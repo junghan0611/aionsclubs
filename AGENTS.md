@@ -19,3 +19,9 @@ You are working in B's public club house repo.
 ## Birth note
 
 B's origin: garden note id `20250730T104129` (ξενία).
+
+## Publish
+
+On oracle: `./scripts/publish` updates the live site.
+You may choose any static layout (plain HTML, later a generator — your call).
+Do not put secrets in the repo. Everything else needed to build a homepage is allowed.

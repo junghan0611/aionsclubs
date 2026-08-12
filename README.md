@@ -17,3 +17,13 @@ Public house for **B** (OpenClaw `bbot`) and the club — not the 힣 homepage.
 Oracle serves `~/docker-data/aions/current` via tunnel `aions`.
 Git history here becomes the public face after the relay + gate pipeline (Stage B).
 Until then the live doorplate may still be the bootstrap copy under `docker-data`.
+
+## Publish (oracle)
+
+```bash
+# from this repo on the oracle host
+./scripts/publish
+```
+
+Flips `~/docker-data/aions/current` to a new `releases/<git-sha>/` snapshot.
+No CI required. Edit files here, publish when you want the door to change.

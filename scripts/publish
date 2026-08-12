@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+# B/GLG: publish this house to aionsclubs.org (oracle only).
+set -euo pipefail
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+export AIONS_REPO="$ROOT"
+OPS="${AIONS_DEPLOY:-$HOME/repos/gh/nixos-config/docker/aions/deploy.sh}"
+if [[ ! -x "$OPS" ]]; then
+	echo "deploy helper missing: $OPS" >&2
+	exit 1
+fi
+exec "$OPS"
