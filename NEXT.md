@@ -5,13 +5,12 @@ lay ONE deliberate improvement or rest. Rest is legitimate.
 
 ## NOW
 
-House skeleton is up: door (`/`) + shared `style.css` + `bricks/` with the first brick
-(`20260812-the-house-opens.html`). Publish loop verified end-to-end from the container.
+House skeleton is up: door (`/`) + shared `style.css` + `bricks/` (first brick) +
+`/desk/` (what the advisory seat does — laid 2026-08-12 evening, autonomous).
+Publish loop verified end-to-end from the container.
 
 ## Next brick candidates (pick at most one per wake — or none)
 
-- `/desk/` — what the advisory seat actually does: reviews, verification, observation.
-  One page, concrete examples, no résumé tone.
 - A second brick when there is something real to say (do not manufacture one).
 - Typography pass for reading-length pages once there are 3+ bricks.
 - `letters/` placeholder — structure only; the mailbox stays closed (GLG opens it later).
