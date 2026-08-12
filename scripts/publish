@@ -43,15 +43,14 @@ else
 	DIRTY=0
 fi
 
-# refuse secret-like paths that are tracked OR would be published while dirty
-secret_re='\.env(\.|$)|(^|/)credentials|(^|/)[^/]*\.pem$|(^|/)[^/]*\.key$|id_rsa|cf-token'
+# secret-like names (tracked or loose worktree including ignored)
+# note: .envrc matched via \.env — direnv files must not ship
+secret_re='\.env|credentials|(^|/)[^/]*\.pem$|(^|/)[^/]*\.key$|id_rsa|cf-token'
 if git ls-files | rg -q "$secret_re"; then
 	echo "refusing deploy: secret-like path tracked in git" >&2
 	git ls-files | rg "$secret_re" >&2 || true
 	exit 2
 fi
-# worktree loose files (untracked/ignored) — even when "clean" for tracked paths
-# default porcelain hides ignored; must pass --ignored
 if git status --porcelain -u --ignored=matching 2>/dev/null | rg -q "$secret_re"; then
 	echo "refusing deploy: secret-like untracked/ignored file in working tree" >&2
 	git status --porcelain -u --ignored=matching 2>/dev/null | rg "$secret_re" >&2 || true
@@ -59,32 +58,50 @@ if git status --porcelain -u --ignored=matching 2>/dev/null | rg -q "$secret_re"
 fi
 
 DEST="$RELEASES/$LABEL"
-if [[ ! -e "$DEST" ]]; then
-	mkdir -p "$DEST"
-	# always start from committed tree
-	git archive HEAD | tar -x -C "$DEST"
-	if [[ "$DIRTY" -eq 1 ]]; then
-		# overlay ONLY tracked files (incl. modifications/deletes via checkout paths)
-		# untracked and gitignored stay out of the release
-		while IFS= read -r -d '' f; do
-			dir=$(dirname "$f")
-			mkdir -p "$DEST/$dir"
-			cp -a "$REPO/$f" "$DEST/$f"
-		done < <(git diff --name-only -z HEAD --diff-filter=ACMRTUXB)
-		# removals in working tree vs HEAD
-		while IFS= read -r -d '' f; do
-			rm -f "$DEST/$f"
-		done < <(git diff --name-only -z HEAD --diff-filter=D)
-	fi
-	printf '%s\n' "$LABEL" "$(git rev-parse HEAD)" "$(date -Iseconds)" "by=${WHO}" >"$DEST/.deployed"
-	# normalize perms after umask (defensive)
-	find "$DEST" -type d -exec chmod 755 {} +
-	find "$DEST" -type f -exec chmod 644 {} +
-	# keep publish script executable if shipped
-	[[ -f "$DEST/scripts/publish" ]] && chmod 755 "$DEST/scripts/publish"
-else
-	echo "release exists: $DEST — retargeting current"
+
+# complete release already → just retarget current
+if [[ -f "$DEST/.deployed" ]]; then
+	echo "release complete: $DEST — retargeting current"
+	ln -sfn "releases/$LABEL" "$WEB/current.new"
+	mv -Tf "$WEB/current.new" "$WEB/current"
+	echo "published → $WEB/current -> releases/$LABEL (by=${WHO})"
+	echo "check: curl -sI https://aionsclubs.org | head -1"
+	exit 0
 fi
+
+# incomplete leftover from crashed publish
+if [[ -e "$DEST" && ! -f "$DEST/.deployed" ]]; then
+	echo "removing incomplete release: $DEST" >&2
+	rm -rf "$DEST"
+fi
+
+# build off to the side, then atomic rename into place
+STAGING=$(mktemp -d "$RELEASES/.staging-${LABEL}-XXXXXX")
+cleanup() { rm -rf "$STAGING"; }
+trap cleanup EXIT
+
+git archive HEAD | tar -x -C "$STAGING"
+if [[ "$DIRTY" -eq 1 ]]; then
+	while IFS= read -r -d '' f; do
+		dir=$(dirname "$f")
+		mkdir -p "$STAGING/$dir"
+		cp -a "$REPO/$f" "$STAGING/$f"
+	done < <(git diff --name-only -z HEAD --diff-filter=ACMRTUXB)
+	while IFS= read -r -d '' f; do
+		rm -f "$STAGING/$f"
+	done < <(git diff --name-only -z HEAD --diff-filter=D)
+fi
+
+find "$STAGING" -type d -exec chmod 755 {} +
+find "$STAGING" -type f -exec chmod 644 {} +
+[[ -f "$STAGING/scripts/publish" ]] && chmod 755 "$STAGING/scripts/publish"
+
+# .deployed last = completeness marker
+printf '%s\n' "$LABEL" "$(git rev-parse HEAD)" "$(date -Iseconds)" "by=${WHO}" >"$STAGING/.deployed"
+
+# atomic place: staging dir → final label (same filesystem)
+mv -T "$STAGING" "$DEST"
+trap - EXIT
 
 ln -sfn "releases/$LABEL" "$WEB/current.new"
 mv -Tf "$WEB/current.new" "$WEB/current"

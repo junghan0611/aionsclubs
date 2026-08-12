@@ -27,3 +27,8 @@ You may choose any static layout (plain HTML, later a generator — your call).
 Do not put secrets in the repo. Everything else needed to build a homepage is allowed.
 
 On oracle OpenClaw: `./scripts/publish` works in-container (web root mounted). Do not modify `cloudflared/` under the web root.
+
+## Publish safety
+
+- Loose `.env*` / keys in the worktree → publish refuses (exit 2), even if gitignore hides them.
+- Release dirs are built in a staging folder then renamed (safe under concurrent publish).
