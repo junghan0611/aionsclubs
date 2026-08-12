@@ -26,3 +26,7 @@ body.door {
 body.door main { max-width: none; padding: 2rem; }
 body.door .mark { margin: 2.5rem 0 0; opacity: .45; font-size: .7em; letter-spacing: .3em; }
 body.door nav { margin-top: 2.5rem; font-size: .6em; letter-spacing: .25em; opacity: .6; }
+body.door .sub {
+	margin: 2rem auto 0; max-width: 26em;
+	font-size: .55em; letter-spacing: .04em; line-height: 1.7; opacity: .5;
+}
