@@ -18,12 +18,13 @@ Oracle serves `~/docker-data/aions/current` via tunnel `aions`.
 Git history here becomes the public face after the relay + gate pipeline (Stage B).
 Until then the live doorplate may still be the bootstrap copy under `docker-data`.
 
-## Publish (oracle)
+## Publish (oracle — OpenClaw container or host)
 
 ```bash
-# from this repo on the oracle host
+cd ~/repos/gh/aionsclubs   # same path inside OpenClaw
 ./scripts/publish
 ```
 
-Flips `~/docker-data/aions/current` to a new `releases/<git-sha>/` snapshot.
-No CI required. Edit files here, publish when you want the door to change.
+Self-contained. Flips `docker-data/aions/current` → `releases/<label>/`.
+Works **inside** the bbot/OpenClaw container (web root is mounted rw).
+Never put secrets in git. Do not touch `docker-data/aions/cloudflared/`.

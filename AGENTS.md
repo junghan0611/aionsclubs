@@ -25,3 +25,5 @@ B's origin: garden note id `20250730T104129` (ξενία).
 On oracle: `./scripts/publish` updates the live site.
 You may choose any static layout (plain HTML, later a generator — your call).
 Do not put secrets in the repo. Everything else needed to build a homepage is allowed.
+
+On oracle OpenClaw: `./scripts/publish` works in-container (web root mounted). Do not modify `cloudflared/` under the web root.

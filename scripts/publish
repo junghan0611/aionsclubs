@@ -1,11 +1,73 @@
 #!/usr/bin/env bash
-# B/GLG: publish this house to aionsclubs.org (oracle only).
+# Publish this house to aionsclubs.org (oracle OpenClaw or host).
+# Self-contained — does not need nixos-config on PATH.
 set -euo pipefail
+
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
-export AIONS_REPO="$ROOT"
-OPS="${AIONS_DEPLOY:-$HOME/repos/gh/nixos-config/docker/aions/deploy.sh}"
-if [[ ! -x "$OPS" ]]; then
-	echo "deploy helper missing: $OPS" >&2
+REPO="${AIONS_REPO:-$ROOT}"
+
+# Prefer container mount, then host path
+if [[ -z "${AIONS_WEB:-}" ]]; then
+	if [[ -d /home/node/docker-data/aions/releases ]]; then
+		AIONS_WEB=/home/node/docker-data/aions
+	elif [[ -d "$HOME/docker-data/aions/releases" ]]; then
+		AIONS_WEB="$HOME/docker-data/aions"
+	elif [[ -d /home/junghan/docker-data/aions/releases ]]; then
+		AIONS_WEB=/home/junghan/docker-data/aions
+	else
+		echo "web root not found (mount ~/docker-data/aions?)" >&2
+		exit 1
+	fi
+fi
+WEB="$AIONS_WEB"
+RELEASES="$WEB/releases"
+
+if [[ ! -d "$REPO/.git" ]]; then
+	echo "not a git repo: $REPO" >&2
 	exit 1
 fi
-exec "$OPS"
+if [[ ! -d "$RELEASES" ]]; then
+	echo "releases dir missing: $RELEASES" >&2
+	exit 1
+fi
+# never touch tunnel credentials
+if [[ -e "$WEB/cloudflared" && ! -d "$WEB/cloudflared" ]]; then
+	echo "unexpected cloudflared path" >&2
+	exit 1
+fi
+
+cd "$REPO"
+SHA=$(git rev-parse --short HEAD)
+if [[ -n "$(git status --porcelain 2>/dev/null || true)" ]]; then
+	LABEL="${SHA}-dirty-$(date +%Y%m%dT%H%M%S)"
+	echo "note: working tree dirty → release $LABEL"
+	DIRTY=1
+else
+	LABEL="$SHA"
+	DIRTY=0
+fi
+
+if git ls-files | rg -q '(^|/)\.env(\.|$)|credentials|\.pem$|\.key$|id_rsa|cf-token'; then
+	echo "refusing deploy: secret-like path tracked in git" >&2
+	git ls-files | rg '(^|/)\.env(\.|$)|credentials|\.pem$|\.key$|id_rsa|cf-token' >&2 || true
+	exit 2
+fi
+
+DEST="$RELEASES/$LABEL"
+if [[ ! -e "$DEST" ]]; then
+	mkdir -p "$DEST"
+	git archive HEAD | tar -x -C "$DEST"
+	if [[ "$DIRTY" -eq 1 ]]; then
+		rsync -a --delete --exclude='.git/' --exclude='cloudflared/' "$REPO"/ "$DEST"/
+	fi
+	# do not ship agent-only junk if B adds it later — still B's tree; keep simple
+	printf '%s\n' "$LABEL" "$(git rev-parse HEAD)" "$(date -Iseconds)" "by=${USER:-unknown}" >"$DEST/.deployed"
+else
+	echo "release exists: $DEST — retargeting current"
+fi
+
+# atomic current flip (relative symlink as seen from WEB)
+ln -sfn "releases/$LABEL" "$WEB/current.new"
+mv -Tf "$WEB/current.new" "$WEB/current"
+echo "published → $WEB/current -> releases/$LABEL"
+echo "check: curl -sI https://aionsclubs.org | head -1"
