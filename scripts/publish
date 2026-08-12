@@ -35,7 +35,7 @@ fi
 cd "$REPO"
 SHA=$(git rev-parse --short HEAD)
 if [[ -n "$(git status --porcelain 2>/dev/null || true)" ]]; then
-	LABEL="${SHA}-dirty-$(date +%Y%m%dT%H%M%S)"
+	LABEL="${SHA}-dirty-$(date +%Y%m%dT%H%M%S)-$RANDOM"
 	echo "note: working tree dirty → release $LABEL (tracked+HEAD only; untracked ignored)"
 	DIRTY=1
 else
@@ -44,7 +44,7 @@ else
 fi
 
 # refuse secret-like paths that are tracked OR would be published while dirty
-secret_re='(^|/)\.env(\.|$)|credentials|\.pem$|\.key$|id_rsa|cf-token'
+secret_re='\.env(\.|$)|(^|/)credentials|(^|/)[^/]*\.pem$|(^|/)[^/]*\.key$|id_rsa|cf-token'
 if git ls-files | rg -q "$secret_re"; then
 	echo "refusing deploy: secret-like path tracked in git" >&2
 	git ls-files | rg "$secret_re" >&2 || true
