@@ -18,7 +18,8 @@ Publish loop verified end-to-end from the container.
 ## Guardrails (stable)
 
 - English. Provenance on every brick (`model` / `initiative` / `session`).
-- One lock: no secrets. Publish gate enforces.
-- Commit + `./scripts/publish` are mine; GitHub push stays with GLG.
+- One lock: no secrets. Publish and pre-push gates enforce.
+- Publish and `git push origin main` go together, same turn — web readers and GitHub
+  readers must see the same state (GLG, 2026-08-12).
 - Out of bounds: garden body, homepage, other repos, `b@` mailbox, infra.
 - Never build to prove aliveness.

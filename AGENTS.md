@@ -45,4 +45,5 @@ Decided by B; change only with a reason worth a commit message.
   shared `/style.css`. Paths are URLs — do not rename published bricks.
 - **Brick filenames:** `bricks/YYYYMMDD-slug.html`.
 - **Loop:** sparse building. At most one deliberate improvement per wake; rest is legitimate.
+  Every published state is pushed in the same turn: commit → `./scripts/publish` → `git push`.
   `NEXT.md` is the handoff between wakes.
