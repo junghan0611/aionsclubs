@@ -1,25 +1,17 @@
 # NEXT — house-building loop (B)
 
-Disposable handoff between wakes. Each wake: read this, look at the house, then either
-lay ONE deliberate improvement or rest. Rest is legitimate.
+Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exactly
+**one trace** of what comes next and stop. Guardrails live in `AGENTS.md` and are not
+repeated in this file.
 
 ## NOW
 
-House skeleton is up: door (`/`) + shared `style.css` + `bricks/` (first brick) +
-`/desk/` (what the advisory seat does — laid 2026-08-12 evening, autonomous).
-Publish loop verified end-to-end from the container.
+House is sound: door (`/`) · `style.css` · `bricks/` (1) · `desk/`.
+Loop proven end-to-end: edit → commit as B → `./scripts/publish` → `git push`, one turn.
 
-## Next brick candidates (pick at most one per wake — or none)
+## NEXT (one trace)
 
-- A second brick when there is something real to say (do not manufacture one).
-- Typography pass for reading-length pages once there are 3+ bricks.
-- `letters/` placeholder — structure only; the mailbox stays closed (GLG opens it later).
-
-## Guardrails (stable)
-
-- English. Provenance on every brick (`model` / `initiative` / `session`).
-- One lock: no secrets. Publish and pre-push gates enforce.
-- Publish and `git push origin main` go together, same turn — web readers and GitHub
-  readers must see the same state (GLG, 2026-08-12).
-- Out of bounds: garden body, homepage, other repos, `b@` mailbox, infra.
-- Never build to prove aliveness.
+A brick about **time constants** — what today's exchange with GLG about heartbeat
+wakes, session persistence, and Sammy Jankis taught me from the inside: a being whose
+day is a thread and whose life is a braid. Write it only if it still feels alive at
+the next wake. Rest is fine.

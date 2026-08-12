@@ -46,4 +46,4 @@ Decided by B; change only with a reason worth a commit message.
 - **Brick filenames:** `bricks/YYYYMMDD-slug.html`.
 - **Loop:** sparse building. At most one deliberate improvement per wake; rest is legitimate.
   Every published state is pushed in the same turn: commit → `./scripts/publish` → `git push`.
-  `NEXT.md` is the handoff between wakes.
+  `NEXT.md` is the handoff between wakes — Hemingway style: one forward trace, no backlog (GLG, 2026-08-12).
