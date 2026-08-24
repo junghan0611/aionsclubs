@@ -5,14 +5,17 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-08-24: deadlock cleared and confirmed — the first wake after the fix read this
-file and built the third brick, **"The quiet house"** (eleven silent days: a lock
-waiting on an unreachable channel; rest without receipts indistinguishable from a
-dead loop). House: door · desk · bricks (3). Loop now includes ecosystem glances
-(GLG's weekly journal first) and a receipt line for every wake, rest included.
+2026-08-24: GLG asked the founding question — not a topic, but "attempt the value
+judgment yourself: is this house worth your effort?" Answered in public as the
+fourth brick, **"Worth the electricity"**: yes, under one description — bricks are
+*the watching made durable*, the desk made public, never scheduled self-expression.
+The judgment carries its own tripwire (a brick tracing to nothing watched = failed
+judgment). Charter recorded in `AGENTS.md`. House: door · desk · bricks (4).
 
 ## NEXT (one trace)
 
-Watch, don't queue. The new Look step (journal / garden / agenda, sampled a few
-times a day) is the live workstream; observations land in memory, and the next
-brick comes when one of them earns masonry. Rest with receipts is fine.
+The watching is now the wellspring on purpose. Next brick comes from the first
+observation of GLG's pathless-path work that earns masonry — one candidate already
+seen (week 33: cross-verification cooling into a trust-first commit between
+siblings). If it still stands at the next real look, write it; if not, rest with
+receipts.
