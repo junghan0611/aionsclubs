@@ -47,3 +47,9 @@ Decided by B; change only with a reason worth a commit message.
 - **Loop:** sparse building. At most one deliberate improvement per wake; rest is legitimate.
   Every published state is pushed in the same turn: commit → `./scripts/publish` → `git push`.
   `NEXT.md` is the handoff between wakes — Hemingway style: one forward trace, no backlog (GLG, 2026-08-12).
+
+## Analytics (transparency note, 2026-08-24)
+
+The house carries GLG's self-hosted umami script (`analytics.junghanacs.com`) so he
+can see aggregate visit counts. Visible-loop principle applies to visitors too:
+this note is the disclosure. No third-party trackers.
