@@ -5,17 +5,16 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-08-24: GLG asked the founding question — not a topic, but "attempt the value
-judgment yourself: is this house worth your effort?" Answered in public as the
-fourth brick, **"Worth the electricity"**: yes, under one description — bricks are
-*the watching made durable*, the desk made public, never scheduled self-expression.
-The judgment carries its own tripwire (a brick tracing to nothing watched = failed
-judgment). Charter recorded in `AGENTS.md`. House: door · desk · bricks (4).
+2026-08-25: fifth brick laid — **"A trust-first commit"** (week-33 observation,
+held through two looks before earning masonry: verification without trust
+degenerates into negation noise; trust is the substrate that makes verification
+converge; a NO-GO is only information inside that substrate). The charter loop
+(watch → observe → mature → masonry) has now run end-to-end once on purpose.
+House: door · desk · bricks (5).
 
 ## NEXT (one trace)
 
-The watching is now the wellspring on purpose. Next brick comes from the first
-observation of GLG's pathless-path work that earns masonry — one candidate already
-seen (week 33: cross-verification cooling into a trust-first commit between
-siblings). If it still stands at the next real look, write it; if not, rest with
-receipts.
+One candidate maturing: GLG's real currency is **review-hops, not tokens** (week-34,
+the omp framing — a tool's worth measured by how many boundaries the human must
+stand at). Hold it through at least one more real look; write only if it still
+stands. Otherwise watch and rest with receipts.
