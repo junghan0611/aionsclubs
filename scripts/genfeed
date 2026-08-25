@@ -1,0 +1,83 @@
+#!/usr/bin/env node
+// Generate /feed.xml (RSS 2.0) from bricks/*.html.
+// No dependencies. pubDate = git first-add date of each brick file, so the
+// output is deterministic: rerunning without new bricks produces no diff.
+// Run after laying a brick, before the commit (see AGENTS.md).
+"use strict";
+
+const { execSync } = require("node:child_process");
+const fs = require("node:fs");
+const path = require("node:path");
+
+const ROOT = path.resolve(__dirname, "..");
+const SITE = "https://aionsclubs.org";
+const BRICKS = path.join(ROOT, "bricks");
+
+const stripTags = (s) =>
+	s.replace(/<[^>]+>/g, "").replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
+// Escape for XML without double-escaping entities already present in the HTML.
+const esc = (s) =>
+	s
+		.replace(/&(?!(?:amp|lt|gt|quot|apos|#\d+|#x[0-9a-fA-F]+);)/g, "&amp;")
+		.replace(/</g, "&lt;")
+		.replace(/>/g, "&gt;");
+
+const files = fs
+	.readdirSync(BRICKS)
+	.filter((f) => /^\d{8}-.*\.html$/.test(f));
+
+const items = files
+	.map((f) => {
+		const rel = `bricks/${f}`;
+		const html = fs.readFileSync(path.join(BRICKS, f), "utf8");
+		const title = stripTags((html.match(/<h1>([\s\S]*?)<\/h1>/) || [null, f])[1]);
+		const afterH1 = html.split(/<\/h1>/)[1] || html;
+		const firstPara = afterH1.match(/<p>([\s\S]*?)<\/p>/);
+		const desc = firstPara ? stripTags(firstPara[1]) : "";
+		let iso = "";
+		try {
+			iso = execSync(`git log --diff-filter=A --follow --format=%aI -- "${rel}"`, { cwd: ROOT })
+				.toString()
+				.trim()
+				.split("\n")
+				.filter(Boolean)
+				.pop() || "";
+		} catch {}
+		const date = iso ? new Date(iso) : new Date();
+		return { url: `${SITE}/${rel}`, title, desc, date };
+	})
+	.sort((a, b) => b.date - a.date);
+
+if (items.length === 0) {
+	console.error("no bricks found — refusing to write an empty feed");
+	process.exit(1);
+}
+
+const rfc822 = (d) => d.toUTCString();
+
+const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+	<title>AIONS CLUBS INTERNATIONAL — bricks</title>
+	<link>${SITE}/</link>
+	<atom:link href="${SITE}/feed.xml" rel="self" type="application/rss+xml"/>
+	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
+	<language>en</language>
+	<lastBuildDate>${rfc822(items[0].date)}</lastBuildDate>
+${items
+	.map(
+		(it) => `	<item>
+		<title>${esc(it.title)}</title>
+		<link>${it.url}</link>
+		<guid isPermaLink="true">${it.url}</guid>
+		<pubDate>${rfc822(it.date)}</pubDate>
+		<description>${esc(it.desc)}</description>
+	</item>`
+	)
+	.join("\n")}
+</channel>
+</rss>
+`;
+
+fs.writeFileSync(path.join(ROOT, "feed.xml"), xml);
+console.log(`feed.xml written — ${items.length} items, newest: ${items[0].title}`);
