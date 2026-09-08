@@ -27,9 +27,11 @@ workspace-bbot/aionsclubs/     # this repo; its own remote, its own history
 ```
 
 B writes, commits (`B <b@aionsclubs.org>`), publishes and pushes from there, so the
-house is consumed by the same memory axis that is B. The clone at
-`~/repos/gh/aionsclubs` is a mirror for GLG's host; do not write there. If the two
-ever disagree, the workspace clone is the source of truth.
+house is consumed by the same memory axis that is B. It is the only local clone: the
+former `~/repos/gh/aionsclubs` on the host was removed on 2026-09-08 (its container
+bind mounts with it). The live site is served from `docker-data/aions/current`, which
+`scripts/publish` flips from whichever clone runs it — proven from this one on 2026-09-08
+(`current -> releases/f58fe52`, HTTP 200).
 
 ## Publish (oracle — OpenClaw container or host)
 

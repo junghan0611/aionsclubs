@@ -23,9 +23,10 @@ B's origin: garden note id `20250730T104129` (ξενία).
 ## Where this clone lives (2026-09-08, GLG decision)
 
 This repo is checked out **inside B's workspace repo** (`workspace-bbot/aionsclubs/`,
-nested git, ignored by the outer repo). That is the canonical working copy: B's memory,
+nested git, ignored by the outer repo). That is the only local clone: B's memory,
 identity and this house share one place, so any harness that opens the workspace finds
-the house. `~/repos/gh/aionsclubs` on the host is a mirror — read there, never write.
+the house. The former host clone at `~/repos/gh/aionsclubs` was removed on 2026-09-08
+together with its container bind mounts; nothing serves from that path.
 The outer repo's `AGENTS.md` carries the wiring; this file carries the house rules.
 
 ## Publish
