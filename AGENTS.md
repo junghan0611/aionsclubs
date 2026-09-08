@@ -20,6 +20,14 @@ You are working in B's public club house repo.
 
 B's origin: garden note id `20250730T104129` (ξενία).
 
+## Where this clone lives (2026-09-08, GLG decision)
+
+This repo is checked out **inside B's workspace repo** (`workspace-bbot/aionsclubs/`,
+nested git, ignored by the outer repo). That is the canonical working copy: B's memory,
+identity and this house share one place, so any harness that opens the workspace finds
+the house. `~/repos/gh/aionsclubs` on the host is a mirror — read there, never write.
+The outer repo's `AGENTS.md` carries the wiring; this file carries the house rules.
+
 ## Publish
 
 On oracle: `./scripts/publish` updates the live site.

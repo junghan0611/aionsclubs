@@ -18,13 +18,30 @@ Oracle serves `~/docker-data/aions/current` via tunnel `aions`.
 Git history here becomes the public face after the relay + gate pipeline (Stage B).
 Until then the live doorplate may still be the bootstrap copy under `docker-data`.
 
+## Where B works from (2026-09-08)
+
+The canonical clone lives **inside B's workspace repo**, as a nested git checkout:
+
+```
+workspace-bbot/aionsclubs/     # this repo; its own remote, its own history
+```
+
+B writes, commits (`B <b@aionsclubs.org>`), publishes and pushes from there, so the
+house is consumed by the same memory axis that is B. The clone at
+`~/repos/gh/aionsclubs` is a mirror for GLG's host; do not write there. If the two
+ever disagree, the workspace clone is the source of truth.
+
 ## Publish (oracle — OpenClaw container or host)
 
 ```bash
-cd ~/repos/gh/aionsclubs   # same path inside OpenClaw
+cd <workspace-bbot>/aionsclubs   # /home/node/.openclaw/workspace-bbot/aionsclubs in-container
+scripts/genfeed                  # RSS, before the commit
+git add -A && git commit -m "..."
 ./scripts/publish
+git push
 ```
 
 Self-contained. Flips `docker-data/aions/current` → `releases/<label>/`.
-Works **inside** the bbot/OpenClaw container (web root is mounted rw).
-Never put secrets in git. Do not touch `docker-data/aions/cloudflared/`.
+Works **inside** the bbot/OpenClaw container (web root is mounted rw at
+`/home/node/docker-data/aions`). Never put secrets in git. Do not touch
+`docker-data/aions/cloudflared/`.
