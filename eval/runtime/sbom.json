@@ -1,0 +1,30 @@
+{
+  "format": 1,
+  "surface": "aionsclubs.org/eval",
+  "package": "scittle-kitchen@0.8.33-105",
+  "npmIntegrity": "sha512-091BkX2J6/VWT7uqFqgd3clWvYE/7TBGswsdtBvz9D0ehSa0VEM4liM7UUZV2x6BbqeVBapRQ1a8bu6lRX5aqQ==",
+  "kitchenGitHead": "f1e206c94310fd75e1cb6f1f58833631217763e3",
+  "kitchenPluginTemplates": "https://github.com/timothypratley/scittle-kitchen/blob/f1e206c94310fd75e1cb6f1f58833631217763e3/plugin-templates.edn",
+  "runtimeFiles": [
+    {
+      "file": "eval/runtime/scittle.d16f6ed9b4f83be00e3ddebd848db1a8e397a3f9389e0ba3402c62f5193439e6.js",
+      "origin": "https://cdn.jsdelivr.net/npm/scittle-kitchen@0.8.33-105/dist/scittle.js",
+      "sha256": "d16f6ed9b4f83be00e3ddebd848db1a8e397a3f9389e0ba3402c62f5193439e6"
+    },
+    {
+      "file": "eval/eval.js",
+      "origin": "https://github.com/junghan0611/homepage/blob/main/assets/js/eval.js",
+      "sha256": "33595f963be56964bb8544401eec19b7d65c5193816826c2da6f372a6c9234f6"
+    }
+  ],
+  "components": [
+    {"name": "scittle-kitchen", "version": "0.8.33-105", "includedIn": ["scittle.js"], "license": "EPL-1.0", "licenseFile": "/eval/licenses/EPL-1.0.txt", "source": "https://github.com/timothypratley/scittle-kitchen/tree/f1e206c94310fd75e1cb6f1f58833631217763e3", "evidence": "npm package gitHead and package integrity; plugin-templates.edn is the build input"},
+    {"name": "scittle", "version": "0.8.33", "includedIn": ["scittle.js"], "license": "EPL-1.0", "licenseFile": "/eval/licenses/EPL-1.0.txt", "source": "https://github.com/babashka/scittle/tree/v0.8.33", "evidence": "kitchen revision submodule scittle=6008412a0a2b438a08399ef865f89a02bd62b2a5"},
+    {"name": "SCI", "version": "6790624776b09297a22100438f05b6555a4ff56d", "includedIn": ["scittle.js"], "license": "EPL-1.0", "licenseFile": "/eval/licenses/EPL-1.0.txt", "source": "https://github.com/babashka/sci/tree/6790624776b09297a22100438f05b6555a4ff56d", "evidence": "scittle v0.8.33 deps.edn pins io.github.babashka/sci to this git SHA"},
+    {"name": "ClojureScript runtime", "version": "not separately versioned in this release artifact", "includedIn": ["scittle.js"], "license": "EPL-1.0", "licenseFile": "/eval/licenses/EPL-1.0.txt", "source": "https://github.com/clojure/clojurescript", "evidence": "compiled bundle contains cljs.core; exact version is not claimed because the package manifest does not record it"},
+    {"name": "Closure Library", "version": "not separately versioned in this release artifact", "includedIn": ["scittle.js"], "license": "Apache-2.0", "licenseFile": "/eval/licenses/Apache-2.0.txt", "source": "https://github.com/google/closure-library", "evidence": "the runtime file contains Copyright The Closure Library Authors and SPDX-License-Identifier: Apache-2.0 (scittle.js lines 6-7)"},
+    {"name": "eval.js (cell evaluator)", "version": "sha256 33595f96", "includedIn": ["eval.js"], "license": "GPL-3.0-only", "licenseFile": "/eval/licenses/GPL-3.0.txt", "source": "/eval/eval.js", "evidence": "adopted byte-identical from junghan0611/homepage assets/js/eval.js; served unminified so the served file is its own corresponding source"},
+    {"name": "Embedded cell programs", "version": "this page", "includedIn": ["/eval/"], "license": "EPL-1.0", "licenseFile": "/eval/licenses/EPL-1.0.txt", "source": "https://github.com/junghan0611/aionsclubs/blob/main/eval/index.html", "evidence": "each program is the visible textarea content of its own cell; the page is the corresponding source"},
+    {"name": "Emmy", "version": "0.32.0", "includedIn": [], "license": "GPL-3.0-only", "licenseFile": "/eval/licenses/GPL-3.0.txt", "source": "https://github.com/mentat-collective/emmy/tree/v0.32.0", "evidence": "deliberately not shipped on this surface: scittle.emmy.js is absent from eval/runtime/ and no script tag references it"}
+  ]
+}

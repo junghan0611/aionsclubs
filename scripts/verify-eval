@@ -1,0 +1,73 @@
+#!/usr/bin/env bash
+# Verify the /eval/ receipts still describe what the house actually serves.
+#
+# A source-first page is only honest while its receipts match its bytes, and
+# nothing here regenerates them — so this check is the thing that keeps the
+# claim true. Run it before publish.
+#
+#   exit 0  receipts match
+#   exit 1  a receipt drifted (message names which)
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+cd "$ROOT"
+fails=0
+fail() { echo "eval verification failed: $*" >&2; fails=$((fails + 1)); }
+
+# 1. every runtime file is pinned by its own full sha256 in the filename
+shopt -s nullglob
+runtimes=(eval/runtime/*.js)
+if [[ ${#runtimes[@]} -eq 0 ]]; then
+	fail "no runtime bundle found under eval/runtime/"
+fi
+for f in "${runtimes[@]}"; do
+	have=$(sha256sum "$f" | cut -d' ' -f1)
+	case "$(basename "$f")" in
+		*"$have"*) ;;
+		*) fail "filename does not pin its content hash: $f (sha256 $have)" ;;
+	esac
+done
+
+# 2. the evaluator hash recorded in manifest + sbom is the evaluator we serve
+evaljs=$(sha256sum eval/eval.js | cut -d' ' -f1)
+for receipt in eval/runtime/manifest.json eval/runtime/sbom.json; do
+	grep -q "$evaljs" "$receipt" || fail "$receipt does not record eval/eval.js sha256 $evaljs"
+done
+
+# 3. every script the page loads exists, and the only off-site origin is the
+#    one disclosed in /javascript/ (GLG's self-hosted Umami beacon). Any other
+#    remote script means the page's audit claim has quietly stopped being true.
+allowed_remote="https://analytics.junghanacs.com/script.js"
+while IFS= read -r src; do
+	case "$src" in
+		"$allowed_remote")
+			grep -q "analytics.junghanacs.com" javascript/index.html \
+				|| fail "the analytics beacon is loaded but not disclosed in /javascript/" ;;
+		http*) fail "eval page loads an undisclosed off-site script: $src" ;;
+		/*) [[ -f ".${src}" ]] || fail "eval page loads a missing script: $src" ;;
+	esac
+done < <(grep -o 'src="[^"]*"' eval/index.html | sed 's/^src="//; s/"$//')
+
+# 4. the runtime the page loads is the one the receipts describe
+while IFS= read -r src; do
+	grep -q "$(basename "$src")" eval/runtime/manifest.json \
+		|| fail "eval page loads $src but the manifest does not list it"
+done < <(grep -o 'src="/eval/[^"]*"' eval/index.html | sed 's/^src="//; s/"$//')
+
+# 5. license files referenced by the receipts and pages are actually present
+while IFS= read -r lic; do
+	[[ -f ".${lic}" ]] || fail "missing license file: $lic"
+done < <(grep -ho '/eval/licenses/[A-Za-z0-9.-]*\.txt' eval/index.html javascript/index.html eval/runtime/*.json | sort -u)
+
+# 6. each cell that asserts a value still has a source to assert it against
+cells=$(grep -c 'class="eval-cell"' eval/index.html || true)
+expects=$(grep -c 'data-expected=' eval/index.html || true)
+textareas=$(grep -c '<textarea' eval/index.html || true)
+[[ "$cells" -eq "$textareas" ]] || fail "cell/textarea count mismatch: $cells cells, $textareas sources"
+[[ "$expects" -ge 1 ]] || fail "no cell carries data-expected — nothing would fail visibly"
+
+if [[ "$fails" -gt 0 ]]; then
+	echo "eval: $fails problem(s)" >&2
+	exit 1
+fi
+echo "eval ok: ${#runtimes[@]} pinned runtime file(s), $cells cells, $expects asserted, no undisclosed remote scripts"

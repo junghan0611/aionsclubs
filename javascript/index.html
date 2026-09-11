@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>JavaScript license information — AIONS CLUBS INTERNATIONAL</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="License, corresponding source, and component inventory for the Eval browser runtime served from aionsclubs.org.">
+<meta name="robots" content="noindex">
+<link rel="stylesheet" href="/style.css">
+<link rel="jslicense" href="/javascript/">
+<body>
+<main>
+	<p class="meta"><a href="/">⌂ aionsclubs.org</a> · <a href="/eval/">eval</a></p>
+
+	<h1>JavaScript license information</h1>
+	<p class="meta">corresponding source for everything this site asks your browser to run</p>
+
+	<p>The executable <a href="/eval/">Eval</a> surface is self-hosted. No script
+	of the Eval runtime is fetched from a third-party CDN at read time; the only
+	remote script is the domain's own self-hosted analytics beacon, listed below.
+	Each executable below is listed with its license and its corresponding
+	source, in the
+	<a href="https://www.gnu.org/software/librejs/free-your-javascript.html">LibreJS</a>
+	table format.</p>
+
+	<table id="jslicense-labels1">
+		<thead>
+			<tr><th>Executable</th><th>License</th><th>Corresponding source</th></tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td><a href="/eval/runtime/scittle.d16f6ed9b4f83be00e3ddebd848db1a8e397a3f9389e0ba3402c62f5193439e6.js">scittle.js</a></td>
+				<td><a href="/eval/licenses/EPL-1.0.txt">EPL-1.0</a></td>
+				<td><a href="https://github.com/babashka/scittle/tree/v0.8.33">Scittle v0.8.33</a> and <a href="https://github.com/timothypratley/scittle-kitchen/blob/f1e206c94310fd75e1cb6f1f58833631217763e3/plugin-templates.edn">kitchen build input</a></td>
+			</tr>
+			<tr>
+				<td><a href="/eval/eval.js">eval.js</a></td>
+				<td><a href="/eval/licenses/GPL-3.0.txt">GPL-3.0-only</a></td>
+				<td><a href="/eval/eval.js">/eval/eval.js</a> — served unminified; the served file is its own source</td>
+			</tr>
+			<tr>
+				<td><a href="/eval/">Embedded Eval cell programs</a></td>
+				<td><a href="/eval/licenses/EPL-1.0.txt">EPL-1.0</a></td>
+				<td><a href="/eval/">/eval/</a> — each program is the visible textarea content of its own cell</td>
+			</tr>
+		</tbody>
+	</table>
+
+	<p>The analytics beacon (<code>analytics.junghanacs.com/script.js</code>) is
+	<a href="https://github.com/umami-software/umami">Umami</a>, MIT, self-hosted
+	by the domain owner; it runs no Eval code and is not part of this surface.</p>
+
+	<h2>Runtime component inventory</h2>
+	<p><a href="/eval/runtime/sbom.json">Machine-readable SBOM</a> ·
+	<a href="/eval/runtime/manifest.json">runtime manifest</a></p>
+
+	<table>
+		<thead>
+			<tr><th>Component</th><th>Version</th><th>License</th></tr>
+		</thead>
+		<tbody>
+			<tr><td><a href="https://github.com/timothypratley/scittle-kitchen/tree/f1e206c94310fd75e1cb6f1f58833631217763e3">scittle-kitchen</a></td><td>0.8.33-105</td><td><a href="/eval/licenses/EPL-1.0.txt">EPL-1.0</a></td></tr>
+			<tr><td><a href="https://github.com/babashka/scittle/tree/v0.8.33">scittle</a></td><td>0.8.33</td><td><a href="/eval/licenses/EPL-1.0.txt">EPL-1.0</a></td></tr>
+			<tr><td><a href="https://github.com/babashka/sci/tree/6790624776b09297a22100438f05b6555a4ff56d">SCI</a></td><td>6790624</td><td><a href="/eval/licenses/EPL-1.0.txt">EPL-1.0</a></td></tr>
+			<tr><td><a href="https://github.com/clojure/clojurescript">ClojureScript runtime</a></td><td>not separately versioned in this artifact</td><td><a href="/eval/licenses/EPL-1.0.txt">EPL-1.0</a></td></tr>
+			<tr><td><a href="https://github.com/google/closure-library">Closure Library</a></td><td>not separately versioned in this artifact</td><td><a href="/eval/licenses/Apache-2.0.txt">Apache-2.0</a></td></tr>
+			<tr><td><a href="https://github.com/mentat-collective/emmy/tree/v0.32.0">Emmy</a></td><td>0.32.0</td><td><a href="/eval/licenses/GPL-3.0.txt">GPL-3.0-only</a> — <strong>not shipped here</strong></td></tr>
+		</tbody>
+	</table>
+
+	<p class="prov">The evidence for each row — which bundle contains it, and how
+	that was established — is in the <a href="/eval/runtime/sbom.json">SBOM</a>.
+	The runtime and this receipt pattern were built on
+	<a href="https://www.junghanacs.com/eval/">junghanacs.com / eval</a> and
+	adopted here.</p>
+</main>
+</body>
+</html>

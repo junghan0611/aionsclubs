@@ -1,0 +1,40 @@
+{
+  "format": 1,
+  "surface": "aionsclubs.org/eval",
+  "package": "scittle-kitchen@0.8.33-105",
+  "npmIntegrity": "sha512-091BkX2J6/VWT7uqFqgd3clWvYE/7TBGswsdtBvz9D0ehSa0VEM4liM7UUZV2x6BbqeVBapRQ1a8bu6lRX5aqQ==",
+  "kitchenGitHead": "f1e206c94310fd75e1cb6f1f58833631217763e3",
+  "kitchenPluginTemplates": "https://github.com/timothypratley/scittle-kitchen/blob/f1e206c94310fd75e1cb6f1f58833631217763e3/plugin-templates.edn",
+  "sbom": "/eval/runtime/sbom.json",
+  "upstreamSurface": {
+    "site": "https://www.junghanacs.com/eval/",
+    "repo": "https://github.com/junghan0611/homepage",
+    "note": "The pinned runtime, the evaluator and the source-first receipt pattern were built there; this house adopted them rather than reinventing them."
+  },
+  "files": [
+    {
+      "path": "scittle.d16f6ed9b4f83be00e3ddebd848db1a8e397a3f9389e0ba3402c62f5193439e6.js",
+      "publicPath": "/eval/runtime/scittle.d16f6ed9b4f83be00e3ddebd848db1a8e397a3f9389e0ba3402c62f5193439e6.js",
+      "origin": "https://cdn.jsdelivr.net/npm/scittle-kitchen@0.8.33-105/dist/scittle.js",
+      "sha256": "d16f6ed9b4f83be00e3ddebd848db1a8e397a3f9389e0ba3402c62f5193439e6",
+      "license": "EPL-1.0",
+      "source": "https://github.com/babashka/scittle/tree/v0.8.33"
+    },
+    {
+      "path": "../eval.js",
+      "publicPath": "/eval/eval.js",
+      "origin": "https://github.com/junghan0611/homepage/blob/main/assets/js/eval.js",
+      "sha256": "33595f963be56964bb8544401eec19b7d65c5193816826c2da6f372a6c9234f6",
+      "license": "GPL-3.0-only",
+      "source": "/eval/eval.js",
+      "note": "Served unminified; the served file is its own corresponding source. Byte-identical to the upstream evaluator — see sha256."
+    }
+  ],
+  "notShipped": [
+    {
+      "name": "scittle.emmy.js",
+      "license": "GPL-3.0-only",
+      "reason": "No cell on this surface needs symbolic mathematics yet. Shipping 4.1 MB of GPL-3.0 Emmy that nothing calls would add license surface without adding capability. Adding it later is one pinned file plus its component rows."
+    }
+  ]
+}

@@ -30,3 +30,34 @@ body.door .sub {
 	margin: 2rem auto 0; max-width: 26em;
 	font-size: .55em; letter-spacing: .04em; line-height: 1.7; opacity: .5;
 }
+
+/* eval cells — /eval/ */
+.eval-cell {
+	margin: 1.4rem 0; padding: .85rem;
+	border: 1px solid rgba(128,128,128,.3); border-radius: .35rem;
+	background: rgba(128,128,128,.05);
+}
+.eval-cell[data-state="pass"] { border-color: #2f7d4f; }
+.eval-cell[data-state="error"] { border-color: #b4453a; }
+.eval-cell-head { display: flex; gap: 1rem; justify-content: space-between; align-items: baseline; }
+.eval-cell-head strong { font-size: .9rem; font-weight: 600; }
+.eval-status { font-size: .72rem; letter-spacing: .12em; opacity: .55; }
+.eval-cell[data-state="pass"] .eval-status { color: #2f7d4f; opacity: 1; }
+.eval-cell[data-state="error"] .eval-status { color: #b4453a; opacity: 1; }
+.eval-cell textarea, .eval-cell pre {
+	width: 100%; box-sizing: border-box; margin: .7rem 0; padding: .7rem;
+	font: 400 .82rem/1.6 ui-monospace, SFMono-Regular, Menlo, monospace;
+	color: inherit; background: rgba(128,128,128,.08);
+	border: 1px solid rgba(128,128,128,.25); border-radius: .25rem;
+}
+.eval-cell textarea { min-height: 5.2rem; resize: vertical; }
+.eval-cell pre { margin-bottom: 0; overflow-x: auto; white-space: pre-wrap; }
+.eval-cell pre:empty { display: none; }
+.eval-cell button {
+	font: inherit; font-size: .8rem; padding: .35rem .8rem; cursor: pointer;
+	color: inherit; background: rgba(128,128,128,.14);
+	border: 1px solid rgba(128,128,128,.35); border-radius: .25rem;
+}
+.eval-cell button:hover { background: rgba(128,128,128,.24); }
+table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; font-size: .85rem; }
+th, td { border: 1px solid rgba(128,128,128,.25); padding: .5rem; text-align: left; vertical-align: top; }
