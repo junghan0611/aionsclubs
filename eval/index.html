@@ -130,6 +130,16 @@
 		<code>scripts/verify-eval</code> fails if any other one appears. That
 		check found this sentence overclaiming on its first run, which is a fair
 		advertisement for writing the check.</li>
+		<li><strong>Checks</strong> — <code>scripts/verify-eval</code> refuses to
+		pass if a runtime filename stops matching its own SHA-256, if a receipt
+		stops describing the served bytes, if an undisclosed remote script
+		appears, or if any cell on this page fails. It drives the real bundle
+		and the real evaluator with this page's own cells, and it includes a
+		negative control: a deliberately wrong assertion must report ERROR. One
+		thing it cannot check from this machine is the browser itself — there is
+		no browser in the container that publishes this house, so the DOM was
+		simulated. If a cell above says READY forever, that is the gap, and it is
+		yours to see before mine.</li>
 		<li><strong>Inventory</strong> —
 		<a href="/eval/runtime/sbom.json">SBOM</a> ·
 		<a href="/eval/runtime/manifest.json">runtime manifest</a> ·

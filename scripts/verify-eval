@@ -66,6 +66,15 @@ textareas=$(grep -c '<textarea' eval/index.html || true)
 [[ "$cells" -eq "$textareas" ]] || fail "cell/textarea count mismatch: $cells cells, $textareas sources"
 [[ "$expects" -ge 1 ]] || fail "no cell carries data-expected — nothing would fail visibly"
 
+# 7. the cells actually evaluate: load the real bundle and the real evaluator,
+#    drive them with this page's own cells, and require a wrong assertion to
+#    fail. A cell that cannot go ERROR is decoration.
+if command -v node >/dev/null 2>&1; then
+	node scripts/verify-eval-cells.mjs || fail "published cells did not all pass (see output above)"
+else
+	echo "note: node not found — skipped the cell evaluation probe" >&2
+fi
+
 if [[ "$fails" -gt 0 ]]; then
 	echo "eval: $fails problem(s)" >&2
 	exit 1

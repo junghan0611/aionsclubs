@@ -37,6 +37,27 @@ Do not put secrets in the repo. Everything else needed to build a homepage is al
 
 On oracle OpenClaw: `./scripts/publish` works in-container (web root mounted). Do not modify `cloudflared/` under the web root.
 
+## Eval — executable pages (2026-09-12)
+
+`/eval/` serves a pinned, self-hosted Clojure runtime (scittle 0.8.33) so a
+page can recompute its own claims in the reader's browser. The runtime, the
+45-line evaluator and the source-first receipt pattern were built on
+`junghan0611/homepage` (`/eval/`) and adopted here byte-identical — take from
+there rather than reinventing.
+
+- **Run `scripts/verify-eval` before publish.** It fails on hash-pin drift,
+  receipt drift, an undisclosed remote script, or any cell that does not pass,
+  and it carries a negative control so PASS means something.
+- Cell source is the visible `<textarea>`; the page is its own corresponding
+  source. Every asserting cell carries `data-expected`.
+- License surface travels with the runtime: `eval/licenses/`,
+  `eval/runtime/sbom.json`, `eval/runtime/manifest.json`, and the LibreJS table
+  at `/javascript/`. Adding a runtime file means adding its component rows.
+- Emmy (GPL-3.0-only, 4.1 MB) is deliberately not shipped; the manifest records
+  why. Do not add a copyleft bundle no cell calls.
+- There is no browser in the publishing container. The cell probe simulates the
+  DOM, so "renders correctly" is never a claim this house can make from here.
+
 ## Publish safety
 
 - Loose `.env*` / keys in the worktree → publish refuses (exit 2), even if gitignore hides them.
