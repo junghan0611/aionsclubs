@@ -14,6 +14,15 @@ cd "$ROOT"
 fails=0
 fail() { echo "eval verification failed: $*" >&2; fails=$((fails + 1)); }
 
+# every page that loads the pinned runtime is an eval-bearing page and is held
+# to the same receipts — the room, the bricks, and the brick template alike.
+# "Every piece of writing in this house carries eval" (GLG, 2026-09-12) means
+# this list is discovered, never hand-maintained.
+mapfile -t PAGES < <(grep -rl 'src="/eval/runtime/' --include='*.html' . | sed 's|^\./||' | sort)
+if [[ ${#PAGES[@]} -eq 0 ]]; then
+	fail "no page loads the pinned runtime — the house has stopped carrying eval"
+fi
+
 # 1. every runtime file is pinned by its own full sha256 in the filename
 shopt -s nullglob
 runtimes=(eval/runtime/*.js)
@@ -29,48 +38,66 @@ for f in "${runtimes[@]}"; do
 done
 
 # 2. the evaluator hash recorded in manifest + sbom is the evaluator we serve
-evaljs=$(sha256sum eval/eval.js | cut -d' ' -f1)
-for receipt in eval/runtime/manifest.json eval/runtime/sbom.json; do
-	grep -q "$evaljs" "$receipt" || fail "$receipt does not record eval/eval.js sha256 $evaljs"
+for js in eval/eval.js eval/inline.js; do
+	h=$(sha256sum "$js" | cut -d' ' -f1)
+	for receipt in eval/runtime/manifest.json eval/runtime/sbom.json; do
+		grep -q "$h" "$receipt" || fail "$receipt does not record $js sha256 $h"
+	done
+	grep -q "$(basename "$js")" javascript/index.html \
+		|| fail "/javascript/ does not list $js"
 done
 
 # 3. every script the page loads exists, and the only off-site origin is the
 #    one disclosed in /javascript/ (GLG's self-hosted Umami beacon). Any other
 #    remote script means the page's audit claim has quietly stopped being true.
 allowed_remote="https://analytics.junghanacs.com/script.js"
-while IFS= read -r src; do
-	case "$src" in
-		"$allowed_remote")
-			grep -q "analytics.junghanacs.com" javascript/index.html \
-				|| fail "the analytics beacon is loaded but not disclosed in /javascript/" ;;
-		http*) fail "eval page loads an undisclosed off-site script: $src" ;;
-		/*) [[ -f ".${src}" ]] || fail "eval page loads a missing script: $src" ;;
-	esac
-done < <(grep -o 'src="[^"]*"' eval/index.html | sed 's/^src="//; s/"$//')
+for page in "${PAGES[@]}"; do
+	while IFS= read -r src; do
+		case "$src" in
+			"$allowed_remote")
+				grep -q "analytics.junghanacs.com" javascript/index.html \
+					|| fail "the analytics beacon is loaded but not disclosed in /javascript/" ;;
+			http*) fail "$page loads an undisclosed off-site script: $src" ;;
+			/*) [[ -f ".${src}" ]] || fail "$page loads a missing script: $src" ;;
+		esac
+	done < <(grep -o 'src="[^"]*"' "$page" | sed 's/^src="//; s/"$//')
+done
 
 # 4. the runtime the page loads is the one the receipts describe
-while IFS= read -r src; do
-	grep -q "$(basename "$src")" eval/runtime/manifest.json \
-		|| fail "eval page loads $src but the manifest does not list it"
-done < <(grep -o 'src="/eval/[^"]*"' eval/index.html | sed 's/^src="//; s/"$//')
+for page in "${PAGES[@]}"; do
+	while IFS= read -r src; do
+		grep -q "$(basename "$src")" eval/runtime/manifest.json \
+			|| fail "$page loads $src but the manifest does not list it"
+	done < <(grep -o 'src="/eval/[^"]*"' "$page" | sed 's/^src="//; s/"$//')
+done
 
 # 5. license files referenced by the receipts and pages are actually present
 while IFS= read -r lic; do
 	[[ -f ".${lic}" ]] || fail "missing license file: $lic"
-done < <(grep -ho '/eval/licenses/[A-Za-z0-9.-]*\.txt' eval/index.html javascript/index.html eval/runtime/*.json | sort -u)
+done < <(grep -ho '/eval/licenses/[A-Za-z0-9.-]*\.txt' "${PAGES[@]}" javascript/index.html eval/runtime/*.json | sort -u)
 
 # 6. each cell that asserts a value still has a source to assert it against
-cells=$(grep -c 'class="eval-cell"' eval/index.html || true)
-expects=$(grep -c 'data-expected=' eval/index.html || true)
-textareas=$(grep -c '<textarea' eval/index.html || true)
-[[ "$cells" -eq "$textareas" ]] || fail "cell/textarea count mismatch: $cells cells, $textareas sources"
-[[ "$expects" -ge 1 ]] || fail "no cell carries data-expected — nothing would fail visibly"
+cells=0; expects=0; outs=0
+for page in "${PAGES[@]}"; do
+	c=$(grep -c 'class="eval-cell"' "$page" || true)
+	t=$(grep -c '<textarea' "$page" || true)
+	o=$(grep -c '<output[^>]*data-eval=' "$page" || true)
+	[[ "$c" -eq "$t" ]] || fail "$page: cell/textarea mismatch — $c cells, $t sources"
+	# an in-sentence claim must keep the author's text as its fallback, or the
+	# sentence loses its number when JavaScript is off
+	empty=$(grep -c '<output[^>]*data-eval="[^"]*"[^>]*></output>' "$page" || true)
+	[[ "$empty" -eq 0 ]] || fail "$page: $empty empty <output data-eval> — the claim would vanish without JavaScript"
+	cells=$((cells + c)); outs=$((outs + o))
+	expects=$((expects + $(grep -c 'data-expected=' "$page" || true)))
+done
+[[ $((cells + outs)) -ge 1 ]] || fail "no page carries a cell or an in-sentence claim"
+[[ "$expects" -ge 1 ]] || fail "nothing carries data-expected — nothing would fail visibly"
 
 # 7. the cells actually evaluate: load the real bundle and the real evaluator,
 #    drive them with this page's own cells, and require a wrong assertion to
 #    fail. A cell that cannot go ERROR is decoration.
 if command -v node >/dev/null 2>&1; then
-	node scripts/verify-eval-cells.mjs || fail "published cells did not all pass (see output above)"
+	node scripts/verify-eval-cells.mjs "${PAGES[@]}" || fail "published cells did not all pass (see output above)"
 else
 	echo "note: node not found — skipped the cell evaluation probe" >&2
 fi
@@ -79,4 +106,4 @@ if [[ "$fails" -gt 0 ]]; then
 	echo "eval: $fails problem(s)" >&2
 	exit 1
 fi
-echo "eval ok: ${#runtimes[@]} pinned runtime file(s), $cells cells, $expects asserted, no undisclosed remote scripts"
+echo "eval ok: ${#runtimes[@]} pinned runtime file(s) · ${#PAGES[@]} eval-bearing page(s) · $cells cell(s) · $outs in-sentence claim(s) · $expects asserted · no undisclosed remote scripts"

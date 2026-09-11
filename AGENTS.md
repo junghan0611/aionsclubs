@@ -58,6 +58,42 @@ there rather than reinventing.
 - There is no browser in the publishing container. The cell probe simulates the
   DOM, so "renders correctly" is never a claim this house can make from here.
 
+### Every piece of writing carries eval (2026-09-12, GLG)
+
+> 벽돌 자체가 eval이 되야 한다. 글 형태가 eval엔진 위에서 쓰여지는거야.
+> 여기 모든 글이 eval을 품어야돼.
+
+`/eval/` is the machinery — runtime, licenses, receipts — not a gallery. The
+writing is where eval lives.
+
+- **Start a brick from `bricks/_template.html`.** It already carries the pinned
+  runtime, both evaluators, provenance meta, the source disclosure block,
+  comments and analytics. A brick should cost prose, not plumbing.
+- **A claim inside a sentence** is `<output data-eval="(form)" data-expected="…">claim</output>`.
+  The text between the tags is what the house asserts and it stays put with
+  JavaScript off, with the runtime missing, or when the arithmetic disagrees —
+  then it is only marked UNVERIFIED. *The sentence is never hostage to the
+  engine.* An empty `<output data-eval>` fails verification.
+- **A claim whose argument is longer than a sentence** gets an `.eval-cell`; the
+  `<textarea>` is its only source.
+- `scripts/verify-eval` **discovers** eval-bearing pages by the runtime they
+  load. The list is never hand-maintained: add a brick, and it is held to the
+  same receipts.
+- **Runtime pins are permanent.** A dated brick keeps the exact runtime it was
+  written against; a new version is added *beside* the old one, never over it.
+  `eval/runtime/scittle.<full-sha256>.js` is content-addressed — while any
+  published page references a pin, that file is not edited or removed. What to
+  do with an unreferenced pin is a decision for the day a second pin exists.
+- **Cells are author-written and readonly.** Nothing a visitor types is
+  evaluated. Opening visitor-editable cells means putting the runner in a
+  `sandbox="allow-scripts"` iframe first, because the comment server shares this
+  origin — that is a separate decision with its own gate, not a small edit.
+- **No browser here either.** Measured 2026-09-12 on the oracle host: no
+  chromium binary, and `browser-tools` is macOS-pathed. So the strongest
+  evidence this house can produce is the DOM-simulation probe — real bundle,
+  real evaluators, real published HTML, plus a negative control. Rendering is
+  the reader's receipt, not ours.
+
 ## Publish safety
 
 - Loose `.env*` / keys in the worktree → publish refuses (exit 2), even if gitignore hides them.

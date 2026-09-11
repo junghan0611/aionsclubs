@@ -61,3 +61,22 @@ body.door .sub {
 .eval-cell button:hover { background: rgba(128,128,128,.24); }
 table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; font-size: .85rem; }
 th, td { border: 1px solid rgba(128,128,128,.25); padding: .5rem; text-align: left; vertical-align: top; }
+
+/* in-sentence eval — a claim the reader's browser recomputes */
+output[data-eval] { font-variant-numeric: tabular-nums; }
+output[data-eval][data-state="pass"] {
+	border-bottom: 1px solid rgba(47,125,79,.55);
+	cursor: help;
+}
+output[data-eval][data-state="error"] {
+	border-bottom: 1px dashed rgba(180,69,58,.8);
+	cursor: help;
+}
+output[data-eval][data-state="error"]::after {
+	content: " ⚠";
+	color: #b4453a;
+	font-size: .8em;
+}
+.eval-sources { margin: 2rem 0 0; font-size: .82rem; opacity: .75; }
+.eval-sources summary { cursor: pointer; }
+.eval-sources code { white-space: pre-wrap; }

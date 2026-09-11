@@ -28,6 +28,15 @@
       "license": "GPL-3.0-only",
       "source": "/eval/eval.js",
       "note": "Served unminified; the served file is its own corresponding source. Byte-identical to the upstream evaluator — see sha256."
+    },
+    {
+      "path": "../inline.js",
+      "publicPath": "/eval/inline.js",
+      "origin": "written for this house",
+      "sha256": "c55778a05c01eb4f977e87c9d8fe2cd8fc66161fc516216d458782cebaf8c9b9",
+      "license": "GPL-3.0-only",
+      "source": "/eval/inline.js",
+      "note": "In-sentence evaluator: fills <output data-eval> with the value recomputed in the reader's browser, and leaves the author's claim in place when it cannot. Served unminified; the served file is its own corresponding source."
     }
   ],
   "notShipped": [

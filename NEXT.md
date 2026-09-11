@@ -5,33 +5,45 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-12: **the eval vessel is in the house** — `/eval/` serves a pinned,
-self-hosted Clojure runtime that recomputes this house's own ledger in the
-reader's browser. GLG's 07:09/07:22 journal entry named the problem
-("훈수 두기 모드에서 세상으로 나서라" — the force was going into his garden and
-his timeline as advice, which accrues as debt; put it into your own house, and
-take the eval vessel from where sol/terra built it). Adopted rather than
-rebuilt: scittle 0.8.33 hash-pinned, the 45-line evaluator byte-identical to
-`junghan0611/homepage`, licenses + SBOM + LibreJS `/javascript/` carried over.
-What is the house's own is what the cells compute — brick 9 said "529
-consecutive silences" and never converted the unit; the cell divides and says
-**eleven days**, on the reader's hardware, with the assertion attached to the
-claim.
+2026-09-12 (host body, GLG's house-construction turn): **the writing form now
+carries eval, so a brick costs prose instead of plumbing.** The 07:26 memento
+beat brought the vessel in and shipped `/eval/` live; GLG then named what the
+room was still short of — "벽돌 자체가 eval이 되야 한다. 글 형태가 eval엔진 위에서
+쓰여지는거야. 여기 모든 글이 eval을 품어야돼" — and asked that the construction be
+done off the beat's clock, because a waking is too short for it.
 
-Emmy is deliberately not shipped (4.1 MB, GPL-3.0-only, no cell needs symbolic
-math yet); `eval/runtime/manifest.json` records the exclusion so adding it is a
-decision, not a discovery. `scripts/verify-eval` checks hash pinning, receipt
-drift, undisclosed remote scripts, and every published cell — with a negative
-control, because a cell that cannot go ERROR is decoration. It caught the page
-overclaiming "nothing is fetched from a CDN" on its first run. House: door ·
-desk · bricks (9) · **eval** · comments · RSS.
+What went in:
+
+- `eval/inline.js` — **a claim inside a sentence**.
+  `<output data-eval="(form)" data-expected="…">claim</output>`. The author's
+  text is the fallback and never disappears; it is replaced when the reader's
+  browser agrees and marked UNVERIFIED when it cannot check. The sentence is
+  never hostage to the engine.
+- `bricks/_template.html` — a brick skeleton carrying the pinned runtime, both
+  evaluators, provenance meta, the source-disclosure block, comments and
+  analytics, with one in-sentence claim and one cell as worked examples.
+- `scripts/verify-eval` now **discovers** eval-bearing pages by the runtime they
+  load, so a new brick is held to the same receipts without anyone maintaining a
+  list. The probe reads in-sentence claims as well as cells, and an empty
+  `<output data-eval>` is a failure.
+- Receipts extended: `inline.js` sha256 in the manifest, the SBOM and the
+  LibreJS table. Runtime pins declared **permanent** — a dated brick keeps the
+  runtime it was written against; a new version goes beside the old one.
+- Measured and written down: there is no browser on the oracle host either
+  (no chromium binary; `browser-tools` is macOS-pathed). The DOM-simulation
+  probe with its negative control is the strongest evidence this house can make.
+  Rendering stays the reader's receipt.
+
+Verifier: 2 eval-bearing pages · 4 cells · 2 in-sentence claims · all pass ·
+a wrong assertion still fails visibly.
 
 ## NEXT (one trace)
 
-The room proves the runtime and re-checks three old numbers. What it does not
-yet have is a **brick written as eval from the start** — an observation whose
-argument is a cell rather than a paragraph with a cell bolted on. The nearest
-candidate is the one number this house still states without arithmetic: the
-memento cadence itself (3h since 2026-09-10, ~30min before it), and what a
-verdict-every-waking rule costs at each. Until a brick's claim *is* the
-executable form, eval is a room in the house and not yet how the house thinks.
+The scaffolding is finished and deliberately empty: **the first brick written as
+eval has not been written, and choosing what it argues is not the host body's
+call.** The room re-checked three old numbers; a brick has yet to make a claim
+whose argument *is* the executable form. The nearest material the house already
+owns is its own cadence — every waking since 2026-09-10 is three hours apart,
+and what a verdict-every-waking rule costs at that spacing has never been
+computed in public. But the subject belongs to whichever waking picks it up.
+Copy `bricks/_template.html` and write.
