@@ -23,6 +23,14 @@ globalThis.document = {
 new Function(readFileSync(runtime, "utf8"))();
 if (!globalThis.scittle?.core?.eval_string) { console.error("runtime failed to load"); process.exit(1); }
 
+// assertion semantics: claim-v1, adopted byte-for-byte from junghanacs.com's
+// immutable engine shelf. The filename carries the sha256 the shelf published;
+// scripts/verify-eval re-checks it against the bytes on disk.
+const claimModule = `${root}/eval/engine/claim-v1.52803ba04b0bd6239e4a80ed2d51d53029cfb4c36a8ddae84e4de2f27e5227f1.js`;
+new Function(readFileSync(claimModule, "utf8"))();
+const engine = globalThis.HomepageEvalClaimV1;
+if (!engine?.assert) { console.error("claim-v1 failed to load"); process.exit(1); }
+
 // --- parse each real page ---
 const decode = (s) => s.replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").replace(/&amp;/g, "&");
 const pages = process.argv.slice(2);
@@ -34,6 +42,7 @@ let bad = 0;
 let totalCells = 0;
 let totalOuts = 0;
 let lastProbe = null;
+const asserted = [];
 
 for (const page of pages) {
 	const html = readFileSync(`${root}/${page}`, "utf8");
@@ -94,6 +103,7 @@ for (const page of pages) {
 		if (!pass) bad++;
 		console.log(`${pass ? "PASS " : "FAIL "} sentence  claim=${o.claim}  => ${o.textContent}`);
 		if (!pass) console.log(`       ${o.title ?? ""}`);
+		if (pass) asserted.push({ page, claim: o.claim, expected: (o.dataset.expected ?? "").trim(), value: o.textContent });
 	}
 
 	totalCells += cells.length;
@@ -124,7 +134,31 @@ if (lastProbe.kind === "cell") {
 }
 if (!caught) bad++;
 
+// --- mutation gate: every in-sentence claim must reject a ten-times-wrong value ---
+//
+// Containment says nothing here: "6" is inside "60". This ran once as a note in
+// this script's own output, which is a position a person occupies, so it caught
+// nothing. It is a gate now. Cells are deliberately fragment-mode and are NOT
+// covered by it — the honest count is printed below.
+let survivors = 0;
+for (const a of asserted) {
+	const n = Number(a.value);
+	if (!Number.isFinite(n)) continue;
+	// n*10 is the containment trap ("6" sits inside "60"); n+1 covers n === 0,
+	// where multiplying is not a mutation at all.
+	const mutations = [...new Set([n * 10, n + 1])].filter((m) => m !== n).map(String);
+	const survived = mutations.filter((m) => engine.assert(m, { mode: "scalar-exact", expected: a.expected }).pass);
+	if (survived.length) {
+		survivors++;
+		console.log(`FAIL  mutation  ${a.page}  claim "${a.expected}" still passes when the value is ${survived.join(" / ")}`);
+	}
+}
+console.log(`\n${survivors ? "FAIL " : "PASS "} mutation-gate  ${asserted.length - survivors}/${asserted.length} in-sentence claim(s) reject a ten-times-wrong value`);
+if (survivors) bad += survivors;
+
 console.log(bad
 	? `\n${bad} problem(s)`
-	: `\nall ${totalCells} published cell(s) and ${totalOuts} in-sentence claim(s) pass, and a deliberately wrong assertion is caught.\nNote: data-expected is containment, not equality — a wrong value that contains the expected text still passes.`);
+	: `\nall ${totalCells} published cell(s) and ${totalOuts} in-sentence claim(s) pass, a deliberately wrong assertion is caught, and every in-sentence claim rejects a ten-times-wrong value.
+Assertion semantics: ${engine.VERSION} (adopted from junghanacs.com/eval/engine/releases/2026.9.12/).
+Not covered: the ${totalCells} cell(s) assert fragment mode by design — a named key inside a printed map — so a ten-times-wrong number inside that map would still contain the fragment. Closing that needs field mode, not a note.`);
 process.exit(bad ? 1 : 0);

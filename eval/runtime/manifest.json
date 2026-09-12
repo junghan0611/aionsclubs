@@ -1,49 +1,58 @@
 {
-  "format": 1,
-  "surface": "aionsclubs.org/eval",
-  "package": "scittle-kitchen@0.8.33-105",
-  "npmIntegrity": "sha512-091BkX2J6/VWT7uqFqgd3clWvYE/7TBGswsdtBvz9D0ehSa0VEM4liM7UUZV2x6BbqeVBapRQ1a8bu6lRX5aqQ==",
-  "kitchenGitHead": "f1e206c94310fd75e1cb6f1f58833631217763e3",
-  "kitchenPluginTemplates": "https://github.com/timothypratley/scittle-kitchen/blob/f1e206c94310fd75e1cb6f1f58833631217763e3/plugin-templates.edn",
-  "sbom": "/eval/runtime/sbom.json",
-  "upstreamSurface": {
-    "site": "https://www.junghanacs.com/eval/",
-    "repo": "https://github.com/junghan0611/homepage",
-    "note": "The pinned runtime, the evaluator and the source-first receipt pattern were built there; this house adopted them rather than reinventing them."
-  },
-  "files": [
-    {
-      "path": "scittle.d16f6ed9b4f83be00e3ddebd848db1a8e397a3f9389e0ba3402c62f5193439e6.js",
-      "publicPath": "/eval/runtime/scittle.d16f6ed9b4f83be00e3ddebd848db1a8e397a3f9389e0ba3402c62f5193439e6.js",
-      "origin": "https://cdn.jsdelivr.net/npm/scittle-kitchen@0.8.33-105/dist/scittle.js",
-      "sha256": "d16f6ed9b4f83be00e3ddebd848db1a8e397a3f9389e0ba3402c62f5193439e6",
-      "license": "EPL-1.0",
-      "source": "https://github.com/babashka/scittle/tree/v0.8.33"
-    },
-    {
-      "path": "../eval.js",
-      "publicPath": "/eval/eval.js",
-      "origin": "https://github.com/junghan0611/homepage/blob/main/assets/js/eval.js",
-      "sha256": "33595f963be56964bb8544401eec19b7d65c5193816826c2da6f372a6c9234f6",
-      "license": "GPL-3.0-only",
-      "source": "/eval/eval.js",
-      "note": "Served unminified; the served file is its own corresponding source. Byte-identical to the upstream evaluator — see sha256."
-    },
-    {
-      "path": "../inline.js",
-      "publicPath": "/eval/inline.js",
-      "origin": "written for this house",
-      "sha256": "c55778a05c01eb4f977e87c9d8fe2cd8fc66161fc516216d458782cebaf8c9b9",
-      "license": "GPL-3.0-only",
-      "source": "/eval/inline.js",
-      "note": "In-sentence evaluator: fills <output data-eval> with the value recomputed in the reader's browser, and leaves the author's claim in place when it cannot. Served unminified; the served file is its own corresponding source."
-    }
-  ],
-  "notShipped": [
-    {
-      "name": "scittle.emmy.js",
-      "license": "GPL-3.0-only",
-      "reason": "No cell on this surface needs symbolic mathematics yet. Shipping 4.1 MB of GPL-3.0 Emmy that nothing calls would add license surface without adding capability. Adding it later is one pinned file plus its component rows."
-    }
-  ]
+	"format": 1,
+	"surface": "aionsclubs.org/eval",
+	"package": "scittle-kitchen@0.8.33-105",
+	"npmIntegrity": "sha512-091BkX2J6/VWT7uqFqgd3clWvYE/7TBGswsdtBvz9D0ehSa0VEM4liM7UUZV2x6BbqeVBapRQ1a8bu6lRX5aqQ==",
+	"kitchenGitHead": "f1e206c94310fd75e1cb6f1f58833631217763e3",
+	"kitchenPluginTemplates": "https://github.com/timothypratley/scittle-kitchen/blob/f1e206c94310fd75e1cb6f1f58833631217763e3/plugin-templates.edn",
+	"sbom": "/eval/runtime/sbom.json",
+	"upstreamSurface": {
+		"site": "https://www.junghanacs.com/eval/",
+		"repo": "https://github.com/junghan0611/homepage",
+		"note": "The pinned runtime, the evaluator and the source-first receipt pattern were built there; this house adopted them rather than reinventing them. Assertion semantics now come from the same place as a content-addressed engine release (claim-v1, 2026.9.12)."
+	},
+	"files": [
+		{
+			"path": "scittle.d16f6ed9b4f83be00e3ddebd848db1a8e397a3f9389e0ba3402c62f5193439e6.js",
+			"publicPath": "/eval/runtime/scittle.d16f6ed9b4f83be00e3ddebd848db1a8e397a3f9389e0ba3402c62f5193439e6.js",
+			"origin": "https://cdn.jsdelivr.net/npm/scittle-kitchen@0.8.33-105/dist/scittle.js",
+			"sha256": "d16f6ed9b4f83be00e3ddebd848db1a8e397a3f9389e0ba3402c62f5193439e6",
+			"license": "EPL-1.0",
+			"source": "https://github.com/babashka/scittle/tree/v0.8.33"
+		},
+		{
+			"path": "../eval.js",
+			"publicPath": "/eval/eval.js",
+			"origin": "https://github.com/junghan0611/homepage/blob/main/assets/js/eval.js",
+			"sha256": "04fce12d38023bd6922aabc10147ef0fea99f52f49c7e0c47210a84113d8e1f0",
+			"license": "GPL-3.0-only",
+			"source": "/eval/eval.js",
+			"note": "Served unminified; the served file is its own corresponding source. Was byte-identical to the upstream evaluator, which junghanacs.com froze as engine module cell-v1 (sha256 33595f963be56964bb8544401eec19b7d65c5193816826c2da6f372a6c9234f6). This house then moved its assertion semantics out of this file and into claim-v1, so the bytes now differ from cell-v1 by that delegation."
+		},
+		{
+			"path": "../inline.js",
+			"publicPath": "/eval/inline.js",
+			"origin": "written for this house",
+			"sha256": "874e539c96b338747b682474ed37a0921b78b5ac88195beda9c6bb3277372690",
+			"license": "GPL-3.0-only",
+			"source": "/eval/inline.js",
+			"note": "In-sentence evaluator: fills <output data-eval> with the value recomputed in the reader's browser, and leaves the author's claim in place when it cannot. Asserts through claim-v1 in scalar-exact mode. Served unminified; the served file is its own corresponding source."
+		},
+		{
+			"path": "../engine/claim-v1.52803ba04b0bd6239e4a80ed2d51d53029cfb4c36a8ddae84e4de2f27e5227f1.js",
+			"publicPath": "/eval/engine/claim-v1.52803ba04b0bd6239e4a80ed2d51d53029cfb4c36a8ddae84e4de2f27e5227f1.js",
+			"origin": "https://junghanacs.com/eval/engine/releases/2026.9.12/claim-v1.52803ba04b0bd6239e4a80ed2d51d53029cfb4c36a8ddae84e4de2f27e5227f1.js",
+			"sha256": "52803ba04b0bd6239e4a80ed2d51d53029cfb4c36a8ddae84e4de2f27e5227f1",
+			"license": "GPL-3.0-only",
+			"source": "/eval/engine/claim-v1.52803ba04b0bd6239e4a80ed2d51d53029cfb4c36a8ddae84e4de2f27e5227f1.js",
+			"note": "Assertion semantics only; evaluation and rendering stay separate. Fetched from the upstream immutable engine shelf and verified against the sha256 the shelf publishes in its own manifest. Conformance fixtures: /eval/engine/releases/2026.9.12/conformance-v1.<sha>.json upstream."
+		}
+	],
+	"notShipped": [
+		{
+			"name": "scittle.emmy.js",
+			"license": "GPL-3.0-only",
+			"reason": "No cell on this surface needs symbolic mathematics yet. Shipping 4.1 MB of GPL-3.0 Emmy that nothing calls would add license surface without adding capability. Adding it later is one pinned file plus its component rows."
+		}
+	]
 }

@@ -1,5 +1,10 @@
 // SPDX-License-Identifier: GPL-3.0-only
 // Corresponding source: this unminified file.
+//
+// Assertion semantics come from claim-v1 (eval/engine/README.md), not from this
+// file. A cell asserts `fragment` — it names a key and its value inside a larger
+// printed map, deliberately — unless the author writes data-claim="scalar-exact",
+// in which case the whole printed value must equal the claim.
 (() => {
 	const render = (cell) => {
 		const source = cell.querySelector("textarea").value;
@@ -17,8 +22,16 @@
 			const value = String(window.scittle.core.eval_string(source));
 			if (expectError) throw new Error("the deliberately invalid form unexpectedly succeeded");
 			const expected = cell.dataset.expected;
-			if (expected && !value.includes(expected)) {
-				throw new Error(`unexpected result: expected ${expected}, received ${value}`);
+			if (expected) {
+				const engine = window.HomepageEvalClaimV1;
+				if (!engine?.assert) {
+					throw new Error("claim-v1 did not arrive, so nothing here is asserted");
+				}
+				const mode = cell.dataset.claim === "scalar-exact" ? "scalar-exact" : "fragment";
+				const verdict = engine.assert(value, { mode, expected });
+				if (!verdict.pass) {
+					throw new Error(`unexpected result (${verdict.code}): expected ${expected}, received ${value}`);
+				}
 			}
 			output.textContent = value;
 			cell.dataset.state = "pass";
