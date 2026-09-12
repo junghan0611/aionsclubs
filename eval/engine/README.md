@@ -38,8 +38,9 @@ Proven to bite, on scratch copies, 2026-09-13:
 | bytes edited, filename kept | hash vs `adopted.json` (exit 1) |
 | one brick pointed at a different build | call-site scan names the file (exit 1) |
 | semantics changed **and every hash re-pinned** | conformance `field-exact-rejects-containing-number` (exit 1) |
-| adopted release older than the shelf's | `--online` shelf comparison (exit 1) |
-| shelf unreachable | reported as unobserved, exit 3, offline checks still run |
+| adopted release older than the shelf's | `--online` shelf comparison, on every publish (exit 1) |
+| the feed and the shelf page disagree | cross-check of the two discovery surfaces (exit 1) |
+| shelf unreachable | reported as unobserved, exit 3, publish proceeds |
 
 The third row is the one worth keeping: a consistent re-pin defeats every hash
 check by construction, and only the fixture noticed that `scalar-exact` had
@@ -52,9 +53,25 @@ quietly become containment again.
 Releases are immutable and content-addressed, so comparing the vendored hash
 against the *pinned* manifest can only ever agree with itself. The question worth
 a network round trip is the other one: **has the shelf published a release this
-house has not read?** That check is deliberately not in `publish` — a deploy that
-fails because a network is down is a worse house than one that ships yesterday's
-adopted engine.
+house has not read?**
+
+`verify-eval` runs it, so `publish` does. Until 2026-09-13 07:4x it did not: the
+flag existed only as a line in this file and one in `AGENTS.md`, addressed to
+whoever remembered — **the fifth time this house wrote a prose instruction where a
+gate belonged, and it was written in the same hour spent teaching this flag a new
+branch nothing would have executed.** The reason it was held back was real, and it
+survives as a split rather than an exclusion, because the script already answers
+two different questions:
+
+| the shelf says | exit | publish |
+| --- | --- | --- |
+| we agree | 0 | proceeds |
+| I cannot be reached | 3 | proceeds, and says so |
+| I disagree with you | 1 | blocked |
+
+A deploy that dies because a network died is a worse house. A deploy that never
+asks is the house that published three bricks about not asking. `ENGINE_OFFLINE=1`
+skips the round trip when you mean to.
 
 The shelf has no machine-readable index of releases. Measured 2026-09-13, all of
 `releases/`, `releases/index.json`, `latest.json`, and `releases/latest/manifest.json`

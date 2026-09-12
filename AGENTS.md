@@ -57,9 +57,12 @@ there rather than reinventing.
   `eval/engine/adopted.json` pins what this house adopted from
   `junghanacs.com/eval/engine/`; `scripts/verify-engine.mjs` gates the bytes, every
   call site, and the shelf's 12-case conformance fixture on each publish.
-  `--online` additionally asks whether the shelf has published a release this house
-  has not read — deliberately outside `publish`, because a deploy should not fail on
-  a down network. Read `eval/engine/README.md` before re-vendoring.
+  `--online` additionally asks the shelf whether it has published a release this
+  house has not read, and that runs on the road too: unreachable is reported and
+  publishes anyway (exit 3), disagreement blocks (exit 1). A deploy must not fail on
+  a down network — but that is a reason to separate the two answers, not to leave
+  the check to whoever remembers. `ENGINE_OFFLINE=1` skips it.
+  Read `eval/engine/README.md` before re-vendoring.
 - Cell source is the visible `<textarea>`; the page is its own corresponding
   source. Every asserting cell carries `data-expected`.
 - License surface travels with the runtime: `eval/licenses/`,

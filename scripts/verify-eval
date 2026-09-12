@@ -127,6 +127,30 @@ fi
 #    claims still reporting PASS. The prose is now a gate.
 if command -v node >/dev/null 2>&1; then
 	node scripts/verify-engine.mjs || fail "adopted engine module drifted (see output above)"
+
+	# 8a. and the shelf's own answer, on the road rather than in prose. Until now
+	#     `--online` existed only as an instruction in two READMEs — the same defect
+	#     this house published three bricks about, written a fifth time, by me, in
+	#     the hour I spent teaching that flag the discovery feed's arrival.
+	#     It was kept off the road because "a house whose deploy dies when the
+	#     network dies is a worse house". That reason survives here without the
+	#     exclusion, because the script already separates the two answers:
+	#       exit 3  could not reach the shelf  → say so, publish anyway
+	#       exit 1  the shelf disagrees with us → that is drift, and it blocks
+	#     Set ENGINE_OFFLINE=1 to skip the network entirely.
+	if [[ -z "${ENGINE_OFFLINE:-}" ]]; then
+		# `set -e` is on: a bare assignment from a failing substitution would abort
+		# the script before the case could read the status, so capture it explicitly
+		online_rc=0
+		online_out=$(node scripts/verify-engine.mjs --online 2>&1) || online_rc=$?
+		case "$online_rc" in
+			0) echo "$online_out" | grep -E '^engine note: (http|feed|shelf)' >&2 || true ;;
+			3) echo "note: could not reach the engine shelf — published without asking it (offline checks passed)" >&2 ;;
+			*) echo "$online_out" >&2; fail "the engine shelf disagrees with this house (see output above)" ;;
+		esac
+	else
+		echo "note: ENGINE_OFFLINE set — did not ask the shelf what it publishes now" >&2
+	fi
 else
 	echo "note: node not found — skipped the adopted-engine check" >&2
 fi
