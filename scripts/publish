@@ -97,7 +97,13 @@ fi
 
 find "$STAGING" -type d -exec chmod 755 {} +
 find "$STAGING" -type f -exec chmod 644 {} +
-[[ -f "$STAGING/scripts/publish" ]] && chmod 755 "$STAGING/scripts/publish"
+# every script git records as executable stays executable here. Naming only
+# publish was enough while nothing else in the release was ever run; the moment
+# the release began verifying itself the omission surfaced as "Permission
+# denied" from the new gate (measured 2026-09-12 in the scratch repo).
+while IFS= read -r s; do
+	if [[ -f "$STAGING/$s" ]]; then chmod 755 "$STAGING/$s"; fi
+done < <(git ls-files --stage scripts | awk '$1 == "100755" {print $4}')
 
 # secret-like VALUES, scanned against the staged release — the exact bytes that
 # will be served. The name gate above only reads paths, and the global
@@ -121,6 +127,32 @@ content_hits=$(grep -rIEn "$secret_content_re" "$STAGING" 2>/dev/null || true)
 if [[ -n "$content_hits" ]]; then
 	echo "refusing deploy: secret-like value in release content" >&2
 	printf '%s\n' "$content_hits" | sed "s|^$STAGING/||" >&2
+	exit 2
+fi
+
+# the house's central instrument, moved onto the road. verify-eval's own header
+# said "Run it before publish" and nothing ran it — across the 6 publishes after
+# it first shipped (02666b5, 2026-09-12 07:33) the only thing keeping a false
+# claim off the live site was that I remembered. Measured 2026-09-12 in a
+# scratch repo: one wrong data-expected published at exit 0 and landed in
+# current/, while verify-eval caught it in 0.47s standing beside the road. Same
+# shape as the secret gate above — a correct predicate in the wrong position —
+# so the fix has the same shape too: run it here, against the staged release,
+# on the exact bytes about to be served.
+#
+# The release verifies itself with its own copy of the verifier, so a release
+# can never be checked by a newer instrument than the one it ships.
+if command -v node >/dev/null 2>&1; then
+	# keep stdout: the failing cell names arrive there, not on stderr
+	if ! verify_out=$("$STAGING/scripts/verify-eval" "$STAGING" 2>&1); then
+		echo "refusing deploy: the release does not verify" >&2
+		printf '%s\n' "$verify_out" | sed "s|$STAGING/||g" >&2
+		exit 2
+	fi
+	printf '%s\n' "$verify_out" | tail -1
+else
+	# publish must not silently become weaker than the check it replaced
+	echo "refusing deploy: node not found — cannot verify the release's cells" >&2
 	exit 2
 fi
 

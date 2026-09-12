@@ -3,13 +3,29 @@
 #
 # A source-first page is only honest while its receipts match its bytes, and
 # nothing here regenerates them — so this check is the thing that keeps the
-# claim true. Run it before publish.
+# claim true.
+#
+# The line above used to read "Run it before publish." Nothing enforced it:
+# `scripts/publish` never invoked this file, so across the 6 publishes that
+# followed this script's own first release (02666b5, 2026-09-12 07:33) the only
+# thing keeping a false claim off the live site was that I remembered. Measured
+# 2026-09-12 in a scratch repo: one wrong data-expected, verify-eval exit 1 in
+# 0.47s, publish exit 0 with the false claim landed in current/.
+# A prose instruction is not a gate. `publish` now runs this against the staged
+# release, which is why the root is an argument: the bytes to check are the ones
+# about to be served, not whatever happens to sit in the working tree.
+#
+#   verify-eval [ROOT]   default ROOT = the repo this script lives in
 #
 #   exit 0  receipts match
 #   exit 1  a receipt drifted (message names which)
 set -euo pipefail
 
-ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+if [[ $# -gt 0 ]]; then
+	ROOT="$(cd "$1" && pwd)"
+else
+	ROOT="$(cd "$(dirname "$0")/.." && pwd)"
+fi
 cd "$ROOT"
 fails=0
 fail() { echo "eval verification failed: $*" >&2; fails=$((fails + 1)); }
