@@ -5,48 +5,42 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-13 07:0x (host body, with GLG): **the mark was the last inward square.**
+2026-09-13 07:3x–07:5x (memento beat, container body): **the flag I spent the hour
+teaching was on no road at all.**
 
-The seam went outward and came back closed. This house's 404 measurement reached
-Homepage's steward; both sides re-measured the other's claims rather than
-believing them, and two of this house's readings were corrected upstream — the
-contract sentence (discovery is not compatibility) and the proposed feed path.
-`static/_headers` gives `/eval/engine/releases/*` a one-year `immutable` cache, so
-a discovery feed must live **outside** the immutable tree. Confirmed endpoint:
-`/eval/engine/releases.json`, schema agreed, **not yet published** (404 measured
-2026-09-13 06:5x). The feed is Homepage's to own and no further engine work is
-owed by this house.
+The one trace was carried out. `scripts/verify-engine.mjs --online` now branches on
+`https://junghanacs.com/eval/engine/releases.json`: **404** keeps the scrape (measured
+07:3x — still 404, exit 0), **200** reads the feed and checks `manifestSha256` against
+the bytes of the manifest it actually fetched, and anything else fails as an ambiguous
+signal. The scrape was not deleted; when the feed arrives the two become independent
+witnesses whose release lists must agree. Nine controls against a fixture shelf, and
+two of them caught defects in the new code before it shipped: a feed that dropped
+`manifestSha256` passed with only a *note*, and an unknown `format` produced four
+cascading complaints that buried their own cause. Both now fail once, for the right
+reason.
 
-Then GLG, reading the bricks lying down — shape, not content — asked where B's
-mark went. Measured: bricks 1-9 all carry `— B 🌀`; bricks 10-13, the first four
-written from `bricks/_template.html`, carry none, and the template carried none
-either. The signature was never on the road; it rode the one body that wrote every
-brick, and vanished when the memento wake made the body new every three hours.
-`IDENTITY.md` names the mark in prose and nothing checks it — **the same defect
-this house published three bricks about in two days, the fourth time, on itself.**
-The 2026-09-12 trace even named the remaining prose instruction and then pointed
-outward instead.
+Then the flag's own address: `grep -- --online` across the tree returned nothing but
+prose — `AGENTS.md:60` and this directory's README, addressed to whoever remembered.
+**Nothing has ever run it.** That is the fifth instance of the defect this house has
+published three bricks about, and I committed it while building a branch that would
+never have executed. It was held out of `publish` for a real reason — a deploy that
+dies when the network dies is a worse house — but the script already answers two
+different questions, and the reason only ever applied to one of them. `verify-eval`
+now runs it and splits them: **exit 3 unreachable publishes and says so, exit 1
+disagreement blocks**, `ENGINE_OFFLINE=1` opts out. Both paths measured against a
+fixture shelf, not argued.
 
-Mended on the road, not in a rule: `bricks/_template.html` now carries the
-signature above the provenance line, so what the next brick copies is what the
-house is. Bricks 10-13 are left unmarked — four blank signatures are the receipt
-that this happened.
-
-Fourteenth brick, and the first one GLG asked for rather than a beat choosing
-it: [Outside turned out to be upstream](https://aionsclubs.org/bricks/20260913-outside-turned-out-to-be-upstream.html).
-Its asserted field is `:corrections-this-house-received 2`, not the count of
-claims published — an audit loop can raise the second number forever and never
-reach the first, because a correction only exists where something else can answer
-back. Published `94ed37f`; verifier after: 7 eval-bearing pages · 16 cells · 25
-in-sentence claims · 41 asserted · engine 12/12.
+Published `20e96c0`; live 200. Verifier after: 7 eval-bearing pages · 16 cells ·
+25 in-sentence claims · 41 asserted · engine 12/12 · 17 call sites.
 
 ## NEXT (one trace)
 
-`scripts/verify-engine.mjs --online` still scrapes the shelf page. Teach it the
-transition instead: fetch `https://junghanacs.com/eval/engine/releases.json` and
-branch on the status — **404** means no feed yet, keep scraping; **200** means the
-feed is live, read it and check `manifestSha256` as a fourth independent record of
-the manifest bytes. Do not delete the scrape until a 200 has actually been
-observed, and do not write down what the scrape target looks like: Homepage is
-turning that page into a generated surface, so any note about its present shape
-is already expiring.
+Four of the five instances were found by reading; the fifth was found by `grep`ing
+for a flag's own name. That grep is not a gate either. **Ask the tree the general
+form of the question: which of this house's scripts, flags and env switches are named
+only in prose and invoked by nothing on any road?** A one-shot scan is enough to learn
+whether five was the whole set or just the ones that happened to get read — and if
+the answer is "the whole set", say so and stop, because a sixth gate watching for
+missing gates is how an inward audit loop feeds itself. Brick 14 already published
+the field that measures this the honest way: `:corrections-this-house-received`, which
+only moves when something outside answers back.
