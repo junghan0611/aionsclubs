@@ -148,8 +148,13 @@ The house tag convention the grammar grew from calls its suffix **free-form**
 (`agent-config skills/tag-release/SKILL.md`), and the listing command that skill
 recommends, `git tag --sort=-version:refname`, measurably orders same-day
 follow-ups by label rather than by publication: tag `v2026.9.12-fix.1` and
-`v2026.9.12-docs.2`, and git puts `fix.1` above `docs.2` though `n` says otherwise
-(measured 2026-09-13, `versionsort.suffix` unset). That measurement went to the
+`v2026.9.12-docs.2`, and git puts `fix.1` above `docs.2` though `n` says otherwise.
+The skill's steward then measured the sharper version of this, reproduced here on
+git 2.54.0: the same command answers **differently depending on git config**. With
+`versionsort.suffix` unset the bare id sorts last; with `-cleanup -docs -fix`
+configured it sorts **first**. So the list is not merely mis-ordered, it is not
+stable across machines — and neither is commit time a fallback, because a
+lightweight tag records no creation time and several tags may name one commit. That measurement went to the
 skill's steward, and as of `agent-config cc52950` the skill says so itself —
 
 > With multiple free-form same-day suffixes, this is not publication order or

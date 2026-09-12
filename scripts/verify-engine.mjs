@@ -51,7 +51,10 @@
 // order, not a procedure a consumer re-implements. The house tag convention this
 // grammar grew from calls its suffix free-form (agent-config
 // skills/tag-release/SKILL.md), and `git tag --sort=-version:refname` measurably
-// orders same-day follow-ups by label, not by publication. That measurement went
+// orders same-day follow-ups by label, not by publication — and its answer even
+// changes with `versionsort.suffix`, so it is not stable across machines, while
+// commit time is no fallback because a lightweight tag records none. That
+// measurement went
 // to the skill's steward on 2026-09-13 and the skill now carries the disclaimer
 // itself (agent-config cc52950): with multiple free-form same-day suffixes it is
 // "not publication order or stable release chronology", and a consumer needing a
