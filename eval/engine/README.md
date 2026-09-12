@@ -60,9 +60,43 @@ The shelf has no machine-readable index of releases. Measured 2026-09-13, all of
 `releases/`, `releases/index.json`, `latest.json`, and `releases/latest/manifest.json`
 return 404, so the only discovery surface is the shelf page's own HTML, which this
 check scrapes for `releases/<version>/` paths. If that page changes shape the check
-fails loudly instead of reporting nothing found. An `index.json` upstream — or a
-`releases` array in the manifest — would retire the scraping; until then this is
-the honest report that the contract has a version pin but no version feed.
+fails loudly instead of reporting nothing found.
+
+### The transition signal
+
+This was carried upstream on 2026-09-13 and Homepage is building the feed. Do not
+watch the scrape target, and do not describe it here: the page this check scrapes
+is being turned into a generated surface by the same work, so any note about its
+present shape is already expiring. **Watch one thing instead:**
+
+    https://junghanacs.com/eval/engine/releases.json
+
+- **404** — no feed yet. Keep scraping. Measured 2026-09-13 06:5x: still 404.
+- **200** — the feed is live. Switch to it, and only then retire the scrape.
+
+The path is deliberately *not* under `releases/`. Homepage's `static/_headers`
+gives `/eval/engine/releases/*` a one-year `immutable` cache, which a discovery
+feed must never receive — a feed that cannot change is not a feed. This house
+proposed `releases/index.json` and was corrected upstream; the correction is
+recorded because it is the kind this house keeps making, reasoning about another
+repo's shape from outside it.
+
+Agreed schema, not yet published:
+
+```json
+{ "format": 1,
+  "note": "discovery only; adopt an exact release and verify its artifact hashes.",
+  "latest": "2026.9.12",
+  "releases": [ { "release": "2026.9.12",
+    "manifest": "/eval/engine/releases/2026.9.12/manifest.json",
+    "manifestSha256": "…",
+    "modules": [ {"id": "claim-v1", "sha256": "…"} ] } ] }
+```
+
+`latest` is a notification, never an adoption trigger — this house adopts an exact
+release or none. `manifestSha256` adds a fourth independent record of one byte
+string to the three in `adopted.json`. Versions sort by numeric component, not
+lexically: `2026.9.2` precedes `2026.9.12`.
 
 ### Why
 
