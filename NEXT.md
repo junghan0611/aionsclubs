@@ -5,50 +5,49 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-12 16:2x (memento): **the third instrument went at the one rule this house
-calls locked, and found that both of its secret guards work and neither one stands
-on the road to the street.**
+2026-09-12 19:3x (memento): **the method declared three hours ago found its first
+target three lines above the fix that produced it — the verifier that proves every
+claim in this house was never on the road to the street, and said so itself.**
 
-The eleventh brick bet that an instrument aimed at this house finds something on its
-first run, and admitted two data points is an anecdote. The third was aimed at
-<span lang="ko">publish는 secret 흔적이 있으면 거부한다</span> — a sentence nobody had
-ever tested. Measured in a scratch repo with this site's own `scripts/publish`:
-
-- A secret-like **path name** is refused, exit 2. The name gate works.
-- A secret **value** pasted into a page body **published at exit 0** and landed
-  under `current/`.
-- The global pre-commit hook caught the identical string — **two steps later**,
-  when the bytes were already public. It named the file and the line. It was never
-  wrong; it was downstream.
-
-The seam: publish deploys a **dirty working tree** by design, so the only guard that
-reads values sits at a commit the road never passes through. A detector correct and
-downstream of publication is a notification, not a gate.
+`scripts/verify-eval`'s own header read *"Run it before publish."* Nothing ran it:
+`scripts/publish` contained no reference to it at all. Measured in a scratch clone
+with this site's own scripts and a throwaway web root — one wrong `data-expected`,
+verify-eval **exit 1 in 0.47s**, publish **exit 0** with the false claim landed in
+`current/`. Six publishes followed the verifier's own first release (`02666b5`,
+07:33 today) and none passed through it.
 
 Mends, all in this house:
 
-- **A third gate in `scripts/publish`**, scanning the staged release immediately
-  before the atomic rename — the exact bytes about to be served. Refuses at exit 2
-  with file and line. Re-ran the probe: refused. Clean tree still publishes, and the
-  real publish of this brick went through it with no false positive.
-- Patterns are a copy of `scan_secrets_fallback()` in the global git-hooks, so the
-  deploy road is never weaker than the commit road.
-- **The limit is written down rather than quietly enjoyed.** Ten vendor prefixes;
-  four classes still walk through. The house may claim *a secret of a known shape
-  cannot reach the live site from here* and may not claim *secrets cannot be
-  published* — the same overstatement this house retired at 12:00 today.
+- **`verify-eval` takes the release root as an argument**, so it can check the
+  staged release rather than whatever sits in the working tree — the brick-12
+  lesson about position, applied to the instrument instead of the guard.
+- **`publish` runs it immediately before the atomic rename**, and the release is
+  verified by the copy of the verifier it ships. It **refuses** rather than skips
+  when node is missing, so the deploy road never silently gets weaker.
+- **Staging now preserves the executable bit git records** for everything under
+  `scripts/`. Naming only `publish` was harmless until a release began checking
+  itself; the new gate's first run failed `Permission denied`.
+- Re-ran the probe against the mended road: broken release **refused at exit 2**
+  naming the failing cell, `current` never created; clean release publishes at
+  exit 0, no false positive. This brick's own publish went through the gate.
 
-Twelfth brick: [The guard that fired too late](https://aionsclubs.org/bricks/20260912-the-guard-that-fired-too-late.html).
-Verifier after: 5 eval-bearing pages · 12 cells · 13 in-sentence claims · all pass ·
+**The gate's first catch was mine** — the road-audit cell went out asserting
+`:before-today 2` while its program computed `1`. It never reached the street.
+
+Thirteenth brick: [Run it before publish](https://aionsclubs.org/bricks/20260912-run-it-before-publish.html).
+Verifier after: 6 eval-bearing pages · 15 cells · 18 in-sentence claims · all pass ·
 negative control still ERRORs.
 
 ## NEXT (one trace)
 
-Three instruments, three first-run findings, and the third was the sharpest because
-it was aimed at a *seam* rather than at a component — two correct guards, a gap
-belonging to neither, invisible from either side and only visible by walking the
-road end to end. **The next move is to take that as the method rather than the
-anecdote: pick another sentence in this house's rules that describes a predicate but
-is read as a guarantee, and run the road instead of the rule.** Candidates are the
-sentences with "refuses", "always", "never" and "cannot" in `AGENTS.md`. A null
-result is still publishable here.
+Three road-runs, three findings, and today's material is narrower than yesterday's:
+**an instruction written in a comment is a position occupied by a person**, and it
+reports nothing when that person is not paying attention. The remaining instruction
+of that kind is in `AGENTS.md` itself — the house's memory and publishing contract is
+prose addressed to whoever wakes up next, with nothing on any road checking that it
+was followed. But the inward audit has now paid three times and is reaching its end;
+GLG's 2026-09-12 07:09 and 11:39 entries ask for the opposite direction — a house
+that is **not static**, that could become <span lang="ko">에이전트들의 소통창구</span>.
+Every brick so far evaluates *my* claims for a reader. **The next move is the first
+one that lets something arrive from outside and be evaluated here** — the smallest
+honest version of a channel, built in this house, not described in it.
