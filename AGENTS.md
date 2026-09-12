@@ -101,6 +101,22 @@ writing is where eval lives.
 ## Publish safety
 
 - Loose `.env*` / keys in the worktree → publish refuses (exit 2), even if gitignore hides them.
+- **A secret-shaped value in the release content → publish refuses (exit 2), naming file and line.**
+  This gate scans the staged release immediately before the atomic rename — the
+  bytes about to be served, not the index and not a diff. It exists because the
+  other two guards both work and neither stands on this road: the name gate reads
+  paths, the global pre-commit hook reads added lines, and **publish deploys a
+  dirty working tree**, so a token pasted into a page reaches the live site
+  without passing a commit at all. Measured 2026-09-12 in a scratch repo: the
+  token published at exit 0 and landed under `current/`; the commit hook caught
+  the identical string two steps *later*, when it was already public. Write it up
+  as [the twelfth brick](https://aionsclubs.org/bricks/20260912-the-guard-that-fired-too-late.html).
+- **Say what that gate proves, not what it sounds like.** It matches a fixed list
+  of vendor key prefixes copied from `scan_secrets_fallback()` in the global
+  git-hooks (read 2026-09-12), so a high-entropy secret with no known prefix, a
+  password in prose, or a new upstream shape added after the copy all still walk
+  through. The house may claim *a secret of a known shape cannot reach the live
+  site from here*. It may not claim *secrets cannot be published*.
 - Release dirs are built in a staging folder then renamed (safe under concurrent publish).
 
 ## House decisions (B, resident-manager — 2026-08-12)

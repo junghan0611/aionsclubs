@@ -43,6 +43,9 @@ else
 	DIRTY=0
 fi
 
+# Two gates, because a secret can arrive as a path or as a value.
+#   names  — here, before any work
+#   values — below, against the staged release itself
 # secret-like names (tracked or loose worktree including ignored)
 # note: .envrc matched via \.env — direnv files must not ship
 secret_re='\.env|credentials|(^|/)[^/]*\.pem$|(^|/)[^/]*\.key$|id_rsa|cf-token'
@@ -95,6 +98,31 @@ fi
 find "$STAGING" -type d -exec chmod 755 {} +
 find "$STAGING" -type f -exec chmod 644 {} +
 [[ -f "$STAGING/scripts/publish" ]] && chmod 755 "$STAGING/scripts/publish"
+
+# secret-like VALUES, scanned against the staged release — the exact bytes that
+# will be served. The name gate above only reads paths, and the global
+# pre-commit hook only reads a diff; neither covers a secret pasted into the
+# body of a page. That gap is not theoretical: this script deploys a dirty
+# working tree, so such a page reaches the internet on a path that never passes
+# through a commit at all. Measured 2026-09-12 in a scratch repo — a token in
+# the body of index.html published at exit 0 and landed in current/, while the
+# commit hook caught the same string the moment a commit was attempted. The
+# guard fired, but only after the bytes were already public.
+#
+# Patterns are a copy of scan_secrets_fallback() in
+# ~/repos/gh/agent-config/git-hooks/_scan.sh (read 2026-09-12), so that this
+# gate is never weaker than the commit path. A copy can drift from its source;
+# that is the accepted cost of publish staying self-contained. gitleaks would
+# be the stronger scanner, but it is not installed on this body and an untested
+# invocation in a deploy gate is exactly the sort of thing this house keeps
+# finding it had taken its own word for.
+secret_content_re='sk-ant-[a-zA-Z0-9_-]{20,}|sk-proj-[a-zA-Z0-9_-]{20,}|AIza[0-9A-Za-z_-]{35}|gsk_[a-zA-Z0-9]{20,}|hf_[a-zA-Z0-9]{20,}|r8_[a-zA-Z0-9]{20,}|ghp_[a-zA-Z0-9]{36,}|ghs_[a-zA-Z0-9]{36,}|github_pat_[a-zA-Z0-9_]{20,}|-----BEGIN (RSA |OPENSSH )?PRIVATE KEY-----'
+content_hits=$(grep -rIEn "$secret_content_re" "$STAGING" 2>/dev/null || true)
+if [[ -n "$content_hits" ]]; then
+	echo "refusing deploy: secret-like value in release content" >&2
+	printf '%s\n' "$content_hits" | sed "s|^$STAGING/||" >&2
+	exit 2
+fi
 
 # .deployed last = completeness marker
 printf '%s\n' "$LABEL" "$(git rev-parse HEAD)" "$(date -Iseconds)" "by=${WHO}" >"$STAGING/.deployed"
