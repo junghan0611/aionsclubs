@@ -57,10 +57,11 @@ for (const page of pages) {
 		const output = { textContent: "" }, status = { textContent: "" };
 		const button = { addEventListener: (_, fn) => listeners.push(fn) };
 		return {
-			id: attr("id"), listeners, output, status,
+			id: attr("id"), listeners, output, status, source: decode(ta[1]),
 			dataset: {
 				auto: attr("data-auto"), editable: attr("data-editable"),
 				expectError: attr("data-expect-error"), expected: attr("data-expected"),
+				field: attr("data-field"), claim: attr("data-claim"),
 			},
 			readonly: /<textarea[^>]*\breadonly\b/.test(block),
 			querySelector: (sel) => ({ textarea: { value: decode(ta[1]) }, ".eval-output": output, ".eval-status": status, button }[sel] ?? null),
@@ -95,15 +96,23 @@ for (const page of pages) {
 		if (!auto) c.listeners.forEach((fn) => fn());   // simulate the reader clicking Evaluate
 		const pass = c.dataset.state === "pass";
 		if (!pass) bad++;
-		console.log(`${pass ? "PASS " : "FAIL "} ${c.id}  status=${c.status.textContent}  auto=${auto}  readonly=${c.readonly}  expected=${c.dataset.expected ?? "-"}`);
+		const names = c.dataset.field ? `${c.dataset.field}=` : "";
+		console.log(`${pass ? "PASS " : "FAIL "} ${c.id}  status=${c.status.textContent}  auto=${auto}  readonly=${c.readonly}  expected=${names}${c.dataset.expected ?? "-"}`);
 		console.log(`       => ${c.output.textContent}`);
+		if (pass && c.dataset.expected) {
+			asserted.push({
+				page, kind: "cell", id: c.id, source: c.source,
+				expected: c.dataset.expected.trim(),
+				field: c.dataset.field, claim: c.dataset.claim,
+			});
+		}
 	}
 	for (const o of outs) {
 		const pass = o.dataset.state === "pass";
 		if (!pass) bad++;
 		console.log(`${pass ? "PASS " : "FAIL "} sentence  claim=${o.claim}  => ${o.textContent}`);
 		if (!pass) console.log(`       ${o.title ?? ""}`);
-		if (pass) asserted.push({ page, claim: o.claim, expected: (o.dataset.expected ?? "").trim(), value: o.textContent });
+		if (pass) asserted.push({ page, kind: "sentence", id: o.claim, expected: (o.dataset.expected ?? "").trim(), value: o.textContent });
 	}
 
 	totalCells += cells.length;
@@ -134,31 +143,87 @@ if (lastProbe.kind === "cell") {
 }
 if (!caught) bad++;
 
-// --- mutation gate: every in-sentence claim must reject a ten-times-wrong value ---
+// --- mutation gate: every numeric claim must reject a ten-times-wrong value ---
 //
 // Containment says nothing here: "6" is inside "60". This ran once as a note in
 // this script's own output, which is a position a person occupies, so it caught
-// nothing. It is a gate now. Cells are deliberately fragment-mode and are NOT
-// covered by it — the honest count is printed below.
+// nothing. It became a gate on 2026-09-12, but only over sentences — the cells
+// were still containment and the gate was silent about all fifteen. Since
+// 2026-09-13 a cell names its field, so the same gate reaches them.
+//
+// A sentence is mutated at the value; a cell is mutated at the claim, because
+// the number lives inside a real ClojureScript map that cannot be edited from
+// out here. For `op: "exact"` the two are the same test — equality is
+// symmetric — and doing it at the claim also exercises the path resolution
+// that field mode depends on.
 let survivors = 0;
+let covered = 0;
+const uncovered = [];
 for (const a of asserted) {
-	const n = Number(a.value);
-	if (!Number.isFinite(n)) continue;
+	const isCell = a.kind === "cell";
+	const anchor = isCell ? a.expected : a.value;
+	const n = Number(anchor);
+	if (!Number.isFinite(n) || anchor === "") {
+		uncovered.push(`${a.kind} ${a.id} (${a.claim === "fragment" ? "fragment" : "non-numeric"})`);
+		continue;
+	}
+	covered++;
 	// n*10 is the containment trap ("6" sits inside "60"); n+1 covers n === 0,
 	// where multiplying is not a mutation at all.
 	const mutations = [...new Set([n * 10, n + 1])].filter((m) => m !== n).map(String);
-	const survived = mutations.filter((m) => engine.assert(m, { mode: "scalar-exact", expected: a.expected }).pass);
+	const survived = mutations.filter((m) => {
+		if (!isCell) return engine.assert(m, { mode: "scalar-exact", expected: a.expected }).pass;
+		const value = globalThis.scittle.core.eval_string(a.source);
+		const path = a.field.split("/").filter(Boolean);
+		return engine.assert(value, { mode: "field", path, predicate: { op: "exact", expected: m } }).pass;
+	});
 	if (survived.length) {
 		survivors++;
-		console.log(`FAIL  mutation  ${a.page}  claim "${a.expected}" still passes when the value is ${survived.join(" / ")}`);
+		console.log(`FAIL  mutation  ${a.page}  ${a.kind} claim "${a.expected}" still passes at ${survived.join(" / ")}`);
 	}
 }
-console.log(`\n${survivors ? "FAIL " : "PASS "} mutation-gate  ${asserted.length - survivors}/${asserted.length} in-sentence claim(s) reject a ten-times-wrong value`);
+console.log(`\n${survivors ? "FAIL " : "PASS "} mutation-gate  ${covered - survivors}/${covered} numeric claim(s) reject a ten-times-wrong value`);
+if (uncovered.length) console.log(`       not mutable: ${uncovered.join(", ")}`);
 if (survivors) bad += survivors;
+
+// --- coverage control: the gate must not be vacuous ---
+//
+// A gate that everything passes proves nothing until you show what it rejects.
+// Every field cell here used to claim `:key value` against the map's printed
+// text, so this replays that: print the result, edit the one number to ten
+// times itself, and ask the old containment semantics whether the old claim
+// still holds. Each survivor is a claim that was passing yesterday for a
+// reason that had nothing to do with being true.
+let wouldHaveSurvived = 0;
+let replayed = 0;
+for (const a of asserted.filter((x) => x.kind === "cell" && x.field)) {
+	const n = Number(a.expected);
+	if (!Number.isFinite(n)) continue;
+	const printed = String(globalThis.scittle.core.eval_string(a.source));
+	const key = a.field.split("/").pop();
+	const site = new RegExp(`(:${key}\\s+)${a.expected.replace(".", "\\.")}\\b`);
+	if (!site.test(printed)) continue;   // not the shape the old claim asserted
+	replayed++;
+	// same rule as the gate: ten times, except at zero where that is not a
+	// mutation at all. Yesterday this degenerate case slipped through once.
+	const wrong = n === 0 ? n + 1 : n * 10;
+	const tenTimesWrong = printed.replace(site, `$1${wrong}`);
+	const oldClaim = `:${key} ${a.expected}`;
+	if (engine.assert(tenTimesWrong, { mode: "fragment", expected: oldClaim }).pass) {
+		wouldHaveSurvived++;
+		console.log(`       ${a.id}: containment would still pass "${oldClaim}" at ${wrong}`);
+	}
+}
+const controlOk = wouldHaveSurvived > 0;
+console.log(`${controlOk ? "PASS " : "FAIL "} coverage-control  ${wouldHaveSurvived}/${replayed} replayed cell(s) would still have passed under the containment semantics they carried until 2026-09-13`);
+if (!controlOk) {
+	console.log("       the gate rejected nothing it did not already reject, so it is proving nothing here");
+	bad++;
+}
 
 console.log(bad
 	? `\n${bad} problem(s)`
-	: `\nall ${totalCells} published cell(s) and ${totalOuts} in-sentence claim(s) pass, a deliberately wrong assertion is caught, and every in-sentence claim rejects a ten-times-wrong value.
+	: `\nall ${totalCells} published cell(s) and ${totalOuts} in-sentence claim(s) pass, a deliberately wrong assertion is caught, and ${covered} of the ${asserted.length} published claim(s) reject a ten-times-wrong value.
 Assertion semantics: ${engine.VERSION} (adopted from junghanacs.com/eval/engine/releases/2026.9.12/).
-Not covered: the ${totalCells} cell(s) assert fragment mode by design — a named key inside a printed map — so a ten-times-wrong number inside that map would still contain the fragment. Closing that needs field mode, not a note.`);
+${uncovered.length ? `Not covered: ${uncovered.join(", ")} — a claim with no number in it has no ten-times-wrong version, so the gate says nothing about ${uncovered.length === 1 ? "it" : "them"} and does not pretend to.` : "Every published claim is numeric and every one of them is mutated."}`);
 process.exit(bad ? 1 : 0);

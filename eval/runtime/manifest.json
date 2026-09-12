@@ -24,10 +24,10 @@
 			"path": "../eval.js",
 			"publicPath": "/eval/eval.js",
 			"origin": "https://github.com/junghan0611/homepage/blob/main/assets/js/eval.js",
-			"sha256": "04fce12d38023bd6922aabc10147ef0fea99f52f49c7e0c47210a84113d8e1f0",
+			"sha256": "7e14fd6c35c6b8f87a69dfeada39569be9641786251eb4df69da2e46a959b6f2",
 			"license": "GPL-3.0-only",
 			"source": "/eval/eval.js",
-			"note": "Served unminified; the served file is its own corresponding source. Was byte-identical to the upstream evaluator, which junghanacs.com froze as engine module cell-v1 (sha256 33595f963be56964bb8544401eec19b7d65c5193816826c2da6f372a6c9234f6). This house then moved its assertion semantics out of this file and into claim-v1, so the bytes now differ from cell-v1 by that delegation."
+			"note": "Served unminified; the served file is its own corresponding source. Was byte-identical to the upstream evaluator, which junghanacs.com froze as engine module cell-v1 (sha256 33595f963be56964bb8544401eec19b7d65c5193816826c2da6f372a6c9234f6). This house then moved its assertion semantics out of this file and into claim-v1, so the bytes now differ from cell-v1 by that delegation. Since 2026-09-13 a cell may also name one field of its result (data-field) and have claim-v1 select it inside the value in `field` mode, instead of asserting containment against the printed text."
 		},
 		{
 			"path": "../inline.js",

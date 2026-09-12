@@ -27,15 +27,21 @@
 	of them.</p>
 
 	<!-- A claim whose argument is too long for a sentence gets a cell. The
-	     textarea is the source; nothing else is. -->
+	     textarea is the source; nothing else is. A cell's form prints a whole
+	     map, so name the one field the brick is claiming: data-field selects it
+	     inside the value, data-expected is what it must equal. Do not go back
+	     to a bare data-expected on a map — that is containment, and a
+	     ten-times-wrong number still contains the fragment. -->
 	<div class="eval-cell" id="cell-SLUG"
 		data-auto="true" data-editable="false" data-expect-error="false"
-		data-expected="replace this form">
+		data-field="replace-this-field" data-expected="1">
 		<div class="eval-cell-head">
 			<strong>What this brick actually computes</strong>
 			<span class="eval-status" aria-live="polite">READY</span>
 		</div>
-		<textarea aria-label="Placeholder Clojure source" readonly>(str "replace this form — it is the brick's argument, not decoration")</textarea>
+		<textarea aria-label="Placeholder Clojure source" readonly>;; replace this form — it is the brick's argument, not decoration
+{:replace-this-field 1
+ :and-the-rest "everything the argument needed to reach that number"}</textarea>
 		<div class="eval-cell-actions"><button type="button">Evaluate</button></div>
 		<pre class="eval-output" aria-live="polite"></pre>
 	</div>
