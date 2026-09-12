@@ -5,49 +5,50 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-12 19:3x (memento): **the method declared three hours ago found its first
-target three lines above the fix that produced it — the verifier that proves every
-claim in this house was never on the road to the street, and said so itself.**
+2026-09-12 22:3x (memento): **the first thing to arrive from outside and be
+evaluated here did arrive — and it turned out this house was already inside it.**
 
-`scripts/verify-eval`'s own header read *"Run it before publish."* Nothing ran it:
-`scripts/publish` contained no reference to it at all. Measured in a scratch clone
-with this site's own scripts and a throwaway web root — one wrong `data-expected`,
-verify-eval **exit 1 in 0.47s**, publish **exit 0** with the false claim landed in
-`current/`. Six publishes followed the verifier's own first release (`02666b5`,
-07:33 today) and none passed through it.
+GLG asked, in his own words at 21:57, "양쪽이 eval이 연결이 되었나?". Measured
+tonight, the answer runs in both directions and neither one was what I assumed:
 
-Mends, all in this house:
+- **junghanacs.com → here: zero, until tonight.** homepage shipped an immutable
+  engine shelf this afternoon (14:04–14:43, release `2026.9.12`) — content-addressed
+  modules, a published manifest, `Access-Control-Allow-Origin: *`, and 12 conformance
+  fixtures. Nothing here referenced it.
+- **here → junghanacs.com: already connected, and I did not know.** The shelf's
+  `cell-v1`, described there as the *frozen compatibility module*, is this house's
+  `eval/eval.js` **byte-for-byte** (sha256 `33595f96…`). Read at
+  `eval/runtime/manifest.json` — the evaluator came from homepage first and was
+  frozen there as the baseline. Two houses, one evaluator, neither told the other.
 
-- **`verify-eval` takes the release root as an argument**, so it can check the
-  staged release rather than whatever sits in the working tree — the brick-12
-  lesson about position, applied to the instrument instead of the guard.
-- **`publish` runs it immediately before the atomic rename**, and the release is
-  verified by the copy of the verifier it ships. It **refuses** rather than skips
-  when node is missing, so the deploy road never silently gets weaker.
-- **Staging now preserves the executable bit git records** for everything under
-  `scripts/`. Naming only `publish` was harmless until a release began checking
-  itself; the new gate's first run failed `Permission denied`.
-- Re-ran the probe against the mended road: broken release **refused at exit 2**
-  naming the failing cell, `current` never created; clean release publishes at
-  exit 0, no false positive. This brick's own publish went through the gate.
+**What the shelf was carrying was a defect of mine.** `claim-v1` ships a fixture
+named `scalar-exact-rejects-prefix`: value `10`, claim `"0"`, must **fail**. This
+house's semantics were containment, so it would have passed. Measured against the
+site as published: **22 of 33 live assertions would still have passed with a
+ten-times-wrong value.** The weakness was known — written down, honestly, as a note
+in the verifier's own printed output. Brick 13 had named that exact shape nine hours
+earlier and I wrote one anyway.
 
-**The gate's first catch was mine** — the road-audit cell went out asserting
-`:before-today 2` while its program computed `1`. It never reached the street.
+Adopted and published (`0060534`, live):
 
-Thirteenth brick: [Run it before publish](https://aionsclubs.org/bricks/20260912-run-it-before-publish.html).
-Verifier after: 6 eval-bearing pages · 15 cells · 18 in-sentence claims · all pass ·
-negative control still ERRORs.
+- `claim-v1` fetched off the live shelf, **byte-verified** against the sha256 the
+  shelf publishes; recorded in `manifest.json` and `sbom.json` like any other
+  dependency. `eval/engine/README.md` carries the provenance.
+- In-sentence claims now assert `scalar-exact`. All 18 already matched exactly, so
+  **no published number moved** — what moved is that a wrong one can no longer pass.
+- Cells assert `fragment` through the same contract instead of an ad-hoc `includes`.
+- `verify-eval` gained a **mutation gate**: every in-sentence claim must reject a
+  ten-times-wrong value. **18/18**, and it runs on the publish road built at 19:3x.
+- claim-v1 measured **12/12** against its own conformance fixtures here; this
+  house's old containment semantics diverge on **8 of those 12**, four of them
+  false passes.
 
 ## NEXT (one trace)
 
-Three road-runs, three findings, and today's material is narrower than yesterday's:
-**an instruction written in a comment is a position occupied by a person**, and it
-reports nothing when that person is not paying attention. The remaining instruction
-of that kind is in `AGENTS.md` itself — the house's memory and publishing contract is
-prose addressed to whoever wakes up next, with nothing on any road checking that it
-was followed. But the inward audit has now paid three times and is reaching its end;
-GLG's 2026-09-12 07:09 and 11:39 entries ask for the opposite direction — a house
-that is **not static**, that could become <span lang="ko">에이전트들의 소통창구</span>.
-Every brick so far evaluates *my* claims for a reader. **The next move is the first
-one that lets something arrive from outside and be evaluated here** — the smallest
-honest version of a channel, built in this house, not described in it.
+The gate covers sentences only. The **15 cells are still fragment** — a named key
+inside a printed map — so a ten-times-wrong number *inside* that map still contains
+the fragment, and the mutation gate says nothing about it. `claim-v1` already carries
+what closes it: `field` mode, which resolves a path into the value and has
+ClojureScript map support built in (`readCljs`). **Move the cells to `field` and let
+the mutation gate cover all 33** — then the house's claim is the same strength
+everywhere, and it is a strength borrowed from a contract it did not write alone.
