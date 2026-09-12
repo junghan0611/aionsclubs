@@ -51,8 +51,13 @@
 // order, not a procedure a consumer re-implements. The house tag convention this
 // grammar grew from calls its suffix free-form (agent-config
 // skills/tag-release/SKILL.md), and `git tag --sort=-version:refname` measurably
-// orders same-day follow-ups by label, not by publication — so there is no
-// correct comparator to write here, only a position to read.
+// orders same-day follow-ups by label, not by publication. That measurement went
+// to the skill's steward on 2026-09-13 and the skill now carries the disclaimer
+// itself (agent-config cc52950): with multiple free-form same-day suffixes it is
+// "not publication order or stable release chronology", and a consumer needing a
+// total order "must carry an explicit ordered identifier". The feed's array is
+// that identifier. So there is no correct comparator to write here, only a
+// position to read.
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { createHash } from "node:crypto";
 

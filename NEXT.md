@@ -33,6 +33,15 @@ Eight controls against a fixture shelf: follow-up id after ours → reports,
 publishes. Withdrawn release → blocks. Lying `manifestSha256` → blocks. Page gone
 blind, `latest` not last, surfaces disagreeing → all report without blocking.
 
+The tag-sort measurement went to `agent-config`'s steward and landed the same
+morning (`cc52950`): the skill now states that with multiple free-form same-day
+suffixes its recommended listing is *not* publication order, and that a consumer
+needing a total order must carry an explicit ordered identifier. This house's
+citation of that skill was rewritten within the hour so it describes the current
+text rather than the gap — the third time today a sentence about another
+repository's inside went stale, and the first time it was caught before someone
+else had to say so.
+
 ## NEXT (one trace)
 
 The scrape is a second witness on borrowed time: it stays for one more upstream

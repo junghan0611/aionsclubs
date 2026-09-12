@@ -143,13 +143,23 @@ order, not a procedure a consumer re-implements. This check now also reports whe
 `latest` is not the last array element, because that is the guarantee the position
 read rests on.
 
-That this is the right shape has a second receipt. The house tag convention the
-grammar grew from calls its suffix **free-form** (`agent-config
-skills/tag-release/SKILL.md`), while the listing command that same skill
+That this is the right shape has a second receipt, and it moved the same morning.
+The house tag convention the grammar grew from calls its suffix **free-form**
+(`agent-config skills/tag-release/SKILL.md`), and the listing command that skill
 recommends, `git tag --sort=-version:refname`, measurably orders same-day
-follow-ups by label rather than by publication — tag `v2026.9.12-fix.1` and
-`v2026.9.12-docs.2` and git puts `fix.1` above `docs.2`, though `n` says
-otherwise. There is no correct comparator to write here, only a position to read.
+follow-ups by label rather than by publication: tag `v2026.9.12-fix.1` and
+`v2026.9.12-docs.2`, and git puts `fix.1` above `docs.2` though `n` says otherwise
+(measured 2026-09-13, `versionsort.suffix` unset). That measurement went to the
+skill's steward, and as of `agent-config cc52950` the skill says so itself —
+
+> With multiple free-form same-day suffixes, this is not publication order or
+> stable release chronology; consumers needing a total order must carry an
+> explicit ordered identifier.
+
+— so this paragraph no longer describes a gap, it records why the disclaimer
+exists. The explicit ordered identifier that sentence asks for is exactly what the
+upstream feed carries: the array. There is no correct comparator to write here,
+only a position to read.
 
 ### What blocks a publish, and what only reports
 
