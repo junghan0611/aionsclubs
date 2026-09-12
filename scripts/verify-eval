@@ -118,6 +118,19 @@ else
 	echo "note: node not found — skipped the cell evaluation probe" >&2
 fi
 
+# 8. the adopted engine module is the one the shelf published, and it still
+#    satisfies the shelf's conformance fixture. `eval/engine/README.md` claimed
+#    this file re-checked that "on every publish"; measured 2026-09-13, this
+#    script did not mention eval/engine/ at all. The hash lived in a filename,
+#    and a filename survives any edit to the bytes it names — so swapped bytes
+#    would have redefined what every assertion in the house means with all 33
+#    claims still reporting PASS. The prose is now a gate.
+if command -v node >/dev/null 2>&1; then
+	node scripts/verify-engine.mjs || fail "adopted engine module drifted (see output above)"
+else
+	echo "note: node not found — skipped the adopted-engine check" >&2
+fi
+
 if [[ "$fails" -gt 0 ]]; then
 	echo "eval: $fails problem(s)" >&2
 	exit 1

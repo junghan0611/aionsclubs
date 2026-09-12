@@ -1,0 +1,31 @@
+{
+	"format": 1,
+	"comment": "What this house adopted from junghanacs.com's engine shelf, in machine-readable form. scripts/verify-engine reads this file; eval/engine/README.md is the prose beside it. The shelf publishes immutable releases, so drift can only mean two things: the bytes here stopped matching the hash the shelf published, or the shelf published a newer release this house has not looked at.",
+	"shelf": "https://junghanacs.com/eval/engine/",
+	"release": "2026.9.12",
+	"releasePath": "releases/{release}/",
+	"adopted": "2026-09-12",
+	"license": "GPL-3.0-only",
+	"modules": [
+		{
+			"id": "claim-v1",
+			"file": "eval/engine/claim-v1.52803ba04b0bd6239e4a80ed2d51d53029cfb4c36a8ddae84e4de2f27e5227f1.js",
+			"sha256": "52803ba04b0bd6239e4a80ed2d51d53029cfb4c36a8ddae84e4de2f27e5227f1",
+			"global": "HomepageEvalClaimV1",
+			"callSites": "not listed here on purpose — scripts/verify-engine finds every reference to a claim-v1.<sha256>.js path in the tree and requires all of them to be this hash, so re-vendoring cannot leave one page behind"
+		}
+	],
+	"conformance": {
+		"contract": "claim-v1",
+		"file": "eval/engine/conformance-v1.1b1967a47deec8388daeb71f35e463fcac79e8cc16477ad068fb6d20efaba603.json",
+		"sha256": "1b1967a47deec8388daeb71f35e463fcac79e8cc16477ad068fb6d20efaba603",
+		"cases": 12
+	},
+	"notAdopted": [
+		{
+			"id": "cell-v1",
+			"why": "cell-v1 is this house's own eval/eval.js as it stood on 2026-09-12, frozen upstream as the compatibility baseline. The house runs the moving version, not the frozen copy, so there is nothing to vendor.",
+			"sha256": "33595f963be56964bb8544401eec19b7d65c5193816826c2da6f372a6c9234f6"
+		}
+	]
+}

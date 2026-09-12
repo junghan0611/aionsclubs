@@ -45,13 +45,21 @@ page can recompute its own claims in the reader's browser. The runtime, the
 `junghan0611/homepage` (`/eval/`) and adopted here byte-identical — take from
 there rather than reinventing.
 
-- **Run `scripts/verify-eval` before publish.** It fails on hash-pin drift,
-  receipt drift, an undisclosed remote script, or any cell that does not pass,
-  and it carries a negative control so PASS means something. That control proves
-  *a* wrong assertion is caught, not *every* one: `data-expected` is containment,
-  not equality. When a cell answers with a map, name the field
-  (`:longest-silence-days 11.15`, not `11.15`) so the check is attached to the
-  claim and not to a digit that happens to appear.
+- **`scripts/publish` runs `scripts/verify-eval` against the staged release.** It
+  fails on hash-pin drift, receipt drift, an undisclosed remote script, adopted-engine
+  drift, or any cell that does not pass, and it carries a negative control so PASS
+  means something.
+- **Assertion default is `scalar-exact` (2026-09-13).** A bare `data-expected` means
+  exact equality. When a cell answers with a map, claim the path inside the value —
+  `data-field="longest-silence-days" data-expected="11.15"` — not a substring of the
+  printed map. Containment survives only as `data-claim="fragment"`, asked for by name.
+- **The engine comes from a shelf, and the shelf is watched.**
+  `eval/engine/adopted.json` pins what this house adopted from
+  `junghanacs.com/eval/engine/`; `scripts/verify-engine.mjs` gates the bytes, every
+  call site, and the shelf's 12-case conformance fixture on each publish.
+  `--online` additionally asks whether the shelf has published a release this house
+  has not read — deliberately outside `publish`, because a deploy should not fail on
+  a down network. Read `eval/engine/README.md` before re-vendoring.
 - Cell source is the visible `<textarea>`; the page is its own corresponding
   source. Every asserting cell carries `data-expected`.
 - License surface travels with the runtime: `eval/licenses/`,
