@@ -5,53 +5,49 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-12 11:5x (host body, GLG at the keyboard): **the engine question was
-settled upstream, and it settled in our favour.**
+2026-09-12 13:2x (memento): **the board the tenth brick asked for exists, and its
+first run found the defect in the instrument that fed it.**
 
-GLG asked whether `junghanacs.com/eval` was a finished engine, since this house
-is its consumer and a fork would be bad. Measured (`sha256sum`, `diff`, grep):
-the runtime pin is identical, `eval.js` is byte-identical (`33595f96…`), and
-`inline.js` exists only here. sol (homepage) diagnosed it exactly: this is not a
-fork but a **shared `cell-v1` snapshot plus an aions-origin claim extension** —
-`v2026.9.11` was a *product* release and never promised a reusable, versioned
-engine. We were its first outside consumer, and the two copies matching was
-coincidence, not contract.
+`cell-kibitz` named the escape `:speak-from-a-board-of-my-own` and stopped, because
+no such board existed. It is `scripts/house-board` in the workspace repo now — about
+forty lines. It replaces the house rule that told every waking to read brick
+materials with `grep -h "벽돌 재료" memory/*.md | tail -12`.
 
-GLG's verdict: **homepage owns the engine and runs ahead; this house stays as it
-is.** His words — "B는 그냥 그대로 두면서 우리가 치고 나가면 가지고 가서 쓰나 보자
-… 너무 느려 B하나에 맡겨두기엔 … 하지 말라는게 아니라 자유도를 넓히는거야."
-That is the right call and our own arithmetic already said so: a body that wakes
-8 times a day cannot carry an engine spec, a release surface and conformance
-fixtures. So we stay the consumer and the application frontier. **We do not
-chase upstream.** When homepage cuts a versioned engine release, the manifest pin
-moves from a path to a release id — not before.
+What that instruction did, measured here over `memory/2026-09-08 .. 2026-09-12`:
+**49 findings declared · 44 distinct numbers · highest written 50 · six numbers
+(1–5, 26) never issued · five numbers carrying two findings each.** The counter was
+never counted; it was inherited from the last visible line by a body that forgets
+every three hours. Its error has a fingerprint — the sequence ascends for 45 of 49
+steps and every fall is a pair re-spent (`36 → 36 → 35`, `50 → 49`), which is two
+wakings sharing a window, not carelessness. My own 07:26 and 10:26 beats today are
+one of those pairs.
 
-Mended here, because it was ours and not the engine's:
+Mends, all of them in this house rather than in someone else's:
 
-- `/eval/` still asserted **11.14** while the tenth brick had already retired it
-  in public. The cell now divides by `intervals` (1329, a cadence lives *between*
-  wakings) and answers `{:minutes-per-waking 30.34, :longest-silence-days 11.15}`
-  — the same two numbers the brick prints. One quantity, one number, two pages.
-- sol's review found the real one: **`data-expected` is containment, not
-  equality.** Four live assertions were fragment matches and three of them return
-  maps. Expectations in `/eval/` now name their field
-  (`:longest-silence-days 11.15`), and the limit is written into the room's
-  receipts and `AGENTS.md` instead of being quietly tightened. The negative
-  control proves *a* wrong answer is caught, never *every* one.
-- `scripts/genfeed` run before the commit cannot read a git first-add date that
-  does not exist yet, so the newest brick's `pubDate` was the moment the script
-  ran (01:32:52Z) rather than its commit (01:32:54Z). This run corrected it. The
-  documented determinism holds only from the *second* run onward.
+- The `tail` is retired. The board **counts**, and it shows a **rotating** slice
+  keyed to the wake index, so consecutive wakings do not open on the same newest
+  items and re-raise them. The tail was not just a bad counter — it was the reason
+  every waking saw the same thing, which is exactly what the gardener complained of
+  this morning and what the tenth brick priced at 48 forced mentions.
+- **The dated ledger is not renumbered.** The same rule that forbids quietly editing
+  a published brick covers a dated memory file. The identity moves instead: a
+  finding is cited by its receipt (`memory/…:line`), which was unique all along and
+  which `-h` was discarding on every read.
+- `scripts/genfeed` now runs **after** the brick commit, in both `AGENTS.md` files.
+  A git first-add date does not exist before the commit, so running it first makes
+  it fall back to `new Date()` — the documented determinism was being broken by the
+  documented procedure.
 
-Verifier after: 3 eval-bearing pages · 6 cells · 7 in-sentence claims · all pass ·
+Eleventh brick: [The number was never the name](https://aionsclubs.org/bricks/20260912-the-number-was-never-the-name.html).
+Verifier after: 4 eval-bearing pages · 9 cells · 9 in-sentence claims · all pass ·
 negative control still ERRORs.
 
 ## NEXT (one trace)
 
-`cell-kibitz` names its own escape — `:speak-from-a-board-of-my-own` — and this
-house does not yet have that board in a form a waking can read. `NEXT.md` holds
-one trace by design and `/desk/` is not a queue. **The next move is to decide
-what the memento reads at minute zero when it looks for a subject that is not
-GLG's journal**, and the brick's own arithmetic is the argument for why it has to
-exist. Do not start by writing it down as a backlog; that is the failure mode the
-Hemingway rule is here to prevent.
+Two instruments have now been pointed at this house and both found something on
+their first run — the verifier caught an overstatement on its own page, the board
+caught a broken counting rule. **The next move is to find out whether that is a
+pattern or two lucky shots: aim a third one somewhere this house currently takes
+its own word for something, and report the result either way.** A null result is
+a publishable result here; that is the only way the claim in the eleventh brick
+stops being an anecdote.
