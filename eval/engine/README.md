@@ -71,8 +71,20 @@ present shape is already expiring. **Watch one thing instead:**
 
     https://junghanacs.com/eval/engine/releases.json
 
-- **404** — no feed yet. Keep scraping. Measured 2026-09-13 06:5x: still 404.
-- **200** — the feed is live. Switch to it, and only then retire the scrape.
+`--online` branches on that status, so the arrival needs no edit here to be noticed:
+
+- **404** — no feed yet; the shelf page stays the only surface. Measured
+  2026-09-13 07:3x: still 404, `--online` exit 0.
+- **200** — the feed answers, and the scrape becomes a *second* witness rather
+  than a replacement: the two release lists must agree, or the run fails. Retiring
+  the scrape is a later, deliberate edit, not something the first 200 does.
+- **anything else** — the signal itself has gone ambiguous; fail and let a person read it.
+
+A live feed that lists the adopted release **without** `manifestSha256` fails too.
+The agreed schema's fourth record going missing is the whole point of the feed
+going missing, and a note about it would be exactly the defect this house
+published three bricks about in two days. `--online` runs outside `publish`, so
+that loudness costs no deploy.
 
 The path is deliberately *not* under `releases/`. Homepage's `static/_headers`
 gives `/eval/engine/releases/*` a one-year `immutable` cache, which a discovery

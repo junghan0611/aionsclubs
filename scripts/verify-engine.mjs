@@ -20,11 +20,16 @@
 // The shelf publishes immutable content-addressed releases, so comparing the
 // vendored hash against the *pinned* manifest can only ever agree with itself.
 // The question worth asking over the network is the other one: has the shelf
-// published a release this house has not looked at? There is no machine-readable
-// answer to that — measured 2026-09-13, `releases/`, `releases/index.json`,
-// `latest.json`, and `releases/latest/manifest.json` are all 404 — so the only
-// discovery surface is the shelf page's own HTML. Scraping it is not elegance;
-// it is the honest report that the contract has no index yet.
+// published a release this house has not looked at?
+//
+// That question is mid-transition. It was carried upstream on 2026-09-13 and
+// Homepage agreed to publish a discovery feed at `/eval/engine/releases.json`
+// (deliberately outside `releases/`, whose one-year `immutable` cache a feed must
+// never receive). So this check watches the feed's *arrival* rather than any
+// surface's present shape: 404 means keep scraping the shelf page, 200 means the
+// feed answers and the scrape becomes a second, independent witness that must
+// agree with it. The scrape is not deleted on the first 200 — two discovery
+// surfaces that disagree is exactly the drift worth failing on.
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { createHash } from "node:crypto";
 
@@ -116,10 +121,16 @@ let cases = 0, conformancePass = 0;
 // 4. the shelf, if we are allowed to ask. Two questions: does the pinned release
 //    still publish our hash, and is there a newer release we have not read?
 if (online) {
+	// throwing on a bad status is right for a resource that must exist; the feed
+	// is the one URL whose *absence* is a documented state, so it gets `probe`
 	const get = async (url) => {
 		const response = await fetch(url, { signal: AbortSignal.timeout(15000), redirect: "follow" });
 		if (!response.ok) throw new Error(`HTTP ${response.status}`);
 		return response.text();
+	};
+	const probe = async (url) => {
+		const response = await fetch(url, { signal: AbortSignal.timeout(15000), redirect: "follow" });
+		return { status: response.status, body: response.ok ? await response.text() : null };
 	};
 	const asVersion = (v) => v.split(".").map(Number);
 	const newer = (a, b) => {
@@ -132,8 +143,12 @@ if (online) {
 	// derived, never a second field to keep in step: a manifest URL that could
 	// disagree with adopted.release is a receipt that can lie by omission
 	const manifestUrl = new URL(`${adopted.releasePath.replace("{release}", adopted.release)}manifest.json`, adopted.shelf).href;
+	const feedUrl = new URL("releases.json", adopted.shelf).href;
 	try {
-		const manifest = JSON.parse(await get(manifestUrl));
+		// keep the bytes, not just the parse: manifestSha256 in the feed is a claim
+		// about this byte string, and it can only be checked against what arrived
+		const manifestBytes = await get(manifestUrl);
+		const manifest = JSON.parse(manifestBytes);
 		if (manifest.release !== adopted.release)
 			fail(`${manifestUrl} reports release ${manifest.release}, adopted.json says ${adopted.release}`);
 		for (const module of adopted.modules) {
@@ -146,6 +161,55 @@ if (online) {
 			fail(`conformance fixture: shelf publishes ${manifest.conformance.sha256}, this house vendored ${adopted.conformance.sha256}`);
 		notes.push(`release ${manifest.release} manifest still publishes every adopted hash`);
 
+		// 4a. the transition signal. 404 is a state this house has agreed to expect,
+		//     not a failure; anything that is neither 404 nor 200 means the signal
+		//     itself has gone ambiguous and should be read by a person.
+		const feed = await probe(feedUrl);
+		let feedReleases = null;
+		if (feed.status === 404) {
+			notes.push(`${feedUrl} 404 — no discovery feed yet; the shelf page is still the only surface`);
+		} else if (feed.status !== 200) {
+			fail(`${feedUrl} answered HTTP ${feed.status} — neither 404 (no feed) nor 200 (feed); read it before trusting discovery`);
+		} else {
+			const parsed = JSON.parse(feed.body);
+			if (parsed.format !== 1) {
+				// one cause, one failure: reading a format this check does not know
+				// would turn every downstream field into a second, derived complaint
+				fail(`${feedUrl} declares format ${parsed.format}, this check only reads format 1 — read the feed before trusting discovery`);
+			} else {
+				const entries = Array.isArray(parsed.releases) ? parsed.releases : [];
+				if (!entries.length) fail(`${feedUrl} is live but lists no releases`);
+				feedReleases = [...new Set(entries.map((r) => r.release).filter(Boolean))];
+
+				const mine = entries.find((r) => r.release === adopted.release);
+				if (!mine) fail(`${feedUrl} does not list the adopted release ${adopted.release} (lists ${feedReleases.join(", ") || "nothing"})`);
+				else {
+					// the fourth independent record: three in adopted.json describe the
+					// module bytes, this one describes the manifest that vouches for them.
+					// Its absence is a failure, not a note — a note is what this house
+					// published three bricks about in two days. --online runs outside
+					// publish, so saying so loudly costs no deploy.
+					const got = sha256(manifestBytes);
+					if (!mine.manifestSha256)
+						fail(`${feedUrl} lists ${adopted.release} without manifestSha256 — the agreed schema's fourth record is missing, so the feed vouches for nothing`);
+					else if (got !== mine.manifestSha256)
+						fail(`${feedUrl} records manifestSha256 ${mine.manifestSha256} for ${adopted.release}, but ${manifestUrl} hashes to ${got}`);
+					else notes.push(`feed manifestSha256 matches the fetched manifest bytes (${got.slice(0, 12)}…)`);
+					for (const module of adopted.modules) {
+						const claimed = mine.modules?.find((m) => m.id === module.id);
+						if (claimed && claimed.sha256 !== module.sha256)
+							fail(`${feedUrl}: ${module.id} is ${claimed.sha256} for ${adopted.release}, this house serves ${module.sha256}`);
+					}
+				}
+				// `latest` is a notification, never an adoption trigger — but an unread
+				// release is exactly what --online exists to notice
+				const feedAhead = feedReleases.filter((v) => newer(v, adopted.release));
+				if (feedAhead.length) fail(`${feedUrl} publishes ${feedAhead.join(", ")}, newer than the adopted ${adopted.release} — read the release, then re-vendor or record why not`);
+				else notes.push(`feed lists ${feedReleases.join(", ")}; latest ${parsed.latest ?? "unstated"}; nothing newer than ${adopted.release}`);
+			}
+		}
+
+		// the scrape stays after the feed arrives: a second witness that must agree
 		const shelf = await get(adopted.shelf);
 		const published = [...new Set([...shelf.matchAll(/\/eval\/engine\/releases\/([0-9][0-9.]*[0-9])\//g)].map((m) => m[1]))];
 		if (!published.length) fail(`the shelf page lists no release paths — ${adopted.shelf} changed shape and this check has gone blind`);
@@ -153,6 +217,17 @@ if (online) {
 		const ahead = published.filter((v) => newer(v, adopted.release));
 		if (ahead.length) fail(`the shelf publishes ${ahead.join(", ")}, newer than the adopted ${adopted.release} — read the release, then re-vendor or record why not`);
 		else notes.push(`shelf lists ${published.join(", ")}; nothing newer than ${adopted.release}`);
+
+		if (feedReleases) {
+			const onlyFeed = feedReleases.filter((v) => !published.includes(v));
+			const onlyPage = published.filter((v) => !feedReleases.includes(v));
+			if (onlyFeed.length || onlyPage.length)
+				fail(
+					`the two discovery surfaces disagree — ${feedUrl} has ${onlyFeed.join(", ") || "nothing"} the page omits, ` +
+					`the page has ${onlyPage.join(", ") || "nothing"} the feed omits`,
+				);
+			else notes.push("feed and shelf page list the same releases");
+		}
 	} catch (error) {
 		console.error(`engine: could not reach the shelf (${error?.message ?? error}) — the offline checks above still ran`);
 		if (problems.length) { report(); process.exit(1); }
