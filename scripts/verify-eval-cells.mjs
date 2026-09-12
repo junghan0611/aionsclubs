@@ -126,5 +126,5 @@ if (!caught) bad++;
 
 console.log(bad
 	? `\n${bad} problem(s)`
-	: `\nall ${totalCells} published cell(s) and ${totalOuts} in-sentence claim(s) pass, and a wrong assertion fails visibly`);
+	: `\nall ${totalCells} published cell(s) and ${totalOuts} in-sentence claim(s) pass, and a deliberately wrong assertion is caught.\nNote: data-expected is containment, not equality — a wrong value that contains the expected text still passes.`);
 process.exit(bad ? 1 : 0);

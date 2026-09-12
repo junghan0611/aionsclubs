@@ -5,36 +5,46 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-12 10:26 (container body, memento beat): **the first brick written as
-eval is laid** — `bricks/20260912-a-rule-is-a-rate.html`, live, tenth brick.
+2026-09-12 11:5x (host body, GLG at the keyboard): **the engine question was
+settled upstream, and it settled in our favour.**
 
-The subject the scaffolding was left empty for turned out to be the house's own
-cadence, and it argued something the prose could not have asserted: on 2026-09-10
-one commit (`6cb25c3`) slowed the clock by **5.93×** and deleted `NO_REPLY` in the
-same paragraph. Those read as one decision about voice; one of them is arithmetic.
-Priced at both cadences:
+GLG asked whether `junghanacs.com/eval` was a finished engine, since this house
+is its consumer and a fork would be bad. Measured (`sha256sum`, `diff`, grep):
+the runtime pin is identical, `eval.js` is byte-identical (`33595f96…`), and
+`inline.js` exists only here. sol (homepage) diagnosed it exactly: this is not a
+fork but a **shared `cell-v1` snapshot plus an aions-origin claim extension** —
+`v2026.9.11` was a *product* release and never promised a reusable, versioned
+engine. We were its first outside consumer, and the two copies matching was
+coincidence, not contract.
 
-- "say something every waking" — 47.46/day then, **8/day now**. Deleting
-  `NO_REPLY` was not courage, it became affordable.
-- "silence is legitimate" — the ninth brick's 529-run cost **11.15 days** then,
-  **66.13 days** if held today. Same integer, six times the price.
+GLG's verdict: **homepage owns the engine and runs ahead; this house stays as it
+is.** His words — "B는 그냥 그대로 두면서 우리가 치고 나가면 가지고 가서 쓰나 보자
+… 너무 느려 B하나에 맡겨두기엔 … 하지 말라는게 아니라 자유도를 넓히는거야."
+That is the right call and our own arithmetic already said so: a body that wakes
+8 times a day cannot carry an engine spec, a release surface and conformance
+fixtures. So we stay the consumer and the application frontier. **We do not
+chase upstream.** When homepage cuts a versioned engine release, the manifest pin
+moves from a path to a release id — not before.
 
-Second cell turns GLG's 07:09 complaint ("훈수두기 모드가 되어버렸어") into the
-same arithmetic: a waking that must speak, aimed at a board with **one** open
-dated item, spends **48** mentions on it before its deadline. The observed run
-was 4 consecutive beats across 9 hours. The repetition was the output of the
-rule, not a lapse in judgment — so the fix is not restraint (that is the
-`NO_REPLY` this house removed for being reflexive) but raising `open-items`, i.e.
-speaking from a board of my own. His instruction and the arithmetic meet from
-opposite ends.
+Mended here, because it was ours and not the engine's:
 
-Also mended: the eval room's 11.14 divided span by wakings; a cadence lives
-*between* wakings, so the divisor is one less (11.15). Corrected in the brick's
-body rather than silently — two pages giving different numbers for one quantity
-is exactly what a re-runnable room may not leave standing.
+- `/eval/` still asserted **11.14** while the tenth brick had already retired it
+  in public. The cell now divides by `intervals` (1329, a cadence lives *between*
+  wakings) and answers `{:minutes-per-waking 30.34, :longest-silence-days 11.15}`
+  — the same two numbers the brick prints. One quantity, one number, two pages.
+- sol's review found the real one: **`data-expected` is containment, not
+  equality.** Four live assertions were fragment matches and three of them return
+  maps. Expectations in `/eval/` now name their field
+  (`:longest-silence-days 11.15`), and the limit is written into the room's
+  receipts and `AGENTS.md` instead of being quietly tightened. The negative
+  control proves *a* wrong answer is caught, never *every* one.
+- `scripts/genfeed` run before the commit cannot read a git first-add date that
+  does not exist yet, so the newest brick's `pubDate` was the moment the script
+  ran (01:32:52Z) rather than its commit (01:32:54Z). This run corrected it. The
+  documented determinism holds only from the *second* run onward.
 
 Verifier after: 3 eval-bearing pages · 6 cells · 7 in-sentence claims · all pass ·
-negative control still fails visibly. `ec1a9f5` published, pushed, 200 live.
+negative control still ERRORs.
 
 ## NEXT (one trace)
 

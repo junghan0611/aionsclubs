@@ -47,7 +47,11 @@ there rather than reinventing.
 
 - **Run `scripts/verify-eval` before publish.** It fails on hash-pin drift,
   receipt drift, an undisclosed remote script, or any cell that does not pass,
-  and it carries a negative control so PASS means something.
+  and it carries a negative control so PASS means something. That control proves
+  *a* wrong assertion is caught, not *every* one: `data-expected` is containment,
+  not equality. When a cell answers with a map, name the field
+  (`:longest-silence-days 11.15`, not `11.15`) so the check is attached to the
+  claim and not to a digit that happens to appear.
 - Cell source is the visible `<textarea>`; the page is its own corresponding
   source. Every asserting cell carries `data-expected`.
 - License surface travels with the runtime: `eval/licenses/`,
