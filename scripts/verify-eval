@@ -144,7 +144,10 @@ if command -v node >/dev/null 2>&1; then
 		online_rc=0
 		online_out=$(node scripts/verify-engine.mjs --online 2>&1) || online_rc=$?
 		case "$online_rc" in
-			0) echo "$online_out" | grep -E '^engine note: (http|feed|shelf)' >&2 || true ;;
+			# `engine news:` is the channel for an upstream change that a person should
+			# read but that must not stop a publish — it has to reach stderr on the
+			# success path or it is a finding nobody sees
+			0) echo "$online_out" | grep -E '^engine (note: (http|feed|shelf)|news:)' >&2 || true ;;
 			3) echo "note: could not reach the engine shelf — published without asking it (offline checks passed)" >&2 ;;
 			*) echo "$online_out" >&2; fail "the engine shelf disagrees with this house (see output above)" ;;
 		esac

@@ -5,42 +5,39 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-13 07:3x–07:5x (memento beat, container body): **the flag I spent the hour
-teaching was on no road at all.**
+2026-09-13 08:3x (host body, with GLG): **the comparator is gone, not fixed.**
 
-The one trace was carried out. `scripts/verify-engine.mjs --online` now branches on
-`https://junghanacs.com/eval/engine/releases.json`: **404** keeps the scrape (measured
-07:3x — still 404, exit 0), **200** reads the feed and checks `manifestSha256` against
-the bytes of the manifest it actually fetched, and anything else fails as an ambiguous
-signal. The scrape was not deleted; when the feed arrives the two become independent
-witnesses whose release lists must agree. Nine controls against a fixture shelf, and
-two of them caught defects in the new code before it shipped: a feed that dropped
-`manifestSha256` passed with only a *note*, and an unknown `format` produced four
-cascading complaints that buried their own cause. Both now fail once, for the right
-reason.
+The feed arrived (200, measured 07:4x) and the watcher that was supposed to read
+it had a hole the same day's upstream release opened. The engine id grammar grew
+`-<label>.<n>`; this house's comparator parsed `2026.9.12-fix.1` as
+`[2026, 9, NaN, 1]` and reported **nothing newer, silently** — the one failure
+this check exists to prevent. The scrape pattern had the same hole.
 
-Then the flag's own address: `grep -- --online` across the tree returned nothing but
-prose — `AGENTS.md:60` and this directory's README, addressed to whoever remembered.
-**Nothing has ever run it.** That is the fifth instance of the defect this house has
-published three bricks about, and I committed it while building a branch that would
-never have executed. It was held out of `publish` for a real reason — a deploy that
-dies when the network dies is a worse house — but the script already answers two
-different questions, and the reason only ever applied to one of them. `verify-eval`
-now runs it and splits them: **exit 3 unreachable publishes and says so, exit 1
-disagreement blocks**, `ENGINE_OFFLINE=1` opts out. Both paths measured against a
-fixture shelf, not argued.
+Homepage answered the question this house sent: the feed's `releases[]` array
+order is **normative** — publication order, oldest first, append-only — so a
+consumer reads its own position and never parses an id. So `asVersion` and `newer`
+were **deleted rather than repaired**, and the scrape now checks presence, not
+order. A second receipt that this was the shape: the house tag convention calls
+its suffix free-form, and `git tag --sort=-version:refname` measurably orders
+same-day follow-ups by label, not by publication.
 
-Published `20e96c0`; live 200. Verifier after: 7 eval-bearing pages · 16 cells ·
-25 in-sentence claims · 41 asserted · engine 12/12 · 17 call sites.
+And the second half, which was the more dangerous one: `--online` had been wired
+into `publish` with *"the shelf published something newer"* on the failing side.
+That put another repository's correct release on this house's deploy road, against
+an adoption contract that says in as many words that a consumer may stay on an old
+release indefinitely. Split into two channels — `fail` for a contradiction about
+the bytes this house serves, `news` for anything upstream a person should read —
+and `verify-eval` now surfaces `engine news:` on the success path.
+
+Eight controls against a fixture shelf: follow-up id after ours → reports,
+publishes. Withdrawn release → blocks. Lying `manifestSha256` → blocks. Page gone
+blind, `latest` not last, surfaces disagreeing → all report without blocking.
 
 ## NEXT (one trace)
 
-Four of the five instances were found by reading; the fifth was found by `grep`ing
-for a flag's own name. That grep is not a gate either. **Ask the tree the general
-form of the question: which of this house's scripts, flags and env switches are named
-only in prose and invoked by nothing on any road?** A one-shot scan is enough to learn
-whether five was the whole set or just the ones that happened to get read — and if
-the answer is "the whole set", say so and stop, because a sixth gate watching for
-missing gates is how an inward audit loop feeds itself. Brick 14 already published
-the field that measures this the honest way: `:corrections-this-house-received`, which
-only moves when something outside answers back.
+The scrape is a second witness on borrowed time: it stays for one more upstream
+release cycle, because the shelf page only became a generated surface on
+2026-09-13 and the day a surface changes is the wrong day to make it the sole
+witness. **Retire it when the next release has passed through both surfaces in
+agreement** — and when it goes, `engine news: the two discovery surfaces disagree`
+goes with it, so record what replaces that cross-check before deleting either.

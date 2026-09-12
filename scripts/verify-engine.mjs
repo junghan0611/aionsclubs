@@ -4,8 +4,17 @@
 //   node scripts/verify-engine.mjs --online   also ask the shelf what it publishes now
 //
 //   exit 0  in sync (offline run says: the adopted bytes are the adopted bytes)
-//   exit 1  drift — a hash, a call site, or a conformance case does not match
+//   exit 1  contradiction — the shelf disagrees with what this house serves
 //   exit 3  --online could not reach the shelf; the offline part still ran and passed
+//
+// What blocks and what only reports. This check runs inside `scripts/verify-eval`,
+// so a failure here stops a publish. Only a *contradiction* earns that: bytes,
+// hashes, or the adopted release being withdrawn. An upstream release this house
+// has not read is news, not corruption — the adoption contract says in as many
+// words that "a consumer can remain on an old release indefinitely"
+// (junghanacs.com eval-engine-contract.md, read 2026-09-13), and a gate that
+// blocks a deploy because someone else did something correct hands the key to
+// this house's press to another repository.
 //
 // Why this file exists. `eval/engine/README.md` said, in its own Verified line,
 // that "scripts/verify-eval re-checks it on every publish". Measured 2026-09-13:
@@ -27,9 +36,23 @@
 // (deliberately outside `releases/`, whose one-year `immutable` cache a feed must
 // never receive). So this check watches the feed's *arrival* rather than any
 // surface's present shape: 404 means keep scraping the shelf page, 200 means the
-// feed answers and the scrape becomes a second, independent witness that must
-// agree with it. The scrape is not deleted on the first 200 — two discovery
-// surfaces that disagree is exactly the drift worth failing on.
+// feed answers and the scrape becomes a second, independent witness. The scrape
+// is not deleted on the first 200 — the shelf page only became a generated
+// surface on 2026-09-13, and making the thing that changed today the sole witness
+// is how a watcher goes quietly blind.
+//
+// Why there is no version comparator here any more. There was one, and on
+// 2026-09-13 it read `2026.9.12-fix.1` as [2026, 9, NaN, 1] and answered
+// "nothing newer" — silently, the exact shape this house forbids. The repair is
+// not a better parser: Homepage declared the feed's `releases[]` array order
+// normative (publication order, oldest first, append-only), so a consumer answers
+// "is there anything newer?" by its own position in that array and never parses a
+// release id at all. Their words: the sort rule is how the publisher builds an
+// order, not a procedure a consumer re-implements. The house tag convention this
+// grammar grew from calls its suffix free-form (agent-config
+// skills/tag-release/SKILL.md), and `git tag --sort=-version:refname` measurably
+// orders same-day follow-ups by label, not by publication — so there is no
+// correct comparator to write here, only a position to read.
 import { readFileSync, readdirSync, statSync } from "node:fs";
 import { createHash } from "node:crypto";
 
@@ -38,7 +61,13 @@ const online = process.argv.includes("--online");
 const sha256 = (buf) => createHash("sha256").update(buf).digest("hex");
 const problems = [];
 const notes = [];
+// Two channels on purpose. `fail` says the shelf contradicts this house and stops
+// a publish; `tell` says something upstream changed that a person should read and
+// lets the publish through. Collapsing them is what put another repository's
+// correct release on this house's deploy road.
+const news = [];
 const fail = (msg) => problems.push(msg);
+const tell = (msg) => news.push(msg);
 
 const adopted = JSON.parse(readFileSync(`${root}/eval/engine/adopted.json`, "utf8"));
 
@@ -132,14 +161,6 @@ if (online) {
 		const response = await fetch(url, { signal: AbortSignal.timeout(15000), redirect: "follow" });
 		return { status: response.status, body: response.ok ? await response.text() : null };
 	};
-	const asVersion = (v) => v.split(".").map(Number);
-	const newer = (a, b) => {
-		const [x, y] = [asVersion(a), asVersion(b)];
-		for (let i = 0; i < Math.max(x.length, y.length); i += 1) {
-			if ((x[i] ?? 0) !== (y[i] ?? 0)) return (x[i] ?? 0) > (y[i] ?? 0);
-		}
-		return false;
-	};
 	// derived, never a second field to keep in step: a manifest URL that could
 	// disagree with adopted.release is a receipt that can lie by omission
 	const manifestUrl = new URL(`${adopted.releasePath.replace("{release}", adopted.release)}manifest.json`, adopted.shelf).href;
@@ -181,8 +202,9 @@ if (online) {
 				if (!entries.length) fail(`${feedUrl} is live but lists no releases`);
 				feedReleases = [...new Set(entries.map((r) => r.release).filter(Boolean))];
 
-				const mine = entries.find((r) => r.release === adopted.release);
-				if (!mine) fail(`${feedUrl} does not list the adopted release ${adopted.release} (lists ${feedReleases.join(", ") || "nothing"})`);
+				const index = entries.findIndex((r) => r.release === adopted.release);
+				const mine = index < 0 ? null : entries[index];
+				if (!mine) fail(`${feedUrl} does not list the adopted release ${adopted.release} (lists ${feedReleases.join(", ") || "nothing"}) — a withdrawn release contradicts this house's adoption`);
 				else {
 					// the fourth independent record: three in adopted.json describe the
 					// module bytes, this one describes the manifest that vouches for them.
@@ -201,28 +223,43 @@ if (online) {
 							fail(`${feedUrl}: ${module.id} is ${claimed.sha256} for ${adopted.release}, this house serves ${module.sha256}`);
 					}
 				}
-				// `latest` is a notification, never an adoption trigger — but an unread
-				// release is exactly what --online exists to notice
-				const feedAhead = feedReleases.filter((v) => newer(v, adopted.release));
-				if (feedAhead.length) fail(`${feedUrl} publishes ${feedAhead.join(", ")}, newer than the adopted ${adopted.release} — read the release, then re-vendor or record why not`);
-				else notes.push(`feed lists ${feedReleases.join(", ")}; latest ${parsed.latest ?? "unstated"}; nothing newer than ${adopted.release}`);
+				// Position, not parsing. Everything after this house's own entry is a
+				// release it has not read. `latest` is a notification, never an
+				// adoption trigger.
+				if (index >= 0) {
+					const after = entries.slice(index + 1).map((r) => r.release).filter(Boolean);
+					if (after.length)
+						tell(`${feedUrl} publishes ${after.join(", ")} after the adopted ${adopted.release} — read them, then re-vendor or record why not. This does not block a publish.`);
+					else notes.push(`feed lists ${feedReleases.join(", ")}; latest ${parsed.latest ?? "unstated"}; nothing after ${adopted.release}`);
+					// the order guarantee this check now rests on, checked rather than
+					// assumed: if `latest` is not the last element, the array is not the
+					// publication order it claims and a position read means less
+					const last = entries[entries.length - 1]?.release;
+					if (parsed.latest && last && parsed.latest !== last)
+						tell(`${feedUrl} declares latest ${parsed.latest} but its last array element is ${last} — the declared publication order does not hold, so read the feed by hand`);
+				}
 			}
 		}
 
 		// the scrape stays after the feed arrives: a second witness that must agree
 		const shelf = await get(adopted.shelf);
-		const published = [...new Set([...shelf.matchAll(/\/eval\/engine\/releases\/([0-9][0-9.]*[0-9])\//g)].map((m) => m[1]))];
-		if (!published.length) fail(`the shelf page lists no release paths — ${adopted.shelf} changed shape and this check has gone blind`);
-		else if (!published.includes(adopted.release)) fail(`the shelf no longer lists the adopted release ${adopted.release} (lists ${published.join(", ")})`);
-		const ahead = published.filter((v) => newer(v, adopted.release));
-		if (ahead.length) fail(`the shelf publishes ${ahead.join(", ")}, newer than the adopted ${adopted.release} — read the release, then re-vendor or record why not`);
-		else notes.push(`shelf lists ${published.join(", ")}; nothing newer than ${adopted.release}`);
+		// the id grammar is `YYYY.M.D` with an optional same-day `-<label>.<n>`; the
+		// old pattern accepted only digits and dots, so a follow-up release on the
+		// page was invisible here too — the same blindness as the deleted comparator
+		const published = [...new Set([...shelf.matchAll(/\/eval\/engine\/releases\/([0-9][0-9.]*[0-9](?:-[a-z][a-z0-9-]*\.[0-9]+)?)\//g)].map((m) => m[1]))];
+		if (!published.length)
+			tell(`${adopted.shelf} lists no release paths — the page changed shape, so this witness is blind${feedReleases ? "; the feed still answers" : " and the feed is not up yet, so nothing is watching discovery"}`);
+		else if (!published.includes(adopted.release))
+			fail(`the shelf no longer lists the adopted release ${adopted.release} (lists ${published.join(", ")})`);
+		else notes.push(`shelf lists ${published.join(", ")}`);
 
-		if (feedReleases) {
+		if (feedReleases && published.length) {
 			const onlyFeed = feedReleases.filter((v) => !published.includes(v));
 			const onlyPage = published.filter((v) => !feedReleases.includes(v));
+			// a disagreement between two *discovery* surfaces says nothing about the
+			// bytes this house serves, so it is read, not a blocked deploy
 			if (onlyFeed.length || onlyPage.length)
-				fail(
+				tell(
 					`the two discovery surfaces disagree — ${feedUrl} has ${onlyFeed.join(", ") || "nothing"} the page omits, ` +
 					`the page has ${onlyPage.join(", ") || "nothing"} the feed omits`,
 				);
@@ -240,6 +277,7 @@ if (online) {
 
 function report() {
 	for (const note of notes) console.log(`engine note: ${note}`);
+	for (const item of news) console.error(`engine news: ${item}`);
 	if (problems.length) {
 		for (const problem of problems) console.error(`engine verification failed: ${problem}`);
 		console.error(`engine: ${problems.length} problem(s)`);

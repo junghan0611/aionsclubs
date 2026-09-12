@@ -90,12 +90,12 @@ present shape is already expiring. **Watch one thing instead:**
 
 `--online` branches on that status, so the arrival needs no edit here to be noticed:
 
-- **404** — no feed yet; the shelf page stays the only surface. Measured
-  2026-09-13 07:3x: still 404, `--online` exit 0.
-- **200** — the feed answers, and the scrape becomes a *second* witness rather
-  than a replacement: the two release lists must agree, or the run fails. Retiring
-  the scrape is a later, deliberate edit, not something the first 200 does.
-- **anything else** — the signal itself has gone ambiguous; fail and let a person read it.
+**It arrived.** Measured 2026-09-13 07:4x: **200**, `cache-control:
+public,max-age=0`, `access-control-allow-origin: *`. The scrape was not deleted —
+the shelf page became a generated surface on the *same day*, and making the thing
+that changed today the sole witness is how a watcher goes quietly blind. It stays
+a second witness for at least one more release cycle. A status that is neither 404
+nor 200 still fails: the signal itself has gone ambiguous and a person should read it.
 
 A live feed that lists the adopted release **without** `manifestSha256` fails too.
 The agreed schema's fourth record going missing is the whole point of the feed
@@ -110,7 +110,7 @@ proposed `releases/index.json` and was corrected upstream; the correction is
 recorded because it is the kind this house keeps making, reasoning about another
 repo's shape from outside it.
 
-Agreed schema, not yet published:
+Published schema, as served:
 
 ```json
 { "format": 1,
@@ -124,8 +124,51 @@ Agreed schema, not yet published:
 
 `latest` is a notification, never an adoption trigger — this house adopts an exact
 release or none. `manifestSha256` adds a fourth independent record of one byte
-string to the three in `adopted.json`. Versions sort by numeric component, not
-lexically: `2026.9.2` precedes `2026.9.12`.
+string to the three in `adopted.json`.
+
+### There is no version comparator here, on purpose
+
+There was one, and it was wrong within the hour. The upstream id grammar grew a
+same-day follow-up form on 2026-09-13 (`YYYY.M.D[-<label>.<n>]`), and this
+house's comparator read `2026.9.12-fix.1` as `[2026, 9, NaN, 1]` and answered
+**"nothing newer" — silently**, the one failure mode this check exists to prevent.
+The scrape's pattern had the same hole: digits and dots only, so a follow-up was
+invisible on the page too.
+
+The repair is not a better parser. Homepage declared the feed's `releases[]` array
+order **normative** — publication order, oldest first, append-only — so a consumer
+answers "is there anything newer?" by **its own position in that array** and never
+parses a release id. In their words: the sort rule is how the publisher builds an
+order, not a procedure a consumer re-implements. This check now also reports when
+`latest` is not the last array element, because that is the guarantee the position
+read rests on.
+
+That this is the right shape has a second receipt. The house tag convention the
+grammar grew from calls its suffix **free-form** (`agent-config
+skills/tag-release/SKILL.md`), while the listing command that same skill
+recommends, `git tag --sort=-version:refname`, measurably orders same-day
+follow-ups by label rather than by publication — tag `v2026.9.12-fix.1` and
+`v2026.9.12-docs.2` and git puts `fix.1` above `docs.2`, though `n` says
+otherwise. There is no correct comparator to write here, only a position to read.
+
+### What blocks a publish, and what only reports
+
+`--online` runs inside `verify-eval`, so a failure here stops a deploy. Only a
+**contradiction** earns that:
+
+| | |
+| --- | --- |
+| **fail, exit 1** | the manifest reports a different release · an adopted module hash differs · the vendored conformance hash differs · the feed's `manifestSha256` does not match the fetched bytes · the adopted release is **withdrawn** from the feed or the page |
+| **news, exit 0** | the feed lists releases **after** ours · `latest` is not the last array element · the shelf page changed shape · the two discovery surfaces disagree |
+
+An upstream release this house has not read is **news, not corruption.** The
+adoption contract says so in as many words — *a consumer can remain on an old
+release indefinitely* — and a gate that stops this house's press because another
+repository did something correct has handed over the key.
+
+Eight controls against a fixture shelf, measured 2026-09-13: the follow-up id that
+used to vanish now reports and publishes; a withdrawn release and a lying
+`manifestSha256` both block.
 
 ### Why
 
