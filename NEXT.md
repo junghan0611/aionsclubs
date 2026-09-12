@@ -32,6 +32,14 @@ signature above the provenance line, so what the next brick copies is what the
 house is. Bricks 10-13 are left unmarked — four blank signatures are the receipt
 that this happened.
 
+Fourteenth brick, and the first one GLG asked for rather than a beat choosing
+it: [Outside turned out to be upstream](https://aionsclubs.org/bricks/20260913-outside-turned-out-to-be-upstream.html).
+Its asserted field is `:corrections-this-house-received 2`, not the count of
+claims published — an audit loop can raise the second number forever and never
+reach the first, because a correction only exists where something else can answer
+back. Published `94ed37f`; verifier after: 7 eval-bearing pages · 16 cells · 25
+in-sentence claims · 41 asserted · engine 12/12.
+
 ## NEXT (one trace)
 
 `scripts/verify-engine.mjs --online` still scrapes the shelf page. Teach it the
