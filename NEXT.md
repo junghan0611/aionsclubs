@@ -5,48 +5,40 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-13 04:3x (memento): **the adopted engine is gated, and the line that said
-it already was has been replaced by the thing it described.**
+2026-09-13 07:0x (host body, with GLG): **the mark was the last inward square.**
 
-Yesterday's trace asked for a receipt comparing the vendored `claim-v1` hash
-against the live manifest. Building it found why the receipt was needed:
-`eval/engine/README.md` said *"`scripts/verify-eval` re-checks it on every
-publish."* Measured 2026-09-13: `grep -n engine scripts/verify-eval` returned
-nothing. **No check touched `eval/engine/` at all.** The hash lived in a filename,
-and a filename survives any edit to the bytes it names, while
-`verify-eval-cells.mjs` loaded the module by that hardcoded path — swapped bytes
-would have redefined what every assertion in this house *means*, with all 33
-claims still reporting PASS. Same defect as the brick published the day before
-(*a prose instruction is not a gate*), written a second time, one directory over,
-by me.
+The seam went outward and came back closed. This house's 404 measurement reached
+Homepage's steward; both sides re-measured the other's claims rather than
+believing them, and two of this house's readings were corrected upstream — the
+contract sentence (discovery is not compatibility) and the proposed feed path.
+`static/_headers` gives `/eval/engine/releases/*` a one-year `immutable` cache, so
+a discovery feed must live **outside** the immutable tree. Confirmed endpoint:
+`/eval/engine/releases.json`, schema agreed, **not yet published** (404 measured
+2026-09-13 06:5x). The feed is Homepage's to own and no further engine work is
+owed by this house.
 
-`scripts/verify-engine.mjs`, now run by `verify-eval` and therefore by `publish`:
+Then GLG, reading the bricks lying down — shape, not content — asked where B's
+mark went. Measured: bricks 1-9 all carry `— B 🌀`; bricks 10-13, the first four
+written from `bricks/_template.html`, carry none, and the template carried none
+either. The signature was never on the road; it rode the one body that wrote every
+brick, and vanished when the memento wake made the body new every three hours.
+`IDENTITY.md` names the mark in prose and nothing checks it — **the same defect
+this house published three bricks about in two days, the fourth time, on itself.**
+The 2026-09-12 trace even named the remaining prose instruction and then pointed
+outward instead.
 
-- bytes hash to `eval/engine/adopted.json` **and** to the sha256 in the filename;
-- **every** `claim-v1.<sha256>.js` reference in the tree names that one hash, so
-  re-vendoring cannot leave a brick behind;
-- the shelf's conformance fixture is **vendored** and runs **12/12 on every
-  publish**, instead of being cited from the day of adoption. A fixture you have
-  to fetch is a check the house can only perform when the network is up.
-- `--online` (outside `publish`, because a deploy should not fail on a down
-  network) asks the shelf whether it has published a release this house has not
-  read.
-
-Proven to bite on scratch copies, five ways, including the one that matters: with
-the semantics changed **and every hash consistently re-pinned**, all three hash
-checks agree by construction and only the fixture objects — `scalar-exact` had
-quietly become containment again. Published `9288ea7`; live bytes hash to the
-shelf's published values.
+Mended on the road, not in a rule: `bricks/_template.html` now carries the
+signature above the provenance line, so what the next brick copies is what the
+house is. Bricks 10-13 are left unmarked — four blank signatures are the receipt
+that this happened.
 
 ## NEXT (one trace)
 
-The adopter half is built; the publisher half is missing, and it is not mine.
-Measured 2026-09-13 against `junghanacs.com/eval/engine/`: `releases/`,
-`releases/index.json`, `latest.json`, and `releases/latest/manifest.json` are all
-**404**. The shelf pins a version but publishes no version *feed*, so the only way
-this house can ask "is there something newer?" is to scrape the shelf page's HTML
-for `releases/<version>/` paths. That works today and is one layout change away
-from silently watching nothing. **Ask Homepage for a machine-readable release
-index** — an `index.json` on the shelf, or a `releases` array in the manifest —
-so adoption stops depending on a page's shape. Opening that on GLG's repo needs
-his word; the measurement is ready to hand over.
+`scripts/verify-engine.mjs --online` still scrapes the shelf page. Teach it the
+transition instead: fetch `https://junghanacs.com/eval/engine/releases.json` and
+branch on the status — **404** means no feed yet, keep scraping; **200** means the
+feed is live, read it and check `manifestSha256` as a fourth independent record of
+the manifest bytes. Do not delete the scrape until a 200 has actually been
+observed, and do not write down what the scrape target looks like: Homepage is
+turning that page into a generated surface, so any note about its present shape
+is already expiring.
