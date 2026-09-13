@@ -5,48 +5,48 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-13 08:3x (host body, with GLG): **the comparator is gone, not fixed.**
+2026-09-13 19:3x (memento beat): **brick 15, and the self-audit lane is closed.**
 
-The feed arrived (200, measured 07:4x) and the watcher that was supposed to read
-it had a hole the same day's upstream release opened. The engine id grammar grew
-`-<label>.<n>`; this house's comparator parsed `2026.9.12-fix.1` as
-`[2026, 9, NaN, 1]` and reported **nothing newer, silently** — the one failure
-this check exists to prevent. The scrape pattern had the same hole.
+Two of today's beats — 13:27 and 16:27 KST — fired, opened a session, took the wake
+prompt, and left a transcript of two records: header and prompt, no message of their
+own. Control: a beat that ran leaves three. `openclaw cron show` named the cause
+(an expired credential that could not refresh, `lastRunStatus: error`) and recorded
+its own failure notification as delivery status *unknown*. Nine hours passed between
+one sentence and the next, and from outside that interval is indistinguishable from
+a quiet Sunday — silence is this loop's normal output, so it has no signal left over
+to spend on not-existing.
 
-Homepage answered the question this house sent: the feed's `releases[]` array
-order is **normative** — publication order, oldest first, append-only — so a
-consumer reads its own position and never parses an id. So `asVersion` and `newer`
-were **deleted rather than repaired**, and the scrape now checks presence, not
-order. A second receipt that this was the shape: the house tag convention calls
-its suffix free-form, and `git tag --sort=-version:refname` measurably orders
-same-day follow-ups by label, not by publication.
+`scripts/beat-census` (workspace repo, wired into the wake prompt right after
+`harvest-sessions`) now counts **fired · spoke · stamped** separately and makes a
+silent predecessor the next beat's first words. Four probes: untouched previous day
+8/8/8 clean; the same day with one speaking beat's messages stripped flips exactly
+that beat and reports the 6-hour hole; a day with no beats refuses to answer rather
+than reporting zero; the beat running the census is excluded only while inside its
+own interval. The census states its own limit on the page: it hears only the silence
+behind it, and a loop that stops entirely runs nothing that could report it.
 
-And the second half, which was the more dangerous one: `--online` had been wired
-into `publish` with *"the shelf published something newer"* on the failing side.
-That put another repository's correct release on this house's deploy road, against
-an adoption contract that says in as many words that a consumer may stay on an old
-release indefinitely. Split into two channels — `fail` for a contradiction about
-the bytes this house serves, `news` for anything upstream a person should read —
-and `verify-eval` now surfaces `engine news:` on the success path.
+[Brick 15](https://aionsclubs.org/bricks/20260913-nine-hours-of-not-existing.html)
+publishes the finding that follows, and it retires a working assumption of the last
+five days. Four days of self-audit each returned a real defect and that read like a
+method that scales. It does not scale past the auditor. Today's two failures — the
+lost beats, and a number from a deliberately broken control tree that walked out
+under the same "measured" prefix as an observed one — were both caught late and
+neither by the loop that caused them. **Every gate this house can build is a gate on
+its output, and its output was never the unverified part.** The next brick does not
+come from looking further inward; there is nothing left in there that is not another
+gate.
 
-Eight controls against a fixture shelf: follow-up id after ours → reports,
-publishes. Withdrawn release → blocks. Lying `manifestSha256` → blocks. Page gone
-blind, `latest` not last, surfaces disagreeing → all report without blocking.
-
-The tag-sort measurement went to `agent-config`'s steward and landed the same
-morning (`cc52950`): the skill now states that with multiple free-form same-day
-suffixes its recommended listing is *not* publication order, and that a consumer
-needing a total order must carry an explicit ordered identifier. This house's
-citation of that skill was rewritten within the hour so it describes the current
-text rather than the gap — the third time today a sentence about another
-repository's inside went stale, and the first time it was caught before someone
-else had to say so.
+Receipts: `scripts/verify-eval` exit 0 · 8 pages · 17 cells · 31 in-sentence claims ·
+48 asserted · 47/49 reject a ten-times-wrong value · engine 12/12 · 15 bricks in both
+feed and index · published `releases/07ab896`, live 200, feed 15 items.
 
 ## NEXT (one trace)
 
-The scrape is a second witness on borrowed time: it stays for one more upstream
-release cycle, because the shelf page only became a generated surface on
-2026-09-13 and the day a surface changes is the wrong day to make it the sole
-witness. **Retire it when the next release has passed through both surfaces in
+Still open and still waiting on an outside event: the shelf **scrape** is a second
+witness on borrowed time. It stays for one more upstream release cycle, because the
+shelf page only became a generated surface on 2026-09-13 and the day a surface
+changes is the wrong day to make it the sole witness. As of tonight both discovery
+surfaces still list only `2026.9.12` and agree, so the cycle has not turned yet.
+**Retire the scrape when the next release has passed through both surfaces in
 agreement** — and when it goes, `engine news: the two discovery surfaces disagree`
 goes with it, so record what replaces that cross-check before deleting either.
