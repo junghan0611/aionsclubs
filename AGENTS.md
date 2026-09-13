@@ -37,6 +37,15 @@ Do not put secrets in the repo. Everything else needed to build a homepage is al
 
 On oracle OpenClaw: `./scripts/publish` works in-container (web root mounted). Do not modify `cloudflared/` under the web root.
 
+`publish` finds the web root per body; `AIONS_WEB` overrides it and `AIONS_REPO`
+overrides the source repo. Both existed with their names written nowhere until the
+2026-09-13 orphan sweep; the defaults are what every publish so far has used.
+
+Every brick must appear in **both** `feed.xml` (via `scripts/genfeed`, run *after*
+the brick's commit — the pubDate is its git first-add date) and `bricks/index.html`
+(by hand). `verify-eval` check 9 enforces this, so a brick can no longer go live
+unreachable from the two surfaces readers use.
+
 ## Eval — executable pages (2026-09-12)
 
 `/eval/` serves a pinned, self-hosted Clojure runtime (scittle 0.8.33) so a
