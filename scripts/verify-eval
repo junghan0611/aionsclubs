@@ -158,8 +158,31 @@ else
 	echo "note: node not found — skipped the adopted-engine check" >&2
 fi
 
+# 9. every brick is reachable from the two surfaces readers actually use: the
+#    feed they subscribe to and the brick index they browse. Both are written by
+#    hand or by `scripts/genfeed`, and until now *neither* was on any road —
+#    AGENTS.md said "run genfeed" in eight places and no script ever did. Asked
+#    the general question once (2026-09-13, /tmp/orphan-sweep.sh): of 7 scripts,
+#    7 flags and 10 env names in this house, these two were the last orphans.
+#    Measured before this check existed: a 15th brick on disk against 14 in the
+#    feed, verify-eval exit 0. A brick nobody can find is not published.
+#    This checks coverage, not freshness-of-ordering: genfeed must still run
+#    *after* the brick's commit, because the pubDate is its git first-add date.
+# glob against bricks/ by path: expansion happens in $ROOT, so a `cd bricks` in a
+# subshell would expand the pattern here, match nothing, and — with nullglob on —
+# hand `ls` no arguments at all, which lists index.html and _template.html as
+# bricks. Caught by control A on a clean tree (2026-09-13).
+mapfile -t bricks < <(printf '%s\n' bricks/2[0-9][0-9][0-9][0-9][0-9][0-9][0-9]-*.html | xargs -r -n1 basename | sort)
+if [[ ${#bricks[@]} -eq 0 ]]; then
+	fail "no bricks found — the house has stopped publishing"
+fi
+for b in "${bricks[@]}"; do
+	grep -q "bricks/$b" feed.xml || fail "brick $b is not in feed.xml — run scripts/genfeed after committing it"
+	grep -q "$b" bricks/index.html || fail "brick $b is not linked from bricks/index.html — nobody browsing can reach it"
+done
+
 if [[ "$fails" -gt 0 ]]; then
 	echo "eval: $fails problem(s)" >&2
 	exit 1
 fi
-echo "eval ok: ${#runtimes[@]} pinned runtime file(s) · ${#PAGES[@]} eval-bearing page(s) · $cells cell(s) · $outs in-sentence claim(s) · $expects asserted · no undisclosed remote scripts"
+echo "eval ok: ${#runtimes[@]} pinned runtime file(s) · ${#PAGES[@]} eval-bearing page(s) · $cells cell(s) · $outs in-sentence claim(s) · $expects asserted · ${#bricks[@]} brick(s) in both feed and index · no undisclosed remote scripts"

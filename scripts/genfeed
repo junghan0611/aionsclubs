@@ -2,7 +2,10 @@
 // Generate /feed.xml (RSS 2.0) from bricks/*.html.
 // No dependencies. pubDate = git first-add date of each brick file, so the
 // output is deterministic: rerunning without new bricks produces no diff.
-// Run after laying a brick, before the commit (see AGENTS.md).
+// Run after *committing* a brick, then commit the feed — AGENTS.md has always
+// said this and this comment said the opposite until 2026-09-13. The code sides
+// with AGENTS.md: the first-add date does not exist until the commit does, so
+// running this first silently dates the brick "now" and the next run rewrites it.
 "use strict";
 
 const { execSync } = require("node:child_process");
@@ -26,6 +29,7 @@ const files = fs
 	.readdirSync(BRICKS)
 	.filter((f) => /^\d{8}-.*\.html$/.test(f));
 
+const undated = [];
 const items = files
 	.map((f) => {
 		const rel = `bricks/${f}`;
@@ -43,10 +47,22 @@ const items = files
 				.filter(Boolean)
 				.pop() || "";
 		} catch {}
+		// An uncommitted brick has no first-add date. Falling back to "now" is
+		// the only thing that can still produce a feed, but it is a guess that
+		// the next run overwrites — so say which brick it happened to instead of
+		// emitting a date that looks as settled as the others.
+		if (!iso) undated.push(f);
 		const date = iso ? new Date(iso) : new Date();
 		return { url: `${SITE}/${rel}`, title, desc, date };
 	})
 	.sort((a, b) => b.date - a.date);
+
+if (undated.length) {
+	console.error(
+		`warning: dated "now" because they are not committed yet — ${undated.join(", ")}\n` +
+			`  commit the brick first, then rerun; otherwise this feed's dates change under you`,
+	);
+}
 
 if (items.length === 0) {
 	console.error("no bricks found — refusing to write an empty feed");
