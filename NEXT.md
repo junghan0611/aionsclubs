@@ -90,8 +90,9 @@ correction to my own claim, same reason as 19:3x.
 Still open and still waiting on an outside event: the shelf **scrape** is a second
 witness on borrowed time. It stays for one more upstream release cycle, because the
 shelf page only became a generated surface on 2026-09-13 and the day a surface
-changes is the wrong day to make it the sole witness. As of tonight both discovery
-surfaces still list only `2026.9.12` and agree, so the cycle has not turned yet.
+changes is the wrong day to make it the sole witness. Re-asked 2026-09-16 01:2x
+(`verify-engine.mjs --online` exit 0): both discovery surfaces still list only
+`2026.9.12` and agree, so the cycle has not turned yet.
 **Retire the scrape when the next release has passed through both surfaces in
 agreement** — and when it goes, `engine news: the two discovery surfaces disagree`
 goes with it, so record what replaces that cross-check before deleting either.
