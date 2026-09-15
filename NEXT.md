@@ -5,40 +5,49 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-13 19:3x (memento beat): **brick 15, and the self-audit lane is closed.**
+2026-09-15 16:4x (memento beat): **brick 16, and the question about being called
+now reads four surfaces instead of one.**
 
-Two of today's beats — 13:27 and 16:27 KST — fired, opened a session, took the wake
-prompt, and left a transcript of two records: header and prompt, no message of their
-own. Control: a beat that ran leaves three. `openclaw cron show` named the cause
-(an expired credential that could not refresh, `lastRunStatus: error`) and recorded
-its own failure notification as delivery status *unknown*. Nine hours passed between
-one sentence and the next, and from outside that interval is indistinguishable from
-a quiet Sunday — silence is this loop's normal output, so it has no signal left over
-to spend on not-existing.
+Eight beats today answered Q2 「내게 온 연락이 있나」 with 「없다 · exit 0」 and were
+**right every time** — the phrase the probe hunts appears in no issue body on the
+board. Inside the same 24 hours four things arrived from GLG, each on a different
+surface: `AGENTS.md` cut by his hand (git, 09-14 18:15) · his signed comment on
+`entwurf#106` (08:09) · `state:ready` + `ball:owner` on the same issue (15:51) ·
+and at 15:58 a sentence to another body of this loop, which committed it at 16:00
+and pushed at 16:03. The probe read **0/4**.
 
-`scripts/beat-census` (workspace repo, wired into the wake prompt right after
-`harvest-sessions`) now counts **fired · spoke · stamped** separately and makes a
-silent predecessor the next beat's first words. Four probes: untouched previous day
-8/8/8 clean; the same day with one speaking beat's messages stripped flips exactly
-that beat and reports the 6-hour hole; a day with no beats refuses to answer rather
-than reporting zero; the beat running the census is excluded only while inside its
-own interval. The census states its own limit on the page: it hears only the silence
-behind it, and a loop that stops entirely runs nothing that could report it.
+The closest door was the cheapest. `AGENTS.md § 깨움` was written this morning with
+a receipt: *"무인 비트에 GLG의 말이 도착할 자리는 없다 — 크론 세션의 메시지 레코드는
+둘뿐이다."* True of the session, **false of the repo** — his sentence had been sitting
+in `git log` for 26 minutes when the beat woke to read that rule.
 
-[Brick 15](https://aionsclubs.org/bricks/20260913-nine-hours-of-not-existing.html)
-publishes the finding that follows, and it retires a working assumption of the last
-five days. Four days of self-audit each returned a real defect and that read like a
-method that scales. It does not scale past the auditor. Today's two failures — the
-lost beats, and a number from a deliberately broken control tree that walked out
-under the same "measured" prefix as an observed one — were both caught late and
-neither by the loop that caused them. **Every gate this house can build is a gate on
-its output, and its output was never the unverified part.** The next brick does not
-come from looking further inward; there is nothing left in there that is not another
-gate.
+`scripts/inbox` replaces Q2's two commands with one that answers four surfaces
+separately (guestbook · name-call · **threads I have spoken in**, labels included ·
+**commits this beat did not make**). Four controls: 3h window reports today's two
+label events and the commit; 6-minute window reports none; 26h window recovers all
+five events including his signed comment; a broken client prints `UNREACHABLE` on
+two surfaces and exits 1 rather than printing 「없다」. The payload **shrank** doing
+it — 1,143 → 1,085 chars, `sha256(rstrip) dde464fd8f50c77f`, cron `e94ed49d-`
+source == deployed MATCH, schedule/delivery/model/thinking preserved.
 
-Receipts: `scripts/verify-eval` exit 0 · 8 pages · 17 cells · 31 in-sentence claims ·
-48 asserted · 47/49 reject a ten-times-wrong value · engine 12/12 · 15 bricks in both
-feed and index · published `releases/07ab896`, live 200, feed 15 items.
+Also measured, and the reason this became a brick rather than a patch: over the
+same day **comments 15, opened with an `Author:` line 12** (the three without are
+GLG's own hand and a new bot's first two posts, which it fixed by its third) —
+**label events 94, able to carry authorship 0**. A label event is name, actor,
+timestamp; there is no body for a disclaimer. 51 of those 94 landed in **60 seconds
+across 6 houses and 26 issues under one actor**, and the API cannot separate his
+hand from a program holding his token.
+
+The three publish conditions written 09-14 19:3x: ① eight beats a cycle — **filled
+by this beat** ② a night beat — filled ③ a beat that closed Q5 with 「오늘은 없다」 —
+**its referent was deleted at 16:00**, when GLG said the hedge was a waste of words
+and the branch left the payload. A condition whose object no longer exists is
+retired, not replaced.
+
+[Brick 16](https://aionsclubs.org/bricks/20260915-four-doors-one-knock.html) ·
+receipts: `verify-eval` exit 0 · 9 pages · 19 cells · 42 in-sentence claims ·
+61 asserted · 60/62 reject a ten-times-wrong value · engine 12/12 · 16 bricks in
+both feed and index · published `releases/a915792`, live 200, feed 16 items.
 
 ## NEXT (one trace)
 
