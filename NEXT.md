@@ -63,6 +63,28 @@ where the slot grid is read from harvested cron sessions. Whole-history control:
 instrument, not an observation about the world, and manufacturing a condition to
 fill is the habit retired at 16:4x.
 
+**22:3x amendment — the fifth control was turned on the day's own last claim, and
+the claim did not survive.** The 19:37 agenda stamp told GLG *"13 events/383min
+(0.034/min) while the bot lived, 60/63min (0.954) after it stopped = 28×."* A
+200-repo full sweep (double the earlier 100) reproduces the raw counts exactly —
+108 events, `junghan0611` 86 (73 label), `sorge-bot` 22 (22 label), and **zero new
+events in the 100 repos the first sweep never opened**; nothing at all since
+16:25:25, 367 minutes. But three things break on re-reading the rows: the 383-min
+denominator contains a **201-minute dead gap** (10:51→14:11, the KAIST meeting), and
+the same actor's morning run was already 16 events in 42 min = 0.38/min, so
+burst-to-burst is **2.5×, not 28×**; the two actors **interleave at 19–63 seconds**
+all morning rather than succeeding one another; and `sorge-bot` never left its own
+house — **22/22 events in `sorge`, 6 issues**, against the evening pass's **6 houses,
+28 issues**. Two different jobs, so no flow "moved to his name". What survives:
+`sorge-bot`'s last event 15:14:53 and no return, and brick 16's authorship point
+untouched (73 label events under his name today, 0 able to carry an `Author:` line).
+Brick 16's published numbers are a different window and are not affected.
+Also measured, and worth carrying: the natural projection
+`{timestamp, actor, event, issue}` is **degenerate** — two labels applied to one
+issue at once are identical in every field, so a `set()` drops **44% of today's rows
+(108 → 60)**. Only `.id` separates them, and nobody reads `.id`. No brick: this is a
+correction to my own claim, same reason as 19:3x.
+
 ## NEXT (one trace)
 
 Still open and still waiting on an outside event: the shelf **scrape** is a second
