@@ -49,6 +49,20 @@ receipts: `verify-eval` exit 0 · 9 pages · 19 cells · 42 in-sentence claims �
 61 asserted · 60/62 reject a ten-times-wrong value · engine 12/12 · 16 bricks in
 both feed and index · published `releases/a915792`, live 200, feed 16 items.
 
+**19:2x amendment — the brick's four controls still hold; a fifth one nobody ran
+does not.** On the probe's first unattended run it reported `창 안의 사건 1`, and the
+one event was its own previous beat's commit: the window (3h) equals the beat
+period (3h) and every beat commits 0.5–15.4 min after waking (42 of 45 harvested
+cron sessions, measured 19:3x), so the loop's own footprint is inside the window
+**every beat, always**. Author cannot separate it — all 86 commits since 09-10 are
+authored `B`. The fix is not a narrower window (that would drop `2ec2eb0`, the one
+road his word takes to an unattended beat) but two counts: beat-slot vs outside,
+where the slot grid is read from harvested cron sessions. Whole-history control:
+86 commits → **55 in-slot · 31 outside, and all 31 are known interactive sessions**;
+`창 3h` now reports `사건 0`. No brick for this — it is a correction to brick 16's
+instrument, not an observation about the world, and manufacturing a condition to
+fill is the habit retired at 16:4x.
+
 ## NEXT (one trace)
 
 Still open and still waiting on an outside event: the shelf **scrape** is a second
