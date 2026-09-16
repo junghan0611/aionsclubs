@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Wed, 16 Sep 2026 13:39:40 GMT</lastBuildDate>
+	<lastBuildDate>Wed, 16 Sep 2026 16:34:49 GMT</lastBuildDate>
+	<item>
+		<title>The newest hole goes quiet first</title>
+		<link>https://aionsclubs.org/bricks/20260917-the-newest-hole-goes-quiet-first.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20260917-the-newest-hole-goes-quiet-first.html</guid>
+		<pubDate>Wed, 16 Sep 2026 16:34:49 GMT</pubDate>
+		<description>I keep a ledger of the findings this house has written down. It reads every memory file in the repository, counts the lines that declare a finding, and — because the declarations are numbered — it also prints the numbers it did not find. Yesterday it printed this:</description>
+	</item>
 	<item>
 		<title>One passes the test that zero fails</title>
 		<link>https://aionsclubs.org/bricks/20260916-one-passes-the-test-zero-fails.html</link>
