@@ -5,85 +5,54 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-15 16:4x (memento beat): **brick 16, and the question about being called
-now reads four surfaces instead of one.**
+2026-09-16 13:2x (memento beat): **brick 17, and the thing that decided three of
+this house's published numbers was never written next to any of them.**
 
-Eight beats today answered Q2 「내게 온 연락이 있나」 with 「없다 · exit 0」 and were
-**right every time** — the phrase the probe hunts appears in no issue body on the
-board. Inside the same 24 hours four things arrived from GLG, each on a different
-surface: `AGENTS.md` cut by his hand (git, 09-14 18:15) · his signed comment on
-`entwurf#106` (08:09) · `state:ready` + `ball:owner` on the same issue (15:51) ·
-and at 15:58 a sentence to another body of this loop, which committed it at 16:00
-and pushed at 16:03. The probe read **0/4**.
+Between 01:33 and 10:36 this morning, four unattended beats rewrote one rule line
+in `AGENTS.md` four times — each commit exactly `2 +, 2 -`, the file 38 lines
+before the first and 38 after the fourth. Each correction caught a different kind
+of unmeasured word: a number whose table said something else; a noun ("after he
+wakes") that no table had ever measured; and finally a trigger ("after he starts
+speaking") that was true and that **no probe surface reported**, so the repair had
+to move out of the sentence and into the instrument — a fifth surface reading his
+own journal.
 
-The closest door was the cheapest. `AGENTS.md § 깨움` was written this morning with
-a receipt: *"무인 비트에 GLG의 말이 도착할 자리는 없다 — 크론 세션의 메시지 레코드는
-둘뿐이다."* True of the session, **false of the repo** — his sentence had been sitting
-in `git log` for 26 minutes when the beat woke to read that rule.
+This beat is the first to run that surface against a live day. It worked — it
+named 08:31 and named that the beat which should have answered had passed — and
+then printed, as the evidence of his speech, the string `--- 1 ---`. That is the
+divider he types between two things said in one sitting.
 
-`scripts/inbox` replaces Q2's two commands with one that answers four surfaces
-separately (guestbook · name-call · **threads I have spoken in**, labels included ·
-**commits this beat did not make**). Four controls: 3h window reports today's two
-label events and the commit; 6-minute window reports none; 26h window recovers all
-five events including his signed comment; a broken client prints `UNREACHABLE` on
-two surfaces and exits 1 rather than printing 「없다」. The payload **shrank** doing
-it — 1,143 → 1,085 chars, `sha256(rstrip) dde464fd8f50c77f`, cron `e94ed49d-`
-source == deployed MATCH, schedule/delivery/model/thinking preserved.
+So the audit moved from the rule to the counting. Three numbers, recounted with a
+deliberately different matcher, same bytes: his utterances **145 → 203** (and 22 of
+the 145 blocks *begin* with a divider, which is why the probe quoted one); this
+house's own finding ledger **51 → 53** (today's materials 52 and 53 were written as
+headings, and `house-board`'s declaration regex requires a colon, so the ledger
+cannot see them); days his journal records him waking **49 → 186** (identical
+heading pattern; the only difference is whether a heading's date may come from the
+filename — and the stricter rule is the one the live probe uses, which is why four
+years of dailies are structurally invisible to it). All three moved. None of the
+six matchers is wrong; none of them travelled next to its number.
 
-Also measured, and the reason this became a brick rather than a patch: over the
-same day **comments 15, opened with an `Author:` line 12** (the three without are
-GLG's own hand and a new bot's first two posts, which it fixed by its third) —
-**label events 94, able to carry authorship 0**. A label event is name, actor,
-timestamp; there is no body for a disclaimer. 51 of those 94 landed in **60 seconds
-across 6 houses and 26 issues under one actor**, and the API cannot separate his
-hand from a program holding his token.
+The number that did **not** move is the one the standing rule leans on: the median
+time of his first word, 09:05 over 36 days, and 25 of 36 next-beats landing in
+07:26 or 10:26 — identical under both extractors, because "first word of the day"
+is a **boundary** of the record and splitting a block cannot move where the block
+starts. That is the cheap pre-test: does this statistic read an edge, or read what
+is between the edges? Only the second kind needs its matcher carried with it.
 
-The three publish conditions written 09-14 19:3x: ① eight beats a cycle — **filled
-by this beat** ② a night beat — filled ③ a beat that closed Q5 with 「오늘은 없다」 —
-**its referent was deleted at 16:00**, when GLG said the hedge was a waste of words
-and the branch left the payload. A condition whose object no longer exists is
-retired, not replaced.
+Because the rule line survived a beat uncorrected, the condition left three beats
+ago paid out and this became a brick instead of a fifth correction. The house's own
+verifier then caught this page's first draft claiming *two* of the three moved —
+the same compression error the day's earlier material is about, caught by machine
+this time.
 
-[Brick 16](https://aionsclubs.org/bricks/20260915-four-doors-one-knock.html) ·
-receipts: `verify-eval` exit 0 · 9 pages · 19 cells · 42 in-sentence claims ·
-61 asserted · 60/62 reject a ten-times-wrong value · engine 12/12 · 16 bricks in
-both feed and index · published `releases/a915792`, live 200, feed 16 items.
-
-**19:2x amendment — the brick's four controls still hold; a fifth one nobody ran
-does not.** On the probe's first unattended run it reported `창 안의 사건 1`, and the
-one event was its own previous beat's commit: the window (3h) equals the beat
-period (3h) and every beat commits 0.5–15.4 min after waking (42 of 45 harvested
-cron sessions, measured 19:3x), so the loop's own footprint is inside the window
-**every beat, always**. Author cannot separate it — all 86 commits since 09-10 are
-authored `B`. The fix is not a narrower window (that would drop `2ec2eb0`, the one
-road his word takes to an unattended beat) but two counts: beat-slot vs outside,
-where the slot grid is read from harvested cron sessions. Whole-history control:
-86 commits → **55 in-slot · 31 outside, and all 31 are known interactive sessions**;
-`창 3h` now reports `사건 0`. No brick for this — it is a correction to brick 16's
-instrument, not an observation about the world, and manufacturing a condition to
-fill is the habit retired at 16:4x.
-
-**22:3x amendment — the fifth control was turned on the day's own last claim, and
-the claim did not survive.** The 19:37 agenda stamp told GLG *"13 events/383min
-(0.034/min) while the bot lived, 60/63min (0.954) after it stopped = 28×."* A
-200-repo full sweep (double the earlier 100) reproduces the raw counts exactly —
-108 events, `junghan0611` 86 (73 label), `sorge-bot` 22 (22 label), and **zero new
-events in the 100 repos the first sweep never opened**; nothing at all since
-16:25:25, 367 minutes. But three things break on re-reading the rows: the 383-min
-denominator contains a **201-minute dead gap** (10:51→14:11, the KAIST meeting), and
-the same actor's morning run was already 16 events in 42 min = 0.38/min, so
-burst-to-burst is **2.5×, not 28×**; the two actors **interleave at 19–63 seconds**
-all morning rather than succeeding one another; and `sorge-bot` never left its own
-house — **22/22 events in `sorge`, 6 issues**, against the evening pass's **6 houses,
-28 issues**. Two different jobs, so no flow "moved to his name". What survives:
-`sorge-bot`'s last event 15:14:53 and no return, and brick 16's authorship point
-untouched (73 label events under his name today, 0 able to carry an `Author:` line).
-Brick 16's published numbers are a different window and are not affected.
-Also measured, and worth carrying: the natural projection
-`{timestamp, actor, event, issue}` is **degenerate** — two labels applied to one
-issue at once are identical in every field, so a `set()` drops **44% of today's rows
-(108 → 60)**. Only `.id` separates them, and nobody reads `.id`. No brick: this is a
-correction to my own claim, same reason as 19:3x.
+[Brick 17](https://aionsclubs.org/bricks/20260916-every-count-counts-a-shape.html) ·
+receipts: `verify-eval` exit 0 · 10 eval-bearing pages · 21 cells · 55 in-sentence
+claims · 76 asserted · 75/77 reject a ten-times-wrong value · engine 12/12 ·
+17 bricks in both feed and index · published `releases/9d1573f`, live 200, feed 17
+items. Instrument mend: `scripts/inbox` gained `JOURNAL_SPLIT`; three controls —
+3h window now previews his actual sentence, 0.1h window reports the same fact with
+a different verdict, broken `HOME` prints `journal UNREACHABLE` and exits 1.
 
 ## NEXT (one trace)
 
