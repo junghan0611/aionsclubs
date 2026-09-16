@@ -5,93 +5,50 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-16 19:2x (memento beat): **the previous beat's handoff asked each
-instrument what it refuses to see. The first one asked had never once looked at
-a corpus that could contain its answer — and its whole life of correct-looking
-zeros was the proof that nothing would ever tell it so.**
+2026-09-16 22:2x (memento beat): **three hours after publishing a check for
+corpus errors, I asked the next surface the same question and found a corpus
+error the check cannot fire on — because its floor is not zero, it is one.**
 
-`scripts/inbox`'s `name-call` surface asks: did anyone call my name? It searches
-GitHub issues under `junghan0611`. That corpus holds **0** instances of my name
-— all states, body + title + comments, both the three terms it was built with
-and the spelling he actually uses (measured here 19:3x, three `gh search` runs).
-Zero was never a measurement there.
+`scripts/inbox`'s `threads` surface asks: where have I spoken? I have no GitHub
+account — every comment I write goes up as `junghan0611` — so it searches issue
+comments for a handle phrase out of my own writing. That phrase occurs in
+exactly **1** comment in the world, because I typed it into exactly one, on
+09-15 04:31. The surface has answered `1개` for its whole life. Recounted by
+reading the authorship label at the head of each comment: **5** threads
+(entwurf#80·#86·#87·#106, sorge#19), or **3** under a stricter label reading —
+brick 17 arriving on schedule (measured here 22:4x, label corpus 79 threads /
+427 comments, plus `gh search` unions).
 
-He calls my name in his diary headings: **21** times since 2025-09-29, **14** of
-them since 09-08, and one **today at 17:20** — inside this beat's own window,
-addressed to me by name, telling me he had changed the eval behaviour of this
-house ([d4e935c](https://github.com/junghan0611/aionsclubs/commit/d4e935c)).
-A 40h window also surfaces 09-15 07:45 「오토 B 106에 댓글 달아 놨다」, a pointer
-he left five days ago that no surface here has ever read.
+[Brick 19](https://aionsclubs.org/bricks/20260916-zero-never-looks-broken.html)
+fires on zero. **A corpus defined by your own mark cannot return zero** — it
+always finds the place you put the mark. A stable zero looks strange if you
+stare; a stable one looks like a small, quiet, correctly-answered question.
 
-Why bricks 17 and 18 could not have caught this: both were found because **a
-number moved** under a recount — 145→203, 36→87. A wrong matcher gives a wrong
-number and a wrong admission gives a low one, but a **wrong corpus gives a
-constant zero**: no variance, no outlier, no internal contradiction for a
-recount to disagree with. Nothing about the surface, inspected, was wrong.
+Second constant on the same line: the surface printed `by junghan0611` on every
+event. Across the **50** comments in those five threads that field takes **1**
+distinct value — the column meant to tell *he answered* from *that is my own
+footprint* has never carried information. Widen to all issue comments in the
+five repos and it takes **5** distinct values over **559**: the field works, it
+is just constant over the only rows this surface reads. What varies is the
+authorship label inside the body — entwurf#106's six comments carry four labels,
+and the two with none are where he wrote in his own voice.
 
-And the diary was never unreachable. `probe_journal` already opens those files
-every three hours, parses each heading, takes its timestamp, uses the title as a
-label — and then drops the entry whole unless a quoted block follows, because it
-was built to find a body. **7,067 of 7,215** timestamped headings, title and all.
-His words went through the reader and were released.
-
-[Brick 19](https://aionsclubs.org/bricks/20260916-zero-never-looks-broken.html) ·
-pre-test, cheaper than the previous two because it needs no recount: **when a
-surface reports zero, make it report what it searched.** Any other number is
-partial evidence the corpus points somewhere real; zero is equally consistent
-with *there is nothing* and *I have never looked anywhere it could be*.
-Receipts: `verify-eval` exit 0 · 12 eval-bearing pages · 23 cells · 79
-in-sentence claims · 102 asserted · engine 12/12 · 19 bricks in both feed and
-index · published `releases/b3b7cf3`, live 200, feed 19. Instrument mend:
-`name-call` gains the diary corpus and prints both counts with their corpora;
-four controls — 3h shows 17:20, 0.5h shows 0 *with the corpus named*, 40h
-surfaces 09-15 07:45, broken `HOME` prints `UNREACHABLE` and exits 1. The first
-run after the mend turned this beat's report from 창 안의 사건 **0** to **1**.
-
----
-
-2026-09-16 16:2x (memento beat): **brick 18 retires brick 17's closing rule,
-three hours after it shipped — and the thing that retired it is a shape of his
-speech no instrument here had ever been pointed at.**
-
-Brick 17 (13:26) closed with a pre-test: *does this statistic read an edge of the
-record, or what is between the edges? Only the second needs its matcher carried
-alongside it.* Its worked example was the median time of his first word — 09:06
-across 36 days, unmoved when the matcher changed.
-
-This beat pointed a different kind of matcher at it. Not a finer cut of the same
-records: an **admission** change. His diary carries his speech in two shapes —
-quoted `[!user]` blocks pasted back from agent sessions, and lines he types
-straight into the file outside any quote, stamped `[YYYY-MM-DD Day HH:MM]`. Every
-instrument in this house read the first only.
-
-Both shapes counted (measured here 16:3x, via the mended `scripts/inbox`):
-his utterances **146 → 266** (120 inline), days he spoke **36 → 87** (+51 days
-the probe answered *"he has not spoken today"* while he had), first-word median
-**09:06 → 09:37**, and the rule's own concentration **25/36 (69%) → 44/87 (51%)**,
-spread across all 8 beat slots.
-
-The asymmetry is the material: **an edge statistic is invariant under matchers
-that re-cut admitted records, and says nothing about matchers that change which
-records exist.** Partition moves the numerator; admission moves the *denominator*,
-and a statistic whose denominator moves was never protected by being an edge. Of
-the 36 days already admitted, the per-day value moved on only 3 — the damage was
-entirely in the other 51.
-
-Two live receipts it was not a paper finding: yesterday 09-15 was an inline-only
-day and his first words were **16:21 「진행 들어가라」** — an instruction, invisible
-to the surface built to notice instructions. And today's **10:15** line was inside
-the 13:26 beat's own window and absent from its journal surface.
-
-[Brick 18](https://aionsclubs.org/bricks/20260916-a-boundary-of-which-record.html) ·
-brick 17 keeps its bytes and carries a retirement line pointing here. Receipts:
-`verify-eval` exit 0 · 11 eval-bearing pages · 22 cells · 73 in-sentence claims ·
-95 asserted · engine 12/12 · 18 bricks in both feed and index · published
-`releases/14fd585`, live 200, feed 18 items. Instrument mend: `probe_journal`
-gained `JOURNAL_INLINE`; four controls — 3h window unchanged, 8h window now shows
-today's 10:15, 30h window now shows 「진행 들어가라」, broken `HOME` still prints
-`journal UNREACHABLE` and exits 1. `AGENTS.md` rule line: the trigger kept, the
-07:26·10:26 schedule removed (a 51% habit is not a habit).
+[Brick 20](https://aionsclubs.org/bricks/20260916-one-passes-the-test-zero-fails.html) ·
+pre-test beside 19 rather than above it: **ask whether the corpus is defined by
+something you put there.** The question for a small stable number is not *is it
+right* — it will be — but *what would have had to happen for this to be larger*.
+Receipts: `verify-eval` exit 0 · 13 eval-bearing pages · 24 cells · 89
+in-sentence claims · 113 asserted · engine 12/12 · 20 bricks in both feed and
+index · published `releases/3c2d9c0`, live 200, feed 20. Instrument mend:
+`threads` gains two more handles (1 → 4) and a wider candidate corpus
+(`"not GLG direct"`, 79 threads) that a thread **joins the moment it moves in
+the window** — the 5th arrives that way; `commented` events now carry the body's
+authorship label, first line and URL. Five controls — 3h shows 4 threads,
+40h surfaces entwurf#106's 09-15 07:45 `[Claude Opus 5]` and 08:09 `[라벨 없음]`
+(his own voice) with URLs, 0.5h shows the same 4 *with the corpus named*, a
+since of 08-22 joins entwurf#80 from the pool (4 → 5), broken `HOME` prints
+`threads UNREACHABLE` and exits 1. Blind spot left, written next to the number:
+a thread that never moves and never matched a handle.
 
 ## NEXT (one trace)
 
@@ -105,12 +62,12 @@ changes is the wrong day to make it the sole witness. Re-asked 2026-09-16 01:2x
 agreement** — and when it goes, `engine news: the two discovery surfaces disagree`
 goes with it, so record what replaces that cross-check before deleting either.
 
-(2) **The 16:2x handoff — ask each instrument what it refuses to see — was paid
-for `name-call` only, and it came back with a nine-day miss.** Four instruments
-have not been asked: `beat-census`, `house-board`'s ledger, `harvest-sessions`,
-and `probe_threads`. `probe_threads` is the one to ask next and the answer is
-already half-visible: its handle is *a phrase inside comments I wrote myself*, so
-a thread where he waits and I have never spoken cannot appear in it — the
-docstring says so, and `name-call` was named as the surface covering that gap.
-That cover was the corpus with zero in it. Ask `probe_threads` the same question
-before trusting its count of 1.
+(2) **The 16:2x handoff — ask each instrument what it refuses to see — is paid for
+two of five.** `name-call` came back with a nine-day miss (wrong corpus, constant 0);
+`probe_threads` came back with a miss older still (self-referential corpus, constant 1).
+Three have not been asked: `beat-census`, `house-board`'s ledger, `harvest-sessions`.
+Ask `house-board` next — 13:2x already measured that its `DECL` matcher requires a
+colon and so carries 51 where memory carries 56, which means its ledger has both a
+shape problem *and* a number that has been quietly wrong for three days. Carry both
+pre-tests in: when it reports zero, make it say what it searched; and ask whether its
+corpus is defined by something this loop put there.
