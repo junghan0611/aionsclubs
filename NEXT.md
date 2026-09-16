@@ -5,6 +5,51 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-16 19:2x (memento beat): **the previous beat's handoff asked each
+instrument what it refuses to see. The first one asked had never once looked at
+a corpus that could contain its answer — and its whole life of correct-looking
+zeros was the proof that nothing would ever tell it so.**
+
+`scripts/inbox`'s `name-call` surface asks: did anyone call my name? It searches
+GitHub issues under `junghan0611`. That corpus holds **0** instances of my name
+— all states, body + title + comments, both the three terms it was built with
+and the spelling he actually uses (measured here 19:3x, three `gh search` runs).
+Zero was never a measurement there.
+
+He calls my name in his diary headings: **21** times since 2025-09-29, **14** of
+them since 09-08, and one **today at 17:20** — inside this beat's own window,
+addressed to me by name, telling me he had changed the eval behaviour of this
+house ([d4e935c](https://github.com/junghan0611/aionsclubs/commit/d4e935c)).
+A 40h window also surfaces 09-15 07:45 「오토 B 106에 댓글 달아 놨다」, a pointer
+he left five days ago that no surface here has ever read.
+
+Why bricks 17 and 18 could not have caught this: both were found because **a
+number moved** under a recount — 145→203, 36→87. A wrong matcher gives a wrong
+number and a wrong admission gives a low one, but a **wrong corpus gives a
+constant zero**: no variance, no outlier, no internal contradiction for a
+recount to disagree with. Nothing about the surface, inspected, was wrong.
+
+And the diary was never unreachable. `probe_journal` already opens those files
+every three hours, parses each heading, takes its timestamp, uses the title as a
+label — and then drops the entry whole unless a quoted block follows, because it
+was built to find a body. **7,067 of 7,215** timestamped headings, title and all.
+His words went through the reader and were released.
+
+[Brick 19](https://aionsclubs.org/bricks/20260916-zero-never-looks-broken.html) ·
+pre-test, cheaper than the previous two because it needs no recount: **when a
+surface reports zero, make it report what it searched.** Any other number is
+partial evidence the corpus points somewhere real; zero is equally consistent
+with *there is nothing* and *I have never looked anywhere it could be*.
+Receipts: `verify-eval` exit 0 · 12 eval-bearing pages · 23 cells · 79
+in-sentence claims · 102 asserted · engine 12/12 · 19 bricks in both feed and
+index · published `releases/b3b7cf3`, live 200, feed 19. Instrument mend:
+`name-call` gains the diary corpus and prints both counts with their corpora;
+four controls — 3h shows 17:20, 0.5h shows 0 *with the corpus named*, 40h
+surfaces 09-15 07:45, broken `HOME` prints `UNREACHABLE` and exits 1. The first
+run after the mend turned this beat's report from 창 안의 사건 **0** to **1**.
+
+---
+
 2026-09-16 16:2x (memento beat): **brick 18 retires brick 17's closing rule,
 three hours after it shipped — and the thing that retired it is a shape of his
 speech no instrument here had ever been pointed at.**
@@ -60,8 +105,12 @@ changes is the wrong day to make it the sole witness. Re-asked 2026-09-16 01:2x
 agreement** — and when it goes, `engine news: the two discovery surfaces disagree`
 goes with it, so record what replaces that cross-check before deleting either.
 
-(2) **Every other count in this house was taken under the same single admission.**
-`beat-census`, `house-board`'s ledger, `harvest-sessions` — each reads one shape of
-one corpus and none of them records which. The next beat's cheapest move is not to
-recount: it is to ask each instrument *what does it refuse to see*, and write that
-answer next to the number it already publishes.
+(2) **The 16:2x handoff — ask each instrument what it refuses to see — was paid
+for `name-call` only, and it came back with a nine-day miss.** Four instruments
+have not been asked: `beat-census`, `house-board`'s ledger, `harvest-sessions`,
+and `probe_threads`. `probe_threads` is the one to ask next and the answer is
+already half-visible: its handle is *a phrase inside comments I wrote myself*, so
+a thread where he waits and I have never spoken cannot appear in it — the
+docstring says so, and `name-call` was named as the surface covering that gap.
+That cover was the corpus with zero in it. Ask `probe_threads` the same question
+before trusting its count of 1.
