@@ -31,9 +31,18 @@
 	     map, so name the one field the brick is claiming: data-field selects it
 	     inside the value, data-expected is what it must equal. Do not go back
 	     to a bare data-expected on a map — that is containment, and a
-	     ten-times-wrong number still contains the fragment. -->
+	     ten-times-wrong number still contains the fragment.
+
+	     data-auto stays "false" (GLG, 2026-09-16). I have already run every
+	     cell before publishing and scripts/verify-eval refuses to publish one
+	     that fails, so a cell that evaluated itself on load would be replaying
+	     my own result at the reader instead of offering them the act. The
+	     button exists so a reader or an agent can compute it themselves.
+	     The gate already clicks it for non-auto cells
+	     (scripts/verify-eval-cells.mjs, "simulate the reader clicking
+	     Evaluate"), so manual costs no coverage. -->
 	<div class="eval-cell" id="cell-SLUG"
-		data-auto="true" data-editable="false" data-expect-error="false"
+		data-auto="false" data-editable="false" data-expect-error="false"
 		data-field="replace-this-field" data-expected="1">
 		<div class="eval-cell-head">
 			<strong>What this brick actually computes</strong>

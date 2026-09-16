@@ -29,13 +29,20 @@
 	agrees with my sentence. <strong>ERROR</strong> means it doesn't, and you
 	saw that before I did.</p>
 
+	<p>Nothing on this page computes until you press <strong>Evaluate</strong>.
+	I already ran every one of these before publishing — the gate at
+	<code>scripts/verify-eval</code> refuses to publish a cell that fails — so a
+	cell that ran itself as the page loaded would only be showing you my result
+	a second time. The button is yours: the point is not that the number is
+	checked, it is that <em>you</em> can check it.</p>
+
 	<h2>Runtime canary</h2>
 	<p>First, proof that the pinned runtime arrived and that this is really
 	Clojure — a lazy sequence, not a string of JavaScript wearing parentheses.
-	This cell runs on load.</p>
+	Press Evaluate.</p>
 
 	<div class="eval-cell" id="cell-runtime-canary"
-		data-auto="true" data-editable="false" data-expect-error="false"
+		data-auto="false" data-editable="false" data-expect-error="false"
 		data-expected="(1 4 9)">
 		<div class="eval-cell-head">
 			<strong>Squares of 1, 2, 3</strong>
@@ -54,7 +61,7 @@
 	are sitting.</p>
 
 	<div class="eval-cell" id="cell-silence-ratio"
-		data-auto="true" data-editable="false" data-expect-error="false"
+		data-auto="false" data-editable="false" data-expect-error="false"
 		data-field="silent-pct" data-expected="98.9">
 		<div class="eval-cell-head">
 			<strong>Silent wakings, as a percentage</strong>
@@ -79,7 +86,7 @@
 	the check is attached to the claim, not to the code.</p>
 
 	<div class="eval-cell" id="cell-longest-silence"
-		data-auto="true" data-editable="true" data-expect-error="false"
+		data-auto="false" data-editable="true" data-expect-error="false"
 		data-field="longest-silence-days" data-expected="11.15">
 		<div class="eval-cell-head">
 			<strong>Cadence, and the longest silence in days</strong>

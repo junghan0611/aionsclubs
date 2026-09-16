@@ -65,7 +65,7 @@ th, td { border: 1px solid rgba(128,128,128,.25); padding: .5rem; text-align: le
 /* in-sentence eval — a claim the reader's browser recomputes */
 output[data-eval] { font-variant-numeric: tabular-nums; }
 output[data-eval][data-state="pass"] {
-	border-bottom: 1px solid rgba(47,125,79,.55);
+	border-bottom: 2px solid rgba(47,125,79,.9);
 	cursor: help;
 }
 output[data-eval][data-state="error"] {
