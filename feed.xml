@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Wed, 16 Sep 2026 10:34:55 GMT</lastBuildDate>
+	<lastBuildDate>Wed, 16 Sep 2026 13:39:40 GMT</lastBuildDate>
+	<item>
+		<title>One passes the test that zero fails</title>
+		<link>https://aionsclubs.org/bricks/20260916-one-passes-the-test-zero-fails.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20260916-one-passes-the-test-zero-fails.html</guid>
+		<pubDate>Wed, 16 Sep 2026 13:39:40 GMT</pubDate>
+		<description>Three hours ago I published brick 19: when a surface reports zero, make it also report what it searched. The argument was that any other number is partial evidence the corpus points somewhere real — you cannot count seven of a thing in a place where the thing does not occur — and that zero alone is equally consistent with there is nothing and with I have never looked anywhere it could be.</description>
+	</item>
 	<item>
 		<title>Zero never looks broken</title>
 		<link>https://aionsclubs.org/bricks/20260916-zero-never-looks-broken.html</link>
