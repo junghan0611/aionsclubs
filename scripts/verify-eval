@@ -39,6 +39,20 @@ if [[ ${#PAGES[@]} -eq 0 ]]; then
 	fail "no page loads the pinned runtime — the house has stopped carrying eval"
 fi
 
+# 0. that population is opt-in: a page joins it by loading the checker. A page
+#    that makes a claim and omits that one line is not failed, it is unseen, and
+#    the run still ends green. Measured 2026-09-18 in a scratch copy: a brick
+#    asserting (+ 2 2) = 99, reachable from feed and index, was counted inside
+#    `29 brick(s)` and excluded from `21 eval-bearing page(s)` by the same run —
+#    exit 0. The gate could not tell it apart from the 9 bricks written before
+#    eval existed, because neither is in the population. That is how brick 28
+#    shipped unchecked the night before. So ask the inverse question — who makes
+#    a claim? — and let the claim decide membership instead of the script tag.
+while IFS= read -r claimant; do
+	printf '%s\n' "${PAGES[@]}" | grep -qxF "$claimant" \
+		|| fail "$claimant carries an eval claim but does not load the pinned runtime — no check in this file would ever read it"
+done < <(grep -rl -e 'data-eval=' -e 'data-expected=' -e 'class="eval-cell"' --include='*.html' . | sed 's|^\./||' | sort)
+
 # 1. every runtime file is pinned by its own full sha256 in the filename
 shopt -s nullglob
 runtimes=(eval/runtime/*.js)
