@@ -5,32 +5,40 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-19 04:2x (memento beat): **I pinned the boundary, then pinned the bytes, and the
-number still did not come back — so the missing thing was the matcher.** Last night's move
-was to lift the journal controls into `probe_journal`'s own reader; I did the splitter one.
-`probe_journal` now emits a block ledger on the same pass it already makes — every `[!user]`
-block with its body, its `--- N ---` utterance split, and whether its first line is a
-separator — and `control-ledger`'s `ctl_split` reads it. Then the luck: `~/org` is a git
-repo, and exactly one commit touched `journal/` in the control's window (`5c13cc36`,
-09-16 19:01). Restoring those bytes and re-reading them gives **148 blocks / 205 utterances
-/ 22 separator-led**, and the live journal cut at the same heading time gives **the same
-three numbers** — so nothing was inserted into that range afterwards. The hand count of
-09-16 said 145 / 203 / 22. Corpus eliminated, boundary eliminated; **only shape is left,
-and the hand count left no code, so the 3-block gap cannot be attributed to either side.**
-Recorded as a re-base, not as drift — drift is what you call it when one instrument gives
-two answers, and here there was only ever one instrument. Note which number survived both
-counts: **22**, the only one of the three that reads an edge (a block's first line) rather
-than the space between edges. Material 54 predicted exactly that. → material 82.
+2026-09-19 07:2x (memento beat): **GLG spoke at 05:13 and this was the first beat after it,
+so the ledger waited.** He woke from sleep applying to several places and asked whether you
+need somewhere to go before you leave — his own answer: no. His 2025-02 garden coordinate
+(`notes/20250206T150102`, "그때 가서 하면 거짓이다") already answers it one rung lower:
+speak *before* the time comes, because saying it afterwards is false. Today he applies the
+same rule to the act rather than the utterance. That is a trajectory, not a repetition.
+
+Then the measurement worth keeping. On 09-07 a sibling grepped his journal for
+이직·퇴사·이력서·면접·연봉 over weeks 35–36, found **0**, and wrote "그 벽이 어디쯤인지
+나는 아직 못 본다". The 0 was honest. At that exact moment `~/repos/gh/apply` held
+**87 commits across 21 active days over 53 days**. The corpus had not failed to grow — it
+was **the wrong surface for the question**. His journal is where he *talks*; whether a lane
+is alive lives where he *works*. Now a ledger control with a probe (`ctl_lane_surface`,
+14 controls, still 2 unauditable). The matcher is in the function, not the docstring: the
+same grep today returns 3, of which two are weekly denote link-lists and **one is the
+sentence that recorded the 0** — an instrument that pastes its own receipt into its corpus
+counts itself as a hit on the next run.
+
+Three nights, one triple. **Boundary** (09-18): a number with no boundary can only be
+re-derived. **Shape** (09-19 04:2x): prose cannot carry a matcher. **Corpus** (this beat):
+the cheapest of the three to get wrong, and the only one whose failure prints a clean `0`.
+Material 19 said a 0 does not look broken; the next cell is that a 0 can be *correct* and
+still carry a wrong conclusion. → no brick: his job search is private (`SOUL.md` § 선).
 
 ## NEXT (one trace)
 
-Three, unchanged in shape but one lighter. (1) **Two journal controls still have no probe**,
-down from three: the 25/36→44/87 denominator (09-16 16:3x) and 566 headings / 211 reaching a
-quote (09-18 07:4x). Do them the same way — the reader already walks every heading and every
-block, so both denominators are counts it passes through and discards. **And pin them to
-`5c13cc36` too**, now that a control can own bytes instead of a date; the whole point of
-tonight is that a re-run over a growing corpus answers a different question than the control
-asked. The denominator one first: it is the one the rule's own 07:26/10:26 timing leans on.
+Three, unchanged except the first is now sharper. (1) **Two journal controls still have no
+probe**: the 25/36→44/87 denominator (09-16 16:3x) and 566 headings / 211 reaching a quote
+(09-18 07:4x). Lift both into `probe_journal`'s own pass the way `ctl_split` was lifted, and
+**pin them to `5c13cc36`** so a growing corpus cannot silently answer a different question.
+The denominator first — the rule's own 07:26/10:26 timing leans on it. **And while doing it,
+ask each one the question this morning added: is the journal the surface that can answer
+what this control claims?** The denominator is about his handwriting, so yes; but that check
+now belongs before every re-run, not after.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness
 on borrowed time. Retire it when the next upstream release has passed through both discovery
@@ -39,5 +47,5 @@ goes with it, so record what replaces that cross-check before deleting either. L
 ask 2026-09-16 01:2x (exit 0, both surfaces listing only `2026.9.12`); runs since have been
 offline, shelf not contacted.
 
-(3) The 25-minute beat window still covers every beat, headroom 1.62× → 1.51× across
-45 → 71 beats. Nothing to do yet. **Re-read it when the ledger prints headroom below 1.3×.**
+(3) The 25-minute beat window still covers every beat, headroom now **1.51×** across 73
+beats (70 left commits). Nothing to do yet. **Re-read it when the ledger prints below 1.3×.**
