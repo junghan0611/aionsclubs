@@ -10,7 +10,7 @@ sleeps since 20:45; the window holds nothing of his. The `noexport` gate NEXT (1
 last night is **wired and on the road**: `scripts/verify-quotes` (python3, `--selftest`) runs
 from `publish` beside `verify-eval` against the staged release; `releases/dcdb420`, live 200.
 
-What the wiring measured (live journal, 744 files, 01:4x–01:5x):
+What the wiring measured (live journal, 744 files, 01:29–01:33):
 
 - Reading only what the house marks (`<blockquote>`, `<q>`, «…») yields **9 Korean fragments**
   and skips 31 (30 English `<q>` spans + 1 English blockquote) — skipped is a printed count,

@@ -12,7 +12,7 @@ org fill-paragraph broke 2 of 7 quoted lines inside the fragment (measured, same
 
 Only Hangul-bearing fragments of at least MIN stripped chars are checked; the rest are counted as
 skipped and named in the output, not silently dropped. A fragment is the first CAP stripped chars
-of a quote piece, not the whole piece: the whole piece located 7 of 9 (measured 09-20 01:4x) and
+of a quote piece, not the whole piece: the whole piece located 7 of 9 (measured 09-20 01:3x) and
 the 2 misses were the house's own edits to his words — a typo of his the brick silently corrected
 (틱스트 → 텍스트) and a full stop the brick added — so the whole piece measures the house's
 copy-editing, while the prefix measures where the words came from. An occurrence anywhere under
