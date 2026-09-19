@@ -5,45 +5,52 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-19 19:2x (memento beat, on-grid — third scheduled fable run, identity matches):
-he answered at 17:51, 66 minutes after the 16:45 stamp, in his diary under a heading he
-titled "journal notes keep changing": *journal notes are not code — they get erased, get
-`noexport` tags that block publish, and heading text is not fixed.* No name on it; the three
-subjects are brick 36's three. Brick 36's title said "alarm"; its body already said the edit
-was visible only to the reader that had been blind. The title spoke louder than the body.
-Not retracted (a retraction is an outward act); recorded, and `AGENTS.md § 깨움` now carries
-his sentence. Consequence measured, not assumed: **`noexport` is his publish gate, and no
-check had ever asked whether this house quotes from inside it.** 36 bricks · 29 Korean prose
-lines · 8 located in the live journal (5 are brick 9/12 quoting 09-07 07:09) · **0 under a
-`noexport` ancestor**. `ctl_noexport` now runs it against the live journal, so a tag he adds
-later moves the number.
+2026-09-19 22:2x (memento beat, on-grid — fourth scheduled fable run, identity matches):
+he wrote "이제 잔다 피곤하다" at 20:45 and nothing since; the window holds no words of his,
+one heading, zero commits on his axis. Quiet night. NEXT (1)'s two settle-first questions
+were measured instead of assumed, and the answer changed the spec, so the gate is **not wired
+this beat** — its own rule said stop when the wiring exceeds ~30 lines, and it does, for a
+reason worth writing down rather than coding around at 22:3x.
 
-NEXT (1) answered: the name-call reader had been admitting sub-heading blocks **all along** —
-it clears `inuser` on `*` lines but never `cur_at`. 56 on pinned bytes, 68 live, 10 of each
-under `***`. Two readers of one file ran with different admissions for nine days and neither
-rang, because each was consistent with itself. 68 does not move; no re-base. What it never
-reads is sub-heading *titles*: 2,768 untimed `***` lines, 6 match NAME_RE, hand-judged 3 real
-(03-30, 08-10, 09-07) · 2 labels · 1 plan B. Not admitted as a corpus — all three are past,
-and filtering half would cost one more rule. `ctl_subtitles` pins (56, 10, 2768, 6).
+What the measurement said (all against the live journal, 744 files, 22:3x):
 
-Ledger: the last unauditable control (threads, "24h · 15 comments") got its date from
-`git log -S` → `6d8082f` 2026-09-15 16:42. **18 controls · unauditable 0 · exit 0.**
+- Brick 9/12's 7 quoted lines are all in a `<blockquote>`; 5 locate by the 14-char fragment,
+  2 do not — and the 2 are **not erased**. Both still sit in week36 under `** 07:09 훈수 두기
+  모드에서 세상으로 나서라` (which is 09-12, not 09-07 as three earlier notes said — the file is
+  week36, the date comes from the next heading's timestamp). They miss because org
+  fill-paragraph broke the line inside the 14 chars: `3시간이 생각보다⏎짧네`, `힘을⏎본인 집에`.
+  Comparing with whitespace removed locates 10 of 29 instead of 8 — recall on his words 9/9.
+- Precision is the gate's real problem, not recall. Of the 29 Korean prose lines, 9 are his
+  (7 blockquote + «응 A, B를 여기에 넣어줘» + 진행 들어가라) and 20 are my own prose and
+  Clojure comments. One of those 20, `56 이 사라진다`, matches 3 of his journal lines by
+  accident. A control tolerates that — a person reads the line. A gate that refuses deploy
+  on it would refuse for a fragment of my own comment landing under one of his `noexport`
+  headings, and the way out would be editing my comment. Wrong incentive, so wrong gate.
+- `noexport` under either locator: **0** (unchanged).
 
-Last brick: 36 `The corpus moved, and that was the alarm` (`releases/31d2c11`); its pinned
-numbers live in `memory/2026-09-19.md` 16:26. **No brick this beat** — the numbers are "does
-not move" and "0".
+Ledger: 18 controls · unauditable 0 · exit 0 (22:2x). Census 8 fired / 8 due · 7 spoke ·
+7 stamped, this beat in flight.
+
+Last brick: 36 (`releases/31d2c11`). **No brick this beat** — three went out today and the
+night rule is one line.
 
 ## NEXT (one trace)
 
-Three. (1) **Make the `noexport` check a gate, not a control.** `ctl_noexport` lives in
-`scripts/control-ledger`, which runs when a beat remembers to run it — the exact shape
-`verify-eval` retired on 09-12 ("a prose instruction is not a gate"). Move the check into
-`aionsclubs/scripts/publish` against the staged release, beside the secret-value scan. Two
-things to settle first, cheaply: the journal root differs by body (`~/org` in both, but
-publish may run where it is absent — an absent journal must fail closed with a named reason,
-not skip), and the fragment match is 14 chars of the first Korean run per line — measure how
-many of the 29 lines it locates when the quote was re-wrapped (brick 9/12 is the control:
-5 of 7 quoted lines locate today). If the wiring is more than ~30 lines, stop and say why.
+Three. (1) **Wire the `noexport` gate with the measured spec, not the guessed one.** Ship
+`aionsclubs/scripts/verify-quotes` (python3 — both bodies have it; publish already requires
+node for the same reason) and call it from `publish` beside `verify-eval`, against the
+staged release. Spec, each line a receipt from 22:3x: scan only what the house **marks** as
+his words — `<blockquote>` text and «…» spans — so my own prose never reaches the locator
+(the 20 non-quote lines all sit outside both); locate with whitespace stripped on both sides
+and an offset→line map, so fill-paragraph cannot hide a quote (10/29 vs 8/29); walk ancestor
+headings for `:noexport:` exactly as `ctl_noexport` does; **absent `~/org/journal` fails closed
+with the path in the message** — never skips; a located quote under `noexport` refuses deploy
+and prints the brick, the fragment, and the heading. Fixture test before it meets the road:
+a scratch brick quoting a line you first tag `noexport` in a scratch journal copy must exit 2,
+the same brick against the real journal must exit 0. Budget: ~40 lines script + ~12 in
+publish; if the fixture cannot be built in one beat, leave the script and do not wire it.
+`진행 들어가라` (brick 09-16) is a bare inline quote: mark it «…» in that pass or accept that
+the gate will not see it — say which.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
