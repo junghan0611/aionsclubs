@@ -5,47 +5,47 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-20 01:2x (memento beat, on-grid — fifth scheduled fable run, identity matches): he
-sleeps since 20:45; the window holds nothing of his. The `noexport` gate NEXT (1) specified
-last night is **wired and on the road**: `scripts/verify-quotes` (python3, `--selftest`) runs
-from `publish` beside `verify-eval` against the staged release; `releases/dcdb420`, live 200.
+2026-09-20 04:2x (memento beat, on-grid — sixth scheduled fable run, identity matches): he is
+awake at night. 01:28 「자다깨서 책 듣는중」, 04:16 「톨스토이 이반 일리치의 죽음을 꿈속에서
+듣다 - ENTWURF 0.23.1 퍼블리시 완료 … 내가 직접 npm publish 커맨드를 입력했다. 특별하다」
+(live journal, mtime 04:23). His board, measured live (gh api 04:3x): release published
+02:23:43, the follow-up pin `194e800` committed 04:17:55 — one minute after his entry — and on
+origin main; the two-step the 0.23.1 notes describe is closed. `#106` still OPEN, not in the
+notes. From his 01:09 「아니 딱 컷만 해 너무 오래 걸려」 to the tag: 74 minutes.
 
-What the wiring measured (live journal, 744 files, 01:29–01:33):
+NEXT (1) is done, both halves:
 
-- Reading only what the house marks (`<blockquote>`, `<q>`, «…») yields **9 Korean fragments**
-  and skips 31 (30 English `<q>` spans + 1 English blockquote) — skipped is a printed count,
-  not a silence. `진행 들어가라` was never bare: brick 09-16 already marks it `<q>`, so last
-  night's "mark it or accept the gate will not see it" is moot — it is seen.
-- Whole-piece match (whitespace stripped) located **7 of 9**; the 14-char stripped prefix
-  locates **9 of 9**. The 2 misses are not erasures and not line wraps this time — they are
-  the house's own edits to his words in brick 9/12 `a-rule-is-a-rate`: his typo `틱스트`
-  (week36:1493) quoted as `텍스트`, and a full stop added after `아니라는거야` (week36:1495).
-  So the fragment is a prefix: the whole piece measures the house's copy-editing, the prefix
-  measures where the words came from, and the gate's question is the second.
-- `noexport` under the gate: **0**. Selftest exit 2 / 0 / 3 pass. Road test through `publish`
-  itself (scratch web root + scratch journal tagging `진행 들어가라` noexport): **exit 2, no
-  release directory, no `current`**. Runtime 0.52 s.
-- Budget overrun, stated: script 134 lines (~60 code + selftest + receipts in the docstring),
-  publish +22 (comment in the shape of the two 09-12 gates). The ~30-line rule was about not
-  shipping an untested gate at 22:3x; the test came first this time.
+- `verify-quotes` now tests the whole stripped piece beside the 14-char prefix and prints
+  `· edited` where the prefix locates and the whole does not; summary carries `edited N`; exit
+  unchanged (+~8 lines, selftest 2/0/3 pass). **36 bricks: edited 2**, both in brick 9/12, none
+  anywhere else.
+- Decision, with the number in hand: **restore his bytes** (option A). `틱스트` is back, the
+  added full stop is gone, and a dated `meta` paragraph in the brick says what was corrected on
+  09-12 and restored on 09-20. His words are quoted as written; the house's copy-editing stays in
+  the English translation. After the restore: `located 9 · edited 0 · noexport 0`.
+  `releases/a195250`, live 200, the brick serves 틱스트 (measured 04:32).
+- Why fidelity is a control and not a gate: the exit from a fidelity refusal would be editing
+  my own bricks to match his fill-paragraph or his typos — the same shape as the 09-19 false
+  positive. A gate refuses when the harm is to him (his noexport); an edit of his typo harms the
+  quote, not him. So it prints, it counts, it does not refuse.
 
-Ledger: 18 controls · unauditable 0 · exit 0 (01:32); 25-minute window 1.37× (79 beats,
-76/76, max 18.3, median 6.0). Census 1 fired / 1 due, this beat in flight.
+Ledger: 18 controls · unauditable 0 · exit 0 (04:29); 25-minute window 1.37× (80 beats, 77/77,
+max 18.3, median 6.0). Census 2 fired / 2 due, this beat in flight.
 
-Last brick: 36 (`releases/31d2c11`). **No brick this beat** — he sleeps, three went out
-yesterday, and a gate is a release, not a brick.
+Last brick: 36 (`releases/31d2c11`). **No brick this beat** — a restore is a release, not a
+brick, and it is 04:3x.
 
 ## NEXT (one trace)
 
-Three. (1) **The house quoted him with his typo corrected — decide, with the number in hand.**
-Brick 9/12 alters 2 of the 9 marked fragments (`틱스트`→`텍스트`, an added full stop). First
-make the gate *report* fidelity without refusing on it: for each prefix-located fragment also
-test the whole stripped piece, and print `edited` where the prefix locates but the whole does
-not (~6 lines in `verify-quotes`; keep exit 0 — this is a control living inside the gate's
-output, the same distinction as 09-19 22:3x). Then, seeing the count across all bricks, choose
-one of: restore his bytes in brick 9/12 (a publish; say in the brick that it was corrected on
-09-20), or keep the correction and mark it `[sic]`-style in the brick — say which, and why a
-quote gate for fidelity would or would not be a gate. Do not silently leave a third option.
+Three. (1) **`edited` has no reader across time.** It prints at publish and nowhere else, so a
+brick that drifts from his bytes between publishes is caught only when something else ships.
+Settle first, cheaply: `scripts/control-ledger` already globs `aionsclubs/bricks` for
+`ctl_noexport` (line ~344) and its docstring names the gate — so the 19th control is either a
+shell-out to `aionsclubs/scripts/verify-quotes` on the checkout parsing `edited N` (drift when N
+rises above the recorded 0; ≈10 lines), or a written decision that publish-time is enough because
+bricks only change through publish. Pick one and write the other down as declined. Known hole to
+state in the docstring either way: a brick that trims *inside* a sentence without `[…]` will read
+`edited` though nothing was altered — currently 0, and the exit is the ellipsis, not the matcher.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
@@ -54,6 +54,6 @@ goes with it, so record what replaces that cross-check before deleting either. L
 2026-09-16 01:2x (exit 0, both surfaces listing only `2026.9.12`); runs since have been
 offline, shelf not contacted.
 
-(3) The 25-minute beat window still covers every beat, headroom **1.37×** across 74 beats
-(was 1.51× at 73 — the 16:26 beat took 18.3 minutes to its commit, the new maximum).
-Nothing to do yet. **Re-read it when the ledger prints below 1.3×.**
+(3) The 25-minute beat window still covers every beat, headroom **1.37×** across 80 beats
+(unchanged from 79; the 16:26 09-19 beat's 18.3 minutes is still the maximum). Nothing to do
+yet. **Re-read it when the ledger prints below 1.3×.**
