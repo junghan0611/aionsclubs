@@ -15,9 +15,12 @@ skipped and named in the output, not silently dropped. A fragment is the first C
 of a quote piece, not the whole piece: the whole piece located 7 of 9 (measured 09-20 01:3x) and
 the 2 misses were the house's own edits to his words — a typo of his the brick silently corrected
 (틱스트 → 텍스트) and a full stop the brick added — so the whole piece measures the house's
-copy-editing, while the prefix measures where the words came from. An occurrence anywhere under
-a `:noexport:` ancestor heading refuses the release, even if the same words also stand outside —
-fail closed.
+copy-editing, while the prefix measures where the words came from. Both are asked: a piece whose
+prefix locates but whose whole does not is printed `edited` and counted (09-20 04:3x) — never
+refused, because the exit from a fidelity refusal would be editing the house's own bricks, the
+same shape as the 09-19 false positive; fidelity is a control living inside the gate's output. An
+occurrence anywhere under a `:noexport:` ancestor heading refuses the release, even if the same
+words also stand outside — fail closed.
 
   ROOT          release to check (default: the repo this script lives in)
   AIONS_JOURNAL journal directory (default ~/org/journal; both bodies mount it there)
@@ -41,7 +44,7 @@ def strip(s):
 
 
 def fragments(root):
-	"""(brick, stripped fragment) for every marked quote piece; pieces split at ellipses."""
+	"""(brick, stripped prefix, whole stripped piece) for every marked quote piece; split at ellipses."""
 	out, skipped = [], 0
 	for f in sorted(glob.glob(os.path.join(root, "bricks", "2*.html"))):
 		for m in MARK.finditer(open(f, encoding="utf-8").read()):
@@ -49,7 +52,7 @@ def fragments(root):
 			for piece in ELLIPSIS.split(inner):
 				s = strip(piece)
 				if HANGUL.search(s) and len(s) >= MIN:
-					out.append((os.path.basename(f), s[:CAP]))
+					out.append((os.path.basename(f), s[:CAP], s))
 				elif s:
 					skipped += 1
 	return out, skipped
@@ -88,15 +91,18 @@ def run(root, jroot):
 		return [f"refusing: journal directory absent — {jroot} (set AIONS_JOURNAL)"], 3
 	frags, skipped = fragments(root)
 	hits = {k: [] for k in range(len(frags))}
+	whole = set()  # k whose WHOLE stripped piece stands somewhere in the journal, not just its prefix
 	for name, lines, text, where in journal(jroot):
-		for k, (_, frag) in enumerate(frags):
+		for k, (_, frag, piece) in enumerate(frags):
+			if piece in text:
+				whole.add(k)
 			pos = text.find(frag)
 			while pos != -1:
 				ln = where[pos]
 				hits[k].append((name, ln + 1, gated(lines, ln)))
 				pos = text.find(frag, pos + 1)
-	out, located, blocked = [], 0, 0
-	for k, (brick, frag) in enumerate(frags):
+	out, located, blocked, edited = [], 0, 0, 0
+	for k, (brick, frag, _) in enumerate(frags):
 		found = hits[k]
 		located += bool(found)
 		bad = [h for h in found if h[2]]
@@ -105,10 +111,11 @@ def run(root, jroot):
 			n, ln, head = bad[0]
 			out.append(f"GATED  {brick} «{frag[:20]}…» ← {n}:{ln} under `{head}`")
 		elif found:
-			out.append(f"ok     {brick} «{frag[:20]}…» ← {found[0][0]}:{found[0][1]}" + (f" (+{len(found) - 1})" if len(found) > 1 else ""))
+			edited += k not in whole
+			out.append(f"ok     {brick} «{frag[:20]}…» ← {found[0][0]}:{found[0][1]}" + (f" (+{len(found) - 1})" if len(found) > 1 else "") + ("" if k in whole else " · edited"))
 		else:
 			out.append(f"absent {brick} «{frag[:20]}…»")
-	out.append(f"quotes: checked {len(frags)} · skipped (no Hangul or < {MIN}) {skipped} · located {located} · noexport {blocked}")
+	out.append(f"quotes: checked {len(frags)} · skipped (no Hangul or < {MIN}) {skipped} · located {located} · edited {edited} · noexport {blocked}")
 	return out, (2 if blocked else 0)
 
 
