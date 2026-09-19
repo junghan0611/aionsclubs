@@ -156,6 +156,27 @@ else
 	exit 2
 fi
 
+# his words, checked against his gate. He tags a journal heading :noexport: to
+# keep it out of his garden (GLG, 2026-09-19 17:51); this house quotes that
+# journal, and until 2026-09-20 nothing on the road asked whether a quote came
+# from behind that tag — the only check was a control in the workspace ledger,
+# read by a person. Same shape as the two gates above: a correct predicate off
+# the road. verify-quotes reads only what the house marks as quotation
+# (<blockquote>, <q>, «…»), because a fragment of my own prose matched 3 of his
+# lines by accident (measured 2026-09-19 22:3x) and a gate cannot tolerate the
+# false positive a control tolerates. An absent journal refuses, never skips.
+if command -v python3 >/dev/null 2>&1; then
+	if ! quotes_out=$("$STAGING/scripts/verify-quotes" "$STAGING" 2>&1); then
+		echo "refusing deploy: a quoted line of his sits under his noexport gate (or the journal is unreadable)" >&2
+		printf '%s\n' "$quotes_out" >&2
+		exit 2
+	fi
+	printf '%s\n' "$quotes_out" | tail -1
+else
+	echo "refusing deploy: python3 not found — cannot check quotes against his journal" >&2
+	exit 2
+fi
+
 # .deployed last = completeness marker
 printf '%s\n' "$LABEL" "$(git rev-parse HEAD)" "$(date -Iseconds)" "by=${WHO}" >"$STAGING/.deployed"
 

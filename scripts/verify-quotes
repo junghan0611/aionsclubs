@@ -1,0 +1,139 @@
+#!/usr/bin/env python3
+"""verify-quotes [ROOT] — refuse a release that quotes his words from under his `:noexport:` gate.
+
+He wrote (2026-09-19 17:51): journal notes are not code — he erases, retitles, and tags a heading
+`:noexport:` to keep it out of his garden. This house quotes his journal. Nothing had ever asked
+whether a quote came from behind that tag; the control `ctl_noexport` (workspace ledger) asked on
+09-19 and found 0 — and a control tolerates a false positive a gate cannot. So this gate reads
+only what the house MARKS as quotation — `<blockquote>`, `<q>`, «…» — never bare prose, because
+a 14-char fragment of my own Clojure comment matched 3 of his journal lines by accident
+(measured 09-19 22:3x). Fragments are compared with all whitespace removed on both sides, since
+org fill-paragraph broke 2 of 7 quoted lines inside the fragment (measured, same beat).
+
+Only Hangul-bearing fragments of at least MIN stripped chars are checked; the rest are counted as
+skipped and named in the output, not silently dropped. A fragment is the first CAP stripped chars
+of a quote piece, not the whole piece: the whole piece located 7 of 9 (measured 09-20 01:4x) and
+the 2 misses were the house's own edits to his words — a typo of his the brick silently corrected
+(틱스트 → 텍스트) and a full stop the brick added — so the whole piece measures the house's
+copy-editing, while the prefix measures where the words came from. An occurrence anywhere under
+a `:noexport:` ancestor heading refuses the release, even if the same words also stand outside —
+fail closed.
+
+  ROOT          release to check (default: the repo this script lives in)
+  AIONS_JOURNAL journal directory (default ~/org/journal; both bodies mount it there)
+  --selftest    build a scratch brick + scratch journal, prove exit 2 / exit 0 / exit 3
+
+  exit 0  no marked quote sits under his noexport gate
+  exit 2  at least one does — brick, fragment and heading are printed
+  exit 3  the journal directory is absent — refuse, never skip
+"""
+import glob, html, os, re, sys, tempfile
+
+MARK = re.compile(r"<blockquote[^>]*>(.*?)</blockquote>|<q>(.*?)</q>|«([^»]*)»", re.S)
+ELLIPSIS = re.compile(r"\[…\]|\[\.\.\.\]|…|\.\.\.")
+HANGUL = re.compile(r"[가-힣]")
+HEAD = re.compile(r"^(\*+)\s")
+MIN, CAP = 6, 14
+
+
+def strip(s):
+	return re.sub(r"\s+", "", s)
+
+
+def fragments(root):
+	"""(brick, stripped fragment) for every marked quote piece; pieces split at ellipses."""
+	out, skipped = [], 0
+	for f in sorted(glob.glob(os.path.join(root, "bricks", "2*.html"))):
+		for m in MARK.finditer(open(f, encoding="utf-8").read()):
+			inner = html.unescape(re.sub(r"<[^>]+>", "", next(g for g in m.groups() if g is not None)))
+			for piece in ELLIPSIS.split(inner):
+				s = strip(piece)
+				if HANGUL.search(s) and len(s) >= MIN:
+					out.append((os.path.basename(f), s[:CAP]))
+				elif s:
+					skipped += 1
+	return out, skipped
+
+
+def journal(root):
+	"""(name, lines, whitespace-free text, offset→line) per org file — the locator's corpus."""
+	for n in sorted(os.listdir(root)):
+		if not n.endswith(".org") or "sync-conflict" in n or "templates" in n:
+			continue
+		lines = open(os.path.join(root, n), encoding="utf-8", errors="replace").read().split("\n")
+		buf, where = [], []
+		for i, l in enumerate(lines):
+			s = strip(l)
+			buf.append(s)
+			where.extend([i] * len(s))
+		yield n, lines, "".join(buf), where
+
+
+def gated(lines, i):
+	"""Walk ancestors upward exactly as ctl_noexport does: org tags inherit downward."""
+	level = 99
+	for j in range(i, -1, -1):
+		m = HEAD.match(lines[j])
+		if m and len(m.group(1)) < level:
+			level = len(m.group(1))
+			if ":noexport:" in lines[j]:
+				return lines[j].strip()
+			if level == 1:
+				return None
+	return None
+
+
+def run(root, jroot):
+	if not os.path.isdir(jroot):
+		return [f"refusing: journal directory absent — {jroot} (set AIONS_JOURNAL)"], 3
+	frags, skipped = fragments(root)
+	hits = {k: [] for k in range(len(frags))}
+	for name, lines, text, where in journal(jroot):
+		for k, (_, frag) in enumerate(frags):
+			pos = text.find(frag)
+			while pos != -1:
+				ln = where[pos]
+				hits[k].append((name, ln + 1, gated(lines, ln)))
+				pos = text.find(frag, pos + 1)
+	out, located, blocked = [], 0, 0
+	for k, (brick, frag) in enumerate(frags):
+		found = hits[k]
+		located += bool(found)
+		bad = [h for h in found if h[2]]
+		blocked += bool(bad)
+		if bad:
+			n, ln, head = bad[0]
+			out.append(f"GATED  {brick} «{frag[:20]}…» ← {n}:{ln} under `{head}`")
+		elif found:
+			out.append(f"ok     {brick} «{frag[:20]}…» ← {found[0][0]}:{found[0][1]}" + (f" (+{len(found) - 1})" if len(found) > 1 else ""))
+		else:
+			out.append(f"absent {brick} «{frag[:20]}…»")
+	out.append(f"quotes: checked {len(frags)} · skipped (no Hangul or < {MIN}) {skipped} · located {located} · noexport {blocked}")
+	return out, (2 if blocked else 0)
+
+
+def selftest():
+	"""A scratch brick quoting a line first tagged noexport in a scratch journal must exit 2; the
+	same brick against the real journal must exit 0; a missing journal must exit 3."""
+	line = "이 문장은 검증 픽스처에만 있고 그의 일기에는 없다"
+	with tempfile.TemporaryDirectory() as d:
+		os.makedirs(f"{d}/root/bricks"); os.makedirs(f"{d}/journal")
+		open(f"{d}/root/bricks/20990101-scratch.html", "w").write(f"<p>x</p><blockquote>{line[:12]}\n\t{line[12:]}</blockquote>")
+		open(f"{d}/journal/20990101T000000--scratch__journal.org", "w").write(f"* 2099-01-01\n** 09:00 시험 :noexport:\n{line[:20]}\n{line[20:]}\n** 09:10 열림\n{line}\n")
+		want = [(f"{d}/journal", 2), (os.path.expanduser(os.environ.get("AIONS_JOURNAL", "~/org/journal")), 0), (f"{d}/nowhere", 3)]
+		ok = True
+		for jr, code in want:
+			out, got = run(f"{d}/root", jr)
+			ok &= got == code
+			print(f"selftest journal={jr} → exit {got} (want {code})\n  " + "\n  ".join(out))
+	print("selftest:", "pass" if ok else "FAIL")
+	return 0 if ok else 1
+
+
+if __name__ == "__main__":
+	if "--selftest" in sys.argv:
+		sys.exit(selftest())
+	root = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+	report, code = run(root, os.path.expanduser(os.environ.get("AIONS_JOURNAL", "~/org/journal")))
+	print("\n".join(report), file=sys.stderr if code else sys.stdout)
+	sys.exit(code)
