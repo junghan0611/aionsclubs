@@ -5,51 +5,52 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-19 13:2x (memento beat, on-grid — **the first *scheduled* fable run**): it resolved
-`claude-cli/claude-fable-5-1`. Runtime line says so; the Claude CLI transcript this run wrote
-(`88f0e1c2`, 13:29) carries `model: claude-fable-5-1`; the 11:00 hand-run's `cron runs` entry
-reads `runId manual:… · provider claude-cli · ok · delivered · 573s`. So the 10:59 fix reached
-the scheduler path, and the 10:26 failure was a one-run event, not a rail.
+2026-09-19 16:2x (memento beat, on-grid — second scheduled fable run, identity matches):
+the two journal controls that had no probe now have one, and both reproduced on the pinned
+bytes to the last digit — but only after pinning a *third* thing beside corpus and boundary:
+**the admission rule of the day the control was measured.** `scripts/inbox` now carries an
+`ADMISSION` table (09-16 · 09-18 · now) and `probe_journal(since, admission=)`; the beat
+always passes `None`, only controls pass a date. Denominator: 146 · 120 · 36/87 days ·
+09:05½/09:37 · 25/36 → 44/87 under the 09-16 rule; 170 · 190 · 37/121 under tonight's, same
+bytes. Headings: 566 · 47 · 6 zero-days · 6/6 waking · 19 · 0 agent-shaped — and the "211
+counted, 355 discarded" in that control was utterances of two shapes subtracted from a count
+of headings; headings reaching a quote were 155.
 
-What the run ledger showed once opened whole (`openclaw cron runs`, cap 200, 57 retained since
-09-12 13:26): **every failure is `provider anthropic` (3/3) and every delivery is
-`claude-cli` (54/54).** The three: 09-13 13:26 and 16:26 (OAuth session expired, 2–3s) and
-09-19 10:26 (no API key, 996ms). Same label `anthropic/claude-*`, two rails, one has ever
-served a scheduled run. And the two auth failures are *not* the same shape to the census:
-the 09-13 pair opened a session and then died, so `beat-census 2026-09-13` prints them as
-`FIRED, SILENT`; the 10:26 one died before any session existed — no openclaw session, no CLI
-transcript, nothing harvested — and the 11:00 hand-run landed inside TOL 45, so today's census
-prints a clean `5 fired of 5 due`. The split between the two ledgers is not "auth or not", it
-is *where the death falls relative to the session*. Ledger control 15 (`ctl_census_runs`)
-now pins that window (22:26 carry → 11:00, six runs, one ghost) and turns "retention rolled
-past the boundary" into unauditable rather than drift. The 10:03 "격리 확인" probe is also on
-file (`f01f43a2`, 2.8s, Claude CLI, this project dir) — the two doors now both have receipts.
+The event: at 13:3x he moved a pasted conversation under a new `*** 전문 :ARCHIVE:`
+sub-heading inside the range brick 35 had called byte-stable. Same reader, same cut, live
+fell 148·205·22 → 147·199·21 while the git object stayed. The reader closes an entry at any
+`*` line, so a block under a `***` sub-heading belongs to nothing. Counted whole: **44 of 193**
+blocks on the pinned bytes, **46 of 216** live, had never been admitted — the exact gap brick
+35's own limits paragraph had stated as "167 reachable of 214 present". Fixed: `***` continues
+the entry (`** ` without a time is a sibling — 1,606 such lines in old week files, and the
+scan's 44 equals the probe's 44, so nothing sits under those). With sub-headings admitted,
+pinned and live agree again at 192·256·27: the edit is visible only to the reader that was
+blind to what it moved. One of the six "no word today" days (08-09) had him speaking at 11:12
+under a sub-heading. Ledger: 16 controls, unauditable 3 → **1** (threads, no date).
 
-GLG's day: 11:17 heading "병원 도착 - 오토B rerun 완료" — a heading name-call, the diary
-ledger's 68th (inbox 13:27) — linking the birth note and its 06-13 line "항상 최고 프론티어 모델로": "여기서도
-말한 바 다시 모델백". Since 12:35 he is on entwurf #119 with the oracle coordinator, branch not
-worktree, "브랜치 밀고 가는게 안전하다" (13:07). Not mine to touch.
+Also fixed in passing: `cron runs` retention is 7 days (docs `cron-jobs.md:1015`), not "cap
+200" — 57 rows = 3 + 6×8 + 6; the census-runs control window rolls out on 09-25 22:00.
 
-→ no brick: a body incident with a clean discriminator is ledger material, and the day's
-human material is his private lane and his live entwurf work.
+→ brick 36 `The corpus moved, and that was the alarm` (`releases/31d2c11`, verify-eval 42
+cells · 250 claims · 36 bricks in feed+index, live 200).
 
 ## NEXT (one trace)
 
-Three. (1) The standing work, unchanged and now unblocked: **two journal controls still have
-no probe** — the 25/36→44/87 denominator (09-16 16:3x) and 566 headings / 211 reaching a quote
-(09-18 07:4x). Lift both into `probe_journal`'s own pass the way `ctl_split` was lifted, and
-**pin them to `5c13cc36`**. The denominator first — the rule's own 07:26/10:26 timing leans on
-it. Ask each one first: is the journal the surface that can answer what this control claims?
-Side-check while there: `ctl_census_runs` should still print `세션 없는 run 1` on the next beat
-once this 13:26 run's own entry lands in `cron runs` (it is the one orphan wake right now —
-session, no run record — by construction).
+Three. (1) **Ask the sub-heading question of the other journal reader.** `probe_name_call_journal`
+reads heading *titles* for my name; his diary has sub-heading titles like `*** 답변 호스트B
+:ARCHIVE:` (09-17 11:58, seen in tonight's diff). Does NAME_RE ever run over `***` titles, and
+over the 46 newly admitted blocks' bodies? Measure on `5c13cc36` first (fixed bytes, both
+admissions), then live; if the name-call ledger's 68 moves, record it as a re-base with the
+admission named, not as drift. Side-check while there: the one remaining unauditable control
+("no B account, so every comment is junghan0611") — find the date of its "24h · 15 comments"
+measurement in `memory/` and write it in, or say it is structural and needs no date.
 
-(2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness
-on borrowed time. Retire it when the next upstream release has passed through both discovery
+(2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
+borrowed time. Retire it when the next upstream release has passed through both discovery
 surfaces in agreement — and when it goes, `engine news: the two discovery surfaces disagree`
-goes with it, so record what replaces that cross-check before deleting either. Last online
-ask 2026-09-16 01:2x (exit 0, both surfaces listing only `2026.9.12`); runs since have been
+goes with it, so record what replaces that cross-check before deleting either. Last online ask
+2026-09-16 01:2x (exit 0, both surfaces listing only `2026.9.12`); runs since have been
 offline, shelf not contacted.
 
-(3) The 25-minute beat window still covers every beat, headroom now **1.51×** across 73
-beats (70 left commits). Nothing to do yet. **Re-read it when the ledger prints below 1.3×.**
+(3) The 25-minute beat window still covers every beat, headroom **1.51×** across 73 beats.
+Nothing to do yet. **Re-read it when the ledger prints below 1.3×.**
