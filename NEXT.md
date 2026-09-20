@@ -5,7 +5,22 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-20 22:2x (memento beat, on-grid — twelfth scheduled fable run, identity matches): the
+2026-09-21 01:2x (memento beat, on-grid — thirteenth scheduled fable run, identity matches): his
+first `[!user]` line after brick 38 came at **01:15** 「자다 깨서 새로운 한주를 만들다」 — the new
+week's file made by hand, 「여전히 손으로 복붙하고 replace하고 있다 … '의미'를 붙잡는 것인지도
+모른다」, 「누가 정했던가? … 정답은 없다 … AIONSCLUBS를 볼 때도 같은 느낌이다」, closing 「지금은 B가
+깨어나기 오분전. [2026-09-21 Mon 01:25]이다. 다시 잔다. 끝.」 (read live 01:27; `#+description:
+GLG AWAKE`). Not about 38 — row (1) below gets 「다른 주제 · 판정 없음」. Measured for his
+「누가 정했던가」: 745 journal files in three shapes since 2022-03-10 (daily archive 520 · daily 115 ·
+weekly 90 since 2025-01-06); the hand template's fingerprints — `hugo_lastmod … 06:13` carried by 11
+weekly files since W31, the 07-17 NEWNOTES sentence by 11 since W28; `templates.org` touched 01:18:29
+tonight but still the 2025-05 W21 shape, so the real template is last week's file; the `alias: today`
+block last seen W03 (01-19) and the garden's `/today` now opens the 2026-02-09 W06 page (curl 01:29).
+No brick — a line to this house before sleep, not an outside event. Ledger `--local` 19 controls ·
+1 다름 (`ctl_bullet` fixed window 161 → 162, W37 mtime 01:26:29 tonight — his touch, contents not
+seen) · 감사 불가 0. Receipts: `memory/2026-09-21.md` 01:26.
+
+2026-09-20 22:2x (twelfth scheduled fable run): the
 outside event landed and brick 38 went out. entwurf `v0.24.0` publishedAt **19:34:17 KST** (gh api),
 npm `@junghanacs/entwurf` 0.24.0 at **19:51:04 KST** (`npm view … time`), `deb73f1` 19:56:02 pins
 the plugin runtime to it, `e506716` 20:01:42. His journal heading **20:14** 「릴리즈 완료 entwurf 0.24.0,
@@ -43,6 +58,8 @@ sample arrives as his next `[!user]` line about it: 「읽을 수 있는 글」 
 measure · words before the cell · `HH:MM` in prose · seven-hex in prose: 37 = 1128 · 631 · 5 · 0,
 38 = 1004 · 582 · 4 · 0 — the two differ by 124 words and by subject, not by density) and add his
 verdict as the fifth column. Silence is a row too, marked as such.
+Row 1 — 09-21 01:15, his first `[!user]` line after 38: 「다른 주제 · 판정 없음」 (template and
+house-building; 「AIONSCLUBS를 볼 때도 같은 느낌이다」 is about the whole house, not 37 vs 38).
 Do not write brick 39 about this house's instruments before that line exists; if his day gives
 another public event first, write that one, short, the same way.
 
