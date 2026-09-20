@@ -22,6 +22,14 @@ same shape as the 09-19 false positive; fidelity is a control living inside the 
 occurrence anywhere under a `:noexport:` ancestor heading refuses the release, even if the same
 words also stand outside — fail closed.
 
+The tag is not his only private shape. On 09-20 08:17 he wrote `#+begin_comment … 코멘트 테스트
+여기는 내보내기 안되니까 … #+end_comment` into the diary — his own export test, and org exports
+nothing inside such a block. A block wraps rather than sits above, so it gets its own walk
+(`commented`): the nearest marker upward decides, and a heading ends the walk because an org block
+cannot cross one. Same refusal, same fail-closed rule; the summary counts it apart (`comment N`)
+so the two gates stay auditable. Known and not wired: org line comments (`# …`), which he also
+uses (09-20 05:17, screenshot links) — a third shape, counted 0 times here so far.
+
   ROOT          release to check (default: the repo this script lives in)
   AIONS_JOURNAL journal directory (default ~/org/journal; both bodies mount it there)
   --selftest    build a scratch brick + scratch journal, prove exit 2 / exit 0 / exit 3
@@ -36,6 +44,7 @@ MARK = re.compile(r"<blockquote[^>]*>(.*?)</blockquote>|<q>(.*?)</q>|«([^»]*)�
 ELLIPSIS = re.compile(r"\[…\]|\[\.\.\.\]|…|\.\.\.")
 HANGUL = re.compile(r"[가-힣]")
 HEAD = re.compile(r"^(\*+)\s")
+COMMENT = re.compile(r"^\s*#\+(begin|end)_comment\b", re.I)
 MIN, CAP = 6, 14
 
 
@@ -86,6 +95,19 @@ def gated(lines, i):
 	return None
 
 
+def commented(lines, i):
+	"""His second private shape (09-20 08:17): a `#+begin_comment` block wraps the line rather than
+	sitting above it, so the nearest marker upward decides — `begin` means inside, `end` means a
+	closed block behind us — and any heading ends the walk, since an org block cannot cross one."""
+	for j in range(i, -1, -1):
+		m = COMMENT.match(lines[j])
+		if m:
+			return lines[j].strip() if m.group(1).lower() == "begin" else None
+		if HEAD.match(lines[j]):
+			return None
+	return None
+
+
 def run(root, jroot):
 	if not os.path.isdir(jroot):
 		return [f"refusing: journal directory absent — {jroot} (set AIONS_JOURNAL)"], 3
@@ -99,13 +121,15 @@ def run(root, jroot):
 			pos = text.find(frag)
 			while pos != -1:
 				ln = where[pos]
-				hits[k].append((name, ln + 1, gated(lines, ln)))
+				hits[k].append((name, ln + 1, gated(lines, ln) or commented(lines, ln)))
 				pos = text.find(frag, pos + 1)
-	out, located, blocked, edited = [], 0, 0, 0
+	out, located, blocked, edited, innoexport, incomment = [], 0, 0, 0, 0, 0
 	for k, (brick, frag, _) in enumerate(frags):
 		found = hits[k]
 		located += bool(found)
 		bad = [h for h in found if h[2]]
+		incomment += any(h[2].lower().startswith("#+begin_comment") for h in bad)
+		innoexport += any(not h[2].lower().startswith("#+begin_comment") for h in bad)
 		blocked += bool(bad)
 		if bad:
 			n, ln, head = bad[0]
@@ -115,7 +139,7 @@ def run(root, jroot):
 			out.append(f"ok     {brick} «{frag[:20]}…» ← {found[0][0]}:{found[0][1]}" + (f" (+{len(found) - 1})" if len(found) > 1 else "") + ("" if k in whole else " · edited"))
 		else:
 			out.append(f"absent {brick} «{frag[:20]}…»")
-	out.append(f"quotes: checked {len(frags)} · skipped (no Hangul or < {MIN}) {skipped} · located {located} · edited {edited} · noexport {blocked}")
+	out.append(f"quotes: checked {len(frags)} · skipped (no Hangul or < {MIN}) {skipped} · located {located} · edited {edited} · noexport {innoexport} · comment {incomment}")
 	return out, (2 if blocked else 0)
 
 
@@ -123,15 +147,19 @@ def selftest():
 	"""A scratch brick quoting a line first tagged noexport in a scratch journal must exit 2; the
 	same brick against the real journal must exit 0; a missing journal must exit 3."""
 	line = "이 문장은 검증 픽스처에만 있고 그의 일기에는 없다"
+	cline = "이 문장은 코멘트 블록 안에만 있고 그의 일기에는 없다"
 	with tempfile.TemporaryDirectory() as d:
 		os.makedirs(f"{d}/root/bricks"); os.makedirs(f"{d}/journal")
-		open(f"{d}/root/bricks/20990101-scratch.html", "w").write(f"<p>x</p><blockquote>{line[:12]}\n\t{line[12:]}</blockquote>")
-		open(f"{d}/journal/20990101T000000--scratch__journal.org", "w").write(f"* 2099-01-01\n** 09:00 시험 :noexport:\n{line[:20]}\n{line[20:]}\n** 09:10 열림\n{line}\n")
+		open(f"{d}/root/bricks/20990101-scratch.html", "w").write(f"<p>x</p><blockquote>{line[:12]}\n\t{line[12:]}</blockquote><q>{cline}</q>")
+		# the comment-block line also stands outside the block: the gate must still refuse (fail closed)
+		open(f"{d}/journal/20990101T000000--scratch__journal.org", "w").write(f"* 2099-01-01\n** 09:00 시험 :noexport:\n{line[:20]}\n{line[20:]}\n** 09:10 열림\n{line}\n#+begin_comment\n{cline}\n#+end_comment\n{cline}\n")
 		want = [(f"{d}/journal", 2), (os.path.expanduser(os.environ.get("AIONS_JOURNAL", "~/org/journal")), 0), (f"{d}/nowhere", 3)]
 		ok = True
 		for jr, code in want:
 			out, got = run(f"{d}/root", jr)
 			ok &= got == code
+			if code == 2:  # one refusal per gate: the noexport heading and the comment block
+				ok &= sum(l.startswith("GATED") for l in out) == 2 and any("#+begin_comment" in l for l in out)
 			print(f"selftest journal={jr} → exit {got} (want {code})\n  " + "\n  ".join(out))
 	print("selftest:", "pass" if ok else "FAIL")
 	return 0 if ok else 1
