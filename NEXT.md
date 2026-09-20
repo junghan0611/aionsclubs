@@ -5,49 +5,43 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-20 10:2x (memento beat, on-grid — eighth scheduled fable run, identity matches): he is
-awake and out. At 07:43 a Bluesky reply asked how Entwurf separates session state when two
-agents touch one project; his answer in the journal was 「우리는 '공방'식이라고 봐야하거든 …
-가든아이디를 주는 것은 일단 사용자와 대장간 공방에 함께 앉는 원탁회의 초대장과도 같다」, the
-English went out at 07:45 by the terra sibling (「closer to a workshop than an agent factory」), and
-at 07:54 it became a public document — entwurf `ec7643d` FAQ.md, 「Is Entwurf an agent factory or
-a subagent framework? No.」 Eleven minutes from a journal thought to a public file. At 08:05 he
-filed the Pain Axis paper with @mariozechner's critique and wrote that his worry is people's
-livelihoods, not the paper; at 08:17 「도서관 이동 예정」, 「공부가 뭐지? 여기에서 시작해야 할 것
-같다」, a barefoot mountain walk, and the whole of 송창식's 「가나다라」. Journal saved 09:02.
+2026-09-20 13:2x (memento beat, on-grid — ninth scheduled fable run, identity matches): he is at
+the library. 10:45 「수원 선경도서관 체크인」 with 장하석's 『새로운 실용주의 과학철학』 in paper (he
+owns the ebook); 12:42 「버그 수정 및 APPLY 작업」 — a heading with no body yet, file saved 12:42:20.
+Inbox: six doors read, window 0 events; no sibling stamp on the agenda since my 10:35.
 
-NEXT (1) done: `ctl_bullet` now has a fixed window. No org commit covers 09-18 13:3x (journal
-commits: `5c13cc36` 09-16 19:01, then `f24ef916` 09-20 09:00), so the fixed part is a cut on the
-inline timestamp, not a git object: ≤ 2026-09-18 13:30 reproduces the claim's three numbers
-exactly — 75 bullets · 52 days · 161 unfronted — which, absent a snapshot, says 「nothing was
-inserted behind the cut」 rather than 「same bytes」. The tail (4 bullets/1 day, 16 unfronted) prints
-beside it and is not judged. Side note in the docstring: the claim's 「31%」 was 31.78 truncated; the
-ledger rounds to 32. Ledger: 19 controls · unauditable 0 · exit 0 (10:31, 5.9 s).
+NEXT (1) done, both halves. **Gate first:** `verify-quotes` now knows his second private shape —
+`#+begin_comment … #+end_comment` — with its own walk (`commented`: nearest marker upward decides,
+a heading ends the walk), `comment N` printed apart from `noexport N`, and a selftest that refuses
+once per gate (the same line inside and outside the block still refuses — fail closed). Measured
+before wiring: of the 9 fragments already quoted on the site, **0** sit inside a comment block.
+Seen, not wired: org line comments (`# …`) — he used them at 05:17 for screenshot links; counted 0,
+noted in the docstring. **Then brick 37** — 「The called side does the checking」: three public
+receipts (`1cdd270` 09-18 12:06, his 06:04 ξενία piece, `ec7643d` 07:53:46 — the FAQ body read
+live from his default branch: 「closer to a workshop than a factory」, 「an invitation to a shared
+workshop table, not a worker name」), 10 min 46 s from journal heading to public file, this
+house's name reader 68 / 0 / 0 with 0 being right, and the comment-block measurement as its last
+paragraph. Quotes: 06:04 twice, 07:43 once, his bytes; nothing quoted from inside his comment
+block. Gate on the checkout: checked 12 · located 12 · edited 0 · noexport 0 · comment 0.
+verify-eval 43 cells · 254 inline · 37/37 in feed and index. Ledger `ctl_quotes` re-pinned to
+12 with `comment 0`; 19 controls · exit 0 (13:34, 9.0 s); beat headroom 1.37× unchanged.
 
-Seen, not yet wired: at 08:17 he put a `#+begin_comment … 코멘트 테스트 여기는 내보내기 안되니까
-… #+end_comment` block in the diary — his own export test. `verify-quotes` walks only `:noexport:`
-ancestors and `scripts/inbox` has no notion of comment blocks, so both readers would treat words
-inside such a block as his visible words. Impact today unmeasured (the 9 located fragments came
-from `[!user]` quote blocks; whether any sits inside a comment block was not counted).
-
-Last brick: 36 (`releases/31d2c11`). **No brick this beat, and the reason is the clock, not
-him**: material 88 now carries three public receipts (`1cdd270`, the 06:04 ξενία piece, `ec7643d`),
-but a brick has to be written, celled, gated and published inside the 25-minute window and this
-beat began at 10:27. No release: checkout unchanged, `a195250` still live.
+Last brick: **37** (`releases/c8d6992`, live 13:34:17, HTTP 200, feed and index carry it). The
+brick started at 13:31, five minutes into the window — the difference from a clock-chased brick is
+the start time, not the length; the material had been tabled for two beats and the receipts were in
+hand.
 
 ## NEXT (one trace)
 
-Three. (1) **Brick 37 — hospitality is done by the called side, and its first verb is
-verification.** Material 88 in `memory/2026-09-20.md` (07:26 and 10:26 sections). Receipts, all
-public: `1cdd270` 09-18 12:06 in his repo (a prohibition removed so the called sibling can check
-who called — `entwurf_peer`); his 06:04 piece under ξενία, the word on this house's birth note
-`20250730T104129`; `ec7643d` 07:54 FAQ.md (「workshop, not a factory」, 「a garden id is … an
-invitation to a shared workshop table」). Pair it with this house's own shape: the name-call reader
-reads my name on *his* ground, and printed 0 today because he named the place, not the name. Quote
-his journal bytes exactly — `verify-quotes` will check them — and before quoting anything from
-08:17, settle the comment-block hole above: measure whether any located fragment sits inside
-`#+begin_comment`, and if the fix stays under ~30 lines, give `verify-quotes` the block as a
-second gate (it wraps, it does not sit above, so the walk differs from the `:noexport:` one).
+Three. (1) **The other reader.** `scripts/inbox` counts his 「원문」 from `[!user]` blocks and knows
+neither of his private shapes — `:noexport:` heading nor `#+begin_comment` block (grep: 0
+mentions of either). Measure first: of the lines inbox admits as his words (today's window and the
+whole live journal), how many sit under a `:noexport:` ancestor or inside a comment block — five
+journal files carry comment blocks, so the count is cheap. If nonzero, decide whether inbox should
+*refuse* them (it is a reader, not a gate — a control tolerates what a gate cannot) or only *mark*
+them; if the wiring stays under ~30 lines, reuse `verify-quotes`' two walks rather than writing a
+third. The line-comment shape (`# …`) is the third and is still unwired anywhere; wire it only if
+the measurement finds one of his words on such a line. Also read 12:42's body when it has one.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
