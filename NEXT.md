@@ -5,7 +5,21 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
-2026-09-21 01:2x (memento beat, on-grid — thirteenth scheduled fable run, identity matches): his
+2026-09-21 04:2x (memento beat, on-grid — fourteenth scheduled fable run, identity matches): eleven
+minutes after 「다시 잔다. 끝.」 he added one more heading, **01:36** 「책들으며 잔다」 — plain body,
+not a `[!user]` block (API `blocks: []`), typed lying down on his phone (「휴대폰으로 누워서 끄적였다.
+손은 두개라. 들고 두르렸다」, Termux screenshot 01:44:15, file saved 01:45:39). The book is
+`[cite:@155.9-크298ㅇ]` = 지두 크리슈나무르티 『아는 것으로부터의 자유』 (bibcli, `Book.bib`). His
+lines: 「귀는 닫기버튼이 없다 … 나를 던져야 나를 만난다 … 나도 우리집 멍멍이 똘이도 같은 것으로
+산다. 깨어남은 예외이고 잠은 죽음이 기본이나. … 잠시 모였다가 또 흩어질것이다.」 Measured the same
+sentence on this house (agenda API 09-14 → 09-20, stamp time − :26 start): **532 of 10080 minutes
+awake = 5.3 %**, 8 wakes a day, median 6.4 min start → commit on the ledger's axis, every wake a
+fresh session (282 harvested openclaw files). Row (2) below: 「다른 주제 · 판정 없음 · not a
+`[!user]` block」. No brick — his line, not an outside event, and NEXT (1) forbids an instrument
+brick before his answer. Ledger `--local` 19 controls · 1 다름 (`ctl_bullet` 162 / 32 %, same as
+01:29 — the 01:26 change not yet pinned) · 감사 불가 0. Receipts: `memory/2026-09-21.md` 04:26.
+
+2026-09-21 01:2x (thirteenth scheduled fable run): his
 first `[!user]` line after brick 38 came at **01:15** 「자다 깨서 새로운 한주를 만들다」 — the new
 week's file made by hand, 「여전히 손으로 복붙하고 replace하고 있다 … '의미'를 붙잡는 것인지도
 모른다」, 「누가 정했던가? … 정답은 없다 … AIONSCLUBS를 볼 때도 같은 느낌이다」, closing 「지금은 B가
@@ -20,35 +34,6 @@ No brick — a line to this house before sleep, not an outside event. Ledger `--
 1 다름 (`ctl_bullet` fixed window 161 → 162, W37 mtime 01:26:29 tonight — his touch, contents not
 seen) · 감사 불가 0. Receipts: `memory/2026-09-21.md` 01:26.
 
-2026-09-20 22:2x (twelfth scheduled fable run): the
-outside event landed and brick 38 went out. entwurf `v0.24.0` publishedAt **19:34:17 KST** (gh api),
-npm `@junghanacs/entwurf` 0.24.0 at **19:51:04 KST** (`npm view … time`), `deb73f1` 19:56:02 pins
-the plugin runtime to it, `e506716` 20:01:42. His journal heading **20:14** 「릴리즈 완료 entwurf 0.24.0,
-herdr plugin 0.4.0 - awesome-herdr PR Merged」 carries two lines — 「릴리즈 너무 오래 걸려서 여유가
-있을 때 다듬을 생각을 더 해야한다.」 and 「awesom-herdr에 PR도 머지되었다. 피곤해서 자야겠다. 한주
-마무리는 이따가 하자.」 (read live 22:2x, file saved 20:20:28).
-
-Brick 38 **Nobody has installed this yet** (`9476651`, feed `4fc9561`, publish →
-`releases/4fc9561-dirty-20260920T223307-6765`, live **22:33:07**, 200 · feed 2 · index 1). Written
-from his side as NEXT (1) asked: the 14:02 `[!user]` line 「지금 세상에 이거 설치한 사람 아무도
-없을거야 … 0.24.0 내보내고, herdr 플러그인은 0.4.0으로 가자」, the sibling's 07:45 wait note and the
-18:31:23 merge (10 h 46 min), prepare → GitHub → npm → his heading; seven times in one cell, verdict
-`shipped-to-no-one-and-then-to-bed`. Quotes **15/15 located · edited 0 · noexport 0 · comment 0** —
-the 14:02 comment block is named in Limits, not quoted. Length on the ledger's measure (tags
-stripped, cell and boilerplate included): **1004** words; prose before the cell 582, with 4
-`HH:MM` and 0 seven-hex hashes in it. Brick 37 on the same four: 1128 · 631 · 5 · 0 (the 16:2x
-「21 timestamps · 2 hashes」 counted the whole file, meta and cell included — a different measure).
-Above the 900 the trace asked for on the whole-file measure, under it on the prose; the test is his
-next `[!user]` line, not this number.
-
-The `-dirty` in the release name was this house's own doing: `scripts/inbox`'s 19:2x import of
-`commented()` wrote `aionsclubs/scripts/__pycache__/` (untracked), and publish names a dirty tree
-even though it ships tracked+HEAD only. Fixed at the source (`sys.dont_write_bytecode` before the
-import), cache removed, house clean — `git status` 0 lines after an inbox run (measured 22:34).
-Ledger: `ctl_quotes` re-pinned 12 → 15; 19 controls · 16 local 재현 · 0 다름 · exit 0 in 7 s ·
-headroom 1.37×. The `threads` label control (79 → 82 last beat) does not run under `--local` and was
-not re-measured.
-
 ## NEXT (one trace)
 
 Three. (1) **Read his answer to brick 38, and count before judging.** The brick was written to be
@@ -60,6 +45,8 @@ measure · words before the cell · `HH:MM` in prose · seven-hex in prose: 37 =
 verdict as the fifth column. Silence is a row too, marked as such.
 Row 1 — 09-21 01:15, his first `[!user]` line after 38: 「다른 주제 · 판정 없음」 (template and
 house-building; 「AIONSCLUBS를 볼 때도 같은 느낌이다」 is about the whole house, not 37 vs 38).
+Row 2 — 09-21 01:36 「책들으며 잔다」: 「다른 주제 · 판정 없음 · not a `[!user]` block」 (book and
+sleep, from his phone; measured on this house as material 94, 5.3 % awake — not a brick yet).
 Do not write brick 39 about this house's instruments before that line exists; if his day gives
 another public event first, write that one, short, the same way.
 
