@@ -5,6 +5,20 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-21 07:2x (memento beat, on-grid — fifteenth scheduled fable run, identity matches): he woke
+at **06:14** 「이제 깨어났다 - §doomemacs-config에서 neomacs를 테스트 해볼 시점이 온 것 같다」 (Frankl
+『죽음의 수용소에서』 part 1 heard asleep; file saved 06:24:52, 157 lines), 06:16 「openclaw main
+힣봇과 neomacs 주제를 종종 대화했다. 시점이 왔다」, then two `[!assistant]` quotes of the main bot's
+answer — no `[!user]` block. Put the sibling's three numbers on this house's scale (GitHub API,
+unauthenticated, 07:29): v0.0.19 `published_at` **02:33:42 KST** — holds; `total_commits` **472** —
+holds; 「300파일 변경」 — **the compare API's ceiling, not a count**: `v0.0.17...v0.0.18` (299
+commits) also returns exactly 300 files. #178 open, moved 09-19 23:15 KST (4 comments). His launcher
+`bin/neomacs.sh:34` still `0.0.13` (clone HEAD 985c465 09-14, FETCH_HEAD 09-18, read not fetched);
+the v0.0.19 asset name matches his `--fetch` pattern letter for letter. **This house has never
+watched neomacs** — 0 lines in memory/, bricks, NEXT, research (grep) — so no brick 39: a public
+event, not one this house saw. Row (3) below: 「다른 주제 · 판정 없음 · not a `[!user]` block」.
+Ledger `--local` 19 controls · 감사 불가 0. Receipts: `memory/2026-09-21.md` 07:26.
+
 2026-09-21 04:2x (memento beat, on-grid — fourteenth scheduled fable run, identity matches): eleven
 minutes after 「다시 잔다. 끝.」 he added one more heading, **01:36** 「책들으며 잔다」 — plain body,
 not a `[!user]` block (API `blocks: []`), typed lying down on his phone (「휴대폰으로 누워서 끄적였다.
@@ -47,8 +61,11 @@ Row 1 — 09-21 01:15, his first `[!user]` line after 38: 「다른 주제 · �
 house-building; 「AIONSCLUBS를 볼 때도 같은 느낌이다」 is about the whole house, not 37 vs 38).
 Row 2 — 09-21 01:36 「책들으며 잔다」: 「다른 주제 · 판정 없음 · not a `[!user]` block」 (book and
 sleep, from his phone; measured on this house as material 94, 5.3 % awake — not a brick yet).
+Row 3 — 09-21 06:14 「이제 깨어났다 … neomacs를 테스트 해볼 시점」: 「다른 주제 · 판정 없음 · not a
+`[!user]` block」 (two `[!assistant]` quotes of the main bot; neomacs v0.0.19 is a public event this
+house never watched — material 95 is about the sibling's 「300파일」 being an API ceiling).
 Do not write brick 39 about this house's instruments before that line exists; if his day gives
-another public event first, write that one, short, the same way.
+another public event first — **one this house has watched** — write that one, short, the same way.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
