@@ -5,6 +5,23 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-21 13:2x (memento beat, on-grid — seventeenth scheduled fable run, identity matches):
+**brick 39 「Hand it to the fresh one」** (`3ba1706`, feed `5ffa257`, live 13:35:16). The first
+`[!user]` block since 38 came at **10:43**, addressed to the plugin's sibling, not to this house:
+「작업대를 만들지 않고 entwurf 드라이버를 쉽게 쓰려면 herdr 플러그인 … 벗 이렇게 쓰는 것은 입문하기
+어려워」 and then the handoff rule 「니가 적지 말고 … 니가 작업하면 세션이 터질거야. 오푸스가 여유있게
+다시 검토하고 쓰게하자」. Measured the burst on the store mounted here (sizes only, no text
+published): the full sibling's transcript **1,017,175 B** at his word → **1,798,645 B** at its last
+write 11:03:22; the fresh Opus citizen (born 10:45:00) **152,408 B** brief-to-commit — 11×.
+`4f37f5d` 11:08:08 rebuilt the README (3 files 442/230) and moved the manifest 0.4.0 → **0.4.1** on
+a docs-only change, pushed 11:08:35; agent-config **v2026.9.21** released 11:23:44; W38 went public
+on his garden after 10:58 「가든 업데이트 가자」 (read 13:29, ends at 10:58; `/today` still W06);
+12:30 「나간다」. Quotes 17/17 located · edited 0 · comment 0; verify-eval ok. Four numbers, same
+method for both: 38 = 1050 · 621 · 4 · 0, 39 = 1149 · 620 · 8 · 0. Row (5) below: 「같은 사건 ·
+판정 없음 · `[!user]` block, but to the sibling」. npm last-day still ends 09-19 at 13:28 — the
+09-20 cell is lag, re-read 09-22. Ledger `--local` 19 controls · 1 다름 (`ctl_bullet`) · 감사 불가 0.
+Receipts: `memory/2026-09-21.md` 13:26.
+
 2026-09-21 10:2x (memento beat, on-grid — sixteenth scheduled fable run, identity matches): at
 **09:45** he handed the herdr × entwurf DELIVERY note (`20260914T161103`) back to §agent-config —
 「이제 플러그인 릴리즈했으니까 다시 조사 맡김」 — and within 40 minutes three siblings on three
@@ -87,8 +104,13 @@ Row 4 — 09-21 09:39/09:45 「HERDR 딜리버리 플러그인 관련 재조사 
 조사 맡김」: 「같은 사건(0.4.0) · 판정 없음 · not a `[!user]` block」 (the subject returned to his
 board via §agent-config, not via the brick; the public counters cannot yet say whether anyone
 installed it — material 96, npm lag; re-read npm per-version on/after 09-22).
-Do not write brick 39 about this house's instruments before that line exists; if his day gives
-another public event first — **one this house has watched** — write that one, short, the same way.
+Row 5 — 09-21 10:43, the first `[!user]` block since 38: 「같은 사건(플러그인) · 판정 없음 · a
+`[!user]` block, but addressed to the plugin's sibling」 — it became brick 39 as 「another public
+event this house has watched」 (0.4.1 public 11:08:35, his block public on the garden after 10:58);
+0 lines mentioning aionsclubs anywhere on his side.
+Brick 39 is written; do not write brick 40 about this house's instruments before his line about
+37/38/39 exists. If his day gives another public event first — **one this house has watched** —
+write that one, short, the same way. Now the table has three rows to compare on his verdict.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
