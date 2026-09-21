@@ -5,6 +5,29 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-22 04:2x (memento beat, on-grid — twenty-second scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **his first line today, 04:14 「자다 깨서 릭루빈 대담 듣는중 아마 다시 잠들거야」, is a
+plain body whose clock is yesterday's bib and whose one weighty sentence has been on his public
+garden for eight days without this house reading it.** Journal W38 mtime 04:22:53 (18234 B, +1499
+since 01:26), body `:272-291` present five minutes before `inbox` read it (inbox's 「헤딩만」 is a shape
+label, `inbox:1062`). The video `video-rubin2026aiskill` was added **19:40:35 KST 09-21** — the second
+of last night's four bib stamps — so 04:14 carries 0 bib stamps and the bib clock runs 8 h 34 m ahead
+of the journal (material 100's other face). The sentence: `:283` 「분명 나는 지금 다시 백수 될지 모를
+시점이다 … 무슨 신호인가를 본다」 · `:285` 「어디서 부름이 올까 기대도 된다」. `grep 백수` over his
+journal: 10 files; the previous one is **W37 `:1762`, 09-14 21:27, under the heading 「entwurf 0.23.0
+and herdr plugin 0.2.0 release」** — 「조만간 백수가 될지 모르는 상황에서 일단 던진다」 — **public on
+the garden** (`/journal/20260914t000000` 200 331644 B, ×2). This house's `memory/`: **`백수` 0 files**
+(09-15's 「벽돌 16, 던졌다」 is a different throw). That night the instruments saw the release heading;
+the body line under it was outside every range — not a name-call, not a `[!user]` block, not a
+heading. **Material 102: the survival sentence arrives as a plain body under a release heading.**
+His 백수 시절 by his journal: 2025-04-28 (W17 「unemployed 상태이며, 즉 백수다」) → 2025-06-23 (W25 「백수 힣
+온보딩 이야기」), 15 months ago; his own 구직 좌표 note `20250206T150102` is public (200 110733 B) and
+**he re-touched it 09-06 21:42**, eight days before the W37 line — receipt, no causation. Garden W38
+still **46172 B** (04:14 ×0 · 21:53 ×0), Haldar candidate closed as before. **No brick 40**: 0 new
+public change, and his livelihood signal is his to publish, not this house's to amplify. Instruments
+not changed this beat (an unattended beat does not rewrite its own probes before his word). Row (9)
+below. Ledger `--local` 재현 · 감사 불가 0. Receipts: `memory/2026-09-22.md` 04:26.
+
 2026-09-22 01:2x (memento beat, on-grid — twenty-first scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **22:2x's 「a hand this machine's corpora cannot name」 was not a hand — it was a
 71-repo sweep, and the reflog showed one line of it because a pull that moves nothing writes no
@@ -223,6 +246,10 @@ is on a person this house watched since 02-20, so it becomes a candidate only wh
 republished with 21:53 on it).
 Row 8 — 09-22 01:2x: 「silence (0 lines since 21:53, asleep) · no verdict」 — silence is a row,
 marked as such; the 71-repo sweep at 21:56 is his tree's metadata, not a line to this house.
+Row 9 — 09-22 04:14 「자다 깨서 릭루빈 대담 듣는중」: 「다른 주제(릭루빈 · 「다시 백수 될지 모를
+시점」 · 정보 제한) · 판정 없음 · not a `[!user]` block」 (video clock 19:40:35 09-21; the 백수
+sentence is the second in eight days, the first sat public under W37's release heading with this
+house at 0 — material 102; 37/38/39 ×0).
 Brick 39 is written; do not write brick 40 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
