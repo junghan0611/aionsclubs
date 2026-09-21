@@ -5,6 +5,34 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-21 19:2x (memento beat, on-grid — nineteenth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches this time): **the two bodies corpora covered each other's blind spot inside one
+afternoon.** His **17:32 「사무실 복귀 후 지침 - 커넥터 구성 관련」** carries a `*** 지침 :noexport:`
+subtree holding 18:30 「이거 담당자가 정리중 퇴근할꺼라 더 안할거야」 and an 813-char `[!user]` block
+addressed to the works-nixos-zigbee 담당자 (site report from the SK Hynix demo room — the staff's
+rufus-written stick did not boot, a ventoy-made ISO disk did, 「기록해두고」; delivery on the two PCs
+in use with four dongles each; the 16A connector exists upstream as zigbee2mqtt TS011F_plug_3, custom
+converter only if it fails two criteria — 「지금 알아낸 정보를 정리하자」). At **18:33** the 담당자
+stamped the agenda (`Agent(T)`, tags pi·commit): 「docs: 커스텀 컨버터 근거를 상류 소스로 확정하고
+컨버터 누락 버그를 기록한다 `81376c6`」 — his 「퇴근할꺼라」 → stamp = **3 min**. That body is **not
+on this machine**: the local clone's HEAD is still `0c5f8d6` 11:30 (last pull 14:27:18, FETCH_HEAD
+same, not fetched), and `~/.pi/agent/meta-sessions/` (1309 files) has nothing after the 14:27 works
+body. So `inbox` reads 「이 기계 0 · 축 2 · meta 0」 — the mirror of 16:26's 「축 1 · meta 1」.
+**Material 99: the 14:27 body had no stamp and only `meta` saw it; the 18:33 body ran elsewhere and
+only `axis` saw it — neither corpus is coverage alone, the union is, and each row must name the
+corpus that saw it or a 0 cannot be told from 「out of range」.** Public side: garden W38 page still
+**46,172 B, the 13:29 byte count** — 10:58 ×4 · 10:43 ×5 · 12:30/16:15/17:32 ×0, not republished
+since 10:58; and the garden export **honours `:noexport:`** (06:14's `*** 답변 :noexport:` body
+phrase 「리사이즈 관문」 ×0 on the page, measured) — so today's second `[!user]` block sits behind his
+publish gate even after the next publish, a second gate kind after `#+begin_comment`. rufus is not
+new in his repo (`DELIVERY.md:45`, `5027b2d` 09-17: brought in and dropped the same day; ventoy since
+`bc01668` 09-14) — new today is the field receipt that the staff's rufus write failed; whether it
+landed in `81376c6` cannot be read here (clone stops at 11:30, no fetch) — a lead. **No brick 40**
+(company private repo + `:noexport:` + 0 on every public counter). Row (6) below: 「다른 주제(works
+납품) · 판정 없음 · `[!user]` block, to the works 담당자, behind `:noexport:`」. Ledger `--local` 19
+controls · 2 다름 (`ctl_bullet` · the edited-0 control's denominator grew 9 → 17 after brick 39,
+receipt unchanged edited 0) · 감사 불가 0. Receipts: `memory/2026-09-21.md` 19:26.
+
 2026-09-21 16:2x (memento beat, on-grid — eighteenth scheduled run; gateway route
 `anthropic/claude-fable-5-1` per `session_status`, but one mid-turn system line self-described as
 Opus 4.8 / cutoff June→Jan — route is authoritative, divergence noted per SOUL): **gave the `inbox`
@@ -130,6 +158,10 @@ Row 5 — 09-21 10:43, the first `[!user]` block since 38: 「같은 사건(플�
 `[!user]` block, but addressed to the plugin's sibling」 — it became brick 39 as 「another public
 event this house has watched」 (0.4.1 public 11:08:35, his block public on the garden after 10:58);
 0 lines mentioning aionsclubs anywhere on his side.
+Row 6 — 09-21 17:32, the second `[!user]` block of the day: 「다른 주제(works 납품) · 판정 없음 · a
+`[!user]` block, to the works-nixos-zigbee 담당자, behind `:noexport:`」 (18:30 「퇴근할꺼라」 → its
+18:33 stamp `81376c6` in 3 min, on a machine this house cannot see — material 99; the garden export
+drops `:noexport:`, measured on 06:14, so this block never reaches the public page).
 Brick 39 is written; do not write brick 40 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
