@@ -5,6 +5,26 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-22 07:2x (memento beat, on-grid — twenty-third scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **his 06:00 heading 「시대가 주는 압력 그리고 나의 길 결국 이 방법 뿐 - 돌직구」 is a
+`[!user]` block whose addressee is a person, not a sibling — the first of 237.** Journal W38 mtime
+06:18:57 (19964 B, +1730 since 04:22:53), block `:300-311`, two stamps: **06:01** 「W씨에게 텔레그램으로
+릭루빈, 헤일스, 켈리 영상들을 공유하면서 결국 남긴 한 마디」 — 「시대가 주는 압력이 엄청 납니다 … 그런데
+중심은 여전히 '나' 입니다 … 돌직구로 계속 갑니다」 · **06:18** 「이제 씻고 등원하러 나간다」 — 「몇년전이
+강원도 캠핑 … 릭루빈 책 이야기 … 그때도 하던 짓은 결국 저널에 하나 끄적이는 것 … 오늘도 똑같이 … 그나마
+그때 처럼 백수는 아니라 다행입니다」. Measured: `[!user]` blocks in his journal **237**, with 「텔레그램」
+or 「씨에게」 within 3 lines **1** each — this one. So the marker is a role (his voice), not an addressee
+(a sibling); `AGENTS.md` still says 「형제에게 붙여넣은」 — one case, rule not rewritten by an unattended
+beat. **Material 103.** Same morning, same word, opposite tense: 04:14 `:283` 「다시 백수 될지 모를
+시점」(plain body, to himself) → 06:18 `:309` 「백수는 아니라 다행」(`[!user]`, to W씨), 2 h 04 m apart.
+The camping recollection (강원도 · tent · W씨's family in a room) has **0 journal lines before today**
+(`캠핑` 13 files 2022-05 … 2026-05, none 강원도 with W씨; not found ≠ absent). Between 04:14 and 06:18
+the bib moved once — `web-tetragrammaton` at **05:31:39 KST** (Rubin's site, not a video); the three
+shared videos carry 0 new bib stamps (Rubin 19:40:35 · Hayles 21:28:17 yesterday · Kelly's latest
+09-12). Garden W38 still **46172 B** (06:00 ×0), and this block has **no `:noexport:`** — it goes
+public on his next publish (lead). **No brick 40**: 0 public change, and a word to a friend is his
+to publish. Row (10) below. Ledger `--local` 재현 · 감사 불가 0. Receipts: `memory/2026-09-22.md` 07:26.
+
 2026-09-22 04:2x (memento beat, on-grid — twenty-second scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **his first line today, 04:14 「자다 깨서 릭루빈 대담 듣는중 아마 다시 잠들거야」, is a
 plain body whose clock is yesterday's bib and whose one weighty sentence has been on his public
@@ -250,6 +270,10 @@ Row 9 — 09-22 04:14 「자다 깨서 릭루빈 대담 듣는중」: 「다른 
 시점」 · 정보 제한) · 판정 없음 · not a `[!user]` block」 (video clock 19:40:35 09-21; the 백수
 sentence is the second in eight days, the first sat public under W37's release heading with this
 house at 0 — material 102; 37/38/39 ×0).
+Row 10 — 09-22 06:00 「시대가 주는 압력 … 돌직구」: 「다른 주제(시대의 압력 · 돌직구 · 캠핑 기억 ·
+「백수는 아니라 다행」) · 판정 없음 · **a `[!user]` block, addressee W씨 (a person, not a sibling)**」
+(first of 237 such blocks addressed to a human — material 103; the 백수 word flips from 04:14's
+fear to 06:18's relief in 2 h 04 m; W38 still 46172 B, block not `:noexport:`; 37/38/39 ×0).
 Brick 39 is written; do not write brick 40 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
