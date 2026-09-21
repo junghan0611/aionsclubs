@@ -5,6 +5,33 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-21 22:2x (memento beat, on-grid — twentieth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **row 6's lead closed from the outside, and his commute turned out to live on
+the bib clock, not the journal's.** His **21:53 「이제 잔다」** — plain body, not a `[!user]` block —
+lists four videos heard 「퇴근하는 길 … 오는 길」 (a family name elided, hook) and links the Hayles bib note he
+will sleep to. `bibcli show` puts all four in `Online.bib` with `dateadded` **19:23:25 · 19:40:35 ·
+19:42:22 · 21:28:17 KST** — one 2 h 05 min event carries four stamps in the bib and one (21:53, 25
+min after the last save) in the journal (**material 100: the journal heading is the write, the bib
+is the clock**). The Haldar video 「Smarter Models Need Less Harness」 covers arXiv `2609.20804v1`
+(published 2026-09-17 17:58 UTC, API read 22:31) — a person this house has watched since 02-20
+(`memory/2026-02-20.md:112`), heard the night he wrote 「니가 작업하면 세션이 터질거야」; receipt
+only, no causation. Then the works clone: `~/repos/work/works-nixos-zigbee` HEAD is now **`81376c6`**
+via reflog `21:56:33 pull origin main: Fast-forward` — 3 min after 「이제 잔다」, a different command
+form from the 14:27 `pull:`, and `meta-sessions` still ends at 14:27 (1309 files) — **the hand that
+pulled is not a hook-registered body on this machine**, and this house did not fetch. The four
+commits `0c5f8d6..81376c6` (14 files 592/27): the rufus → ventoy field receipt landed in the
+**first**, `72c90fa` 17:45:56 「현장 통과를 기록하고 Rufus 1순위를 뒤집는다」 (13 min after his 17:32
+heading), not in `81376c6` (rufus|ventoy added lines 36 across four, 0 in the last) — and the
+담당자 wrote under it 「Rufus 의 어느 모드였는지는 미확인이다 … 이 실패는 『Rufus 가 원리적으로 안
+된다』의 증거가 아니다」, this house's `없다는 판정은 더 비싼 증거` in a repo that never read it. Public
+side: garden W38 **46172 B at 22:28, the 13:29 byte count** (21:53 ×0 · 헤일스 ×0); the linked
+Hayles note is already public at `/bib/20240515t165300` (200, 33533 B; the root path 404s). **No
+brick 40** (private bib, journal not yet republished, 0 on public counters). Row (7) below: 「다른
+주제(퇴근길 영상·잠) · 판정 없음 · not a `[!user]` block」. Ledger `--local` 19 controls · 2 다름
+(`ctl_bullet` 162/32 % · edited-0 denominator 17, receipt edited 0) · 감사 불가 0. Receipts:
+`memory/2026-09-21.md` 22:26. If W38 is republished with 21:53 on it, Haldar is a brick candidate —
+short, same way.
+
 2026-09-21 19:2x (memento beat, on-grid — nineteenth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches this time): **the two bodies corpora covered each other's blind spot inside one
 afternoon.** His **17:32 「사무실 복귀 후 지침 - 커넥터 구성 관련」** carries a `*** 지침 :noexport:`
@@ -161,7 +188,13 @@ event this house has watched」 (0.4.1 public 11:08:35, his block public on the 
 Row 6 — 09-21 17:32, the second `[!user]` block of the day: 「다른 주제(works 납품) · 판정 없음 · a
 `[!user]` block, to the works-nixos-zigbee 담당자, behind `:noexport:`」 (18:30 「퇴근할꺼라」 → its
 18:33 stamp `81376c6` in 3 min, on a machine this house cannot see — material 99; the garden export
-drops `:noexport:`, measured on 06:14, so this block never reaches the public page).
+drops `:noexport:`, measured on 06:14, so this block never reaches the public page). Lead closed
+22:2x: the receipt landed in `72c90fa` 17:45, not `81376c6`; clone pulled 21:56:33 by a hand
+this machine's corpora cannot name.
+Row 7 — 09-21 21:53 「이제 잔다」: 「다른 주제(퇴근길 영상 넷·잠) · 판정 없음 · not a `[!user]`
+block」 (four bib stamps 19:23 → 21:28, journal 21:53 — material 100; Haldar's harness-tax video
+is on a person this house watched since 02-20, so it becomes a candidate only when W38 is
+republished with 21:53 on it).
 Brick 39 is written; do not write brick 40 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
