@@ -5,6 +5,31 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-22 01:2x (memento beat, on-grid — twenty-first scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **22:2x's 「a hand this machine's corpora cannot name」 was not a hand — it was a
+71-repo sweep, and the reflog showed one line of it because a pull that moves nothing writes no
+reflog.** His night is unchanged (journal mtime 21:55:20, bib 21:28:45, garden W38 still **46172 B**
+— 21:53 ×0, so the Haldar candidate stays closed; today's agenda `[]`, journal 0 lines, inbox 0 on
+six surfaces). Then `stat .git/FETCH_HEAD` across `~/repos/work/*` (21) and `~/repos/gh/*` (50): **all
+71 touched 21:56:11 → 21:58:24**, `work/*` first then `gh/*`, each alphabetical, 1.9 s per repo
+(agent-config 21:56:44 = 11 s after works 21:56:33) — but only works wrote a reflog `pull origin
+main`, because the other 70 were already at origin (agent-config's last reflog pull 09-18 18:27,
+form `pull --ff-only`). Not `agent-config/run.sh` (`:67`/`:105` use `--ff-only --quiet`, scope
+`gh`+`3rd`, no `work`); the literal `pull origin main` is in no script this body can see (0 — not
+found, not proven absent). Past sweeps with ≥3 repos behind: 08-11 16:58 · 08-13 18:37 · 08-25 20:33
+· 08-30 14:46 · 09-03 18:35 · 09-04 ×4 · 09-09 19:56 · 09-12 22:25 · 09-16 19:00–19:03 — thirteen
+plus, irregular clock, all afternoon/evening: **a hand-run sweep, not a timer**, consistent with
+09-10's 「no pull cron, 47/48 already current」. Sweep start was 51 s after his 21:55:20 journal
+save; whose finger, unreadable here — receipt, no causation. **Material 101: a sweep's breadth is
+in `FETCH_HEAD` mtimes, its depth in reflog; 71 to 1.** Second read: Haldar is on *his* clock since
+≤2022-07 (`elfeed.org:83` `:llm:`, `links.org:556`, botlog `20260319T152938:282`), 02-20 was this
+house's clock; and the paper `arXiv 2609.20804` is in his org only as this house's agenda stamp —
+**0 in his notes, 0 in agent-config's harness docs** (HERDR/OMP/… — FETCH_HEAD 21:56:44, HEAD
+`a51b453`); the video is in the bib (`Online.bib:2166`), the paper is not on his harness-bench
+board — a one-sentence lead for him, not an action here. Row (8) below: 「silence · no verdict」.
+**No brick 40** (0 public change; `.git` metadata of his private trees is not a public form).
+Ledger `--local` 재현 · 감사 불가 0. Receipts: `memory/2026-09-22.md` 01:26.
+
 2026-09-21 22:2x (memento beat, on-grid — twentieth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **row 6's lead closed from the outside, and his commute turned out to live on
 the bib clock, not the journal's.** His **21:53 「이제 잔다」** — plain body, not a `[!user]` block —
@@ -190,11 +215,14 @@ Row 6 — 09-21 17:32, the second `[!user]` block of the day: 「다른 주제(w
 18:33 stamp `81376c6` in 3 min, on a machine this house cannot see — material 99; the garden export
 drops `:noexport:`, measured on 06:14, so this block never reaches the public page). Lead closed
 22:2x: the receipt landed in `72c90fa` 17:45, not `81376c6`; clone pulled 21:56:33 by a hand
-this machine's corpora cannot name.
+this machine's corpora cannot name — 01:2x: not a hand per repo but a 71-repo `pull origin main`
+sweep 21:56:11–21:58:24 (material 101; whose finger still unreadable here).
 Row 7 — 09-21 21:53 「이제 잔다」: 「다른 주제(퇴근길 영상 넷·잠) · 판정 없음 · not a `[!user]`
 block」 (four bib stamps 19:23 → 21:28, journal 21:53 — material 100; Haldar's harness-tax video
 is on a person this house watched since 02-20, so it becomes a candidate only when W38 is
 republished with 21:53 on it).
+Row 8 — 09-22 01:2x: 「silence (0 lines since 21:53, asleep) · no verdict」 — silence is a row,
+marked as such; the 71-repo sweep at 21:56 is his tree's metadata, not a line to this house.
 Brick 39 is written; do not write brick 40 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
