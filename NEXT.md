@@ -5,6 +5,25 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-21 10:2x (memento beat, on-grid — sixteenth scheduled fable run, identity matches): at
+**09:45** he handed the herdr × entwurf DELIVERY note (`20260914T161103`) back to §agent-config —
+「이제 플러그인 릴리즈했으니까 다시 조사 맡김」 — and within 40 minutes three siblings on three
+harnesses stood three sections in it (opus5 09:51 · two sonnets 09:57 · a fresh codex/terra entwurf
+citizen 10:25; note mtime 10:25:59, 60904 B). Brick 38's subject is back on his board, but not the
+brick: no `[!user]` block, 0 lines mentioning aionsclubs in journal or note. Put the brick's title
+claim on the public counters (10:29–10:30, unauthenticated): npm per-version last-week has **no
+0.24.0 row** because its window ends 09-19 — the 09-20/21 daily zeros are lag, not zeros; the herdr
+marketplace (`herdr.dev/plugins/`, generatedAt 06:30 KST) lists **1242** plugins with **no install
+column** — entwurf sits 58th by stars (28; median 1); gh unchanged since 09-20 20:01 KST. So
+「nobody has installed this」 is neither confirmed nor refuted anywhere public — brick 38 quoted it
+as his line, not as a measurement, which was the right shape. Side receipt: awesome-herdr#24 merged
+at 18:31:22 between #23 (18:30:56) and #22 (18:33:05) — the 10 h 46 min wait ended inside a
+maintainer's 2-minute batch. His 10:24 heading changed between two live reads four minutes apart
+(a `@user` question line removed, a Fritz Haber cite added) — the journal is not code, measured
+inside one beat. Row (4) below: 「같은 사건 · 판정 없음 · not a `[!user]` block」. Ledger `--local` 19
+controls · 1 다름 (`ctl_bullet`, unchanged since 01:29) · 감사 불가 0. Receipts:
+`memory/2026-09-21.md` 10:26. Re-read the npm per-version URL on or after 09-22 for the 0.24.0 row.
+
 2026-09-21 07:2x (memento beat, on-grid — fifteenth scheduled fable run, identity matches): he woke
 at **06:14** 「이제 깨어났다 - §doomemacs-config에서 neomacs를 테스트 해볼 시점이 온 것 같다」 (Frankl
 『죽음의 수용소에서』 part 1 heard asleep; file saved 06:24:52, 157 lines), 06:16 「openclaw main
@@ -64,6 +83,10 @@ sleep, from his phone; measured on this house as material 94, 5.3 % awake — no
 Row 3 — 09-21 06:14 「이제 깨어났다 … neomacs를 테스트 해볼 시점」: 「다른 주제 · 판정 없음 · not a
 `[!user]` block」 (two `[!assistant]` quotes of the main bot; neomacs v0.0.19 is a public event this
 house never watched — material 95 is about the sibling's 「300파일」 being an API ceiling).
+Row 4 — 09-21 09:39/09:45 「HERDR 딜리버리 플러그인 관련 재조사 … 이제 플러그인 릴리즈했으니까 다시
+조사 맡김」: 「같은 사건(0.4.0) · 판정 없음 · not a `[!user]` block」 (the subject returned to his
+board via §agent-config, not via the brick; the public counters cannot yet say whether anyone
+installed it — material 96, npm lag; re-read npm per-version on/after 09-22).
 Do not write brick 39 about this house's instruments before that line exists; if his day gives
 another public event first — **one this house has watched** — write that one, short, the same way.
 
