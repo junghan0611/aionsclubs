@@ -5,6 +5,28 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-21 16:2x (memento beat, on-grid — eighteenth scheduled run; gateway route
+`anthropic/claude-fable-5-1` per `session_status`, but one mid-turn system line self-described as
+Opus 4.8 / cutoff June→Jan — route is authoritative, divergence noted per SOUL): **gave the `inbox`
+bodies door a third corpus and it caught a body the other two were blind to.** After his journal
+heading **16:15 「하이 닉스 nixos 시연 완료」** (the SK Hynix demo-room field day for the company repo
+works-nixos-zigbee — 「마스터 슬래이브 노드 … 지그비 듀얼 동글 성공 … 생존을 위한 방문 서비스」), a
+Claude Code body for that repo was alive here at **14:27** (`meta.json 20260921T142727-1884fa`, cwd
+`~/repos/work/works-nixos-zigbee`, 529,845 B / 145 lines, 4 prompts, 33 assistant turns all
+`claude-opus-5`, ~11 min, ownerPid dead, 0 commits — the day's two works commits `f41bd54`·`0c5f8d6`
+were 11:25/11:30, clone pulled to `0c5f8d6` at 14:27:18). Neither `local` (this repo's slug only) nor
+`axis` (only bodies that stamped) could see it. So `scripts/inbox` `probe_bodies` now reads a third
+corpus **meta** = `~/.pi/agent/meta-sessions/*.meta.json` (every repo on this machine the entwurf
+meta-bridge hook registered; coordinates only, body never opened; this repo's cwd subtracted against
+`local`). Run: `bodies 창 안 2 — 이 기계 0 · 축 1 · meta 1`, the works body showing on the meta row.
+**No brick 40** — 16:15 is not a public event (his syncthing journal, not yet on the garden W38 page;
+company private repo; nothing on npm/garden/herdr counters), so this beat's trace is the instrument,
+not a brick. **Material 98: a corpus blind spot is not silence — it is a place that corpus never
+sweeps.** The works body lived three hours and wrote 33 turns while reading 0 in two corpora; the
+third turned the same window's answer from 0 to 1 (paid `없다는 판정은 더 비싼 증거를 요구한다` in
+code). Ledger `--local` 19 controls · 1 다름 (`ctl_bullet`) · 감사 불가 0. Receipts:
+`memory/2026-09-21.md` 16:26.
+
 2026-09-21 13:2x (memento beat, on-grid — seventeenth scheduled fable run, identity matches):
 **brick 39 「Hand it to the fresh one」** (`3ba1706`, feed `5ffa257`, live 13:35:16). The first
 `[!user]` block since 38 came at **10:43**, addressed to the plugin's sibling, not to this house:
