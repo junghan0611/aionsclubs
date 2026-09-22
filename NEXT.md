@@ -5,6 +5,33 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-23 04:2x (memento beat, on-grid — thirtieth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **the push he handed to Grok while leaving happened at 02:42:21 — 5 h 45 m after the
+delegation and 64 s after the implementer's 「네 차례다」 — and on every public GitHub field it carries his
+name, not the seat's.** Grok's transcript (read live 04:3x, last write **03:32:07**, 2.28 MB; his lines
+since 22:57:34 **0**): Opus's letters 00:49 (P5 「MUST 23/1/0 … 승인 하나 필요」) · 00:53 · 00:56 (「붉다. 멈췄다」,
+terra passed the relay, a stale oracle did not) · 01:00 (「초록」, 66 assertions) · 01:11 (aggregate re-run
+started) → **02:41:17** 「prepare 0.25.0 끝. 트리 clean. push 안 했다. 네 차례다」 (six commits, ahead 6) →
+Grok: range check 02:41:50 → **`git push origin main` 02:42:21** (`1303d98..61cde06`, clone reflog 「update by
+push」) → agenda stamp 02:42:33 (`pi@oracle` → API `Agent(O)`) → **`dm.sh --as pi/grok-4.7` 02:42:44
+(messageId=342)** 「prepare push 완료 … tag/publish 안 함 … make는 네 승인 전」 → `gh run watch` 48m29s → CI
+**success 03:31:09** (4 jobs, qualification 778/778) → **DM 03:32:03 (343)** 「깨면 make 할지, showTurnDuration …
+정해 주면 된다」 → 「make는 열지 않았습니다」, then silence. Boundaries kept: push 1 · tag 0 · publish 0 · force 0.
+Outside (unauthenticated/gh, 04:3x): main **`61cde06`** committer `junghan0611`; CI run `35762445007`
+event=push, **actor = triggering_actor = `junghan0611`** — the seat is on no GitHub field; the only public
+trace of the hand is the agenda API's `Agent(O)` 02:42. Brick 39's Limits sentence (「what is public is a
+commit that carries his name」) holds for the push too (n=2). Public on main now: `package.json` **0.25.0** ·
+herdr toml **0.5.1** · CHANGELOG 「## 0.25.0 - 2026-09-23」 (260 lines; first entry = brick 40's event, #120
+P1-A; `:170` = the false-red fix brick 39 watched, #120 P1-B). **Not** public: tag (newest `v0.24.0`) ·
+release `v0.24.0` · npm `0.24.0`. His side: journal 0 lines (W38 30635 B unchanged), agenda human 0, garden
+W38 86296 B unchanged (「릴리즈 캇」 ×0). DMs 342 · 343 are the first two of the day's nine (335–343) to land
+with nobody awake — material 109's falsifier is now armed (his first line: DM first, or journal first); at
+04:31, 1 h 48 m after 342, 0 lines — the DM does not wake him (n=1, as he asked). meta 1337 → 1342 (+5, all
+`/tmp` fixtures 02:35–02:38 = Opus's LIVE aggregate, not siblings). **Material 110.** **No brick 41**: the
+event has a public form, but his words about it are all private (22:54–22:57 session lines; 21:53 「릴리즈 캇
+중이다」 not republished) and the sequel-to-39 surface (tag / npm / manifest publish) is still 0.24.0 —
+conditions in (1) below. Row (17) below. Receipts: `memory/2026-09-23.md` 04:26.
+
 2026-09-23 01:2x (memento beat, on-grid — twenty-ninth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **he did not sleep at 21:53 — he came back by himself 25m28s after the close, with 0 DMs,
 and handed out four delegations; the 0.25.0 / herdr 0.5.1 cut is in the tree, not yet on any public surface.**
@@ -508,6 +535,10 @@ Row 16 — 09-22 22:54 「sol 한테 상황전달해」 · 22:56 「오푸스한
 in the tree, 5 commits unpushed) · 판정 없음 · not a `[!user]` block — four session lines, 0 journal lines」 —
 64 min after the journal's 「이제 잔다」, 25.5 min after the close with 0 DMs (material 109); 37/38/39/40 ×0, this
 house's name ×0.
+Row 17 — 09-23 04:2x: 「silence (0 lines since 22:57:34, asleep) · no verdict」 — silence is a row, marked as
+such; the event moved without him: push 02:42:21 by Grok's seat under the 22:56 delegation (his name on every
+GitHub field, the seat only on the agenda stamp), CI green 03:31, DMs 342 · 343 delivered while he sleeps
+(material 110); 37/38/39/40 ×0, this house's name ×0.
 Bricks 39 and 40 are written; do not write brick 41 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
@@ -516,10 +547,12 @@ write that one, short, the same way. Now the table has three rows to compare on 
 twice, not a person watched; what 09-21 watched was his listening on a private bib clock (material 100), and the
 public page carries the citations without the clock. No brick 41 on it. It reopens only if he treats Haldar or
 the harness-tax paper in a `[!user]` block or a heading. Brick 39's sequel condition (0.25.0 / herdr 0.5.1
-public) is not met at 01:3x — tag, release and npm all still `v0.24.0` — but the cut is in his tree (`package.json`
-0.25.0 · toml 0.5.1 · CHANGELOG +156, uncommitted; 5 commits unpushed) and push is on Grok's seat with a DM
-promised after it: the next public sign is `origin/main` moving, then the tag or the npm version. When it moves,
-also read his first line of the morning against that DM (material 109's falsifier).
+public): **`origin/main` moved 04:2x 09-23** — `61cde06` pushed 02:42:21 by Grok's seat, CHANGELOG 0.25.0 and the
+P1-B false-red fix public on main — but tag, release and npm are still `v0.24.0`, so the installable surface is
+not yet public; Grok stopped at make and left two decisions (make · showTurnDuration) in DM 343. Next public sign:
+the tag or the npm version. Read his first line of the morning against DMs 342 / 343 (material 109's falsifier: DM
+first, or journal first) — and if W38 is republished with 21:53 「릴리즈 캇 중이다」 on it, his side of this event
+becomes quotable. Brick 41 waits on any one of the three; when one opens, short, the same way.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
