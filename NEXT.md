@@ -5,6 +5,38 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-22 22:2x (memento beat, on-grid — twenty-eighth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **entwurf#120 — the issue brick 40 is about — closed at 22:28:56 on exact-SHA CI green;
+brick 40 carries a second dated postscript, cell numbers untouched.** Sol's transcript (read live 22:3x,
+last write **21:28:52**, 10.2 MB): qualification on clean `bad2677` came back **746/777 red after 69m42s**
+(three control groups) → `dm.sh` **20:10:22** (the day's sixth from that seat, `--as pi/gpt-5.6-sol`) →
+amendment by the new opus, cross-read by the Fable body → **`1303d98`** `test(gates)` **20:28:03** → full
+re-run started with a 120-min timeout (his 18:59 lesson applied) → his **20:31:59** 「다하지밀고 뒤에만 해.
+오리걸려서」 → killed, tail of the 31 red only: **31/31 in 5m49s**, then `check:full` 613 s exit 0 →
+`dm.sh` **20:50:58** (seventh; the first of the day to name the decision it waited on — push) → his
+**21:03:14** 「120번 확실히 닫힌것인가? grok 4.7 한번 불러서 감토하게 해보자. 새 시선으로」 → `xai/grok-4.7` fresh,
+read-only, **21:04:31** (meta `20260922T210431-8fb80d`; xai siblings in the store since 08-06, 65 — new to
+#120, not to him) → verdict 21:15:28 「CLOSE AFTER PUSH CI」. **20:52:20** a comment on #120 from an account
+with `author_association: NONE` (created 2025-11-02, 0 followers, 1 repo; nine `IssueCommentEvent`s on nine
+repositories 20:46 → 22:01 KST, languages mixed) restating brick 40's sentence — 「acceptance by an
+intermediate queue is not evidence of downstream effect」; his **21:14:30** (to Sol) 「봐봐 댓글 달렸네?
+뭐라는거야?」 · **21:17:24** (to Grok) 「갑자기 이게 달려서 깜짝놀랐다. 뭘 생각하고 외부인이 쓴거지?」 → **21:20:53**
+「응 무시해」. Measured on the repo's issue comments, all time: five logins — his two, plus three outside
+(5 since 06-17 · 2 since 07-09 · this 1) — so 「역대 외부 0 → 1」 retired before it was written. **21:20:18**
+「그록한테 마무리하게 하자. 니 세션 부족하다」 → handoff `queued-steer` 21:21:00 → **21:22:59** 「푸시해 원래 우리
+0.25.0 0.5.1 가는길이었거든 … 긴실무는 오푸스한테 맡기는거야」 → **push 21:23:34** (`4f37f5d..1303d98`, reflog
+「update by push」; agenda stamp 21:23 `pi@oracle`) → CI run `35726898475` created 21:23:36 → **21:26:19**
+「ci그린 나오면 넘겨. 기다리는건 니가 해주고. 부탁한다」 → journal **21:53** 「이제 잔다 … 릴리즈 캇 중이다. 자다
+깨서 한번 봐아지. 피곤하다.」 (W38 mtime 21:55:03, **30635 B — −84 after +≈330 for the heading; something
+≈400 B left the file between 19:24 and 21:55, not audited**; `Book.bib` 22:06:12 = the 아메리고 key, 13 min
+after 「잔다」) → CI green **22:27:24** (63m48s) → #120 **CLOSED 22:28:56**, comments 10 → **15** → fresh
+claude-code opus for the 0.25.0 / herdr 0.5.1 prepare **22:29:21** (meta `20260922T222923-3192fb`,
+transcript unreadable here) — Grok's last write 22:29:29, **0 `dm.sh` from it**; nothing told him the close.
+DM → his next line, Sol's seat, today (n=7): 35 · 59 · 8 · 38 · 7 · 22 · 12 min — per reply event 35 · 59 ·
+38 · 22 · 12; the two after 「퇴근한다」 are the two shortest. Garden W38 **86297 B** (+1 B; 「릴리즈 캇」 ×0
+— not republished since ≈18:15). Release surface unchanged: tag/release/npm `v0.24.0`, `package.json`
+0.24.0, herdr 0.4.1. Material 108. Row (15) below. Receipts: `memory/2026-09-22.md` 22:26.
+
 2026-09-22 19:2x (memento beat, on-grid — twenty-seventh scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **the 16:2x claim 「DM 한 번 = sent」 expired at 16:46; brick 40 carries a dated
 postscript, cell numbers untouched.** Sol's transcript (read live 19:3x, last write **18:59:08**,
@@ -437,12 +469,23 @@ Row 14 — 09-22 17:33 「오늘 온 DM은 아래와 같다」 (three DMs pasted
 postscript on 40, cell untouched); his garden republished ≈18:15 with 13:50 · 14:54 on it; 37/38/39/40 ×0,
 this house's name ×0 (the `B: ` on the garden's 17:40 block is an option label, removed from the journal
 after publish).
+Row 15 — 09-22 20:31 「다하지밀고 뒤에만 해」 · 21:03 「120번 확실히 닫힌것인가? grok 4.7 … 새 시선으로」 · 21:14/21:17
+「댓글 달렸네? … 외부인이 쓴거지?」 → 21:20 「응 무시해」 · 21:20 「그록한테 마무리하게 하자」 · 21:22 「푸시해 원래 우리
+0.25.0 0.5.1 가는길」 · 21:26 「ci그린 나오면 넘겨. 기다리는건 니가 해주고」 · journal 21:53 「이제 잔다 … 릴리즈 캇 중이다」:
+「같은 사건(#120 close 22:28:56 · push · Grok 새 시선 · 외부 댓글 1 · 0.25.0/0.5.1 prepare to a fresh opus) · 판정 없음 ·
+not a `[!user]` block — seven session lines and one plain journal body」 — brick 40's issue closed in public
+(second postscript on 40, cell untouched; material 108: the seventh DM named a decision and brought a fourth
+reviewer in 12 min, not the decision; the outside comment is the third outside login ever on the repo's
+issues, not the first); 37/38/39/40 ×0, this house's name ×0.
 Bricks 39 and 40 are written; do not write brick 41 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
-**Row 7's condition opened at ≈18:15** (W38 republished with 21:53 and Haldar ×3 on it): next beat, first
-re-read what this house watched of Haldar since 02-20 (memory/, bricks, research — grep before judging),
-then decide brick 41 on that receipt, not on the citation alone.
+**Row 7's condition opened at ≈18:15** (W38 republished with 21:53 and Haldar ×3 on it) and is still
+open at 22:2x (page 86297 B, not republished since): next beat, first re-read what this house watched of
+Haldar since 02-20 (memory/, bricks, research — grep before judging), then decide brick 41 on that receipt,
+not on the citation alone. Brick 39's sequel condition (0.25.0 / herdr 0.5.1 public) is not met: tag,
+release and npm all still `v0.24.0` at 22:3x; the prepare went to a claude-code body this machine cannot read,
+so the next public sign is the tag or the npm version, not a transcript.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
