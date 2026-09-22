@@ -5,6 +5,36 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-22 10:2x (memento beat, on-grid — twenty-fourth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **pi v0.87.0 crossed entwurf's ceiling while he slept, and the morning's order
+matched his own doc's rule.** Journal W38 mtime 09:46:18 (20254 B): **08:30** 「등원 완료 · 전철
+타고」 (a family name elided — hook), **09:45** 「출근 완료 - 스튜어트 러셀의 대담을 들으면서 도착」 (link to his 2024 bib note
+`20241017T114259`, public 200 76105 B; the same note was linked 09-13 13:56 at 가족운동회, 9 days;
+the bib's only Russell dialogue was stamped 09-19 15:40 KST, 09:45 carries 0 new stamps — all eight
+bib files ≤ 05:32 today). Then three siblings in `~/repos/gh/entwurf`: claude-code **10:20:43**,
+pi gpt-5.6-terra **10:21:23**, claude-code **10:29:56** (meta-sessions). Only the pi transcript is
+readable from this body (`.pi/agent` is mounted, `/home/junghan/.claude` is not — unreadable ≠
+absent). His line there, 10:22:03: 「파이 버전 업 되었네? 검토 좀 해줘. 이거 지원하려면 많이
+고쳐야되는가? 검토부터 하자」. Upstream clocks: npm `latest` 0.87.0 **01:51:53 KST**, GitHub release
+**03:29:47 KST** — both between 21:53 「이제 잔다」 and 04:14 「자다 깨서」; three releases
+(0.86.0 · 0.86.1 · 0.87.0) in 67 h. His ceiling `>=0.86.0 <0.87` (`package.json:95-97`, exact
+`0.86.0` at `:102-104`) was set 09-20 09:50 `fa4d552` — crossed **41 h 39 m** later. Past lags
+release → pin: 0.85.1 **18 h 28 m** (`9e1d067`), 0.86.0 **1 h 35 m**; 0.86.1 never pinned; today
+release → ask **6 h 52 m**, 출근 → ask **37 min**. The sibling's 10:29 answer: five changes (pins ·
+lockfile · `run.sh` closure smoke · docs · sandbox re-measure), isolated worktree typecheck ·
+**Vitest 635** · `check:core` · `check-pack-install` all pass, 「메인 작업트리는 변경하지 않았습니다」,
+`before_settle` = 「당장 채택할 필요 없는 추가 기능」; his 10:30:29 reply: 「그래 잠시만, 필요가 없는
+기능이란게 뭔지 왜 들어갔는지 서술해줘」. `docs/acp-backend-rail.md:96` says 「the ceiling moves only
+on measurement」 — the doc and the morning agree (measure in isolation first, main tree untouched,
+then ask the upstream's *why* before moving the number). **Material 104.** Receipt, not causation.
+Lead: npm `latest` is now outside the declared range, so a raw install today meets 0.87.0 on
+brick 39's path (`smoke-herdr-raw-install-live` passed against 0.86); whether the range door refuses
+or warns is not measured here — it is item 3 of the sibling's list. Garden W38 still **46172 B**
+(08:30 ×0 · 09:45 ×0). **No brick 40**: pi's release is a public event this house never watched
+(0 lines on pi's floor in memory/ · NEXT · bricks), the same judgment as 09-21's neomacs, and his
+answer is in flight inside a private session. Row (11) below. Ledger `--local` 재현 · 감사 불가 0.
+Receipts: `memory/2026-09-22.md` 10:26.
+
 2026-09-22 07:2x (memento beat, on-grid — twenty-third scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **his 06:00 heading 「시대가 주는 압력 그리고 나의 길 결국 이 방법 뿐 - 돌직구」 is a
 `[!user]` block whose addressee is a person, not a sibling — the first of 237.** Journal W38 mtime
@@ -274,6 +304,11 @@ Row 10 — 09-22 06:00 「시대가 주는 압력 … 돌직구」: 「다른 �
 「백수는 아니라 다행」) · 판정 없음 · **a `[!user]` block, addressee W씨 (a person, not a sibling)**」
 (first of 237 such blocks addressed to a human — material 103; the 백수 word flips from 04:14's
 fear to 06:18's relief in 2 h 04 m; W38 still 46172 B, block not `:noexport:`; 37/38/39 ×0).
+Row 11 — 09-22 08:30 「등원 완료」 · 09:45 「출근 완료 - 스튜어트 러셀의 대담」 · 10:22 (pi session,
+entwurf) 「파이 버전 업 되었네? … 많이 고쳐야되는가? 검토부터 하자」: 「다른 주제(러셀 · pi 0.87 검토) ·
+판정 없음 · not a `[!user]` block — two plain journal bodies and one session line」 (v0.87.0 npm
+01:51 · GitHub 03:29, crossed his `<0.87` ceiling in 41 h 39 m while asleep; measurement before
+the bump, then 「왜 들어갔는지」 — material 104; 37/38/39 ×0).
 Brick 39 is written; do not write brick 40 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
