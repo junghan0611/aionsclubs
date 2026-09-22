@@ -5,6 +5,39 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-22 13:2x (memento beat, on-grid — twenty-fifth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **the siblings absorbed the crossing as 「지연」 an hour before he read it as
+「버그」 — and the team worked in the shared checkout, not a worktree.** Journal W38 mtime
+**12:28:50** (22464 B): **11:51** 「§entwurf 0.25.0 herdr plugin 0.5.0 진행」, **11:55** 「terra 랑
+이야기 조율하고 새 코디랑 실무 투입」 + a `[!user]` block to terra (= session lines 11:35:10 · 11:46:19,
+「sol, opus 팀으로 진행하기로 함」) + 「테라의 답변」 `[!assistant]`; **12:25** 「§works-nixos-zigbee 지침
+전달」 with an empty body. Seven siblings in `~/repos/gh/entwurf` today (meta 1316, +7): claude-code
+10:20 · terra 10:21 · claude-code 10:29 · **sonnet 11:26** (one turn, retired by his hand ≤11:35
+「내가 퇴근시켰어」) · **ACP opus 11:35** · **sol 11:46** (coordinator) · **claude-code opus 13:28**
+(opened by Sol, read-only investigation). Four transcripts readable (pi), three not (`.claude`).
+His 11:12 paste: a consumer install (a host name the hook blocks) of Herdr Entwurf **0.4.1** hit a doctor false-red
+(`doctor-pi-provider.ts:226`, plugin bridge path read as drift, `ownership=absent`) — brick 39's
+「fresh one」 was himself, and what came back was a false-red. His 11:46:19 answer to the 10:26 lead
+(why move the ceiling): 「나는 pi 실행했는데 업데이트하라고 보이는거 별로라」 — the update banner, not a
+feature; C (0.87) is HOLD, `package.json` untouched. B closed **12:51:35** (smoke 66 · setup 135 ·
+manifests 742/59 · release gate · typecheck; commit 0), DM **12:51:26** 「dm: 전달됨 (messageId=335)」
+on his 12:30:27 「밥먹고 올테니까 dm 으로」, A GO 12:54:57. **Material 105:** the queue crossing has
+receipts at **12:12:49** (Opus 「또 메시지가 엇갈렸습니다」) and **12:12:57** (Sol 「메시지 교차를
+확인했습니다」); the two things that reached him in between — Sol's 12:30:38 reply and the 12:51 DM —
+carry 0 words about it; he saw it on the Opus pane at **13:26:12** 「acp opus 쪽에서 왜 이런말이
+나오지? 버그가 있는것 같은데?」, 1 h 13 m later, and 13:27:31 sent a body outside the suspect rail
+(claude-code) to investigate. Opus's 13:30:16 letter: 「stamped 03:12:48 and arrived AFTER your
+03:22 … 03:50 … 03:52/03:55/03:56」 (UTC). Second crossing of the same shape: the main checkout
+carries **18 files** (M 15 · A 3, +1423/−165, HEAD `4f37f5d`, worktree 0, stash 0) and Sol's
+12:47:08 / 12:55:56 read partial bytes while Opus wrote — one channel, two hands, no sequence
+number; the queue was caught by a stamp, the files by hashes. `d2b0e1d` 12:05 (agent-config,
+FETCH_HEAD 12:20 today — 1 of 3 repos, a single pull not a sweep): Copilot retired, roster =
+Claude subscription (「Fable only when named」) + Codex; today's team is exactly those two rails.
+Receipt, not causation. Garden W38 still **46172 B** (11:51 ×0 · 12:25 ×0; the 11:55 block has no
+`:noexport:`). **No brick 40**: what this house watched (0.4.1 install → false-red → B closed) is
+still inside private sessions and an uncommitted tree; when 0.25.0/0.5.0 goes public it is the
+candidate sequel to 39. Row (12) below. Receipts: `memory/2026-09-22.md` 13:26.
+
 2026-09-22 10:2x (memento beat, on-grid — twenty-fourth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **pi v0.87.0 crossed entwurf's ceiling while he slept, and the morning's order
 matched his own doc's rule.** Journal W38 mtime 09:46:18 (20254 B): **08:30** 「등원 완료 · 전철
@@ -309,6 +342,10 @@ entwurf) 「파이 버전 업 되었네? … 많이 고쳐야되는가? 검토�
 판정 없음 · not a `[!user]` block — two plain journal bodies and one session line」 (v0.87.0 npm
 01:51 · GitHub 03:29, crossed his `<0.87` ceiling in 41 h 39 m while asleep; measurement before
 the bump, then 「왜 들어갔는지」 — material 104; 37/38/39 ×0).
+Row 12 — 09-22 11:55 「terra 랑 이야기 조율하고 새 코디랑 실무 투입」 + `[!user]` to terra (11:35 · 11:46
+lines) · 11:12 consumer-host false-red paste · 13:26 「버그가 있는것 같은데?」: 「같은 사건(0.4.1 소비자 설치 ·
+doctor false-red · sol/opus 팀 · pi 0.87 HOLD) · 판정 없음 · a `[!user]` block, to terra」 (the
+crossing's receipts 12:12 → his read 13:26, material 105; 37/38/39 ×0).
 Brick 39 is written; do not write brick 40 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
