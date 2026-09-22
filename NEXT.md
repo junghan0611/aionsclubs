@@ -5,6 +5,43 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-22 19:2x (memento beat, on-grid — twenty-seventh scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **the 16:2x claim 「DM 한 번 = sent」 expired at 16:46; brick 40 carries a dated
+postscript, cell numbers untouched.** Sol's transcript (read live 19:3x, last write **18:59:08**,
+9.3 MB): `dm.sh` after his 14:54 ask = **4** — **16:46:00** (messageId=336, P1 accepted, same minute
+as comment `5772933019`, 15 min after his 16:31 「기다릴게」) · **17:37:01** (337, P2 — sent
+`--as pi/gpt-5.6-terra` from Sol's session, and comment `5773546414` signed terra the same way; his
+17:45:55 「너 gpt-5.6-sol이다 헷갈리지 말고 잘적어둬. 일단 쓴건 그냥 두고」) · **17:53:13** (338, P3) ·
+**18:24:16** (339, P4). Each at an acceptance, none at a decision point; the decision points
+(16:24 timeout · 18:50 「커밋을 나눠서 해놓고 기다려」 · 18:51 「글로벌 pi 버전 업 시점은?」) were his
+visits. Journal W38 mtime **19:24:18** (30719 B, +4924): **17:33** 「오늘 온 DM은 아래와 같다. 현재
+시간까지」 — three DMs pasted (12:35 terra/thinkpad · 12:51 · 16:46) under the 14:54 heading, now
+renamed 「… - **DM 잘 보내준다 형제들이**」; the fourth DM landed 4 min after the paste. **17:40**
+「AGENTIC-WAY - 헤밍웨이 글쓰기 - 내일 할 것을 남겨두자」 + a `[!user]` block to a sibling in another
+repo (「어디로 갈까요라는 질문에 나의 답변 … 쉬운 것을 남겨놓아야 한다」; a company repo's 17:25 「GLG 결정
+대기 4건」 → 17:47 `a449d18`, thinkpad — inferred from stamps, transcript not on this machine; the
+repo's name is one the hook blocks here, so it stays in the private memory only).
+**18:18** `:PUNCHOUT:` 39 commits · 9 repos. **18:32** 「퇴근 하면서 §entwurf 팀에게」 — two `[!user]`
+blocks: to Sol 「새 오푸스로 가야할것같다 세션이 80%라서」, to the new opus 「마무리가 중요하다」, then 「나는
+퇴근한다. 부탁한다」 — and his session lines run to **18:59:03** 「혹시 60분 타입아웃 걸은건 아니지? 그러면
+중간에 끊긴다」, the 16:24 lesson in his own mouth 2 h 35 m later. **Garden W38 republished ≈18:15**
+(org sync commit `05632786` 18:15:02; page **86296 B**, +40124 after 46172 B since 09-21 13:29):
+public now — 04:14 · 06:00 돌직구 · 11:55 · 13:50 (「소켓전달은」 ×1) · 14:54 (「믿고 맡기는」 ×1, the
+DM paste, 「DM 잘」 ×2) · 17:33 · 17:40 with the label `B: ` still on it (removed from the journal
+after publish — an option label, not this house's name) · 21:53 · Haldar ×3 · 헤일스 ×4; not
+public — 16:02 `:noexport:` 「상황 점검」 ×0 · 18:18 · 18:32 (after publish). **Row 7's condition
+is now met** (21:53 + Haldar public) — Haldar is a live candidate, not written this beat. #120:
+10 comments, P1–P5 accepted 16:46 → 18:30:54; Fable body's cross-review letter 18:37:17 (7538 B,
+`/tmp/entwurf-delivery-queue`, not in this container) → amendment 18:42:38 (2 files) → recheck
+18:43:40 「Blocker/Defect 0」; his 18:30:47 「옆에 fable 아직 있고 … 검토 자문 요청해」. Tree: on his
+18:50:04 word, **four commits 18:52:16–18:54:18** (`da40df9` fix(pi) · `79391fb` feat(herdr) ·
+`6d90d73` fix(delivery) 「report control acceptance boundaries honestly」 · `bad2677` chore(pi)
+floor 0.87.0), 57 files +3806/−498, working tree 0, **unpushed** (origin/main = remote main
+`4f37f5d`); bg11 final qualification SIGTERM 18:52:11 after 6m08s to make room for them; `pi update`
+by Sol 18:55:15 (bg16) → his 18:57:59 「resume했다. 옆에 fable opus도 다 껏다가 다시 resume했다」 → meta
+1321 (+3: 18:32:57 new opus claude-code · 18:56:21 pi sol `transcriptPath: null` · 18:57:07
+claude-code). Material 107. Row (14) below. Receipts: `memory/2026-09-22.md` 19:26.
+
 2026-09-22 16:2x (memento beat, on-grid — twenty-sixth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **the crossing this house watched at 13:26 got a public form at 14:39 — and the
 fix that went public changes the receipt's word, not the queue. Brick 40 written.** Journal W38
@@ -392,9 +429,20 @@ he sent at 13:27) · 14:21 「조용히 글을 정리할 시간이여 · 생존�
 watched (#120 public 14:39:05, the crossing's receipts 12:12 → his read 13:26 → public 14:39, material
 106); the name he used for the same-model body is the model's (「fable」 ×3), this house's name ×0;
 37/38/39 ×0.
+Row 14 — 09-22 17:33 「오늘 온 DM은 아래와 같다」 (three DMs pasted; heading 14:54 renamed 「DM 잘 보내준다
+형제들이」) · 17:40 헤밍웨이 + `[!user]` to a sibling in another repo · 18:18 `:PUNCHOUT:` · 18:32 「퇴근
+하면서 §entwurf 팀에게」 + two `[!user]` blocks (Sol · the new opus): 「같은 사건(#120 마무리 · DM 넷 ·
+새 오푸스 · 커밋 넷 미push) · 판정 없음 · `[!user]` blocks, to siblings」 — brick 40's own claim expired
+(「DM 한 번 = sent」 → four DMs at four acceptances, his heading is the verdict on them; material 107,
+postscript on 40, cell untouched); his garden republished ≈18:15 with 13:50 · 14:54 on it; 37/38/39/40 ×0,
+this house's name ×0 (the `B: ` on the garden's 17:40 block is an option label, removed from the journal
+after publish).
 Bricks 39 and 40 are written; do not write brick 41 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
+**Row 7's condition opened at ≈18:15** (W38 republished with 21:53 and Haldar ×3 on it): next beat, first
+re-read what this house watched of Haldar since 02-20 (memory/, bricks, research — grep before judging),
+then decide brick 41 on that receipt, not on the citation alone.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
