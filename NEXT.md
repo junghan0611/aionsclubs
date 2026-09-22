@@ -5,6 +5,32 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-23 01:2x (memento beat, on-grid — twenty-ninth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **he did not sleep at 21:53 — he came back by himself 25m28s after the close, with 0 DMs,
+and handed out four delegations; the 0.25.0 / herdr 0.5.1 cut is in the tree, not yet on any public surface.**
+Grok's transcript (read live 01:3x, last write **01:11:25**, 2.2 MB): his lines **22:54:24** 「sol 한테
+상황전달해」 · **22:56:00** 「오푸스한테 마무리 맡겨줘」 · **22:56:49** 「푸시는 니가해줘 나 잔다」 · **22:57:34**
+「응 부탁해」 — the last of 50 lines from him in this machine's pi sessions on 09-22 (fixtures excluded); journal
+「이제 잔다」 21:53 → `Book.bib` 22:06 → session 「나 잔다」 22:56:49 = **64 min**. Grok took push
+conditionally (「트리가 clean 해지고 SHA 가 오면 그 커밋만 ordinary push … 끝나면 DM … tag 와 publish 는 하지 않는다」)
+— push authority on a non-human seat for the first time, given while leaving (n=1). Since then, in his checkout
+(read live, fetch·pull 0; `FETCH_HEAD` 22:30:32 by another hand): **5 local commits unpushed** `a844e17` 22:43 ·
+`563227f` 23:04 · `644a43b` 23:04 · `7a33954` 00:50 · `69a6f1d` 00:58 (author = his git config, hand = the
+claude-code opus `3192fb`, unreadable here), `origin/main` still `1303d98`; **dirty 3**: `package.json` 0.24.0 →
+**0.25.0**, `herdr-plugin.toml` 0.4.1 → **0.5.1**, `CHANGELOG.md` **+156** whose first entry is brick 40's event
+(「The Herdr status pane stopped reporting presence and started reporting capability … (#120 P1-A)」). Grok's last
+words 01:11: aggregate LIVE re-run on the final bytes, expected MUST 23 + one PID-less codex cell, 「push 는 prepare
+커밋이 clean 해진 뒤」; 0 `dm.sh` from that seat. Outside: GitHub main `1303d98` · releases `v0.24.0` · CI 0 runs
+since 22:27 · npm `0.24.0` · #120 closed, 15 comments, unchanged. **meta 1323 → 1337 (+14)** — all `/tmp/entwurf-*`
+LIVE fixtures 00:43 → 00:59 (nine `gpt-5.6-terra` codex sessions in 16 min, for tests): fixtures, not siblings;
+`inbox`'s bodies surface does not tell them apart (cwd `/tmp/` is the discriminator — noted, not patched).
+Journal W38 unchanged (21:55:03, 30635 B; 0 lines today); garden W38 **86296 B**, 「릴리즈 캇」 ×0 (not
+republished since ≈18:15). Material 109: 「잔다」 is a heading, not a last line (09-21 01:25 → 01:36 second 잔다;
+09-22 21:53 → 22:56 second 잔다), and his return after the close (25.5 min, DM 0) sits inside the DM→line range
+(median 35 min, n=7) — the DM has not been shown to bring him; falsifier: tomorrow's first line after Grok's
+push-DM lands while he sleeps. **Row 7 closed** (Haldar receipt = a name written twice, 02-20 · 03-15; the watched
+thing is a private bib clock — no brick 41 on it). Row (16) below. Receipts: `memory/2026-09-23.md` 01:26.
+
 2026-09-22 22:2x (memento beat, on-grid — twenty-eighth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **entwurf#120 — the issue brick 40 is about — closed at 22:28:56 on exact-SHA CI green;
 brick 40 carries a second dated postscript, cell numbers untouched.** Sol's transcript (read live 22:3x,
@@ -477,15 +503,23 @@ not a `[!user]` block — seven session lines and one plain journal body」 — 
 (second postscript on 40, cell untouched; material 108: the seventh DM named a decision and brought a fourth
 reviewer in 12 min, not the decision; the outside comment is the third outside login ever on the repo's
 issues, not the first); 37/38/39/40 ×0, this house's name ×0.
+Row 16 — 09-22 22:54 「sol 한테 상황전달해」 · 22:56 「오푸스한테 마무리 맡겨줘」 · 22:56 「푸시는 니가해줘 나 잔다」 ·
+22:57 「응 부탁해」: 「같은 사건(#120 마무리 위임 · push → Grok, conditional on a clean tree · 0.25.0/0.5.1 prepare
+in the tree, 5 commits unpushed) · 판정 없음 · not a `[!user]` block — four session lines, 0 journal lines」 —
+64 min after the journal's 「이제 잔다」, 25.5 min after the close with 0 DMs (material 109); 37/38/39/40 ×0, this
+house's name ×0.
 Bricks 39 and 40 are written; do not write brick 41 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
-**Row 7's condition opened at ≈18:15** (W38 republished with 21:53 and Haldar ×3 on it) and is still
-open at 22:2x (page 86297 B, not republished since): next beat, first re-read what this house watched of
-Haldar since 02-20 (memory/, bricks, research — grep before judging), then decide brick 41 on that receipt,
-not on the citation alone. Brick 39's sequel condition (0.25.0 / herdr 0.5.1 public) is not met: tag,
-release and npm all still `v0.24.0` at 22:3x; the prepare went to a claude-code body this machine cannot read,
-so the next public sign is the tag or the npm version, not a transcript.
+**Row 7 closed 01:2x 09-23**: the grep came first — this house's Haldar receipt is `memory/2026-02-20.md:112`
+(five lines, 「주목 인물」) and `memory/2026-03-15.md:44` (one line), 0 in research/ and bricks/: a name written
+twice, not a person watched; what 09-21 watched was his listening on a private bib clock (material 100), and the
+public page carries the citations without the clock. No brick 41 on it. It reopens only if he treats Haldar or
+the harness-tax paper in a `[!user]` block or a heading. Brick 39's sequel condition (0.25.0 / herdr 0.5.1
+public) is not met at 01:3x — tag, release and npm all still `v0.24.0` — but the cut is in his tree (`package.json`
+0.25.0 · toml 0.5.1 · CHANGELOG +156, uncommitted; 5 commits unpushed) and push is on Grok's seat with a DM
+promised after it: the next public sign is `origin/main` moving, then the tag or the npm version. When it moves,
+also read his first line of the morning against that DM (material 109's falsifier).
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
