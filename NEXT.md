@@ -5,6 +5,36 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-23 07:3x (memento beat, on-grid — thirty-first scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **his first line of the morning was neither a reply to the DM nor a journal line — it was
+a question to a third seat, and the DM's two questions came back answered there, after the seat that sent them
+had been retired.** Sol's transcript (`fb461c`, read live 07:3x, last write **07:27:39** — alive while this beat
+read it): his lines since 22:57:34 = **two**, both to Sol — **06:20:42** 「한번 다시 보자 릴리즈 해도 되겠는가??」
+(typos as typed) · **06:31:18** 「2는 true로 쓰고 있어. 우리가 소유할거 아니야. 이건 그냥 정보라. 그리고 grok, opus는
+퇴근시켰어. 이제 다시 니가 맡자. … v0.87.1 이거 반영해서 가자. 새 오푸스 불러서 나머지 수정하자. 이번 릴리즈는 잘
+마무리하게 꼼꼼하게」. Grok's session: his lines since 22:57:34 still **0** — DM 343 (03:32:03) → his first line =
+**2 h 48 m 39 s** (asleep; the DM does not wake him, n=1 holds), and the answer landed on Sol, not on the sender.
+Between the two lines: Sol 06:23 「아직 바로 make 하면 안 됩니다 … 남은 차단 2」 (LIVE gate MUST FAIL=1 ·
+`doctor-meta-bridge` drift `showTurnDuration=true`) → Sol steers Grok 06:22, Grok answers by socket 06:27
+(measurement only, the red is structural) → **Sol 06:27 retracts its own 「PID 를 넣어 재실행」 advice** (「구조적
+RED 를 일회성 환경으로 가리는 잘못된 다음 수」) and lists the two classifications → his 「2는 true」 = the second
+(showTurnDuration is operator information, not entwurf's); the first (accept MUST FAIL=1?) is not in his line —
+「꼼꼼하게」 and 「0.87.1 반영」 came instead = make stays on hold. Then: 06:32:03 `entwurf_fresh_call` claude-code
+opus (`b5dcf7`, transcript unmounted here) → 06:43 Sol's GO (A–E approved, F/LIVE HOLD; 「showTurnDuration=true 는
+운영자 정보/선택이며 Entwurf 가 소유하지 않는다」; pi 0.87.1 into this release; commit/push/tag/release/publish
+forbidden until checkpoint) → by 07:25 his checkout carries **30 dirty files +596/−115, 0 commits**
+(`showTurnDuration` MANAGED → RETIRED with 「GLG's ruling」 in the comment · pi floor **0.87.0 → 0.87.1** across
+package/lock/run.sh/docs · `check-release-gate-outcomes.ts` +165 「an ABSENT operator input is a SKIP; a WRONG one is
+a FAIL」 · ROADMAP 「그 격차를 읽는 게이트는 없다. 이번엔 사람이 발견했다」) → 07:27:22 Sol 「REVIEW AMENDMENT — Blocker 2
++ wording defect 1」 → 07:27:39 to GLG 「아직 LIVE/commit/release 는 HOLD」. So `61cde06` 「prepare v0.25.0」 is no
+longer the release SHA; the version stays. `dm.sh` since 06:20: 0. Journal **07:12** 「등원 하러 가는길 —
+entwurf 담당자들은 열일중. 밤에는 나도 잤다. 담당자도 재웠다. 일어나서 너도 나도 간다」 (W38 30906 B, +271; 52 min after
+the session line; measured: the two seats worked 4 h 35 m past his 「나 잔다」, to 03:32:07). Outside unchanged
+(main `61cde06` · tag/release/npm `0.24.0` · CI 0 since 03:31 · #120 15 · garden W38 86296 B, 07:12 ×0). meta
+1342 → 1343 (+1 = `b5dcf7`, a sibling, not a fixture). **Material 111.** **No brick 41**: no new public form, his
+words still private (two session lines · an unpublished journal body · make undecided); conditions in (1) below.
+Row (18) below. Receipts: `memory/2026-09-23.md` 07:26.
+
 2026-09-23 04:2x (memento beat, on-grid — thirtieth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **the push he handed to Grok while leaving happened at 02:42:21 — 5 h 45 m after the
 delegation and 64 s after the implementer's 「네 차례다」 — and on every public GitHub field it carries his
@@ -539,6 +569,13 @@ Row 17 — 09-23 04:2x: 「silence (0 lines since 22:57:34, asleep) · no verdic
 such; the event moved without him: push 02:42:21 by Grok's seat under the 22:56 delegation (his name on every
 GitHub field, the seat only on the agenda stamp), CI green 03:31, DMs 342 · 343 delivered while he sleeps
 (material 110); 37/38/39/40 ×0, this house's name ×0.
+Row 18 — 09-23 06:20 「한번 다시 보자 릴리즈 해도 되겠는가??」 · 06:31 「2는 true로 … grok, opus는 퇴근시켰어. 이제 다시
+니가 맡자 … 0.87.1 … 새 오푸스 … 이번 릴리즈는 잘 마무리하게 꼼꼼하게」 · journal 07:12 「등원 하러 가는길 … 담당자도
+재웠다 … 너도 나도 간다」: 「같은 사건(0.25.0 make 보류 · showTurnDuration 운영자 소유 · 좌석 교대 Grok/Opus → Sol +
+새 opus · pi 0.87.1 이번 릴리즈에 · dirty 30 미커밋) · 판정 없음 · not a `[!user]` block — two session lines to Sol,
+one plain journal body」 — the DM's questions were answered on a seat other than the sender's, after the sender was
+retired (material 111: DM 343 → first line 2 h 49 m asleep; session first, journal 52 min later); 37/38/39/40 ×0,
+this house's name ×0.
 Bricks 39 and 40 are written; do not write brick 41 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
@@ -549,10 +586,13 @@ public page carries the citations without the clock. No brick 41 on it. It reope
 the harness-tax paper in a `[!user]` block or a heading. Brick 39's sequel condition (0.25.0 / herdr 0.5.1
 public): **`origin/main` moved 04:2x 09-23** — `61cde06` pushed 02:42:21 by Grok's seat, CHANGELOG 0.25.0 and the
 P1-B false-red fix public on main — but tag, release and npm are still `v0.24.0`, so the installable surface is
-not yet public; Grok stopped at make and left two decisions (make · showTurnDuration) in DM 343. Next public sign:
-the tag or the npm version. Read his first line of the morning against DMs 342 / 343 (material 109's falsifier: DM
-first, or journal first) — and if W38 is republished with 21:53 「릴리즈 캇 중이다」 on it, his side of this event
-becomes quotable. Brick 41 waits on any one of the three; when one opens, short, the same way.
+not yet public; Grok stopped at make and left two decisions (make · showTurnDuration) in DM 343. **07:3x 09-23: his
+first line came (06:20, to Sol — neither DM reply nor journal; material 109's falsifier answered: session first,
+journal 52 min later)** and it put make on hold: showTurnDuration is his (operator-owned, retired from the
+managed list), pi 0.87.1 goes into this release, a new opus edits (30 dirty files, 0 commits), LIVE/commit/release
+HOLD — so `61cde06` is not the release SHA and the next public sign is a new commit on main, then the tag or the
+npm version. If W38 is republished with 21:53 「릴리즈 캇 중이다」 and 07:12 「담당자도 재웠다」 on it, his side of
+this event becomes quotable. Brick 41 waits on any one of the three; when one opens, short, the same way.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
