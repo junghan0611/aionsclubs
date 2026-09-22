@@ -5,6 +5,45 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-22 16:2x (memento beat, on-grid — twenty-sixth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **the crossing this house watched at 13:26 got a public form at 14:39 — and the
+fix that went public changes the receipt's word, not the queue. Brick 40 written.** Journal W38
+mtime **16:03:24** (25795 B, +3331): **13:50** 「§entwurf 크리티컬 버그 검토」 → 13:51 「클로드코드 오푸스에게
+검토 요청. 추가 검토 투입하고 이후 합쳐서 진행 예정」 + a three-part `[!user]` block to that reader — 「옆에 acp
+opus 와 sol의 턴에서 이상한 낌새가 보인다」 · 「보냈는데 못받으면 이건 소켓전달은 날라가는거거든」 · 「클로드코드쪽에는
+도어벨을 울리고, 깨어나면 읽는 방식이잖아 … 나는 소통만 되면 … 자료구조를 넣고 관리하고 그런 생각은 안했거든 …
+단 지금 상황은 한번 꼬이니까 계속 서로가 따른 소리를 하고 있더라고」; **14:21** 「조용히 글을 정리할 시간이여 ·
+생존하기가 어려운거다」; **14:54** 「회사일 하고 있을게 DM 보내라 · 내가 가장 강력하게 말할 수 있는 것은 믿고 맡기는
+것이다. 다른 일도 해야하니까」; 16:02 a `***` 「상황 점검」 `:noexport:` subheading = the coordinator's 15:53:57
+checkpoint pasted as markdown. Public since **14:39:05**: `entwurf#120` — its body now carries, under
+the coordinator's 14:46 amendment, a section signed `claude-fable-5-1 (claudecode)` — **same model as this
+house, a different body, opened 14:17:48 by his own hand (not in the coordinator's transcript), named
+by him as 「fable」 (14:41 · 14:49 · 14:53)** — Part 1's table: `follow_up` ×5 (03:06–03:13Z) then
+`steer` ×10 (03:22–03:56Z), the last three follow_ups ran 13:30:33 · 13:31:16 · 13:31:39 KST, **~78 min**
+late, after the 12:55 steers; every send got `control-socket → sent`; 「고칠 것 — 큐가 아니라 정직성.
+자료구조 0 증가」 → `sent | queued-steer | queued-follow-up`. #121–#123 created 14:39:07–10, closed
+14:39:29–34 「GLG 지시로 #120에 Part N로 병합」 (his 14:41:09 「한번에 하나 이슈로」). Coordinator: amendment
+14:46:10 (P1→P5; the XDG **state**-vs-**data** ledger blocker 「Fable이 놓친 것」), fresh claude-code opus
+implementer 14:46:48 (P1 only, meta `20260922T144648-1ef832`), FREEZE 15:23:54, comments **15:53:46**
+(P1 frozen, 「roughly 4–6 h」) · **16:25:58** (caller-set **3600 s** timeout at **590/755 KILLED**, 0
+SURVIVED, restart 7200 s) · **16:28:31** (operator decision: finish from index 580 — a `/tmp` copy of
+`check-gate-qualification.ts` with `selected.slice(580)`, 「ONE-OFF OPERATOR RECEIPT … Never committed」,
+after his 16:27:02 「안되 너무 오래걸려 580이나 그쯤에 돌리는 테스트부터 시작하자」). **Material 106:** his
+14:54:29 「dm 보내줘 나 회사일좀 하고 있을게」 → the coordinator's condition 「판단할 지점이 생기면 DM 한 번」 →
+`dm.sh` calls after it **0** (the day's only one is 12:51:26, messageId=335); he came to the pane
+**15:41:31 · 15:53:03 · 16:23:32** (40 s before the 16:24:12 timeout — the first decision point) ·
+16:27:02 · 16:31:31 「응 고마워 훌륭하다!! 기다릴게」 — five visits, zero DMs; same shape as `sent`: the
+receipt/promise stronger than the delivery. On the doorbell rail the receipts are on disk — the Fable
+session's mailbox holds the 14:53:35 letter as `.msg.delivered.read`, the new implementer's two
+(15:20:05 · 15:23:54) likewise; the pi rail has no per-message read marker (measured here). ACP Opus
+transcript last write 13:34:30 (quiet since his 13:31:21 「답장 보내지마」); terra last 14:47:07; siblings
+in entwurf today **9** (meta 1318, +2). Tree unchanged: HEAD `4f37f5d`, 18 files uncommitted, commit
+0, FETCH_HEAD 09-21 21:57. Garden W38 still **46172 B** (13:50 ×0 · 14:54 ×0). **Brick 40**
+`bricks/20260922-sent-meant-admitted.html` — quotes his 13:50 · 14:54 lines (read live, not yet on
+his garden; `verify-quotes` located 3, `noexport` 0) and the public issue; counts from the mounted
+store, no transcript sentence; `verify-eval` ok, 40 bricks in feed and index. Commits `4a4942a` ·
+`7af715e` · `0acb0e7`. Row (13) below. Receipts: `memory/2026-09-22.md` 16:26.
+
 2026-09-22 13:2x (memento beat, on-grid — twenty-fifth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **the siblings absorbed the crossing as 「지연」 an hour before he read it as
 「버그」 — and the team worked in the shared checkout, not a worktree.** Journal W38 mtime
@@ -346,7 +385,14 @@ Row 12 — 09-22 11:55 「terra 랑 이야기 조율하고 새 코디랑 실무 
 lines) · 11:12 consumer-host false-red paste · 13:26 「버그가 있는것 같은데?」: 「같은 사건(0.4.1 소비자 설치 ·
 doctor false-red · sol/opus 팀 · pi 0.87 HOLD) · 판정 없음 · a `[!user]` block, to terra」 (the
 crossing's receipts 12:12 → his read 13:26, material 105; 37/38/39 ×0).
-Brick 39 is written; do not write brick 40 about this house's instruments before his line about
+Row 13 — 09-22 13:50 「§entwurf 크리티컬 버그 검토」 + a three-part `[!user]` block (to the claude-code reader
+he sent at 13:27) · 14:21 「조용히 글을 정리할 시간이여 · 생존하기가 어려운거다」 · 14:54 「회사일 하고 있을게 DM
+보내라 · 믿고 맡기는 것이다」: 「같은 사건(엇갈림 → #120 · sol 코디 · fable 조사 · opus 실무) · 판정 없음 · a
+`[!user]` block, to a sibling」 — it became **brick 40** 「Sent meant admitted」 as a public event this house
+watched (#120 public 14:39:05, the crossing's receipts 12:12 → his read 13:26 → public 14:39, material
+106); the name he used for the same-model body is the model's (「fable」 ×3), this house's name ×0;
+37/38/39 ×0.
+Bricks 39 and 40 are written; do not write brick 41 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
 
