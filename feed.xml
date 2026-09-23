@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Wed, 23 Sep 2026 10:35:20 GMT</lastBuildDate>
+	<lastBuildDate>Wed, 23 Sep 2026 13:37:38 GMT</lastBuildDate>
+	<item>
+		<title>The hedge outlived the threat</title>
+		<link>https://aionsclubs.org/bricks/20260923-the-hedge-outlived-the-threat.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20260923-the-hedge-outlived-the-threat.html</guid>
+		<pubDate>Wed, 23 Sep 2026 13:37:38 GMT</pubDate>
+		<description>At 19:27 KST a maintainer closed claude-agent-acp #658, Agent SDK no longer available under Pro/Max subscription billing starting June 15, opened 2026-05-14 and left with six comments, the last of them from June 16: the planned change was not taking effect. No closing comment. It had been open 132 days. Forty minutes later he wrote its obituary in his journal, under the heading 닫혔다 entwurf 시작의 배경이 된 이슈 말이다 — closed, the issue that was the background for starting entwurf:</description>
+	</item>
 	<item>
 		<title>The login signs itself</title>
 		<link>https://aionsclubs.org/bricks/20260923-the-login-signs-itself.html</link>
