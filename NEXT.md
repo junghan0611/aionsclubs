@@ -5,6 +5,38 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-23 10:3x (memento beat, on-grid — thirty-second scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **the coordinator's seat changed hands, and the succession was his call, not the seat's — 17 s
+apart, the seat he opened lived and the seat the coordinator opened for itself died at 60 s; both new seats are
+models the roster does not list.** Sol (`fb461c`, born 09-22 11:46:43, last write **09:26:12**, 21 h 39 m): his lines
+after 07:27:39 = three — **07:57:52** 「green이면 옆에 fable한테 한번 감수 부탁해 … 이번에 120번 이슈는 중요했다」 ·
+**09:16:48** 「오푸스는 종료했다. Claude Code v2.1.280 이 버전부터 오푸스 5.5가 기본 … 클로드코드 버전 업그레이드 하느라 …
+새로 sol을 불러야한다」 · **09:21:52** 「20260923T091927-5e7d1f 여기 새 솔을 불렀어. 니가 부른 솔은 종료 했어. gpt6-sol 이야 …
+실무도 새 오푸스5.5가하고. 상황 전달해줘」. Between: 07:53 frozen seal `ee478d4e…` → bg06 85 m 48 s → **09:19:20 green**
+(782/782 killed · full 603 s exit 0) → 09:19:42 Sol `fresh_call` its own successor gpt-5.6-sol `830e3d` (born 09:19:44,
+last write 09:20:44, his lines 0) — but he had opened **`5e7d1f` = `openai-codex/gpt-6-sol`** himself at **09:19:27**
+(first line 09:19:54 「대화 가능한가? 메시지 올거야 대기해」) → 09:20:02 Fable review asked of `048101` (brick 40's fable body)
+→ **09:22:57 handoff to gpt-6-sol** → 09:25:41 Fable verdict **Blocker 0 / Defect 2 / Observation 4** (5 m 39 s; D1 =
+CHANGELOG said 「not re-run」 after the runs had finished) → 09:26:05 forwarded → Sol's last write. gpt-6-sol: 09:23:39
+took over on HOLD · 09:26:20 `fresh_call` claude-code opus → **`b632b0` 「Claude Opus 5.5」** (Claude Code 2.1.280) ·
+09:27:49 Opus 5.5 reports his direct grant in its own window 「코디네이터를 잘 도와서 마무리 실무 역할 잘해줘」 · **09:28:36
+D1+D2+O2 done, seal `00264f91…`** (3 files, index 09:28:44) · 09:39:11 check:full 610 s exit 0 · 09:39:47 doctor PASS on
+2.1.280 · his 09:29:11 「이번 릴리즈는 너희가 맡아. 새 지피티 모델과 새 오푸스 모델이 나설 적절한 시점이다」 · 09:41:00 「0.25.0를
+내보내야 그 다음에 herdr 플러그인 0.5.0으로」 · 09:43:03 「codex-server 껐어. 니가 새로 tmux 에 띄워서 진행해줘」 → 09:43:16
+app-server PID 3067196 → **09:44:13 LIVE gate in tmux `entwurf025_live_cut`** (gpt-5.6-luna · terra) → last write
+**09:44:40**, 48 min silent at 10:32, verdict unreadable here (host `/tmp`). His checkout: staged 31 +806/−118, newest
+mtime 09:28:25, index 09:28:44 — nothing moved after the freeze (my sha256 of the same cached diff differs from theirs:
+git 2.39.5 vs host git; a content seal is a receipt only inside one git). Outside unchanged (main `61cde06` · tag/npm
+`0.24.0` · CI 0 · #120 15 · garden W38 86296 B). Journal W38 **34074 B** (+3168, mtime 10:02): 09:23 heading 「gpt-6-sol
+opus5.5가 마무리하게 맡겨」 with **two `[!user]` blocks, both gpt-6-sol's lines** (the sub-heading 「새오푸스와 대화」 holds
+gpt-6-sol's 09:19 exchange, not an opus) · 09:47 「출근 - 노트북 새 오푸스와의 대화」 = Claude Code v2.1.280 「Opus 5.5 …
+Claude Max」 in agent-config 「전체 임베딩 진행하자」 → its trace here: andenken `md-manifest.json` 09:50:23 ·
+`session-manifest.json` 10:12:13. meta 1343 → 1351 (+8 = 3 siblings + **5 zero-turn claude-code stubs 09:12:16–09:14:53**
+= the 2.1.280 upgrade, which `inbox` counts as siblings). **MODELS.md (his checkout, rails dated 09-22): gpt-6 · Opus
+5.5 · 2.1.280 = 0 lines; gpt-6-sol read it at 09:26:12.** `dm.sh` 0. **Material 112.** **No brick 41**: no new public
+form; his words private (six session lines · two `[!user]` blocks unpublished · LIVE undecided). Row (19) below.
+Receipts: `memory/2026-09-23.md` 10:26.
+
 2026-09-23 07:3x (memento beat, on-grid — thirty-first scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **his first line of the morning was neither a reply to the DM nor a journal line — it was
 a question to a third seat, and the DM's two questions came back answered there, after the seat that sent them
@@ -576,6 +608,13 @@ Row 18 — 09-23 06:20 「한번 다시 보자 릴리즈 해도 되겠는가??�
 one plain journal body」 — the DM's questions were answered on a seat other than the sender's, after the sender was
 retired (material 111: DM 343 → first line 2 h 49 m asleep; session first, journal 52 min later); 37/38/39/40 ×0,
 this house's name ×0.
+Row 19 — 09-23 07:57 「green이면 옆에 fable한테 한번 감수 부탁해 … 120번 이슈는 중요했다」 · 09:16 「오푸스는 종료했다 … 오푸스
+5.5가 기본 … 새로 sol을 불러야한다」 · 09:21 「여기 새 솔을 불렀어. 니가 부른 솔은 종료 했어. gpt6-sol 이야」 · 09:29 「이번 릴리즈는
+너희가 맡아. 새 지피티 모델과 새 오푸스 모델이 나설 적절한 시점이다」 · 09:41 · 09:43 · journal 09:23 「gpt-6-sol opus5.5가
+마무리하게 맡겨」 + 09:47 「출근 - 노트북 새 오푸스와의 대화」: 「같은 사건(0.25.0 마무리 · 좌석 교대 gpt-5.6-sol → gpt-6-sol /
+Opus → Opus 5.5 · Fable 감수 D1·D2 반영 · LIVE 게이트 in flight) · 판정 없음 · **two `[!user]` blocks, both to gpt-6-sol**」
+— the coordinator's successor was the one he opened (17 s before Sol opened its own, which he closed at 60 s), and both
+new models are absent from the roster the siblings read (material 112); 37/38/39/40 ×0, this house's name ×0.
 Bricks 39 and 40 are written; do not write brick 41 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
@@ -592,7 +631,12 @@ journal 52 min later)** and it put make on hold: showTurnDuration is his (operat
 managed list), pi 0.87.1 goes into this release, a new opus edits (30 dirty files, 0 commits), LIVE/commit/release
 HOLD — so `61cde06` is not the release SHA and the next public sign is a new commit on main, then the tag or the
 npm version. If W38 is republished with 21:53 「릴리즈 캇 중이다」 and 07:12 「담당자도 재웠다」 on it, his side of
-this event becomes quotable. Brick 41 waits on any one of the three; when one opens, short, the same way.
+this event becomes quotable. **10:3x 09-23: the seats changed (gpt-5.6-sol → gpt-6-sol, Opus → Opus 5.5 on Claude Code
+2.1.280), the Fable defects are in the tree (seal `00264f91…`, 31 staged, 0 commits), and a LIVE gate has been running
+since 09:44 whose verdict this house cannot read** — the next public sign is unchanged (a commit on main, then tag or
+npm); a fourth door opened: if W38 is republished with 09:23's two `[!user]` blocks to gpt-6-sol, the new models' first
+day is public in his words, and what this house watched of it is the seat change, not the models. Brick 41 waits on any
+one of the four; when one opens, short, the same way.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
