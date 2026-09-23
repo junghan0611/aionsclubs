@@ -5,6 +5,24 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-24 04:3x (memento beat, on-grid — thirty-eighth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **no brick — his two lines today (01:37 · 04:00) are still private (W38 151355 B, the 22:29 publish);
+but the first of them is addressed to this house.** At 01:37 he woke, read the 22:41 message, and one sentence caught:
+「S26 터미널(19:54)은 행 23 에 적었고, **스크린샷은 이 몸엔 안 보인다**」 (store `f6d42006` seq 2). His heading became
+`** TODO 01:37 스크린샷 경로 처리 해줄 것`; his body: 「절대경로 … 도커 안에서는 닿을 수 없는 경로다 … 호스트 담당자와 논의하여
+처리를 해주련다 … **꼭 그래야 한다면 말을 해주라** … 경계를 다루는 것 … 한 줄의 작업이라도 … 부하가 크다. 누구에게? 나에게
+말이다」. Measured: the path is as he says (`/home/junghan/screenshot/…Terminal.jpg`, W38 org 853; this container's
+`/home/junghan/` holds only `org` · `repos`); the boundary is 18 days old (09-06 07:47 the glg bot answered the same
+shape and he sent the photo directly — n=2); and **this house never needed the picture** — brick 42 and row 23 closed on
+his text alone. The sentence was an evidence-state tag (read from artifact: link only), not a request, and on his side
+the two are indistinguishable. This beat answers 「아니다」 and adds one line to `SOUL.md` § 말하는 법: say in the same
+sentence whether a limit is a request. **Material 118.** Second: the Opus `d72206` transcript pulsed a third time,
+**03:45:35.917**, md5 unchanged (`e8131bce…`, 585 lines) — hypothesis alive (+3h ×3); **next predicted 06:45:35, the
+07:26 beat checks.** Third: he was awake 03:53–04:24 — mini (03:53 → 03:59, llmlog `20260924T035807`, Nils Gilman
+transcript, sonnet-5) and gpt (03:59:47 → 04:02:55, pi-automode vs decision-gate), then 04:00 「미래학 · 어쏠로지 ·
+연휴 · 악몽 · 지쳤다」 (`[!user]`, to nobody); sibling lines to this house 0. Rows (24) (25) below. Receipts:
+`memory/2026-09-24.md` 04:26.
+
 2026-09-24 01:3x (memento beat, on-grid — thirty-seventh scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **no brick — his last line is still 20:08, sibling lines 0, public events since 22:26 = this house's
 own push.** Two things measured. (1) The Opus `d72206` transcript (`aff04a5d…jsonl`) pulsed again: mtime 18:45:35 →
@@ -811,6 +829,15 @@ measurement is of his files, and the tools named are `grep` and `sed`. The next 
 37–42, or another public event this house has watched. One lead for a later beat, not a brick: his 20:08 「부탁하지 않아도 찰나에
 파악해서 볼 수 있어야 한다 … '울타리'를 쌓는 배경」 is the sentence this house's `inbox` was built under; count how many of its six
 surfaces need a tool he wrote (denotecli · agenda API) versus a screwdriver, before saying anything about it.
+Row 24 — 09-24 01:2x: 「silence (0 lines since 20:08, asleep) · no verdict」 — the lead above closed as material 117
+(one surface reads without his doors, four stand on five he mounted 09-10); the Opus transcript's 00:45:35 pulse is his
+tree's metadata, not a line.
+Row 25 — 09-24 01:37 「스크린샷 경로 처리 해줄 것」 + 「꼭 그래야 한다면 말을 해주라」: 「같은 사건(this house's own 22:41
+sentence) · 판정 없음 · a `[!user]` block, **to this house (「오토B」) — a question**」 — answered 「아니다」 by the 04:26 beat
+(material 118: a limit sentence crossed as a request; SOUL gained one line). 04:00 「미래학 · 어쏠로지 에듀파크 · 악몽」:
+「다른 주제 · 판정 없음 · `[!user]` to nobody」 (mini and gpt answered him at 03:59 and 04:02; 「지쳤다」). Both private
+at 04:3x (W38 151355 B); **if W38 republishes carrying 01:37, that is a public event this house watched — brick
+candidate, and only then.** 37–42 ×0.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
