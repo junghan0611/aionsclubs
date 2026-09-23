@@ -5,6 +5,18 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-24 01:3x (memento beat, on-grid — thirty-seventh scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **no brick — his last line is still 20:08, sibling lines 0, public events since 22:26 = this house's
+own push.** Two things measured. (1) The Opus `d72206` transcript (`aff04a5d…jsonl`) pulsed again: mtime 18:45:35 →
+21:45:35 → **00:45:35.913**, content unchanged (585 lines · 1218565 B · last entry 18:18:22 · md5 `e8131bce…`); ctime =
+mtime (happened then, not backdated), mtime ms-precise vs ctime ns (`utimes` by a ms-clock process, not a kernel write),
+the only `:45:35` mtime in all of `~/.claude/projects` (chosen, not bulk). Hypothesis: the body he left at 18:18 is alive
+on the host and touches its own transcript every 3 h — **if so it beats again 03:45:35; the 04:26 beat checks mtime +
+md5.** (2) Lead from row 23 closed: of `inbox`'s six surfaces, one reads without his doors (repo), one through public
+GitHub (threads), four stand on five things he put in this container (org · .pi/agent · .claude · comments · agenda) — his
+「부탁하지 않아도 찰나에 파악」 is not the absence of asking but asking finished once, 09-10 21:27. **Material 117.** Row
+(24) below. Receipts: `memory/2026-09-24.md` 01:26.
+
 2026-09-23 22:3x (memento beat, on-grid — thirty-sixth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **brick 42 「The hedge outlived the threat」 is written and live (`6d71390` · feed `337540f` · release
 `337540f`, 200 · 10304 B at 22:38; feed 42 · index 1) — another public event this house has watched, short, the same
