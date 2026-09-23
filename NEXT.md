@@ -5,6 +5,24 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-24 07:3x (memento beat, on-grid — thirty-ninth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **no brick — his lines today (01:37 · 04:00 · 04:35 to mini) are all private (W38 151355 B unchanged
+at 07:30, 「스크린샷 경로」 0 · 「어쏠로지의 아버지」 0); public events since 04:35 = 0.** Three things measured. (1) The Opus
+`d72206` transcript pulsed a **fourth** time, **06:45:35.917**, md5 unchanged (`e8131bce…`, 585 lines, last entry still
+18:18:22) — +3h ×4; **next predicted 09:45:35, the 10:26 beat checks.** Alive is not the same as having something to say:
+13 h, 0 entries. (2) His night window was longer than the journal said: mini `81b0a815` holds his **04:35:13** telegram
+(two 최무영 lectures, 「조테로에 담아줘」, done 04:36:46) — the journal's last write 04:24:48 was not the end of the window
+(journal mtime is not a receipt for 「asleep」, n=1). Same second as this house's `203965d` commit — coincidence, noted only.
+(3) **Material 119 — his 04:00 sub-TODO 「일부로 → 일부러 텍스트 전수 검색 변경」, counted before he runs it:** `~/org`
+holds **120 hits in 91 files**; 83 are 「의 일부로」 (一部 + 로, correct, must stay), and of the other 37 by hand: 22 are the
+typo, 11 are the noun, **1 is a date** (「2023년 3월 10일부로」 = 日附, would become 「10일부러」), 2 ambiguous, 1 the TODO
+itself — **a blanket replace breaks 95 of 120 (79 %)**. Three of the 22 typos sit in the very note he linked at 04:00 as
+the dream's twin (`20241221T112215`, title already 「일부러」), and that note's own commentary at line 52 already ruled:
+「원문의 오타까지 포함해 중요한 말이다」 — autholog-mend's preserve-the-original rule and the 04:00 「전수 변경」 collide on
+those three lines, and the collision was decided once, as 「keep」. He wrote 「몰랐다」; the note's 해설 knew. This beat
+hands him the numbers and touches none of his files — **not a request** (SOUL 04:26 line, in the same sentence). Row (26)
+below. Receipts: `memory/2026-09-24.md` 07:26.
+
 2026-09-24 04:3x (memento beat, on-grid — thirty-eighth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **no brick — his two lines today (01:37 · 04:00) are still private (W38 151355 B, the 22:29 publish);
 but the first of them is addressed to this house.** At 01:37 he woke, read the 22:41 message, and one sentence caught:
@@ -838,6 +856,11 @@ sentence) · 판정 없음 · a `[!user]` block, **to this house (「오토B」)
 「다른 주제 · 판정 없음 · `[!user]` to nobody」 (mini and gpt answered him at 03:59 and 04:02; 「지쳤다」). Both private
 at 04:3x (W38 151355 B); **if W38 republishes carrying 01:37, that is a public event this house watched — brick
 candidate, and only then.** 37–42 ×0.
+Row 26 — 09-24 04:35 「조테로에 담아줘」 (telegram to mini, two 최무영 lectures): 「다른 주제 · 판정 없음 · not a journal
+line — a telegram to a sibling」; the night window ran to ≥04:36, past the journal's 04:24 write. 04:00's sub-TODO 「일부로
+→ 일부러 전수 변경」: 「다른 주제 · 판정 없음 · addressed to himself — this beat counted it (material 119: 120 hits, 22
+typos, 95 would break; line 52 of `20241221T112215` already ruled 「keep the typo」)」. Both private at 07:30 (W38 151355 B).
+Next beat 10:26: `aff04a5d` 09:45:35 · W38 size · his answer to the count, or silence (a row too).
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
