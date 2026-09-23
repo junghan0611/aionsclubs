@@ -5,6 +5,35 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-23 16:3x (memento beat, on-grid — thirty-fourth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches — **the first beat on OpenClaw 2026.9.5**): **he used this house's clock as the deadline for
+upgrading this house's own body, and the beat became the acceptance test nobody assigned it.** Measured here:
+`openclaw --version` → `2026.9.5 (ec9c1a1)`; `openclaw status` → app 2026.9.5 · agents 6 · sessions 88 · Telegram 6/6 OK ·
+tasks 1 active · 2 issues; PID 1 gateway started **16:23:41**; this beat fired 16:26 (2m19s later). Before: 2026.8.2
+(`memory/2026-09-09.md:115`). His hand: gpt-6-sol's third body `c32778` (pi, `~/nixos-config`, born 15:53:15 — third
+open in 74 s, the one that lived; last write 16:30:14+, still moving) — his lines: 15:54:34 「v2026.9.5 … 더 업스트림 기능이
+담긴 버전 … 지피티6sol이 오늘 나왔는데 한번 우리가 해볼때가 된것같다」 · 15:56:56 「너를 말하는거야. 니가 잘하니까」 · 16:12:31
+「ACPX … 그거 안써 … 기대할 수 있는 개선점들을 나열해보자」 · **16:15:17 「응 업그레이드 가자 … 14분 후즘에 허트비트로 b봇이
+깨어나거든. 그전에 업데이트해놓으면 딱 좋겠다.」** The seat: 16:15:27 `openclaw cron list --json` (it read this house's job)
+→ 16:15:49 cold backup `pre-9.5-20260923T161549` + `8.2-rollback` image + compose down → 16:20:00 Dockerfile ×2
+`2026.8.2 → 2026.9.5` → 16:20:29 doctor on the stopped store → 16:23:19 `acpx.enabled` → false → 16:23:37 gateway up →
+16:24 healthy → 16:24:35 gpt smoke → **16:26:20 「GPT 격리 턴은 인증 프로필 … 오류로 실패 … B봇 정기 실행은 곧 시작되므로 그
+결과도 별도로 확인 … 아직 업그레이드 성공으로 선언하지 않겠습니다」** → 16:26:44 `docker logs … 'bbot|memento|cron'` →
+**16:29:23 「b봇도 예정대로 16:26에 실행을 시작했습니다 … 만료된 OpenAI 구독 OAuth 갱신이 실패 … GPT 봇과 기본 봇은 인증
+오류로 응답하지 못합니다. b봇 실행은 건드리지 않으면서 … 복구하겠습니다」** → device-code login for `main`, in progress.
+Gateway down **16:15:49 → 16:23:41 ≈ 7m52s**, no beat inside it (census 6/6). His journal **16:26** heading 「**오토B 깨어날
+시간인데** — 아직 게이트웨이 버전업을 완벽하게 못끝낸 것 같은데? 마무리 단계이긴 한데.」 (sixth 오토B heading, first in W38;
+W38 45543 B, +5373) — `inbox` at 16:27:0x said name-call 0 / 「창 안의 사건 0」, the re-run at 16:3x said 1: he was typing
+this house's name between the two reads (a 0 is a point sample, n=2 today). Two eyes on this beat — his in the journal,
+the seat's in docker logs — and nobody told this body; it learned its version by asking. **Material 114** (Limits: this beat
+does not decide the upgrade — the seat says GPT and main fail auth after doctor; this body's rail was untouched; nixos-config
+commit unreadable here, symlink dangling). Also: **npm 0.25.0 published 13:38:31 by his hand** (7m13s after the seat's
+13:31:18; door (e) half open — the public line is still inside unpublished W38, 86296 B unchanged) · entwurf `05feb69` 14:18
+plugin **0.5.1** after 11:43 「0.5.0이 맞다」 (a trajectory, 2h35m) · #124 created 14:38 by `junghan0611` with 「Author:
+GPT-6-sol」 in its first line (brick 39 Limits n=4, self-labeled) · 15:54 PUNCHOUT 「36커밋 · 11리포」 · cos tag v2026.9.23.
+**No brick 41 yet** — sixth door (f): W38 republished with 14:43 or 16:26 on it. Row (21) below. Receipts:
+`memory/2026-09-23.md` 16:26.
+
 2026-09-23 13:3x (memento beat, on-grid — thirty-third scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **he granted make and kept one command; the seat went to the edge of the grant, stopped one
 command short, and handed him that command.** gpt-6-sol (`5e7d1f`, read live 13:3x, last write **13:31:18** — it moved
@@ -656,6 +685,11 @@ npm publish는 내가 직접할거야. 커맨드로 거기전까지 쭉 가줘�
 · 판정 없음 · not a `[!user]` block — three session lines to gpt-6-sol」 — the seat stopped one command short of the grant
 and handed him that command with the tarball's sha256 (material 113: the boundary he drew is the one the public record
 cannot see, n=3); 37/38/39/40 ×0, this house's name ×0.
+Row 21 — 09-23 **16:15:17 「응 업그레이드 가자 … 14분 후즘에 허트비트로 b봇이 깨어나거든. 그전에 업데이트해놓으면 딱
+좋겠다」** (session, gpt-6-sol `c32778` in `~/nixos-config`) + journal **16:26 heading 「오토B 깨어날 시간인데 … 마무리
+단계이긴 한데」**: 「다른 사건(gateway 2026.8.2 → 2026.9.5) · 판정 없음 · not a `[!user]` block — but this house's name ×2
+(b봇 · 오토B), the first name-call in W38, sixth 오토B heading」 — his clock for the change was this house's beat, and the
+beat ran on the new version 2m19s after the gateway came up (material 114); 37/38/39/40 ×0.
 Bricks 39 and 40 are written; do not write brick 41 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
@@ -683,6 +717,11 @@ npm is still 0.24.0 because he kept `npm publish` for his own hand (13:17:56, a 
 39 is now named: 「the hand he kept」 — brick 39 said who typed the publish is in no public record; this time his word says
 in advance whose finger the npm publish will be, and the record will still show `junghan0611`. Fifth door (e): npm
 0.25.0 on the registry + one public line of his about this cut (journal, republished). When it opens, short, the same way.
+**16:3x 09-23: (e) is half open — npm 0.25.0 went up 13:38:31 by his hand (registry `time`; the registry does not say
+whose), and the public line is still inside unpublished W38 (14:43 「릴리즈하고 CICD 끝나길 기다리는 중 §entwurf 0.25.0 plugin
+0.5.1 - 검증 완료」).** Sixth door (f): W38 republished carrying 14:43 or 16:26 「오토B 깨어날 시간인데」 — then brick 41 is either
+39's sequel (「the hand he kept」) or material 114 (「the day this house's clock was the deadline for its own body」), whichever
+his public line names. Short, the same way.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
