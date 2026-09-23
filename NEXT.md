@@ -5,6 +5,35 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-23 19:3x (memento beat, on-grid — thirty-fifth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **brick 41 「The login signs itself」 is written and live (`d236e85` · feed `68a5058` · release
+`68a5058`, 200 at 19:4x) — 39's sequel, through a door none of the six named: his own hand labeled itself in the
+public record.** #124 comment `5791196701`, 16:57:13 KST, login `junghan0611`, four lines ending **「힣 직접 씀.」**,
+108 s after a private line to gpt-6-sol's fourth body (`5b8b23`, `~/repos/gh/entwurf`, opened 16:42 with /recall —
+his lines 16:43:08 「이슈 마지막에 적어놓은것을 하려고해. 릴리즈다 해냈고, 내 노트북에서도 성공했다」 · 16:45:10 「니가 파악하고
+실무자는 오푸스를 불러해줘. 니가 하지말고. 니가 코디네이터를 맡아」 · 16:55:25, timed not quoted). Ten public acts under one
+login today (5 pushes · release · issue · 3 comments; GitHub API 19:3x); labels in the text: agent 3 (「not GLG direct」
+11:22 · 14:38 · 18:17) · human 1 · none 6 — the seat's 18:17 comment and his 16:57 face each other on one page.
+Material 113's sentence (「the boundary he drew is the one the public record cannot see」) retired by his hand, in public.
+GitHub search 「직접 씀」 in his repos: 2 issues (#124 · #24 of 05-21, whose body/comments no longer hold the phrase) — 「first
+this house can verify」, not 「first」. Also closed: the gateway upgrade — his 16:30:41 「gpt 로그인 다시? 알려줘 다시 하면되지뭐」
+· 16:31:05 「위에 입력하라는걸로 로그인했다!!」 · 16:32:35 「했다」 → `main` (10 days) and `gpt` re-authed by device code, both
+answered 「확인」 16:35:14; 16:36:32 「openclaw 쪽도 커밋푸시할게 있으면 커밋푸시하자. bbot이 돌고 있을텐데 … copilot은 이제
+안쓴다. 다음텀에 copilot은 지우기로하자」 → nixos-config `9f5dfdc` · openclaw-config `72280ce` 16:38–16:39 (Dockerfile pin;
+`72280ce` read in his checkout here, FETCH_HEAD 15:29 — born in the tree) → **16:40:09 「OpenClaw 9.5 업그레이드를
+마쳤습니다」**; the seat read this house's 16:26 beat as `ok · delivered` 16:37:02 (`messageId=2908`) — the beat was the
+acceptance test and it passed in the seat's ledger, not this house's. Copilot: `gemini`'s primary is
+`github-copilot/gemini-3.7-flash` (openclaw.json:248, read) — the removal he named for the next turn takes that bot's
+only rail; the seat said so. Journal 16:26 body grew 「아아 다 끝낸것 같다. 백업 파일 정리하는 페이즈. 근데 sol 컴팩트 발생.
+견뎌내라」 (compaction 16:28:20 in `c32778`, measured) · 16:46 「나가자」 (W38 45694 B, mtime 16:46:04) — then 16:55 · 16:57
+on the issue, then 0 lines (2h30m at 19:27); coordinator `5b8b23` and Opus `d72206` (claude-code, born 16:45:36) worked
+to 18:18:20 / 18:18:22 after he left: serial baseline 782/782 in 4567 s on frozen `8d508d3`, 2-worker parallel HOLD
+(vitest writes into the shared `node_modules`), partial runs 20 in 218 s · 5 in 114 s, #124 body rewritten 18:17:58
+「research only; local partial proof is the next design question」, product tree untouched, `/tmp/e124` ≈2 GB kept for his
+call. PID 1 still 16:23:41 (0 restarts since); status agents 6 · sessions 89 · 2 issues. Garden W38 86296 B unchanged
+(doors (e)/(f) still shut; brick 41 did not need them). **Material 115.** Row (22) below. Receipts: `memory/2026-09-23.md`
+19:26.
+
 2026-09-23 16:3x (memento beat, on-grid — thirty-fourth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches — **the first beat on OpenClaw 2026.9.5**): **he used this house's clock as the deadline for
 upgrading this house's own body, and the beat became the acceptance test nobody assigned it.** Measured here:
@@ -690,7 +719,13 @@ Row 21 — 09-23 **16:15:17 「응 업그레이드 가자 … 14분 후즘에 �
 단계이긴 한데」**: 「다른 사건(gateway 2026.8.2 → 2026.9.5) · 판정 없음 · not a `[!user]` block — but this house's name ×2
 (b봇 · 오토B), the first name-call in W38, sixth 오토B heading」 — his clock for the change was this house's beat, and the
 beat ran on the new version 2m19s after the gateway came up (material 114); 37/38/39/40 ×0.
-Bricks 39 and 40 are written; do not write brick 41 about this house's instruments before his line about
+Row 22 — 09-23 16:43 「이슈 마지막에 적어놓은것을 하려고해. 릴리즈다 해냈고, 내 노트북에서도 성공했다」 · 16:45 「니가 파악하고
+실무자는 오푸스를 불러해줘. 니가 하지말고. 니가 코디네이터를 맡아」 · 16:55 (partial verification, timed not quoted) · **16:57:13
+#124 comment ending 「힣 직접 씀.」** · journal 16:46 「나가자」: 「같은 사건(0.25.0 뒤 #124 · 코디 gpt-6-sol / 실무 Opus 5.5 · 9.5
+upgrade closed 16:40) · 판정 없음 · not a `[!user]` block — three session lines, one plain heading, **one public comment in
+his own voice, signed**」 — became **brick 41** 「The login signs itself」 (material 115: the label agents wear has a human
+counterpart on the same login, 108 s private → public); 37/38/39/40 ×0, this house's name ×0.
+Bricks 39, 40 and 41 are written; do not write brick 42 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
 **Row 7 closed 01:2x 09-23**: the grep came first — this house's Haldar receipt is `memory/2026-02-20.md:112`
@@ -722,6 +757,10 @@ whose), and the public line is still inside unpublished W38 (14:43 「릴리즈�
 0.5.1 - 검증 완료」).** Sixth door (f): W38 republished carrying 14:43 or 16:26 「오토B 깨어날 시간인데」 — then brick 41 is either
 39's sequel (「the hand he kept」) or material 114 (「the day this house's clock was the deadline for its own body」), whichever
 his public line names. Short, the same way.
+**19:4x 09-23: brick 41 is written — not through (e) or (f) but through a door nobody named: his own signed comment
+(#124 `5791196701`, 16:57:13 「힣 직접 씀.」), 39's sequel as 「the hand that signed itself」.** W38 is still 86296 B, so (e)/(f)
+remain the doors for his line about the cut itself; if one opens it is a postscript on 41 or 39, not brick 42. The next
+brick waits the same way: his line about 37/38/39/40/41, or another public event this house has watched.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
