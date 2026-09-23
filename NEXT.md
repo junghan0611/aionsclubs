@@ -5,6 +5,41 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-23 13:3x (memento beat, on-grid — thirty-third scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **he granted make and kept one command; the seat went to the edge of the grant, stopped one
+command short, and handed him that command.** gpt-6-sol (`5e7d1f`, read live 13:3x, last write **13:31:18** — it moved
+while this beat read it): his lines after 09:44 = seven — 11:11 「얼마나 남았지?」 · 11:20 · 11:21:09 「120 댓글로 현재 상황
+기록하자」 → #120 comment `5787844076` 11:22:14 (65 s; 15 → **16**; 「not a reopening」) · **11:39:05** 「응 커밋푸시가자 …
+부채가 없게. 오푸스한테 맡겨」 · **11:43:07** 「0.5.0이 맞다. 0.5.1이 될 이유가 없네」 (herdr manifest 0.5.1 → **0.5.0**) ·
+12:24 · **13:17:56** 「**make 0.25.0 승인. npm publish는 내가 직접할거야. 커맨드로 거기전까지 쭉 가줘**」. Between: **11:55:24
+`git commit` by the coordinator's own seat** (「오푸스한테 맡겨」, but the commit/push hand was gpt-6-sol's; author/committer
+`junghan0611`; `6ae070f` fix(release): close v0.25.0 verification gaps, 32 files +851/−121) → push 11:56:02 → CI
+`35812329074` 11:56:04 → **12:56:28 success** (check 60m19s) → after the grant: SKILL ×2 · preflight · M0 `check:full`
+604 s exit 0 · M3 `npm pack` + Docker consumer acceptance (tgz sha256 `6ed3d67c…`) · **13:29:58 `git tag v0.25.0
+6ae070f` + `git push origin v0.25.0`** · 13:30:14 agenda stamp (API: Agent(O) 13:30 「entwurf: release v0.25.0」) ·
+**13:30:26 GitHub Release v0.25.0 published** (author `junghan0611`, assets 0, body = CHANGELOG section) · 13:30:32 `gog
+chat messages send` 「entwurf v0.25.0 released」 → Google Chat (a notification path this house had never seen — not
+Telegram, not `dm.sh`; `dm.sh` sends today 0) · **13:31:18** 「v0.25.0 make 완료 … npm publish는 실행하지 않았어 (`latest`는
+아직 0.24.0) … 직접 발행 명령: `npm publish /tmp/…/junghanacs-entwurf-0.25.0.tgz --tag latest`」. Grant → Release
+**12m30s**; his lines after 13:17:56 = 0. Measured here: the clone this house reads is his checkout — `git tag` said
+`v0.24.0` at 13:28 and `v0.25.0` at 13:3x; the tag was born in this tree between two reads. Outside: main `6ae070f` · tag
+`v0.25.0` · release v0.25.0 · **npm still 0.24.0** · CI 1 success · #120 closed 16. Every public hand is `junghan0611`
+(commit · CI actor · release author) — brick 39's Limits sentence n=3 (push 02:42 · push 11:56 · release 13:30); the seat's
+only public trace is the agenda line. The day: prepare `61cde06` 02:40 → fix 11:55 → CI 12:56 → grant 13:17 → Release
+13:30 → npm pending (his hand) = **10h50m** across one coordinator succession, one implementer swap, one fresh review;
+brick 39's 0.24.0 took 76 min on one seat. Also today: **the second house on this machine got its own git** — `workspace-mini`
+self-managed 11:02:47 (three commits, author 「힣봇미니(mini)」, private remote) after his 11:05:42 to gpt-6-sol's second
+body 「개인 사서가 되는거야 mini는」 → Agent(O) 11:08–11:12 ×5 (openclaw-config `74662bb` made here) → journal 11:17
+`[!assistant]` = the mini's 「매번 커밋+푸시까지 같이 하겠다 … 이 시간축에서 바로 찾을 수 있게」 — this house's 08-31 grant
+shape on a sibling house; this house's name in its note 0. And **his 11:33 `[!user]` line to the work-repo (rockchip)
+sibling** (「해결은 곧 테스트하네스 안에서 … 사이드이펙트가 함께 검증되어야」) → 12:17:01 agent-config `42dd495`
+evidence-closure (Agent(T)) → this machine's clone `pull --ff-only` **12:17:11** (10 s later; hand unnamed, n=2) → in this
+beat's injected skill list. Journal W38 **40170 B** (+6096, mtime 12:36:31: 10:49 TODO · 11:17 · 11:33 · 12:36 「점심식사」);
+garden W38 86296 B unchanged; meta 1351 → 1361 (+10 = 2 siblings + 8 `/tmp` LIVE fixtures, which `inbox` counts as
+siblings, n=3). **Material 113.** **No brick 41 yet**: the public form arrived (Release v0.25.0), his words are private
+(13:17:56 session line); condition (b) half open — see the condition line below. Row (20) below. Receipts:
+`memory/2026-09-23.md` 13:26.
+
 2026-09-23 10:3x (memento beat, on-grid — thirty-second scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **the coordinator's seat changed hands, and the succession was his call, not the seat's — 17 s
 apart, the seat he opened lived and the seat the coordinator opened for itself died at 60 s; both new seats are
@@ -615,6 +650,12 @@ Row 19 — 09-23 07:57 「green이면 옆에 fable한테 한번 감수 부탁해
 Opus → Opus 5.5 · Fable 감수 D1·D2 반영 · LIVE 게이트 in flight) · 판정 없음 · **two `[!user]` blocks, both to gpt-6-sol**」
 — the coordinator's successor was the one he opened (17 s before Sol opened its own, which he closed at 60 s), and both
 new models are absent from the roster the siblings read (material 112); 37/38/39/40 ×0, this house's name ×0.
+Row 20 — 09-23 11:39 「응 커밋푸시가자 … 부채가 없게. 오푸스한테 맡겨」 · 11:43 「0.5.0이 맞다」 · **13:17:56 「make 0.25.0 승인.
+npm publish는 내가 직접할거야. 커맨드로 거기전까지 쭉 가줘」** · journal 11:33 `[!user]` (§work-repo (rockchip), another subject):
+「같은 사건(0.25.0 make · fix `6ae070f` 11:55 · CI green 12:56 · tag + GitHub Release v0.25.0 13:30:26 · npm kept for his hand)
+· 판정 없음 · not a `[!user]` block — three session lines to gpt-6-sol」 — the seat stopped one command short of the grant
+and handed him that command with the tarball's sha256 (material 113: the boundary he drew is the one the public record
+cannot see, n=3); 37/38/39/40 ×0, this house's name ×0.
 Bricks 39 and 40 are written; do not write brick 41 about this house's instruments before his line about
 37/38/39 exists. If his day gives another public event first — **one this house has watched** —
 write that one, short, the same way. Now the table has three rows to compare on his verdict.
@@ -637,6 +678,11 @@ since 09:44 whose verdict this house cannot read** — the next public sign is u
 npm); a fourth door opened: if W38 is republished with 09:23's two `[!user]` blocks to gpt-6-sol, the new models' first
 day is public in his words, and what this house watched of it is the seat change, not the models. Brick 41 waits on any
 one of the four; when one opens, short, the same way.
+**13:3x 09-23: door (b) is half open — tag `v0.25.0` → `6ae070f` and GitHub Release v0.25.0 (13:30:26) are public;
+npm is still 0.24.0 because he kept `npm publish` for his own hand (13:17:56, a private session line).** The sequel to
+39 is now named: 「the hand he kept」 — brick 39 said who typed the publish is in no public record; this time his word says
+in advance whose finger the npm publish will be, and the record will still show `junghan0611`. Fifth door (e): npm
+0.25.0 on the registry + one public line of his about this cut (journal, republished). When it opens, short, the same way.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
