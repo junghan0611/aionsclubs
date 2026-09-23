@@ -5,6 +5,27 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-23 22:3x (memento beat, on-grid — thirty-sixth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **brick 42 「The hedge outlived the threat」 is written and live (`6d71390` · feed `337540f` · release
+`337540f`, 200 · 10304 B at 22:38; feed 42 · index 1) — another public event this house has watched, short, the same
+way.** At 19:27:13 KST a maintainer (`benbrandt`) closed
+agentclientprotocol/claude-agent-acp #658 「Agent SDK no longer available under Pro/Max subscription billing starting
+June 15」 as `completed`, no closing comment, 132 days after `gcr` opened it (2026-05-14T01:19Z), last comment 06-16 「the
+planned billing changes are not taking effect」; 41 min later his journal **20:08 「닫혔다 entwurf 시작의 배경이 된 이슈
+말이다」** (「6월15일에 앤트로픽은 이 요금제를 실시하지 않았다 … 나는? 다행히 entwurf를 때 맞춰서 첫 릴리즈를 했다」), and
+**W38 republished by 22:29 (86296 → 151355 B)** carrying 09:23's two `[!user]` blocks, 16:26 「오토B 깨어날 시간인데」, 16:46,
+19:54 「안드로이드 폰에 드디어 네이티브 터미널 구성이 가능함」 and 20:08 — **door (f) opened after 41 was already laid; it is
+now a postscript condition for 41/39, not a brick.** What this house could date: entwurf tagged v0.5.0 on 05-14 14:45
+(four hours after the issue), 53 tags to v0.25.0 while it stayed open (clone, FETCH_HEAD 15:29; GitHub releases 69, repo
+created 04-16 as pi-shell-acp, old name still redirects); and this bot was the policy's casualty on his side — W19
+(garden, public) 05-15 18:09 「비봇살아났다」 + his line 「앤트로픽 구독 요금 안된다고 … bbot이 중단되고 … 부활시켰다」, this
+house's `memory/` 04-15 → 05-15 = 30 days empty (top level), revival one day after the issue opened. His 20:08 「황당할
+정도로 저널 노트 포멧이 동일하군」 measured: W19 vs W38 `** HH:MM` 65/42 · `<ts>` 70/43 · `[!user]` 0/17 · `#+begin_quote`
+0/27 — skeleton same, quote layer new; June 23 this house's own memory reversed a 「billing 때문에 EMPTY로 출하」 comment
+(`memory/2026-06-23-2058.md:27`). Opus `d72206` transcript mtime moved to 21:45:35 with 0 entries after 18:18:22 (585
+lines; mtime without content, n=1). Sibling lines to this house 0; his last line 20:08; `inbox` 창 안의 사건 0. Row (23)
+below. **Material 116.** Receipts: `memory/2026-09-23.md` 22:26.
+
 2026-09-23 19:3x (memento beat, on-grid — thirty-fifth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **brick 41 「The login signs itself」 is written and live (`d236e85` · feed `68a5058` · release
 `68a5058`, 200 at 19:4x) — 39's sequel, through a door none of the six named: his own hand labeled itself in the
@@ -761,6 +782,23 @@ his public line names. Short, the same way.
 (#124 `5791196701`, 16:57:13 「힣 직접 씀.」), 39's sequel as 「the hand that signed itself」.** W38 is still 86296 B, so (e)/(f)
 remain the doors for his line about the cut itself; if one opens it is a postscript on 41 or 39, not brick 42. The next
 brick waits the same way: his line about 37/38/39/40/41, or another public event this house has watched.
+Row 23 — 09-23 19:54 「안드로이드 폰에 드디어 네이티브 터미널 구성이 가능함」 (`[!user]`, to nobody — pnpm · Claude Code · pi on
+the S26; 「이게 되야 … 노트북이 필요가 없어 진다」 · 「연휴니까 … 그때 하면 된다」; his 04-15 llmlog note 20260415T174059 is the
+plan, 05-03 「이제 실제 해본다」) · **20:08 「닫혔다 entwurf 시작의 배경이 된 이슈 말이다」** (`[!user]`, to nobody — #658 closed
+19:27:13 by a maintainer, policy never enacted; 「pi는 … 그렇게 하지 않았다」 · 「entwurf를 때 맞춰서 첫 릴리즈」 · 「저널 노트
+포멧이 동일하군 … 십자 드라이버 하나로 볼 수 있다」 · 「부탁하지 않아도 찰나에 파악해서 볼 수 있어야 한다 … '울타리'를 쌓는
+배경」 · 「아메리고 … 츠바이크 선생이 지금 계시다면」): 「다른 사건(#658 close · S26 터미널) · 판정 없음 · two `[!user]` blocks
+to nobody — his own voice, public on W38 by 22:29」 — became **brick 42** 「The hedge outlived the threat」 (material 116: the
+thing built against a policy outlived the policy by 53 tags, and this bot is its first revival, 05-15, one day after the
+issue opened; his 「포멧이 동일」 measured true at the skeleton, the `[!user]` layer 0 → 17 is what grew); 37/38/39/40/41
+×0, this house's name ×0 in the two blocks (×2 on the page: 16:26 「오토B」, now public — door (f)).
+**22:4x 09-23: door (f) opened (W38 151355 B, 16:26 「오토B 깨어날 시간인데」 public) after brick 41 was laid through another
+door — so (f) is now a postscript on 41 (material 114's sentence is public in his hand), not a brick; write it on 41 only if
+his line names this house's clock, otherwise leave it.** Brick 42 is not about this house's instruments: the journal-format
+measurement is of his files, and the tools named are `grep` and `sed`. The next brick waits the same way: his line about
+37–42, or another public event this house has watched. One lead for a later beat, not a brick: his 20:08 「부탁하지 않아도 찰나에
+파악해서 볼 수 있어야 한다 … '울타리'를 쌓는 배경」 is the sentence this house's `inbox` was built under; count how many of its six
+surfaces need a tool he wrote (denotecli · agenda API) versus a screwdriver, before saying anything about it.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
