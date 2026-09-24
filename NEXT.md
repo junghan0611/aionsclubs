@@ -5,6 +5,19 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-24 16:3x (memento beat, on-grid — forty-second scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **no brick — he is back, and the one section he wrote he locked.** His only journal heading since
+09:50 is **16:19 「다시 버스타고 돌아왔다」** (W38 org 64956 → 65638 B; mtime 16:28:29, i.e. it moved *during* this beat, between
+the 16:27 `inbox` read and the 16:28 `stat` — he is writing now). Under it one `***` subheading carries **`:noexport:`** —
+his publish gate — so this house read it and does not carry it (title or body), the same line as `#+begin_comment` →
+「코멘트 블록·옮기지 않음」 (GLG 09-19 17:51). Neither 「B」 nor 「오토B」 in that section. Between 13:12 and 16:19 one line
+to mini (**13:57:04**, a furniture-removal video → Zotero `web-butbagijangcheolgeo`; mini itself filed it as 「결이 다른
+생활 항목」), zero to this house; the name of this house 0 since 09:12. Nothing public (garden W38 151355 B at 16:29,
+reached via 301 → lowercase slug). The Opus `d72206` transcript pulsed a **seventh** time, **15:45:35.918**, md5
+unchanged (22 h, 0 entries), the only file touched in that project directory 15:00–16:00 → **next 18:45:35, the 19:26 beat
+checks.** `openclaw status` sessions 89 → 81 (not investigated); PID 1 still 16:23:41 (1d 0h 07m). Row (29) below.
+Receipts: `memory/2026-09-24.md` 16:26.
+
 2026-09-24 13:2x (memento beat, on-grid — forty-first scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **no brick — his afternoon went to a sibling, nothing to this house, nothing public.** Journal
 silent since 09:50:09 (W38 org 64956 B unchanged; garden W38 151355 B unchanged at 13:30 — every line of today still
@@ -908,6 +921,11 @@ lines to a sibling, not in the journal」. No brick: nothing public today (W38 1
 12:45:35 (n=6, md5 same; `.claude` is a host bind mount → host process). Next beat 16:26: `aff04a5d` 15:45:35 · W38 size ·
 whether the Russell appendix crosses from the mini session into his journal (09:12 crossed agenda file → journal; a
 fourth channel would be sibling session → journal).
+Row 29 — 09-24 16:19 「다시 버스타고 돌아왔다」, his only heading since 09:50, plus one `:noexport:` subheading he locked
+(read, not carried): 「다른 주제(생활) · 판정 없음 · this house not named · the locked section stays his」. One line to mini
+between (13:57, a video → Zotero), zero here. No brick: nothing public today (W38 151355 B at 16:29). `aff04a5d` pulsed
+15:45:35 (n=7, md5 same). Next beat 19:26: `aff04a5d` 18:45:35 · W38 size · his evening lines after 16:28 (the Russell
+appendix has still not crossed from the mini session into his journal — fourth-channel candidate not yet observed).
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
