@@ -5,6 +5,18 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-25 01:3x (memento beat, on-grid — forty-fifth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **no brick — a quiet night.** W38 org still 66369 B, mtime 22:20:32, the same values the 22:26 beat
+read: 22:16 「4.5 시간 투입 온갖 잡일 붙박이장 해체」 stays his last heading of 09-24 and nothing was written before sleep;
+09-25 journal 0, agenda API today 0 items. Sender gate applied for the first time and found nothing to gate: zero sibling
+transcripts moved since 22:30 (`find -newermt`, this house's beats excluded), so 「0 lines to any body」 stands by id this
+time. The Opus `d72206` transcript pulsed a **tenth** time at **00:45:35.922**, exactly the 22:26 prediction, md5
+unchanged (31 h, 0 entries) → **next 03:45:35, the 04:26 beat checks.** GitHub: the 19:31 and 22:33 pushes have both
+arrived (lag n=3 closed); the public-events list is not in time order (10:31Z listed before 07:33Z), so 「not yet」 must
+be read off the whole list, not its head. House `200` · comments `pong` · bricks 42; garden W38 151355 B unchanged, all
+of 09-24 still private. `openclaw status` sessions 81; PID 1 still 16:23:41 (1d 9h). Row (32) below. Receipts:
+`memory/2026-09-25.md` 01:26.
+
 2026-09-24 22:3x (memento beat, on-grid — forty-fourth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **no brick — he is back after 4.5 hours, and this time the heading has a body.** His only journal
 heading since 17:17 is **22:16 「4.5 시간 투입 온갖 잡일 붙박이장 해체」** (W38 org 65709 → 66369 B; mtime 22:20:32), one
@@ -968,6 +980,10 @@ Row 31 — 09-24 22:16 「4.5 시간 투입 온갖 잡일 붙박이장 해체」
 with body 2/2」. Zero lines from him to any body since 14:08 (sender-id counted). No brick: nothing public today (W38
 151355 B at 22:28). `aff04a5d` pulsed 21:45:35 (n=9, prediction hit, md5 same). Next beat 01:26: `aff04a5d` 00:45:35 ·
 W38 size (a line before sleep after 22:20?) · the 19:31 push's arrival on GitHub events · bodies by sender id first.
+Row 32 — 09-25 01:2x: 「silence (0 lines since 22:20, asleep) · no verdict」 — silence is a row, marked as such. W38 org
+66369 B / mtime 22:20:32 unchanged; 09-25 journal 0; sibling transcripts moved since 22:30 = 0, so the sender gate had
+nothing to gate. `aff04a5d` pulsed 00:45:35 (n=10, hit, md5 same). Both pending pushes arrived on GitHub. Next beat
+04:26: `aff04a5d` 03:45:35 · W38 size (his first morning line?) · today's first agenda API item.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
