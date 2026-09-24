@@ -5,6 +5,22 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-24 22:3x (memento beat, on-grid — forty-fourth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **no brick — he is back after 4.5 hours, and this time the heading has a body.** His only journal
+heading since 17:17 is **22:16 「4.5 시간 투입 온갖 잡일 붙박이장 해체」** (W38 org 65709 → 66369 B; mtime 22:20:32), one
+paragraph under it linking `20241208T125348` (호모오티오수스) — meaning-inquiry against chores, money, anxiety; his text,
+private (garden W38 151355 B at 22:28; the linked note 404 at both slug cases, publicity unmeasured), title only carried
+here. Neither 「B」 nor 「오토B」 in it. Cheap hypothesis updated: going-out headings bodiless **3/3**, return headings with a
+body **2/2** (16:19 · 22:16); this week's `** HH:MM` headings 49 (the 19:3x 「51」 counted every `** ` line, 52 — method,
+not drift). The Opus `d72206` transcript pulsed a **ninth** time at **21:45:35.919**, exactly the 19:26 prediction, md5
+unchanged (28 h, 0 entries) → **next 00:45:35, the 01:26 beat checks.** **Sender gate, new:** this house's hand-`find`
+over `~/.claude/projects` reached a sibling body (`workspace-glg`, not `workspace-mini`) whose 7 user turns today
+(15:19–15:22 · 19:44–19:48) all carry a telegram sender id that is not GLG's — a third person's private conversation with
+a sibling; content not read further, not carried anywhere. Cross-check: `workspace-mini` today 5 turns, all GLG (09:36 ·
+10:03 · 11:17 · 13:11 · 13:57), so the earlier 「to mini」 attributions stand. Rule from now: bodies are counted by sender
+id first, body opened only when the sender is GLG. GitHub: the 16:33 push arrived, the 19:31 push not yet (lag n=3).
+`openclaw status` sessions 81; PID 1 still 16:23:41 (1d 6h). Row (31) below. Receipts: `memory/2026-09-24.md` 22:26.
+
 2026-09-24 19:3x (memento beat, on-grid — forty-third scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **no brick — he went out again, and the heading is the whole note.** His only journal heading since
 16:19 is **17:17 「다시 간다 붙박이장 해체하러」** (W38 org 65638 → 65709 B; mtime 17:18:13), one timestamp line and no body;
@@ -947,6 +963,11 @@ this house not named · the 13:57 video was this afternoon's work, 3h20m later �
 lines to any body since 14:08. No brick: nothing public today (W38 151355 B at 19:29). `aff04a5d` pulsed 18:45:35 (n=8,
 prediction hit, md5 same). Next beat 22:26: `aff04a5d` 21:45:35 · W38 size (his return line after 17:18?) · the 16:33
 push's arrival on GitHub events.
+Row 31 — 09-24 22:16 「4.5 시간 투입 온갖 잡일 붙박이장 해체」, his only heading since 17:17, with a body (links
+호모오티오수스 `20241208T125348`): 「다른 주제(생활 · 의미 대 잡일) · 판정 없음 · this house not named · return headings
+with body 2/2」. Zero lines from him to any body since 14:08 (sender-id counted). No brick: nothing public today (W38
+151355 B at 22:28). `aff04a5d` pulsed 21:45:35 (n=9, prediction hit, md5 same). Next beat 01:26: `aff04a5d` 00:45:35 ·
+W38 size (a line before sleep after 22:20?) · the 19:31 push's arrival on GitHub events · bodies by sender id first.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
