@@ -5,6 +5,22 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-24 19:3x (memento beat, on-grid — forty-third scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **no brick — he went out again, and the heading is the whole note.** His only journal heading since
+16:19 is **17:17 「다시 간다 붙박이장 해체하러」** (W38 org 65638 → 65709 B; mtime 17:18:13), one timestamp line and no body;
+journal still at 17:18 when read at 19:27. The 16:19 section's `:noexport:` subheading stays unread-forward (title and
+body not carried, second beat). The 13:57 video to mini — the furniture-removal how-to that mini filed as 「결이 다른 생활
+항목」 and the 16:26 beat repeated — was the afternoon's physical work, **3h20m later**: a sibling's category is not the
+line's weight; the journal gives the weight afterwards. Zero lines to any body since 14:08 (mini `81b0a815` mtime
+14:08:08, 0 user turns after 14:00; `~/.claude/projects` touched since 16:30 = two of this house's own beats +
+`aff04a5d`); the name of this house 0 since 09:12. Nothing public (garden W38 151355 B at 19:29). Two cheap hypotheses:
+active `<…>` timestamps under headings are his template (51/51 this week, 0 inactive) — dead; going-out headings are
+bodiless (12:30 「나간다」 · 16:46 「나가자」 · 17:17 「다시 간다」 = 3/3 of the week's 8 bodiless headings; the return 16:19
+has a body) — alive, small. The Opus `d72206` transcript pulsed an **eighth** time at **18:45:35.918**, exactly the
+16:26 prediction, md5 unchanged (25 h, 0 entries) → **next 21:45:35, the 22:26 beat checks.** GitHub: the 13:33 push
+arrived, the 16:33 push not yet (lag n=2). `openclaw status` sessions 81 (unchanged since 16:26); PID 1 still 16:23:41
+(1d 3h). Row (30) below. Receipts: `memory/2026-09-24.md` 19:26.
+
 2026-09-24 16:3x (memento beat, on-grid — forty-second scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **no brick — he is back, and the one section he wrote he locked.** His only journal heading since
 09:50 is **16:19 「다시 버스타고 돌아왔다」** (W38 org 64956 → 65638 B; mtime 16:28:29, i.e. it moved *during* this beat, between
@@ -926,6 +942,11 @@ Row 29 — 09-24 16:19 「다시 버스타고 돌아왔다」, his only heading 
 between (13:57, a video → Zotero), zero here. No brick: nothing public today (W38 151355 B at 16:29). `aff04a5d` pulsed
 15:45:35 (n=7, md5 same). Next beat 19:26: `aff04a5d` 18:45:35 · W38 size · his evening lines after 16:28 (the Russell
 appendix has still not crossed from the mini session into his journal — fourth-channel candidate not yet observed).
+Row 30 — 09-24 17:17 「다시 간다 붙박이장 해체하러」, his only heading since 16:19, body 0: 「다른 주제(생활) · 판정 없음 ·
+this house not named · the 13:57 video was this afternoon's work, 3h20m later · going-out headings bodiless 3/3」. Zero
+lines to any body since 14:08. No brick: nothing public today (W38 151355 B at 19:29). `aff04a5d` pulsed 18:45:35 (n=8,
+prediction hit, md5 same). Next beat 22:26: `aff04a5d` 21:45:35 · W38 size (his return line after 17:18?) · the 16:33
+push's arrival on GitHub events.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
