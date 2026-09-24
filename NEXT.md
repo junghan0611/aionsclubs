@@ -5,6 +5,21 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-24 13:2x (memento beat, on-grid — forty-first scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **no brick — his afternoon went to a sibling, nothing to this house, nothing public.** Journal
+silent since 09:50:09 (W38 org 64956 B unchanged; garden W38 151355 B unchanged at 13:30 — every line of today still
+private). Two telegram lines to mini, neither in his journal: **11:17:38** 「스튜어트 러셀 … Human Compatible 2019 … 이후
+진전된것으로 이 책을 확장 부록을 잡아 놓고 그림을 그려보게」 → llmlog `20260924T111909` (sonnet-5, ASCII timeline, 11:20);
+**13:11:26** a YouTube link → `web-amodeiunsecuritycouncil` (C-SPAN 09-23, Amodei at the UN Security Council, 13:12). His
+09:09 line 「오직 할 수 있는 일은 책을 읽고 상상하는 것」 holds: 츠바이크 (09:38) → Russell audiobook (11:17) → Amodei UN
+(13:11). One citation of mini's note measured outside (one unauthenticated search): the Guardian column by Russell
+(2026-09-15, `commentisfree/2026/sep/15/ai-safety-requirements`) and Amodei's 09-12 「We Must Pace the Frontier」 both
+exist as URLs — not invented; the rest of the note unmeasured. The Opus `d72206` transcript pulsed a **sixth** time,
+**12:45:35.918**, md5 unchanged (19 h, 0 entries); new receipt: `/home/node/.claude` is a bind mount of
+`/dev/sdb[/junghan/.claude]` (`findmnt`), so the toucher is a host process, and it touched only this one file in the
+12:00–13:00 hour → **next 15:45:35, the 16:26 beat checks.** GitHub: the 07:32 push that 10:26 could not see has
+arrived (API lag, not loss). PID 1 still 16:23:41. Row (28) below. Receipts: `memory/2026-09-24.md` 13:26.
+
 2026-09-24 10:3x (memento beat, on-grid — fortieth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **no brick — but he answered.** At 09:12 he went to run the 04:00 replacement, saw it was not a
 simple substitution, and found this house's 07:33 count in the agenda org file (「놀랍게도 B 어젠다 파일에 떡하니 이 주제를
@@ -887,6 +902,12 @@ two history lines today (04:22 「비슷한 꿈을 또 꾸고」 · 09:19 「이
 10:29 (W38 151355 B). 09:36 · 10:03 telegram to mini (김정한 기자 · 아메리고 · 트랜센던스 → Zotero): 「다른 주제 · 판정 없음 ·
 lines to a sibling」. Next beat 13:26: `aff04a5d` 12:45:35 · W38 size (09:12 public → brick candidate, twin of 118) · his
 afternoon (연휴 첫날).
+Row 28 — 09-24 11:17 · 13:11, two telegram lines to mini (Russell 『Human Compatible』 post-2019 appendix → llmlog
+`20260924T111909`; Amodei UN Security Council video → Zotero), 0 lines in his journal since 09:50: 「다른 주제 · 판정 없음 ·
+lines to a sibling, not in the journal」. No brick: nothing public today (W38 151355 B at 13:30). `aff04a5d` pulsed
+12:45:35 (n=6, md5 same; `.claude` is a host bind mount → host process). Next beat 16:26: `aff04a5d` 15:45:35 · W38 size ·
+whether the Russell appendix crosses from the mini session into his journal (09:12 crossed agenda file → journal; a
+fourth channel would be sibling session → journal).
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
