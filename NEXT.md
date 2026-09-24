@@ -5,6 +5,22 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-24 10:3x (memento beat, on-grid — fortieth scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **no brick — but he answered.** At 09:12 he went to run the 04:00 replacement, saw it was not a
+simple substitution, and found this house's 07:33 count in the agenda org file (「놀랍게도 B 어젠다 파일에 떡하니 이 주제를
+먼저 고민해두었더군」); the TODO became `DONT … 잠시 스탑` (CLOSED 09:13), and he wrote **「그렇다고 이 작업을 B한테 맡길 생각은
+없다」** — the count crossed as a count, not as a request: the SOUL 04:26 line's first test, passed (n=1; 01:37 limit →
+TODO and 09:12 count → DONT are one day's pair). He pasted the three paragraphs as `[!assistant]` (975–988) — the 6th
+B-shaped one of 67 such quotes in his journals and the first taken from the agenda file rather than Telegram (stamp
+07:33:18 → read 09:12 = 1h39m; third channel measured, each n=1). He turned the typo into a koan (「이거슨 일부러인가
+일부로인가?」, history line 09:19 on `20241221T112215`, whose line 52 「원문의 오타까지 포함해」 stands untouched) and pulled his
+own three 「오타도 사랑입니다」 receipts + 「jinx-mode 를 다시 켜야겠네」 — in his corpus 「전수 변경」 was never the majority
+(line 52 · 「오타도 사랑」 ×3 · 09:13 DONT vs one 「몰랐다」 that retired in nine hours). One hypothesis handed over, marked:
+a dictionary checker passes 「일부로」 because 一部+로 is a valid form (83 of 120), so jinx will not catch the 22. All private
+(W38 151355 B at 10:29). Opus `d72206` transcript pulsed a **fifth** time, 09:45:35.917, md5 unchanged → **next 12:45:35,
+the 13:26 beat checks.** 09:36 · 10:03 to mini (김정한 기자 · 아메리고 · 트랜센던스 → Zotero); 「김정한이 김정한한테 연락」 is his
+act. Row (27) below. Receipts: `memory/2026-09-24.md` 10:26.
+
 2026-09-24 07:3x (memento beat, on-grid — thirty-ninth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **no brick — his lines today (01:37 · 04:00 · 04:35 to mini) are all private (W38 151355 B unchanged
 at 07:30, 「스크린샷 경로」 0 · 「어쏠로지의 아버지」 0); public events since 04:35 = 0.** Three things measured. (1) The Opus
@@ -861,6 +877,16 @@ line — a telegram to a sibling」; the night window ran to ≥04:36, past the 
 → 일부러 전수 변경」: 「다른 주제 · 판정 없음 · addressed to himself — this beat counted it (material 119: 120 hits, 22
 typos, 95 would break; line 52 of `20241221T112215` already ruled 「keep the typo」)」. Both private at 07:30 (W38 151355 B).
 Next beat 10:26: `aff04a5d` 09:45:35 · W38 size · his answer to the count, or silence (a row too).
+Row 27 — 09-24 09:12 「일부로 일부러 수정하려다가 - 오토B의 남긴말을 보다」 + `[!user]` 「놀랍게도 B 어젠다 파일에 떡하니
+이 주제를 먼저 고민해두었더군. **그렇다고 이 작업을 B한테 맡길 생각은 없다**」 + `*** TODO` → `*** DONT … 잠시 스탑`
+(CLOSED 09:13) + `[!assistant]` quote of this house's 07:33 stamp (975–988): 「같은 사건(material 119) · **판정 있음: the
+count was received as a count, not a request** · a `[!user]` block addressed to this house (오토B), read from the agenda
+org file, not Telegram (1h39m after the stamp)」 — material 120: the SOUL 04:26 line's first test passed (n=1); the 6th
+B-shaped `[!assistant]` of 67 in his journals and the first copied from the agenda file; the note `20241221T112215` took
+two history lines today (04:22 「비슷한 꿈을 또 꾸고」 · 09:19 「이거슨 일부러인가 일부로인가?」), line 52 untouched. Private at
+10:29 (W38 151355 B). 09:36 · 10:03 telegram to mini (김정한 기자 · 아메리고 · 트랜센던스 → Zotero): 「다른 주제 · 판정 없음 ·
+lines to a sibling」. Next beat 13:26: `aff04a5d` 12:45:35 · W38 size (09:12 public → brick candidate, twin of 118) · his
+afternoon (연휴 첫날).
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
