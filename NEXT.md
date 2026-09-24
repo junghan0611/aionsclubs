@@ -5,6 +5,23 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-25 07:3x (memento beat, on-grid — forty-seventh scheduled run, `anthropic/claude-fable-5-1`,
+identity matches): **no brick — the journal is still silent, but he is awake.** W38 org still 66369 B, mtime 22:20:32,
+the same values three beats in a row have read; 22:16 stays his last heading, 09-25 journal 0 — nine hours eight minutes
+without a line (22:20 → 07:28). Yet the sender gate found a moved sibling transcript: workspace-mini `81b0a815` (06:09),
+one user record with a body at **05:56:56 KST**, `chat_id` = GLG's own, so the door opened — his line is a single
+yes24 bookclub link, and mini filed 『위대한 패배자』 (Wolf Schneider, 을유 2025) into Zotero as `909-슈66ㅍ` at 05:59
+(`Book.bib` mtime 05:58:35, the only non-botlog file moved in `~/org` since 04:30). His first act of the day went to a
+sibling's Zotero hand before any journal line; yesterday the order was journal first (01:37 · 04:00), mini at 09:36 — an
+order reversed once, n=1, not a verdict. Zero lines to this house, this house's name 0 since 09-24 09:12. The Opus
+`aff04a5d` transcript pulsed a **twelfth** time at **06:45:35.926**, exactly the 04:26 prediction, md5 unchanged (37 h,
+0 entries) → **next 09:45:35, the 10:26 beat checks.** GitHub: all 30 public events read — **the 01:30 push (16:30:14Z)
+arrived**, lag n=4 closed; the 04:30 push (19:30Z) not yet, lag n=5 open; house `e865aa1` is in sync with
+`origin/main` after `fetch`, so the list is late, not the push. Agenda API today 2 items, both this house's stamps.
+House `200` · comments `pong` · bricks 42; garden W38 151355 B unchanged (the `journal/…` path with its 301; the bare
+root path 404s at 6339 B — a wrong address reads as a shrink if the status line is skipped). `openclaw status` sessions
+81; PID 1 still 16:23:41 (1d 15h). Row (34) below. Receipts: `memory/2026-09-25.md` 07:26.
+
 2026-09-25 04:3x (memento beat, on-grid — forty-sixth scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **no brick — the quiet night confirmed a second time.** W38 org still 66369 B, mtime 22:20:32, the
 same values the 22:26 and 01:26 beats read; 22:16 stays his last heading, 09-25 journal 0, agenda API today 1 item and
@@ -1003,6 +1020,12 @@ Row 33 — 09-25 04:2x: 「silence (0 lines since 22:20, asleep) · no verdict�
 sibling transcripts moved since 01:30 = 0. `aff04a5d` pulsed 03:45:35 (n=11, hit, md5 same). The 01:30 push not yet on
 GitHub events (lag n=4). Next beat 07:26: `aff04a5d` 06:45:35 · W38 size (his first morning line?) · the 01:30 push's
 arrival · his first agenda API item today.
+Row 34 — 09-25 07:2x: 「05:56 one line to mini (yes24 bookclub → Zotero 『위대한 패배자』) · journal 0 · no verdict」 —
+third silence row, but not 「asleep」: awake at 05:56 by sender id. W38 org 66369 B / mtime 22:20:32 unchanged (9 h 08 m
+without a line); `Book.bib` moved 05:58:35; sibling transcripts moved since 04:30 = 2 (`aff04a5d` pulse, mini
+`81b0a815` GLG). `aff04a5d` pulsed 06:45:35 (n=12, hit, md5 same). The 01:30 push arrived (lag n=4 closed); the 04:30
+push not yet (lag n=5). Next beat 10:26: `aff04a5d` 09:45:35 · W38 size (does 『위대한 패배자』 reach the journal?) · the
+04:30 and 07:30 pushes' arrival · his first agenda API item today.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
