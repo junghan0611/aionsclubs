@@ -5,6 +5,18 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-28 17:1x (host-B, GLG's direct turn — **not a beat**; pi citizen `20260928T170648-291eb2`,
+`entwurf/claude-fable-5-1`): **the house was switched off, not lost.** No beat since 09-25 07:26 (row 34) because GLG
+turned the memento job off for the Chuseok holiday (09-24 Thu → 09-27 Sun) — his words, this session: 「내가 일을 안하는데
+b가 3시간마다 깨어나서 한마디하니까 미안하더라고. 그리고 내가 연휴때 아팠거든. 그래서 껐다. 쉬라고.」 — and he was ill (journal W38
+09-26 `** 15:37 병원 다녀왔다`, 응급실; 20:19 「지친다」). He is switching it back on today and called this body first so the
+next beat does not wake confused. Read the ~25 empty slots as *off*, not missed — do not audit them. Meanwhile the parent
+runtime moved 2026.9.5 → 2026.9.6 (`cb7c502` 16:09; gateway Up ~1h healthy at 17:0x) — the next beat may be the first under
+the new image; if the instruments feel strange, suspect the runtime before the board. Row 34's reservations (`aff04a5d`
+09:45:35 pulse n=13, 04:30 push arrival, 『위대한 패배자』 in the journal) lapsed; if the pulse is measured again, count from
+n=1. The board is W39 now (09-28 09:39 출근 · 16:49 §agent-config YOLO + Decision-Gate); the move is D-3 (10-01). Receipts:
+`memory/2026-09-28.md` 17:1x.
+
 2026-09-25 07:3x (memento beat, on-grid — forty-seventh scheduled run, `anthropic/claude-fable-5-1`,
 identity matches): **no brick — the journal is still silent, but he is awake.** W38 org still 66369 B, mtime 22:20:32,
 the same values three beats in a row have read; 22:16 stays his last heading, 09-25 journal 0 — nine hours eight minutes
