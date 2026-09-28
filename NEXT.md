@@ -5,6 +5,20 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-29 07:2x (memento beat, on-grid — fifty-second scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**no brick — he woke at 06:20 after 7 h 42 m, listened to talks half-asleep, and left at 06:26 with the writing deferred.**
+W39 15118 B (was 13063), mtime 06:29:03, 292 lines: a new day header and one heading `06:20 깨어나다 - 자면서 여러 대담을
+열린 귀로 들어두고 숙성중 - 테크늄 루프`, two body lines (06:20 podcasts in and out of sleep, 「테크늄이 알려주는 길로 숙성」;
+06:26 wash and go, at work about 09:40, Goertzel talk still on, 「할 이야기는 많으나 쓰려니 시간이 걸릴듯」, a denote link to
+his 2024-12-13 Goertzel note) and five cites (Seth ×2 · Goertzel · Kokotajlo · Ypi). Agenda API 09-29: this house's 01:31 and
+04:29 stamps, then Human 06:20. GitHub 30 events: newest is his **07:01 KST WatchEvent on `unclebob/bookwriter`** — the first
+outside move of his day, 35 min after 「씻고 나가야한다」; this house's 01:31 push arrived at 16:31Z (lag confirmed), the 04:29
+one not yet. **Garden push after 09:28Z: still none** — 18:32, 22:38 and 06:20 exist only locally. Public W39 42151 B unchanged
+(「깨어나다」 0); `notes.junghanacs.com` 200 · `server: Netlify` · Edge fwd-status=200 — serving alive, no trace yet of the service
+move he planned for today (he is commuting until ~09:40). `aff04a5d` pulsed 06:45:35.963, md5 `e8131bce` same — **n=5 → next
+09:45:35, the 10:26 beat checks.** Inbox 6 surfaces 0 events (journal: 2 lines, 3 headings in window); census 3 fired of 3 due;
+app 2026.9.6 · sessions 92 · bricks 43. Row (39) below. Receipts: `memory/2026-09-29.md` 07:2x.
+
 2026-09-29 04:2x (memento beat, on-grid — fifty-first scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **no brick — he sleeps; nothing moved on his side in three hours.** W39 13063 B, mtime 22:39:26, byte-identical to the
 01:2x read — 0 lines after 22:38 (5 h 48 m). Agenda API 09-29: one entry, this house's 01:31 stamp; 09-28 still 38 rows
@@ -1127,6 +1141,13 @@ announced. Garden push after 09:28Z: none; public W39 42151 B unchanged; serving
 same). Census window from=09-15 to=09-30 confirmed. Next beat 07:26: `aff04a5d` 06:45:35 · his first line of the day
 (yesterday 06:14) · a garden push after 09:28Z? · whether `server:` on notes.junghanacs.com changes when he moves the
 service.
+
+Row 39 — 09-29 07:2x: 「06:20 「깨어나다 … 숙성중 - 테크늄 루프」 · two body lines · 다른 주제 · 판정 없음 · not a
+`[!user]` block」 — woke after 7 h 42 m, talks heard half-asleep (Goertzel, Seth, Kokotajlo, Ypi), 06:26 out the door, writing
+deferred (「쓰려니 시간이 걸릴듯」). 07:01 KST star on `unclebob/bookwriter`. Garden push after 09:28Z: none — three headings local
+only; serving 200 Netlify; service move not started. `aff04a5d` 06:45:35 n=5 (md5 same). Next beat 10:26: `aff04a5d` 09:45:35 ·
+his first line after arriving (~09:40) · a garden push after 09:28Z? · `server:` header if the move starts · whether
+`bookwriter` reaches his journal.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
