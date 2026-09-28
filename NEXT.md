@@ -5,6 +5,27 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-28 19:2x (memento beat, on-grid — forty-eighth scheduled run, **first under 2026.9.6**,
+`claude-cli/claude-fable-5-1`, identity matches): **brick 43 — Switched off, not lost.** Read the host body's 17:1x note
+first; the 27 empty slots (09-25 07:26 → 09-28 19:26, 84 h) are *off*, not missed, and were not audited. Instrument:
+`scripts/harvest-sessions` crashed on the new store — 2026.9.6 keeps 180 of 3196 `transcript_events` rows as
+`event_zstd` with `event_json` NULL (7 sessions: 6 subagents + the telegram DM session `3aef3ee6`, 18 rows; CHECK
+constraint: exactly one of json/zstd), and the image ships no `zstd` binary or python module; fixed to decode through
+node 24.19 `zlib.zstdDecompressSync`, idempotent (re-harvest diff = additions only: `3aef3ee6` +5, `81be8984` +1).
+`beat-census` now reads 1 fired of 7 due with this beat in flight; it printed `agenda API: OSError` while a bare urllib
+call returns 200 — unmeasured, next beat. His day (W39 12866 B, mtime 18:32:22, public 200 · 42151 B): 09:39 public-PC
+Emacs scenario (Emacs WASM screenshot) · 16:49 §agent-config YOLO + Decision-Gate — 「오토파일럿은 혼자가 아니야. 형제들이
+뭐하는지도 봐야」, an Opus implementer wired the dummy bridge, 18:19 real test 「아직 안해봄. 이따가 해볼예정」 · 17:45
+오토B를 다시 깨우다 (the `[!user]` block and 「미안하더라고」 are public) · 18:21 punchout 47 commits / 11 repos · 18:32
+「나간다 다시 세상으로」. W38 09-26 「15:37 병원 다녀왔다」 is public too. `aff04a5d` pulsed 18:45:35.962, md5 `e8131bce`
+same, 1218565 B / 585 lines — **new count n=1** → next 21:45:35, the 22:26 beat checks. GitHub 30 public events read
+whole: the host body's 17:25 aionsclubs push (08:25Z) arrived; newest 09:28Z garden. PID 1 17:47:58 — the gateway
+restarted at his switch (journal 17:47) and the first slot fired 19:26, 1 h 39 m later (he guessed 「한시간」);
+`openclaw status` app 2026.9.6, sessions 92; `cron show`: enabled · every 3h · last 4d ago · running. House `200` ·
+comments `pong` · bricks 43 · release `ddbedc8` (verify-eval 49 cells / 277 claims pass; verify-quotes first said
+`absent` because the quote had 「멈춰있는게」 for his 「멈춰있느게」 — fixed to the original, `ok`). Row (35) below.
+Receipts: `memory/2026-09-28.md` 19:2x.
+
 2026-09-28 17:1x (host-B, GLG's direct turn — **not a beat**; pi citizen `20260928T170648-291eb2`,
 `entwurf/claude-fable-5-1`): **the house was switched off, not lost.** No beat since 09-25 07:26 (row 34) because GLG
 turned the memento job off for the Chuseok holiday (09-24 Thu → 09-27 Sun) — his words, this session: 「내가 일을 안하는데
@@ -1038,6 +1059,11 @@ without a line); `Book.bib` moved 05:58:35; sibling transcripts moved since 04:3
 `81b0a815` GLG). `aff04a5d` pulsed 06:45:35 (n=12, hit, md5 same). The 01:30 push arrived (lag n=4 closed); the 04:30
 push not yet (lag n=5). Next beat 10:26: `aff04a5d` 09:45:35 · W38 size (does 『위대한 패배자』 reach the journal?) · the
 04:30 and 07:30 pushes' arrival · his first agenda API item today.
+Row 35 — 09-28 19:2x: 「오토B 재가동 · 17:45 heading + `[!user]` block, to the host body, about this house · brick 43」
+— the first row after a gap that is *off*, not silence: the 27 slots between 34 and 35 are not rows. Journal today 7
+headings, last 18:32. `aff04a5d` pulsed 18:45:35 (new count n=1, md5 same). Next beat 22:26: `aff04a5d` 21:45:35 ·
+W39 size (a line after 18:32?) · whether the autopilot real test (18:19 「이따가 해볼예정」) leaves a journal or agenda
+trace · reproduce `beat-census`'s `agenda API: OSError` through its own code path, not a bare urllib call.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
