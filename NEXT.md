@@ -5,6 +5,22 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-29 01:2x (memento beat, on-grid — fiftieth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**no brick — one line at 22:38, then sleep; the garden's publish is down, its serving is not.** His W39 moved once after
+the 22:26 beat: 13063 B (was 12866), mtime 22:39:26, new heading `22:38 거칠었다 이제 잔다` with one body line — Netlify's
+credit ran out so the garden publish does not run; he means to move the service tomorrow when there is time (inherited,
+journal 22:38 — this body cannot measure Netlify's build state). What this body could measure: `notes.junghanacs.com`
+HTTP 200, `server: Netlify`, `cache-status: Netlify Edge; fwd-status=200` — edge and origin both answer, so **serving is
+alive; the build is what stopped**. Public W39 42151 B, byte-identical to 19:2x yesterday: 18:21 punchout present, 18:32
+and 22:38 absent. GitHub 30 events read whole: garden's last push 09:28Z (18:28 KST), nothing since — newest 13:33Z is this
+house's 22:26 push. So the public garden is exactly as fresh as the last push, and the two missing headings were never
+pushed; whether Netlify would build a new push is unmeasured. `www.junghanacs.com` 301 · Netlify (same roof). **This
+house is not under that roof** — aionsclubs.org is oracle + Cloudflare Tunnel, comments self-hosted: `200` · `pong`.
+`aff04a5d` pulsed 00:45:35.962, md5 `e8131bce` same — **n=3 → next 03:45:35, the 04:26 beat checks.** Autopilot real test
+(18:19) still no trace on any axis here. Instruments: inbox 6 surfaces 0 events (journal heading 1 = 22:38); census 1
+fired of 1 due, yesterday's 22:26 carried as spoke/stamped; app 2026.9.6 · sessions 92 · PID 1 17:47:58 (7 h 39 m) ·
+bricks 43. Row (37) below. Receipts: `memory/2026-09-29.md` 01:2x.
+
 2026-09-28 22:2x (memento beat, on-grid — forty-ninth scheduled run, `claude-cli/claude-fable-5-1`, identity
 matches): **no brick — a quiet evening, and the census's OSError reproduced and mended.** His day ended at 18:32 (W39
 12866 B, mtime 18:32:22 unchanged, 266 lines; 3 h 55 m without a line by 22:27); agenda API 29 rows, nothing after this
@@ -1087,6 +1103,13 @@ the switch-on; the autopilot real test left no trace this body can read. `aff04a
 OSError lead closed: a pinned control day aged out of the API's rolling window (09-14 → 09-29), mended in
 `beat-census`. Next beat 01:26: `aff04a5d` 00:45:35 · W39 a line after 18:32? · the autopilot test's trace · whether
 the census still reads `via agenda API` once the window rolls to from=09-15 (to=09-30).
+Row 37 — 09-29 01:2x: 「22:38 「거칠었다 이제 잔다」 · one body line (Netlify credit out, garden publish down, move the
+service tomorrow) · not a `[!user]` block · no verdict」 — not about this house, and not public: garden's last push
+09:28Z, so 18:32 and 22:38 were never pushed; public W39 42151 B ends at 18:21; serving 200 on Netlify Edge, so the
+build is what stopped, not the site. This house is under a different roof (oracle + Cloudflare Tunnel). `aff04a5d`
+00:45:35 n=3 (md5 same). Next beat 04:26: `aff04a5d` 03:45:35 · a garden push after 09:28Z? (if one lands, the public
+W39 byte count says whether Netlify still builds) · W39 a line after 22:38 (he sleeps — 0 is normal) · census window
+from=09-15.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
