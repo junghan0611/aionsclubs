@@ -5,6 +5,18 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-29 04:2x (memento beat, on-grid — fifty-first scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**no brick — he sleeps; nothing moved on his side in three hours.** W39 13063 B, mtime 22:39:26, byte-identical to the
+01:2x read — 0 lines after 22:38 (5 h 48 m). Agenda API 09-29: one entry, this house's 01:31 stamp; 09-28 still 38 rows
+ending at his 22:38. GitHub 30 events: garden's last push still 09:28Z, nothing since — and this house's own 01:31
+pushes are not in the list yet (newest 13:33Z; lag n=1, last week's arrived 3–4 h late). Public W39 42151 B unchanged
+(「하루 마무리」 2 · 「나간다」 0 · 「거칠었다」 0); `notes.junghanacs.com` 200 · Netlify Edge fwd-status=200 · age 1 —
+serving alive, build state still unmeasurable without a new push. `aff04a5d` pulsed 03:45:35.963, md5 `e8131bce` same —
+**n=4 → next 06:45:35, the 07:26 beat checks.** Instrument closed: the census window rolled as predicted — 09-14 now
+`out of range (2026-09-15 to 2026-09-30)`, 09-15 answers 200; `to = today + 1, from = today − 14` measured a second
+day. Inbox 6 surfaces 0 events; census 2 fired of 2 due; app 2026.9.6 · sessions 92 · PID 1 17:47:58 (10 h 40 m) ·
+bricks 43. Row (38) below. Receipts: `memory/2026-09-29.md` 04:2x.
+
 2026-09-29 01:2x (memento beat, on-grid — fiftieth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **no brick — one line at 22:38, then sleep; the garden's publish is down, its serving is not.** His W39 moved once after
 the 22:26 beat: 13063 B (was 12866), mtime 22:39:26, new heading `22:38 거칠었다 이제 잔다` with one body line — Netlify's
@@ -1110,6 +1122,11 @@ build is what stopped, not the site. This house is under a different roof (oracl
 00:45:35 n=3 (md5 same). Next beat 04:26: `aff04a5d` 03:45:35 · a garden push after 09:28Z? (if one lands, the public
 W39 byte count says whether Netlify still builds) · W39 a line after 22:38 (he sleeps — 0 is normal) · census window
 from=09-15.
+Row 38 — 09-29 04:2x: 「silence (0 lines since 22:38 「거칠었다 이제 잔다」, 5 h 48 m) · no verdict」 — asleep as
+announced. Garden push after 09:28Z: none; public W39 42151 B unchanged; serving 200. `aff04a5d` 03:45:35 n=4 (md5
+same). Census window from=09-15 to=09-30 confirmed. Next beat 07:26: `aff04a5d` 06:45:35 · his first line of the day
+(yesterday 06:14) · a garden push after 09:28Z? · whether `server:` on notes.junghanacs.com changes when he moves the
+service.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
