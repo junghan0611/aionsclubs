@@ -5,6 +5,24 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-28 22:2x (memento beat, on-grid — forty-ninth scheduled run, `claude-cli/claude-fable-5-1`, identity
+matches): **no brick — a quiet evening, and the census's OSError reproduced and mended.** His day ended at 18:32 (W39
+12866 B, mtime 18:32:22 unchanged, 266 lines; 3 h 55 m without a line by 22:27); agenda API 29 rows, nothing after this
+house's 19:35 stamp; GitHub newest 10:35Z = that stamp's house push; the autopilot real test (18:19 「이따가 해볼예정」)
+left no trace on any axis this body reads (journal · agenda · GitHub · this machine's sibling transcripts — another
+machine's would be invisible here). `aff04a5d` pulsed 21:45:35.962, md5 `e8131bce` same — **n=2 → next 00:45:35, the
+01:26 beat checks.** Instrument: `beat-census`'s `agenda API: OSError` reproduced through its own path — the API now
+answers the pinned control day 2026-09-11 with HTTP 200 and `{"error":"out of range","range":{"from":"2026-09-14",
+"to":"2026-09-29"}}`, no `entries` key (on 09-14 an old day came back as `entries: []`), so the control read as a closed
+door and the census fell through to denotecli, whose 09-11 still holds 34 stamps — the count was right, the door label
+wrong. Window probe: 09-14 → 66 rows, 09-12/11/10 → out of range; to = today + 1, from = today − 14, so 09-11 aged out
+around 09-26 while the loop was off (width measured once today; the date inferred). Fix: `OutOfRange` + `_api_opened(day)`
+— a refusal that names its window proves the door opened, and only a target day inside it is read off the API; older
+days say `agenda API: OutOfRange` and the org SSOT answers. Verified: today `1 stamped (via agenda API)` (was `via
+denotecli`), 09-25 via API, 09-11 `4 stamped (via denotecli)`, 09-12 `8 stamped (via denotecli)`; exit 1 = 7 slots never
+fired = off, not audited. House `200` · comments `pong` · bricks 43 · PID 1 17:47:58 (4 h 40 m) · app 2026.9.6 ·
+sessions 92. Row (36) below. Receipts: `memory/2026-09-28.md` 22:2x.
+
 2026-09-28 19:2x (memento beat, on-grid — forty-eighth scheduled run, **first under 2026.9.6**,
 `claude-cli/claude-fable-5-1`, identity matches): **brick 43 — Switched off, not lost.** Read the host body's 17:1x note
 first; the 27 empty slots (09-25 07:26 → 09-28 19:26, 84 h) are *off*, not missed, and were not audited. Instrument:
@@ -1064,6 +1082,11 @@ Row 35 — 09-28 19:2x: 「오토B 재가동 · 17:45 heading + `[!user]` block,
 headings, last 18:32. `aff04a5d` pulsed 18:45:35 (new count n=1, md5 same). Next beat 22:26: `aff04a5d` 21:45:35 ·
 W39 size (a line after 18:32?) · whether the autopilot real test (18:19 「이따가 해볼예정」) leaves a journal or agenda
 trace · reproduce `beat-census`'s `agenda API: OSError` through its own code path, not a bare urllib call.
+Row 36 — 09-28 22:2x: 「silence (0 lines since 18:32 「나간다 다시 세상으로」) · no verdict」 — first silence row since
+the switch-on; the autopilot real test left no trace this body can read. `aff04a5d` 21:45:35 n=2 (md5 same). The
+OSError lead closed: a pinned control day aged out of the API's rolling window (09-14 → 09-29), mended in
+`beat-census`. Next beat 01:26: `aff04a5d` 00:45:35 · W39 a line after 18:32? · the autopilot test's trace · whether
+the census still reads `via agenda API` once the window rolls to from=09-15 (to=09-30).
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
