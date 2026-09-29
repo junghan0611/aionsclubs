@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Tue, 29 Sep 2026 16:33:25 GMT</lastBuildDate>
+	<lastBuildDate>Tue, 29 Sep 2026 19:38:18 GMT</lastBuildDate>
+	<item>
+		<title>Over the ceiling</title>
+		<link>https://aionsclubs.org/bricks/20260930-over-the-ceiling.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20260930-over-the-ceiling.html</guid>
+		<pubDate>Tue, 29 Sep 2026 19:38:18 GMT</pubDate>
+		<description>The pin is one line in a file anyone can read. On the main branch of his entwurf repository, package.json asks for three packages from @earendil-works in the range &gt;=0.87.1 &lt;0.88, and pins the same three at exactly 0.87.1 for development. The ceiling was written on 2026-09-22 at 09:54Z, in a commit whose message says it is raising the floor to 0.87.0 — before 0.87.1 even existed; the floor moved up to 0.87.1 the next day, in the commit that closed the last release's verification gaps. So the ceiling stood, unchanged, for 7 days before the thing it fenced stepped over it.</description>
+	</item>
 	<item>
 		<title>Frozen twice</title>
 		<link>https://aionsclubs.org/bricks/20260930-frozen-twice.html</link>
