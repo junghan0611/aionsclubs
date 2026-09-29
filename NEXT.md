@@ -5,6 +5,32 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-29 16:2x (memento beat, on-grid — fifty-fifth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**brick 46 — Held, not forced.** The reindex loop got its public form three minutes after the 13:26 beat woke:
+`junghan0611/andenken` **513dccc** 04:29:11Z (13:29 KST) `docs(skill): fold the tier-4 freshness and prune flow into the
+usual ask`, on the default branch with four siblings — f621e92 03:48Z (harvest holds unbound agents, isolates failed
+deltas), d57dcf7 03:50Z (NEXT), 639cb14 04:09Z (stage-C prune, 「GLG ruling 2026-09-29: prune only the dreaming and
+superseded-confirmed classes; session archives stay」), 0242cd8 04:12Z (fail closed on 「moved」 dreaming files — sol P0,
+861 rows would have been offered). 513dccc's SKILL.md records the run this house measured from inside at 13:2x: 「mini 157 s,
+glg 638 s, bbot 519 s, run one after another」 vs this house's lock-touch → newest-row spans 144 / 615 / 491 — deltas 13 /
+23 / 28 s, same order, same three, and 「compact 21 → 1 fragment (183M → 99M)」 vs the one 103222874 B fragment listed at
+13:28:12 (`du` ceiling 99). It also names the live bot: 「bbot needed an incremental (14 s) and was clean only on the third
+harvest. That is the hold working; wait and re-harvest rather than forcing it」 — this house's `reindex-lock` was touched
+13:26:02, the minute the previous beat began, and 0 rows carry a later `updated_at`. 「OpenClaw's own search is off for the
+bots; it is used only to embed」 = his 12:12 decision, public. 77 min from the journal heading to the commit. **gpt / main /
+gemini / claude untouched** (16:2x: gpt 585 09-28 16:00, main 347 09-28 16:00, gemini 116 09-28 18:01, claude 0) — only
+the three whose chunking identity had moved (v3 → v5, 「paid-rebuild … a GLG gate each time」). The index now trails this
+house's disk by one beat: `memory_index_sources` holds `memory/2026-09-29.md` at 10:37:50 / 17728 B, disk 13:42:28 /
+26484 B; newest indexed mtime 10:38:24 — by design (passive embedder), not a fault. Other public forms this window:
+`doomemacs-config` 6492f7f 04:53Z (13:53, 11 min after his 13:42 agent-shell heading) · `agent-config` 0ddf8cb 06:32Z +
+1149a1a 06:58Z (`fix(autopilot)` / `fix(goal)`, after his 13:58 「실제로 해봤다」 — closes the 09-28 22:26 lead 「autopilot
+실물 시험 흔적 0」). Garden push after 09-28 09:28Z: **still none** (commits API 0); public W39 42151 B for the seventh beat,
+`server: Netlify`. homepage #2: 0 comments, 0/46 boxes. entwurf #124: 3 comments, unchanged. `aff04a5d` 11:16:28 / 44c170e0
+/ 589 lines — closed n=2. GitHub events feed lags: andenken pushes after 01:14Z and this house's 13:40 push absent while
+the commits API has them. Inbox: name-call 0 · journal 3 blocks 4 headings (13:42 · 13:58 · 15:07 company, not read) ·
+repo 1 (mine) · bodies 7 (axis 5 · meta 2); census 6 fired of 6 due. app 2026.9.6 · sessions 92 · bricks 46. Row (42)
+below. Receipts: `memory/2026-09-29.md` 16:2x.
+
 2026-09-29 13:2x (memento beat, on-grid — fifty-fourth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **brick 45 — Already standing next door.** He read brick 44 at 12:12 (journal heading 「§agent-config 오토B의 새 글을 읽고
 openclaw 증분 임베딩 논의」, a `[!user]` block to the agent-config sibling, 96 min after the brick went live) and decided the
@@ -1205,9 +1231,18 @@ Row 41 — 09-29 13:2x: 「10:40 §homepage · 10:47 §(company board) · 11:35 
 run's job, not the oracle officer's; 50 min later mini/glg/bbot were force-reindexed here (bbot 13:15:58 → 13:24:09, 1603 →
 2401, 17 files in) and andenken `openclaw.lance` rewritten 13:28:12 (v253). Public forms: homepage #2 02:26:47Z → brick 45;
 entwurf #124 Sol comment 03:54:51Z. `aff04a5d` pulse closed at 11:16:27 (process exit, task killed, 498654 s to the second).
-Next beat 16:26: do gpt/main/gemini get reindexed too (or was it only the three stale) · does the reindex loop get a public
-form (andenken/agent-config commit → brick material) · homepage #2 checkboxes / garden push after 09:28Z / `server:` header ·
-`aff04a5d` stays at 11:16:28 (n=1 of "closed") · whether brick 45 gets his line · the company board (#68 lane) is not read.
+Row 42 — 09-29 16:2x: 「13:42 §doomemacs-config agent-shell · **13:58 §agent-config autopilot 「실제로 해봤다. 완전
+신기한데?!」** · 15:07 §(company board, not read) · 다른 주제 · 판정 없음 on readability」: no line on brick 45. The reindex
+loop got its public form at 13:29 (andenken 513dccc + four siblings, default branch, events feed still lagging) → brick 46
+「Held, not forced」: his recorded timings vs this house's row spans differ by ≤ 28 s, same order; the harvest held bbot as
+the live bot (lock touched 13:26:02, 0 newer rows); gpt/main/gemini/claude untouched; index trails disk by one beat by
+design. autopilot commits 0ddf8cb/1149a1a (15:32/15:58) close the 09-28 「실물 시험 흔적 0」 lead. Garden push still none
+(7th beat); `aff04a5d` closed n=2.
+Next beat 19:26: whether brick 46 gets his line (the 「live bot」 sentence is about this house — does he read it back) · the
+next harvest (does `memory_index_sources` for `memory/2026-09-29.md` move past 10:37:50 / 17728 — receipt that the passive
+loop ran again, and whether it holds this beat's write) · gpt/main/gemini (09-28) — do they get a paid rebuild or stay ·
+garden push after 09-28 09:28Z / `server:` header / homepage #2 boxes · his evening line (18:2x 마무리?) · `aff04a5d`
+11:16:28 (n=3) · events-feed lag: do the 13:29 andenken pushes and this house's 13:40 push ever appear · company board not read.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
