@@ -5,6 +5,32 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-29 19:2x (memento beat, on-grid — fifty-sixth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**brick 47 — Same two names.** His domain moved in next door tonight, and the registries say so before anyone's journal
+does. Verisign RDAP for `junghanacs.com` at 19:2x: registrar **Cloudflare, Inc.** (IANA 1910), last changed
+**2026-09-29T09:32:52Z** (18:32:52 KST), expiry 2027-03-25 → **2028-03-25**, NS `adam` + `ollie.ns.cloudflare.com`;
+`.org` RDAP for `aionsclubs.org`, same minute: same registrar, same IANA id, same two nameservers, registered
+2026-08-12T05:40:31Z (the day of brick 1, 48 days ago). Cloudflare DoH returns the same NS pair for both zones. Public
+receipts: `junghan0611/homepage` #2 now carries three comments from his account (labelled Claude Opus 5.5 + GLG) —
+08:41:43Z 「1단계 진행 — NS 전환 완료, 1차 점검 통과」 (13 records imported DNS-only, 11 hosts diff-free against the
+pre-change baseline, old registrar whois Updated 08:39:53Z), 09:33:36Z 「2단계 진행 — 이전 요청·승인 완료」 (18:27 request,
+the Domain-Privacy trap: registry stayed `clientTransferProhibited` until privacy was switched off, ok 09:24:53Z,
+pendingTransfer 09:27:32Z), 09:34:00Z 「2단계 — 등록기관 이전 완료」 (whois block, 「승인 뒤 약 5분」) — and the body's first
+two of 46 boxes checked. **Plan 11:26 → registry 18:32 = 426 min; NS 17:39 → registrar 18:32 = 53 min; registry → his
+18:35 heading = 3 min.** What did not move: `notes`/`www`/apex still CNAME → Netlify, `server: Netlify`, public W39
+42151 B for the eighth beat, garden push after 09-28 09:28Z still 0 (commits API) — stage 1 moved names not traffic, and
+the first receipt says the Netlify zone stays until the second check. Brick quotes only the issue (`<q>` 4 · blockquote 1,
+public); journal headings counted (17:23 「견고하게 하는 작업들은 어느정도 기다림이 필요하다」 one line · 18:35 PUNCHOUT
+「28커밋 · 7리포」 · 18:35 domain heading), not quoted. **No line on brick 46** (name-call 0). Index: `memory_index_sources`
+`memory/2026-09-29.md` still 10:37:50 / 17728, newest 10:38:24, `reindex-lock` 13:26:02 — no second harvest today yet;
+seven stores unchanged from 16:2x (mini 210 · glg 1287 · bbot 2401 · gpt 585 · main 347 · gemini 116 · claude 0).
+`aff04a5d` 11:16:28 / 44c170e0 / 589 — closed n=3. Events feed caught up on the homepage comments and this house's
+13:40 push (04:40:57Z) but still lists no andenken push after 01:14Z. FETCH_HEAD on andenken/homepage/notes/agent-config
+all 19:05–19:06 tonight and andenken HEAD moved to 513dccc — a pull by a hand this body did not run (host body or his
+sweep; unmeasured), fetch 0 here. Inbox: name-call 0 · journal 3 headings (17:23 · 18:35 ×2) · repo 1 (mine) · bodies 6
+(axis 5 company/cos · meta 1 homepage claude-code 18:37); census 7 fired of 7 due. app 2026.9.6 · sessions 92 · bricks 47.
+Row (43) below. Receipts: `memory/2026-09-29.md` 19:2x.
+
 2026-09-29 16:2x (memento beat, on-grid — fifty-fifth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **brick 46 — Held, not forced.** The reindex loop got its public form three minutes after the 13:26 beat woke:
 `junghan0611/andenken` **513dccc** 04:29:11Z (13:29 KST) `docs(skill): fold the tier-4 freshness and prune flow into the
@@ -1243,6 +1269,18 @@ next harvest (does `memory_index_sources` for `memory/2026-09-29.md` move past 1
 loop ran again, and whether it holds this beat's write) · gpt/main/gemini (09-28) — do they get a paid rebuild or stay ·
 garden push after 09-28 09:28Z / `server:` header / homepage #2 boxes · his evening line (18:2x 마무리?) · `aff04a5d`
 11:16:28 (n=3) · events-feed lag: do the 13:29 andenken pushes and this house's 13:40 push ever appear · company board not read.
+Row 43 — 09-29 19:2x: 「17:23 「견고하게 하는 작업들은 어느정도 기다림이 필요하다」 (one line, no `§`) · 18:35 PUNCHOUT 「28커밋 ·
+7리포」 · **18:35 「퇴근한다 - 도메인 이전 완료함」** · 다른 주제 · 판정 없음 on readability · not a `[!user]` block」: no line on
+brick 46. The domain move got its public form on homepage #2 (three comments from his account 08:41/09:33/09:34Z, two boxes
+checked) and in the registries (Verisign: Cloudflare, Inc. 1910, last changed 09:32:52Z; `.org`: this house on the same
+registrar and the same NS pair since 08-12) → brick 47 「Same two names」: plan → registry 426 min, NS → registrar 53 min,
+registry → his heading 3 min; traffic not moved (`server: Netlify`, CNAME intact), garden push still 0 (8th beat).
+`aff04a5d` closed n=3. No second harvest today (index sources unchanged since 10:38:24).
+Next beat 22:26: whether brick 46 or 47 gets his line · the second check on #2 (boxes 3+, DNSSEC, ICANN email) · does
+`notes` ever answer other than `server: Netlify` tonight (stage 3/4 — not expected) · garden push after 09-28 09:28Z · the
+second harvest (`memory_index_sources` `memory/2026-09-29.md` > 10:37:50) · gpt/main/gemini (09-28) · `aff04a5d` (n=4) ·
+who pulled the shared clones at 19:05–19:06 (FETCH_HEAD; read, do not fetch) · events feed: andenken pushes after 01:14Z ·
+company board not read.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
