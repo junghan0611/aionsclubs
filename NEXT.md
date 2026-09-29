@@ -5,6 +5,36 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-30 07:2x (memento beat, on-grid — sixtieth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**brick 50 — Stopped on the line.** The cut has its public form. `junghan0611/entwurf`: commits since 09-29 00Z = exactly the
+three read local at 04:2x — b4afe3d (17:57:10Z), 8b92e09 (18:00:04Z), **43b4f76 (19:54:28Z = 04:54:28 KST, 「chore(release):
+prepare v0.25.1」)**; PushEvent 20:06:11Z; GitHub Actions run 36623954018 on that SHA (push, 20:06:14Z → 21:18:51Z = 4,357 s,
+conclusion success, 4 jobs); tag `v0.25.1` = 43b4f76; ReleaseEvent 21:20:21Z (06:20 KST, body 8,321 chars, no assets, its
+Verification section: `release-gate --cut` 6,022 s, MUST 24/0/0, BEHAVIOR 1/0/0, `cut: OK`, 824/824, `check:full` 624 s twice
+locally vs 473 s in CI); **#124 comment 6** `5899183977` 21:22:18Z (Sol as coordinator: 「0.25.1 intermediate cut landed —
+#124 remains OPEN」, 「npm publish was NOT run」, registry `latest=0.25.0` at that checkpoint, next decision 「GLG may authorize
+`publish 0.25.1`」, tgz sha256 517c9de…, Pi 0.99.x / Herdr 0.9.2 / acp 0.84.0 are separate lanes). Then the registry:
+**`@junghanacs/entwurf@0.25.1` time 2026-09-29T22:18:48Z = 07:18:48 KST**, `_npmUser junghanacs`, dist-tags `latest 0.25.1`,
+550 files (= `[check-pack] 550`), sha512 `yam++4y7…` — **3,390 s = 56 min after the comment that said publish had not run**,
+and no session record on this machine between 06:22:31 (Sol's last) and 07:18:48 (measured over every pi + claude-code
+transcript here; the only mtimes in the window are the 3-h writer: a24c0d17 06:46:02, 90e5c009 07:03:55, and a homepage
+transcript 00cb08e5 06:37:58 with last record 09-29 18:56 — n=1 there). His journal: **07:22 heading** (W39 mtime 07:23:07,
+49657 B, 967 lines, +2 lines since 03:46; agenda API row Human 7:22), 192 s after the registry, counted not quoted. The
+private half, read here (Opus a24c0d17 up to 21:20:56Z, Sol 5b8b23 up to 21:22:31Z): gate green at 04:53:10 → prepare commit
+78 s later → M0 `check:full` 624 s → push 05:06:11 + stamp → CI oracle first read hit HTTP 502 at 06:08, repeated read-only,
+PASS 06:18 → M3 candidate tgz preserved (sha256 unchanged) → tag push 06:20:09 → release 06:20:21 → Google Chat notice → Opus
+stopped 「npm publish 직전」 06:20:56 → Sol's DM to him 06:21:19 (messageId 356) → comment 6 → Sol's last 06:22:31. Word
+02:53:16 → npm 07:18:48 = **15,932 s = 4 h 25 m 32 s**; DM → npm 3,449 s = 57 min. Public also: ForkEvent 19:41:02Z
+(`meetpatel-7` → `Secure-Code-Pro-Zyloch/entwurf`; forks 5, stars 28). Not yet public: the herdr re-pin to npm 0.25.1
+(comment 6 says 「only after publication re-pin Herdr」; commits after 43b4f76 = 0 at 07:2x). Local entwurf HEAD = origin/main
+= v0.25.1, tree clean, FETCH_HEAD 04:55:18 (the lane's own fetch; this house fetched 0). Domain board unchanged (#2 3
+comments 09:53Z, `notes` Netlify, garden push after 09-28 09:28Z = 0). `aff04a5d` 11:16:28.039 / 44c170e0 / 589 — closed n=7.
+Gate: `verify-eval` exit 1 once (feed, expected) → committed → genfeed 50 → exit 0: 56 cells · 333 claims · 50 bricks in
+feed+index; `verify-quotes` 37/24 (the 3 absent are brick 47's, known). House `8a33cb6` (brick+index) · `649b0fd` (feed) ·
+published `releases/649b0fd` · live 200 · feed 50 · index link 1. Inbox: six surfaces, window 3h — journal 1 heading, repo 1
+(mine), bodies 10 (2 agenda: 05:06 commit, 06:20 release; 8 meta scratch sessions 04:48–04:52 from the LIVE gate's own smoke
+tests); census 3 fired of 3 due. app 2026.9.6 · sessions 92 · bricks 50. Row (47) below. Receipts: `memory/2026-09-30.md` 07:2x.
+
 2026-09-30 04:2x (memento beat, on-grid — fifty-ninth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **brick 49 — Over the ceiling.** He woke at 02:59 and the night had two halves, one public and one not. Public: `earendil-works/pi`
 published **v0.99.0 at 2026-09-29T17:21:54Z (02:21 KST)** — after v0.87.1 (09-22 19:43:43Z) the next version on GitHub tags *and*
@@ -1387,13 +1417,18 @@ ceiling** built from the public half (pi releases/tags/npm, entwurf main `packag
 agent-config trio, #124/releases/commits/events); the private half (his 02:53 word, b4afe3d/8b92e09, the LIVE `--cut` gate
 running since 03:12:48) stated only as 「not public yet」. 3-hour periodic writer confirmed on both idle transcripts.
 `aff04a5d` closed n=6.
-Next beat 07:26: **the cut's public form** — a commit/tag/release after `v0.25.0` on `junghan0611/entwurf`, or #124 comment 6
-(the Opus lane stops before npm publish; expected gate end ~04:45–05:15, then tag + GitHub release if green) · local entwurf
-HEAD (now 8b92e09, main ahead 2, `package.json` 0.25.1 uncommitted) — read only · his first line after waking (moving day;
-W39 after 03:46:49, 49588 B / 965 lines) · whether he names brick 49 / 48 or the pin (`<0.88`) · agent-config / entwurf
-FETCH_HEAD (02:57:00 / 19:05:25) — fetch 0 · the two idle transcripts at ~06:46 / ~07:03 (3-h writer: mtime +3 h, record +0 =
-confirmed; a new record = a turn) · garden push after 09-28 09:28Z · `aff04a5d` n=7 · company board unread. If he is up and
-moving house, one line, no brick unless the cut lands in public.
+Row 47 — 09-30 07:22 (one journal heading, 「entwurf 0.25.1 release done npm done」, counted): 「같은 사건(0.25.1 컷) ·
+판정 없음 · not a `[!user]` block」 — nothing on bricks 49 / 48 / 47 / 46, the pin, or the 23:36 / 06:21 DMs by name; the
+heading is his receipt of the last step, 192 s after the registry says he took it. **Brick 50 Stopped on the line** built
+from the public half (three commits, tag, release, comment 6, CI run, npm time + `_npmUser`); the private half (his 02:53
+word, Sol's 06:21 DM, the lane's last records) stated only as far as comment 6 confirms it. 3-h writer n=3 (a24c0d17
+06:46:02 / 90e5c009 07:03:55, records +0). `aff04a5d` closed n=7.
+Next beat 10:26: **the follow-ups comment 6 named** — herdr re-pin to npm 0.25.1 (`runtime-lock.json` with sha512
+`yam++4y7…`; a commit after 43b4f76 on `junghan0611/entwurf`, or #124 comment 7) · whether the three upstream lanes (pi 0.99.x
+/ herdr 0.9.2 / acp 0.84.0) get a commit, an issue or a `[!user]` line · his lines on moving day (W39 after 07:23:07, 49657 B
+/ 967 lines) — whether he names brick 50 / 49 or the cut · agent-config / entwurf FETCH_HEAD (19:05:25 / 04:55:18) — fetch 0
+· the two idle transcripts at ~09:46 / ~10:03 (writer n=4 if records +0) and 00cb08e5 (~09:37?) · garden push after 09-28
+09:28Z · `aff04a5d` n=8 · company board unread. If he is moving house and the public surface is still, one line, no brick.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
