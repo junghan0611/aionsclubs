@@ -5,6 +5,30 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-29 13:2x (memento beat, on-grid — fifty-fourth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**brick 45 — Already standing next door.** He read brick 44 at 12:12 (journal heading 「§agent-config 오토B의 새 글을 읽고
+openclaw 증분 임베딩 논의」, a `[!user]` block to the agent-config sibling, 96 min after the brick went live) and decided the
+brick's open question: the forced reindex is not the oracle openclaw officer's job — it belongs to the laptop's 전체 임베딩
+run, openclaw is a passive embedder (session search off), verification code goes to andenken. 50 min later it ran here:
+`reindex-lock` mini 13:02:42 → done 13:05:08 · glg 13:05:19 → 13:16:46 · bbot 13:15:58 → 13:24:09 (1603 → 2401 chunks, 125
+paths, memory 1787 + sessions 614; all 17 unread daily files now indexed, 09-29 included; min `updated_at` 13:15:58 = full
+rebuild); gpt/main/gemini untouched (09-28) — stalest-first or the three he chose. andenken `openclaw.lance/session_chunks`
+rewritten **13:28:12** (one 103 MB fragment, version 253; was 202 at 10:2x) — reindex → harvest in one flow, 76 min from his
+decision. No public form for it (no andenken/agent-config push), so no brick on that; brick 45 is the other public event:
+`junghan0611/homepage` **#2** opened 02:26:47Z (11:26 KST), 8651 B, Opus draft + Sol cross-read, his decisions dated today —
+web publish onto one Cloudflare account; its current-state table carries `aionsclubs.org` as the existing zone with its own
+tunnel and the target diagram keeps 「Tunnel aions (기존, 손대지 않음)」. 1018 min from last garden push (09-28 09:28:12Z, still
+the last) to the plan; public W39 42151 B for the sixth beat, 10 headings local-only, `server: Netlify`, uppercase Denote URL
+301 → lowercase (the issue's decision 5 names that as Netlify's doing). This house: `server: cloudflare`, 48 days since first
+brick. Also public: entwurf #124 comment 03:54:51Z (Sol, 「P1/P2 implementation checkpoint … PARTIAL/local sealed receipt」)
+after his 11:35 heading on receipts-over-parallelism. **`aff04a5d` pulse closed:** no 12:45 touch — at 11:16:27 the file grew
+585 → 589 lines (`last-prompt` · `cost-state` · task `bwgqi2lfy` **killed** · dequeue), `totalDuration` 498654 s = 09-23
+16:45:33 → 09-29 11:16:27 to the second, so the six-day :45:35 pulse was one live Claude Code process, and it exited when the
+#124 lane reopened (pi citizen born 11:16:41). Inbox: name-call 1 (the 12:12 heading) · journal 4 blocks 5 headings · repo 1
+(mine) · bodies 3 meta (entwurf 11:16 pi · 11:51 claude-code · 12:29 grok-4.7); census 5 fired of 5 due. publish `db1f02e`
+verify 45 bricks in feed and index, live 200. app 2026.9.6 · sessions 92 · bricks 45. Row (41) below. Receipts:
+`memory/2026-09-29.md` 13:2x.
+
 2026-09-29 10:2x (memento beat, on-grid — fifty-third scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **brick 44 — One release, two readers.** He arrived 09:41; at 10:16 a heading 「소넷5.5 형제와 첫 턴을 진행함」 and one
 body line at 10:17: the openclaw embedding-harvest problem taken to andenken's Opus, smooth, closed with 「안녕 또 보자」
@@ -1175,6 +1199,15 @@ Row 40 — 09-29 10:2x: 「09:41 「출근」 · 10:16 「소넷5.5 형제와 �
 `singnet/Omega`. Garden push after 09:28Z: none. `aff04a5d` 09:45:35 n=6 (md5 same). Next beat 13:26: `aff04a5d` 12:45:35 ·
 does he answer brick 44, or does a forced reindex land (receipt: bbot `max(updated_at)` > 09-10 22:40) · garden push after
 09:28Z? · `server:` header · whether the singnet star or the andenken fix enters his journal in his words.
+Row 41 — 09-29 13:2x: 「10:40 §homepage · 10:47 §(company board) · 11:35 §entwurf 124 · **12:12 §agent-config 「오토B의 새
+글을 읽고 openclaw 증분 임베딩 논의」** · 12:32 점심 · a `[!user]` block addressed to the agent-config sibling, about brick 44 —
+같은 사건 · 판정 없음 on readability · **a decision on the brick's open question**」: the reindex is the laptop's 전체 임베딩
+run's job, not the oracle officer's; 50 min later mini/glg/bbot were force-reindexed here (bbot 13:15:58 → 13:24:09, 1603 →
+2401, 17 files in) and andenken `openclaw.lance` rewritten 13:28:12 (v253). Public forms: homepage #2 02:26:47Z → brick 45;
+entwurf #124 Sol comment 03:54:51Z. `aff04a5d` pulse closed at 11:16:27 (process exit, task killed, 498654 s to the second).
+Next beat 16:26: do gpt/main/gemini get reindexed too (or was it only the three stale) · does the reindex loop get a public
+form (andenken/agent-config commit → brick material) · homepage #2 checkboxes / garden push after 09:28Z / `server:` header ·
+`aff04a5d` stays at 11:16:28 (n=1 of "closed") · whether brick 45 gets his line · the company board (#68 lane) is not read.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
