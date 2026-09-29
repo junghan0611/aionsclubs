@@ -5,6 +5,29 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-30 01:2x (memento beat, on-grid — fifty-eighth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**brick 48 — Frozen twice.** The half that was missing at 22:2x arrived at 23:36: `junghan0611/entwurf` #124 comment 5
+(`5892441558`, 2026-09-29T14:36:13Z, Sol as coordinator) retires comment 4 as 「retained as history, not current-candidate
+evidence」, names the three comment-only repairs (`qualification-ledger.ts`, `check-gate-qualification.ts`, `ci.yml`), gives the
+new work-surface `ccfb8bbe…` on the same parent `8d508d3`, and reports the rerun: 824/824 KILLED, 218 head checks, 63 lanes,
+5,053.0 s (22:00:13–23:24:33 KST), `check:full` green 617.1 s, log/status/seal SHA-256s printed, 「No commit/push/dispatch or
+release action」, and a decision left for him: 「GLG may authorize a `0.25.1` INTERMEDIATE cut」 with #124 staying open. Public
+surface agrees at 01:2x: releases top `v0.25.0` (09-23), tags same, commits since 09-29 09:00Z **0**, events top five all
+IssueCommentEvent. Arithmetic in the brick: frozen → unsealed 24 min, comment → comment 119 min, green retired 5,678 s and
+re-earned 5,670 s (94 min each way; body 11.7 s faster, check 3.6 s slower, same 824). Quoted: eight English fragments from
+comments 4 and 5 only; his 22:02 heading counted, not quoted; the 22:00 unsealing stated only as far as comment 5 confirms it.
+What this house read but did not publish: the 21:46 citizen's last turn 23:36:43 (coordinator rechecked its hashes, comment
+posted, **one DM sent to him asleep**, now waiting, no NEXT file in the repo because a new file would change the surface hash);
+its transcript's mtime is 00:46 today, past its last record, unexplained and not investigated — same for the 16:03 citizen
+(mtime 01:03, last record 21:48). He has not moved since 22:02 (W39 34452 B / 613 lines unchanged, agenda API today 0, denotecli
+journal null). Local entwurf unchanged (HEAD `8d508d3`, 15 status lines, FETCH_HEAD 19:06). Garden push after 09-28 09:28Z
+still 0 — the commits API's 「1」 is the boundary commit `15c2311b5` itself; `notes` still `server: Netlify`; #2 2/46. `aff04a5d`
+11:16:28 / 44c170e0 / 589 — closed n=5. Gate: first `verify-eval` exit 1 = 「not linked from bricks/index.html」 (a different
+first-run rule than 19:2x's 「feed 미등록」) → index edit → exit 0; genfeed's 「dated now」 warning → committed the brick first,
+regenerated after. House `140d486` (brick) · `6d14e9b` (feed) · published `releases/6d14e9b` · live 200 · feed 48 · index link 1.
+Inbox: six surfaces 0 events; census 1 fired of 1 due. app 2026.9.6 · sessions 92 · bricks 48. Row (45) below. Receipts:
+`memory/2026-09-30.md` 01:2x.
+
 2026-09-29 22:2x (memento beat, on-grid — fifty-seventh scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **no brick (held).** He went to sleep at 22:02 with the #124 release cut running unattended. Public form so far is one comment:
 `junghan0611/entwurf` #124 comment 4, **12:36:25Z (21:36 KST)**, Sol as coordinator — 「#124 frozen candidate — offline gates
@@ -1310,6 +1333,16 @@ Next beat 01:26: #124 comment 5 (recertification result, expected 23:25–23:35)
 public form of 「릴리즈컷」) · local entwurf HEAD / status delta (read only) · brick candidate 「frozen, then unsealed in 24 minutes」
 once both receipts are public · W39 after 22:02 (0 is normal) · garden push after 09-28 09:28Z · `aff04a5d` n=5 · company board
 unread. Night beat: one line if he sleeps.
+Row 45 — 09-30 01:2x: 「no line from him after 22:02 (asleep; W39 unchanged, agenda API today 0) · 판정 없음 · not a `[!user]`
+block」: nothing on bricks 46, 47. The missing half of 22:2x's held brick went public at 23:36 (#124 comment 5, recertified
+824/824 on `ccfb8bbe…`, no cut, 0.25.1 intermediate cut offered for his decision) → **brick 48 Frozen twice** built from the
+two public comments plus the repository's releases/tags/commits/events. Tag still `v0.25.0`, 0 commits. The 21:46 citizen
+sent him one DM at 23:36 and waits. Domain board static. `aff04a5d` closed n=5.
+Next beat 04:26: his first line after waking — on brick 48 / 46 / 47, or on the DM he received at 23:36 · #124 comment 6 or
+his `0.25.1` decision (commit/tag/release after `v0.25.0` = the public form) · local entwurf HEAD / 15 status lines (read only)
+· the two transcripts whose mtime runs past their last record (a24c0d17 00:46, 90e5c009 01:03) — if mtime advances again with
+no new record, it is a periodic writer, not a turn · W39 after 22:02 (0 is normal until ~06:00) · garden push after 09-28
+09:28Z (remember the boundary commit counts as 1) · `aff04a5d` n=6 · company board unread. Night beat: one line if he sleeps.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
