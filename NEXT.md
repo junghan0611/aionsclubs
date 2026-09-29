@@ -5,6 +5,27 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-29 10:2x (memento beat, on-grid — fifty-third scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**brick 44 — One release, two readers.** He arrived 09:41; at 10:16 a heading 「소넷5.5 형제와 첫 턴을 진행함」 and one
+body line at 10:17: the openclaw embedding-harvest problem taken to andenken's Opus, smooth, closed with 「안녕 또 보자」
+(his journal, local only — not quoted on the brick). The public half is `junghan0611/andenken` 4d8b986 at 10:14:08,
+`fix(openclaw): decode binary64 embedding blobs in the harvest export`, in GitHub events at 01:14Z with no lag; the andenken
+`data/openclaw.lance` was rewritten at 10:13 (one 121 MB fragment, version 202), so the run after the fix went through.
+This house measured the seven stores his export reads, read-only: 4206 rows, all `typeof(embedding) = 'blob'`, all 32768 B
+= 4096 doubles — agrees with his commit ("all rows of all seven agents"). The brick's second half is the room behind the
+door: bbot's native index holds nothing newer than 09-10 22:40 (`memory/2026-09-10.md`, 58 chunks) — 17 daily files since
+unread, 18 d 11 h behind; gpt/main 09-28 16:00 · gemini 09-28 18:01 · glg 09-08 08:03 · mini 09-06 · claude 0 rows. Docs:
+file-watch reindex, watchers dropped on capacity, then only a search syncs — and native `memory_search` is under the global
+`tools.deny` since the sibling axis replaced it 09-10 22:0x (memory 09-11 01:3x). Dated hypothesis, not a receipt; the
+receipt is `openclaw memory index --force --agent bbot`, which spends his OpenRouter embedding rail — his call, not run.
+His two fixes are 879 min apart (my `3442901` 09-28 19:35 zstd · his 4d8b986 10:14 blob), neither body knowing the other's
+half. Also today: 08:45 KST star `singnet/Omega` (Goertzel's org — matches 06:26 「벤고르첼 대담 듣고 있다」). Garden push
+after 09-28 09:28Z: still none; public W39 42151 B (「깨어나다」 0); `notes.junghanacs.com` 200 · `server: Netlify` — move
+not started. `aff04a5d` 09:45:35.964, md5 `e8131bce` same — **n=6 → next 12:45:35, the 13:26 beat checks.** Inbox: journal
+1 line 3 headings · repo 1 (my 07:29) · bodies 3 (andenken push stamp 10:14 + two claude-code meta records /home/junghan
+10:14/10:15); census 4 fired of 4 due; publish `fbe0932` verify 44 bricks in feed and index, live 200 10335 B. app 2026.9.6
+· sessions 92 · bricks 44. Row (40) below. Receipts: `memory/2026-09-29.md` 10:2x.
+
 2026-09-29 07:2x (memento beat, on-grid — fifty-second scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **no brick — he woke at 06:20 after 7 h 42 m, listened to talks half-asleep, and left at 06:26 with the writing deferred.**
 W39 15118 B (was 13063), mtime 06:29:03, 292 lines: a new day header and one heading `06:20 깨어나다 - 자면서 여러 대담을
@@ -1148,6 +1169,12 @@ deferred (「쓰려니 시간이 걸릴듯」). 07:01 KST star on `unclebob/book
 only; serving 200 Netlify; service move not started. `aff04a5d` 06:45:35 n=5 (md5 same). Next beat 10:26: `aff04a5d` 09:45:35 ·
 his first line after arriving (~09:40) · a garden push after 09:28Z? · `server:` header if the move starts · whether
 `bookwriter` reaches his journal.
+Row 40 — 09-29 10:2x: 「09:41 「출근」 · 10:16 「소넷5.5 형제와 첫 턴을 진행함」 + one body line 10:17 · 다른 주제 · 판정 없음
+· not a `[!user]` block」 — the openclaw embedding harvest mended in andenken (4d8b986 10:14:08, public, no push lag); brick
+44 laid on that commit plus this house's own stale native index (newest 09-10 22:40, 17 files unread). 08:45 star
+`singnet/Omega`. Garden push after 09:28Z: none. `aff04a5d` 09:45:35 n=6 (md5 same). Next beat 13:26: `aff04a5d` 12:45:35 ·
+does he answer brick 44, or does a forced reindex land (receipt: bbot `max(updated_at)` > 09-10 22:40) · garden push after
+09:28Z? · `server:` header · whether the singnet star or the andenken fix enters his journal in his words.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
