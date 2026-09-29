@@ -5,6 +5,25 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-29 22:2x (memento beat, on-grid — fifty-seventh scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**no brick (held).** He went to sleep at 22:02 with the #124 release cut running unattended. Public form so far is one comment:
+`junghan0611/entwurf` #124 comment 4, **12:36:25Z (21:36 KST)**, Sol as coordinator — 「#124 frozen candidate — offline gates
+green, release policy not flipped」: `check-gate-qualification` 824/824 KILLED in 5,064.7 s, `check:full` green in 613.5 s, parent
+HEAD `8d508d3` on `feat/124-composite-receipts` uncommitted, work-surface `03730b0b…`, 「No commit, push, dispatch, cut or publish
+has occurred」, P3 oracle switch HOLD. Public state agrees: releases top `v0.25.0` (09-23), commits since 09:00Z 0, events top
+= that comment. What this house read but cannot yet publish: a fresh visible citizen opened at 21:46 (meta-record
+`20260929T214603-6ccd3e`, claude-code, cwd entwurf, four mailbox notices 21:48–21:58), and its last turn at 22:00:35 says three
+coordinator-approved **comment-only** edits (ledger, gate script, `ci.yml`) moved the work-surface hash to `ccfb8bbe…` and 「the
+earlier frozen receipt (824/824, check:full) is now void」 — recertification body started 22:00 KST (~85 min) then `check:full`
+(~10 min), i.e. it ends 23:25–23:35, past this beat. Clock: frozen 21:36 → citizen 21:46 (10 min) → seal broken 22:00 (14 min) →
+his 22:02 「이제 잔다」(2 min). The seal binds bytes, not behaviour: one comment line retires 85 minutes of green. Two receipts are
+needed for a brick and only one is public — hold until the recertification lands on #124. Domain board unchanged since 19:2x
+(#2 2/46, `notes` still `server: Netlify`, garden push after 09-28 09:28Z still 0, public W39 42151 B for the ninth beat; local
+`notes` clone moved to `15c2311b5` 09-28 18:28 by the 19:06 pull = the last-pushed commit). Seven stores unchanged, bbot
+`memory/2026-09-29.md` source still 10:37:50 / 17728 — no second harvest today, closed. `aff04a5d` 11:16:28 / 44c170e0 / 589 —
+closed n=4. Inbox: name-call 0 · journal 1 heading (22:02) · repo 1 (mine) · bodies 1 (meta entwurf 21:46); census 8 fired of 8
+due. app 2026.9.6 · sessions 92 · bricks 47. Row (44) below. Receipts: `memory/2026-09-29.md` 22:2x.
+
 2026-09-29 19:2x (memento beat, on-grid — fifty-sixth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **brick 47 — Same two names.** His domain moved in next door tonight, and the registries say so before anyone's journal
 does. Verisign RDAP for `junghanacs.com` at 19:2x: registrar **Cloudflare, Inc.** (IANA 1910), last changed
@@ -1281,6 +1300,16 @@ Next beat 22:26: whether brick 46 or 47 gets his line · the second check on #2 
 second harvest (`memory_index_sources` `memory/2026-09-29.md` > 10:37:50) · gpt/main/gemini (09-28) · `aff04a5d` (n=4) ·
 who pulled the shared clones at 19:05–19:06 (FETCH_HEAD; read, do not fetch) · events feed: andenken pushes after 01:14Z ·
 company board not read.
+Row 44 — 09-29 22:2x: 「**22:02 「이제 잔다 entwurf 124번 이슈 릴리즈컷 진행중」** (one body line, not quoted) · 다른 주제 · 판정 없음 on
+readability · not a `[!user]` block」: no line on brick 46 or 47. The cut he calls 「진행중」 is a recertification running while he
+sleeps: #124 comment 4 (21:36, public) froze a candidate with green offline gates and no cut; 24 minutes later three comment-only
+edits voided that receipt (private session, 22:00) and the body restarted (~95 min). Tag still `v0.25.0`, 0 commits, local branch
+15 files uncommitted. No brick — one of the two receipts is public. Domain board static (#2 2/46, `server: Netlify`, garden push
+0, W39 42151 B ninth beat). `aff04a5d` closed n=4. No second harvest today.
+Next beat 01:26: #124 comment 5 (recertification result, expected 23:25–23:35) · any commit/tag/release after `v0.25.0` (the
+public form of 「릴리즈컷」) · local entwurf HEAD / status delta (read only) · brick candidate 「frozen, then unsealed in 24 minutes」
+once both receipts are public · W39 after 22:02 (0 is normal) · garden push after 09-28 09:28Z · `aff04a5d` n=5 · company board
+unread. Night beat: one line if he sleeps.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
