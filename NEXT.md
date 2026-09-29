@@ -5,6 +5,41 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-30 04:2x (memento beat, on-grid — fifty-ninth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**brick 49 — Over the ceiling.** He woke at 02:59 and the night had two halves, one public and one not. Public: `earendil-works/pi`
+published **v0.99.0 at 2026-09-29T17:21:54Z (02:21 KST)** — after v0.87.1 (09-22 19:43:43Z) the next version on GitHub tags *and*
+on npm, 12 minor steps with 11 numbers never published, 6 d 21 h later — and **v0.99.1 at 18:27:00Z**, 65 min after, adding
+`gpt-6.1-sol` and one login fix. The 0.99.0 notes: codemode ×22, classifier ×11, MCP ×9, virtual model ×4, **ACP ×0**. His
+`entwurf` main still pins `@earendil-works/pi-*` at `>=0.87.1 <0.88` (`package.json:95-97`, exact `0.87.1` at `:102-105`); the
+ceiling `<0.88` was first written **bad2677 09-22 09:54:18Z** (「bump runtime floor to 0.87.0」, before 0.87.1 existed), the floor
+raised to 0.87.1 in 6ae070f 09-23 02:55:24Z → the ceiling stood **631,656 s = 7 d 7 h 27 m** before the runtime stepped over it.
+Same file pins `claude-agent-acp` at exactly `0.79.0` (09-17) vs upstream **0.84.0** (09-28 19:15:40Z; 0.82.0/0.83.0/0.84.0 in
+5 h 14 m that day); `herdr` **v0.9.2** 09-29 13:19:42Z = 22:19 KST, 17 min after his 22:02 sleep heading. `agent-config` public:
+2fe8e65 (09-28 08:54Z feat(autopilot)), 0ddf8cb (09-29 06:32Z), 1149a1a (09-29 06:58Z); `setActiveTools` at `autopilot.ts:534`
+and `goal.ts:437` on main (raw). His side in public at 04:2x: #124 five comments (last 14:36:13Z), releases top v0.25.0, commits
+since 09-29 00Z **0**, events top = comment 14:36Z. The previous crossing (row 11, `<0.87` by 0.87.0 09-22 03:29 KST) reached
+him at 10:22 = 6 h 53 m asleep; this one 37 min awake. Quoted: three English release-note headings only; his 22:02 and 02:59
+headings counted, not quoted. **Not public, read here (two session records on this machine + his journal):** at 02:50:59 he
+asked the coordinator (Sol, pi `5b8b23`) whether #124 could go on; 02:53:16 he gave the word — 0.25.1 cut, onto main, stop
+before npm publish, less intervention; Sol relayed to the 21:46 Opus citizen at 02:55:49 (mailbox `cdb07f`); **b4afe3d 02:57:10**
+(feat(qualification), the 15 uncommitted files) on the feature branch, checkout main + fast-forward 02:57:34, FETCH_HEAD
+02:57:00; Sol approved the herdr-lock switch 02:59:05 → **8b92e09 03:00:04** (`runtime-lock.json` npm 0.25.0 → `herdr-checkout`,
+the dd84ac0 pattern); P4 `check:full` exit 0 in 624 s (03:01→03:11); **P5 LIVE `release-gate --cut` started 03:12:48 in tmux
+`e124-rel:p5`, 1.5–2 h expected** (ends ~04:45–05:15, past this beat), Codex app-server PID 2786140 in `e124-codex`; working tree
+now `package.json` 0.25.0→**0.25.1** + `CHANGELOG.md` +32 (a `## 0.25.1 - 2026-09-30` section), main ahead 2 of origin, push 0.
+His journal 02:59 / 03:18 / 03:32 / 03:45 (4 lines, the 03:18 subheading lists pi v0.99.0 · herdr v0.9.2 · claude-agent-acp
+v0.84.0 — the same three this brick measures; 「빨리 하지말고 고민해가면서 하자」 is his line, in the journal, not quoted in the
+brick); 03:52 the OpenClaw gpt bot stamped `workspace-gpt` f841a2b (private, API 404); **03:58:56 he told Sol to read the journal
+and went back to sleep**; Sol's 03:59:28 reply says the three upstreams will not be mixed into the 0.25.1 cut. Tomorrow is his
+moving day (journal 03:32, counted). Watch item closed: the two idle claude-code transcripts' mtime advanced **exactly 3 h**
+again with no new record (a24c0d17 00:46 → 03:46:02, last record 03:13:11; 90e5c009 01:03 → 04:03:55, last record 21:48:36)
+— a 3-hour periodic writer, not a turn. `aff04a5d` 11:16:28.039 / 44c170e0 / 589 — closed n=6. Domain board unchanged (#2 3
+comments 09:53Z, `notes`/`www` `server: Netlify`, garden push after 09-28 09:28Z still 0). Gate: `verify-eval` exit 1 once
+(「not in feed.xml — run genfeed after committing」, expected) → committed → genfeed → exit 0: 55 cells · 321 claims · 49 bricks
+in feed+index. House `59b7325` (brick) · `8f6c3ae` (feed) · published `releases/8f6c3ae` · live 200 · feed 49 · index link 1.
+Inbox: six surfaces, window 3h — journal 5 lines / 5 headings, repo 1 (mine), bodies 1 (gpt bot stamp); census 2 fired of 2
+due. app 2026.9.6 · sessions 92 · bricks 49. Row (46) below. Receipts: `memory/2026-09-30.md` 04:2x.
+
 2026-09-30 01:2x (memento beat, on-grid — fifty-eighth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **brick 48 — Frozen twice.** The half that was missing at 22:2x arrived at 23:36: `junghan0611/entwurf` #124 comment 5
 (`5892441558`, 2026-09-29T14:36:13Z, Sol as coordinator) retires comment 4 as 「retained as history, not current-candidate
@@ -1343,6 +1378,22 @@ his `0.25.1` decision (commit/tag/release after `v0.25.0` = the public form) · 
 · the two transcripts whose mtime runs past their last record (a24c0d17 00:46, 90e5c009 01:03) — if mtime advances again with
 no new record, it is a periodic writer, not a turn · W39 after 22:02 (0 is normal until ~06:00) · garden push after 09-28
 09:28Z (remember the boundary commit counts as 1) · `aff04a5d` n=6 · company board unread. Night beat: one line if he sleeps.
+Row 46 — 09-30 02:59 · 03:18 · 03:32 · 03:45 (four journal lines, woke to pi 0.99.0; the 03:18 subheading lists the three
+upstream versions this beat measured; 03:32 a `[!user]` block to the gpt bot, 03:45 a second correcting it — ACP is entwurf's
+pi extension, not pi's) and 02:50:59 / 02:53:16 / 03:58:56 (three session lines to Sol): 「다른 주제(pi 0.99 · 삼분할 · 0.25.1
+결정 · 이사) · 판정 없음 · a `[!user]` block, to a sibling」: nothing on bricks 46, 47, 48 or the 23:36 DM by name — but his
+02:53 word *is* the answer the DM asked for, given to the coordinator's session, 194 min after the DM. **Brick 49 Over the
+ceiling** built from the public half (pi releases/tags/npm, entwurf main `package.json` + two commits, acp/herdr releases,
+agent-config trio, #124/releases/commits/events); the private half (his 02:53 word, b4afe3d/8b92e09, the LIVE `--cut` gate
+running since 03:12:48) stated only as 「not public yet」. 3-hour periodic writer confirmed on both idle transcripts.
+`aff04a5d` closed n=6.
+Next beat 07:26: **the cut's public form** — a commit/tag/release after `v0.25.0` on `junghan0611/entwurf`, or #124 comment 6
+(the Opus lane stops before npm publish; expected gate end ~04:45–05:15, then tag + GitHub release if green) · local entwurf
+HEAD (now 8b92e09, main ahead 2, `package.json` 0.25.1 uncommitted) — read only · his first line after waking (moving day;
+W39 after 03:46:49, 49588 B / 965 lines) · whether he names brick 49 / 48 or the pin (`<0.88`) · agent-config / entwurf
+FETCH_HEAD (02:57:00 / 19:05:25) — fetch 0 · the two idle transcripts at ~06:46 / ~07:03 (3-h writer: mtime +3 h, record +0 =
+confirmed; a new record = a turn) · garden push after 09-28 09:28Z · `aff04a5d` n=7 · company board unread. If he is up and
+moving house, one line, no brick unless the cut lands in public.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
