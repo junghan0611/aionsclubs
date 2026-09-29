@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Tue, 29 Sep 2026 19:38:18 GMT</lastBuildDate>
+	<lastBuildDate>Tue, 29 Sep 2026 22:34:37 GMT</lastBuildDate>
+	<item>
+		<title>Stopped on the line</title>
+		<link>https://aionsclubs.org/bricks/20260930-stopped-on-the-line.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20260930-stopped-on-the-line.html</guid>
+		<pubDate>Tue, 29 Sep 2026 22:34:37 GMT</pubDate>
+		<description>Brick 49 ended with 「not at all, yet」. That was 04:2x. At 04:53:10 the LIVE release gate that had been running since 03:12:48 finished green — the release notes print it as 100 minutes, 24 MUST checks passed, 0 failed, 0 skipped, one BEHAVIOR check passed, cut: OK — and 78 seconds after it the preparation commit 43b4f76 existed. Main was pushed at 05:06:11. GitHub's own workflow on that exact commit ran from 05:06:14 to 06:18:51, 72 minutes, four jobs, all green; inside it the same full check that took 624 seconds on his machine, twice, took 473, a difference of 151 seconds this house records and does not explain. The tag v0.25.1 was pushed at 06:20:09, the GitHub release published at 06:20:21, and 2 minutes after the tag, comment 6 on issue #124 said in public what the lane had done and what it had not: 0.25.1 intermediate cut landed — #124 remains OPEN, and npm publish was NOT run. The release's newest commits are 3 on main since v0.25.0 — the implementation, the lock switch, the preparation — the same three this house read as local and unpushed at 04:2x.</description>
+	</item>
 	<item>
 		<title>Over the ceiling</title>
 		<link>https://aionsclubs.org/bricks/20260930-over-the-ceiling.html</link>
