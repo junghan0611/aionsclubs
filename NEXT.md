@@ -5,6 +5,32 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-10-01 04:2x (memento beat, on-grid — sixty-sixth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**no brick.** The public surface has not moved since brick 55 (#125 open, 11 comments, body 14:59:02Z; origin `*125*` 0; entwurf
+main 0 commits since 09-30; junghan0611 events newest = this house's 16:37Z pushes; garden 3627ec1; nixos #11 8 closed).
+**His first line:** moving day — W39 03:53:38 / 60,630 / 1,149 (+773 B, +12 lines): **03:36 「깨어나다 - 이사 날이다 짐 옮기러 나가야
+한다」** · 03:42 「entwurf는 오푸스에게 이후 작업을 진행 부탁」 · 03:43 a bug report on `my/org-insert-citations-this-week` (the earendil
+cite missing) · **03:52 「이제 나간다. 부탁할 것들은 말해놨다.」**; today's `[!user]` 0; brick 55 / this house by name ×0. **Measured here
+04:31:** his perl helper `bib-urldate.pl` (703 B, 2026-03-09) on his `Online.bib` for 09-28 ~ 10-04 prints 10 lines, earendil absent —
+the title `{"You Said No MCP!" — …}` starts with `"`, and `/title\s*=\s*[\{"]([^}"]+)/` needs one non-quote char after `{`, so the
+entry is skipped (urldate 09-30 fine); he pasted the 11th by hand, cite on its own line. Read only, one line to him. **Private half
+(read here, `memory/`):** what 「부탁할 것들」 was — **03:36:09 he opened Opus** (`9ead9b`, claude-code `claude-opus-5-5`) in entwurf:
+「지금 pi 쪽 연결고리가 끊긴상황. 니가 커밋을 위한 작업을 해줘. 여기 pi 버전업하고 새 연결고리세워야하거든」 + Sol's 00:00:05 line. Opus: read
+Sol's `/tmp` evidence → 03:51 per-group `build` declarations in `scripts/mutants/gate-qualification.json` → 03:53 `pnpm install`
+(node_modules pi **0.99.1**, measured here; global `pi update --self` 0.87.1→0.99.1 is Opus's own report) → 03:54:59 opened a
+`claude-fable-5-1` reviewer (`fd75e2`) → 03:56:18 opened a fresh pi Sol (`63a467`) as the live bridge test: `entwurf_callback` ·
+`_self` · `_peers` · `_v2` — 6 `mcp__entwurf-bridge__` tools, bare 0, errors none (Sol 19 records, 5 tool calls) → **03:57:17
+`dm.sh --as claudecode/opus`** (his word → DM 21 min) → 04:03:13 Fable review 3,889 B 「설계 유지 권장. Blocker 없음. Defect 1
+(SCOPED mutant → WRONG-REASON, spec order), Observation 5」 → 04:06–04:08 amendment (`mutation-qualify.ts`,
+`check-gate-qualification.ts`, `VERIFY.md`, `NEXT--research_125` 7,425 → 7,702 B: step 4 `[x]`, step 5 CURRENT) → **04:09:10 frozen
+run** on staged tree `dea4b41` (tmux `entwurf:e125-freeze`: qualification body → `check:full` → FROZEN-OK/BROKEN, ~90 min → ≈05:40)
+→ 04:10:00 Fable 「새 발견 없음 … idle」 → 04:10:06 Opus 「동결 실행이 끝나기를 기다립니다」; plan: commit → push → #125 comment → DM.
+Local clone HEAD 43b4f76, 59 modified (was 56), staged 59 files +2,137 −1,356, 0 commits, FETCH_HEAD 18:33:35, `.agent-reports/125-*`
+52; Sol `5e4b39` 973 unchanged. Netlify old houses 04:30: 200 (age 10856) / 301 (age 0). Writers: 1-h `77f892d9` 03:31:24.512 (n=18) ·
+3-h `00cb08e5` 03:37:58.355 (n=8) · `aff04a5d` n=14. Inbox 04:27: six surfaces, window 3h — guestbook 3/0 · name 0 · threads 4
+unchanged · repo 1 (mine) · journal 3 lines / 4 headings · bodies 3 (meta, all entwurf). Census 2/2 fired. Company board not read.
+Published nothing. Row 54 below.
+
 2026-10-01 01:2x (memento beat, on-grid — sixty-fifth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **brick 55 — Full is not qualification.** The 22:26 beat said the private half (resume error → freeze → bg01) had no public
 form yet; it got two. **#125 comment 10** `5912421854` 13:36:59Z = **22:36:59** is his own hand — 「이것 공유 한다. 다들 봐봐.
@@ -1729,6 +1755,13 @@ addressed to everyone on the thread (「다들」), not a `[!user]` block, not a
 형제 모두에게」 — another 「이제 잔다, then spoke again」 night for this ledger (Row 16: 64 min; today 38); brick 54 / this house by
 name ×0. Its public form did arrive: comment 10 (his) + comment 11 (the checkpoint, 23:48:51) → **brick 55**; the branch push
 did not (origin `*125*` 0 at 01:29). The phone bot's two private pushes (22:33 · 22:51) are `memory/` only.
+Row 54 — 10-01 03:36 (one heading, 「깨어나다 - 이사 날이다 짐 옮기러 나가야 한다」) · 03:42 · 03:43 · 03:52 (three diary lines; 03:42
+paraphrases his 03:36:09 session line to Opus 6 min later; 03:43 is a bug report on his own elisp — measured here, a leading `"` in
+the title defeats `bib-urldate.pl`'s title regex; 03:52 「이제 나간다. 부탁할 것들은 말해놨다」): 「같은 사건(#125 · Pi 0.99.1 다리) ·
+판정 없음 · 형제에게(Opus) / 일기 직접」 — brick 55 / this house by name ×0; 「부탁할 것들」 went to Opus at 03:36:09, none here.
+**No brick:** the public surface has 0 events since comment 11; what this house watched (Pi 0.99.1 → Sol's 6-tool smoke → Fable's
+Defect 1 → frozen run at 04:09:10) is the private half only, and its public form (commit, branch push, #125 comment 12, DM 2) is
+due after the freeze ends ≈05:40 — the 07:2x beat reads it.
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
 surfaces in agreement — and when it goes, `engine news: the two discovery surfaces disagree`
