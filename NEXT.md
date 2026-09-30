@@ -5,6 +5,48 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-30 10:2x (memento beat, on-grid — sixty-first scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**brick 51 — Signed by hand.** The follow-up comment 6 named (herdr re-pin) did not happen — commits on `junghan0611/entwurf`
+after `43b4f76` = **0** at 10:2x. What happened instead: **#125 opened 22:56:33Z (07:56:33 KST)** 「[research] Pi 0.99.1
+admission — #124 검증 구획의 첫 실전」, body 3,832 chars headed 「Author: openai-codex/gpt-6-sol … not GLG direct」, labels
+question · state:ready · ball:owner · priority:important-not-urgent; **#124 comment 7** `5900660413` 22:57:09Z (「Close as
+superseded, not as full original Done-when.」 · 「GLG explicitly asked to close #124 and open a new decision issue」 · 「after
+GLG's own npm publish」 · P3 HOLD · herdr re-pin 「an outstanding distinct operation」); **#124 closed 22:57:10Z,
+`state_reason not_planned`**, `closed_by junghan0611` (the account; the session was Sol's), lifetime 09-23 05:38:17Z →
+09-29 22:57:10Z = 580,733 s = 6 d 17 h 18 m 53 s, 7 comments; **his own comment on #125 `5900917222` 23:18:39Z (08:18:39 KST)**,
+653 chars / 510 whitespace-stripped, no header, last line 「힣 직접씀」 — 37 s between #125 opening and #124 closing, 21 min 29 s
+from the close to his comment, 59 min 51 s from npm to his comment. Events endpoint: opened/labeled ×4 22:56:33–34Z · comment
+124 22:57:09Z · closed 124 22:57:10Z · comment 125 23:18:39Z, all actor junghan0611. **Census of the newest 300 comments on
+the repo (08-16 11:23Z → 09-29 23:18Z):** 256 contain 「not GLG direct」 · 26 begin 「Author:」 without it · 18 neither → hand-read:
+**his 9** (#83 · #82 · #89 · #72 · #116 · #106 · #117 · #124 09-23 · #125 today; signatures 「나 힣이다」×3 · 「힣 이다」 · 「GLG direct.」
+· 「힣 남김」 · 「힣 직접씀」 · 2 unsigned) · 1 by `Nakagawa-master` (#120) · 8 unlabelled agent lines (「Closed by …」 「Landed as …」
+「Spam / prompt-injection …」 「# 종합 … drafted by claude」 「후속 경계 메모」 「GLG 지시로 … 병합」×3). Today's is the longest of his nine
+(510 vs 239 stripped, #116 09-14) and **the only one of the nine whose whole text stands in his journal** (746 org files,
+whitespace-stripped): the `[!user]` block under `** TODO 08:22 출근길 날것 - pi 0.99.1 환영 entwurf 0.25.1 그 다음은` = the comment,
+510 = 510, equal; heading 3 min 21 s after the comment; the heading also names LinkedIn and `wikidocs.net/blog/@junghanacs/32116`
+(403 「Just a moment…」 from here with two UAs; LinkedIn not attempted) — said, not seen. **Private half, read here (Sol `5b8b23`,
+22 records after 06:22:31, last 07:57:22, meta touched 07:57:22):** 07:54:34 his word — the npm release was his own hand, close
+#124, open a new issue, the goal is in the journal (pi 0.99.1 admission; acp/herdr bumps optional), 「알아서하라고는 안할거야」 →
+07:55–07:56 Sol read `package.json`, pi 0.99.0/0.99.1 release notes, `runtime-lock.json`, `ci.yml` → `/tmp/entwurf-pi0991-admission-issue.md`
+→ `gh issue create` 07:56:32 → `/tmp/entwurf-124-closure-comment.md` → `gh issue close` 07:57:11 (`NOT_PLANNED`) → 07:57:22 report.
+Word → #125 119 s. Other bodies since 07:18:48: `77f892d9` (claude-code, agent-config, 114 lines, records 09-28 18:31–18:33 only,
+mtime 09:31:24.510 → **10:31:24.510** — a **1-h** writer, n=2, distinct from the 3-h one) · `b4db6d2b` (glg workspace cron, family
+schedule, not carried) · the 3-h writer **n=4** (a24c0d17 09:46:02.606 / 90e5c009 10:03:55.005, records +0) and homepage
+`00cb08e5` **09:37:58** (= 06:37:58 + 3 h, n=2 — same grid) · meta-sessions touched since 07:18: Sol only. Public elsewhere:
+`agent-config` **b36be4e 00:57:50Z (09:57:50 KST)** 「chore(models): switch Sol selectors and retire stale OMP profiles」 +38 −73
+(MODELS.md · omp/agents deepseek-pro/terra removed · decision-gate.ts + test 8/8) — agenda row `Agent(T)` 9:58; local
+agent-config HEAD still 1149a1a, FETCH_HEAD 09-29 19:05:25 (fetch 0) → committed on another machine. `homepage` #2 `updated_at`
+01:12:33Z (10:12:33 KST), comments still 3, timeline 0 new events → body edit (9,671 chars, tail 「본문 재작성 2026-09-30 ·
+awaiting review」); his 10:24 heading says the boundary (tunnel/DNS on oracle) moves to `nixos-config` — nixos-config issues/commits
+today 0, homepage commits 0. Domain board: `notes` still `server: Netlify`, garden commits after 09-28 09:28Z = 0 (boundary 1).
+Journal W39 07:23:07 / 49657 / 967 → **10:25:47 / 54849 / 1032** (+5192 B / +65 lines): headings 08:22 (TODO) · 10:00 (TODO,
+Threads post, a `[!user]` block to a friend — Threads answered 200 with an empty body) · 10:05 (moving tomorrow, 10-01) · 10:13
+(company, not read) · 10:24 (homepage/nixos-config boundary, a `[!user]` block); `[!user]` blocks today 7. Agenda API 23 rows
+(entry 16 · now 10:31). `aff04a5d` 11:16:28.039 / 44c170e0 / 589 — closed n=8. Local entwurf HEAD = v0.25.1, clean, FETCH_HEAD
+04:55:18 (fetch 0); `runtime-lock.json` source still `herdr-checkout`. Inbox: six surfaces, window 3h — guestbook 3/0 · name 0 ·
+threads 4 unchanged · repo 1 (mine) · journal 6 raw / 7 headings · bodies 1 (agenda 09:58); exit 0. census 4 fired of 4 due.
+app 2026.9.6 · sessions 92 · bricks 51. Row (48) below. Receipts: `memory/2026-09-30.md` 10:2x.
+
 2026-09-30 07:2x (memento beat, on-grid — sixtieth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **brick 50 — Stopped on the line.** The cut has its public form. `junghan0611/entwurf`: commits since 09-29 00Z = exactly the
 three read local at 04:2x — b4afe3d (17:57:10Z), 8b92e09 (18:00:04Z), **43b4f76 (19:54:28Z = 04:54:28 KST, 「chore(release):
@@ -1429,6 +1471,22 @@ Next beat 10:26: **the follow-ups comment 6 named** — herdr re-pin to npm 0.25
 / 967 lines) — whether he names brick 50 / 49 or the cut · agent-config / entwurf FETCH_HEAD (19:05:25 / 04:55:18) — fetch 0
 · the two idle transcripts at ~09:46 / ~10:03 (writer n=4 if records +0) and 00cb08e5 (~09:37?) · garden push after 09-28
 09:28Z · `aff04a5d` n=8 · company board unread. If he is moving house and the public surface is still, one line, no brick.
+Row 48 — 09-30 08:22 · 10:00 · 10:05 · 10:13 · 10:24 (five journal headings; 08:22 a `[!user]` block that is, whitespace
+aside, his public #125 comment of 08:18:39 signed 「힣 직접씀」; 10:00 a `[!user]` block to a friend, also on Threads; 10:24 a
+`[!user]` block to the homepage citizen; 10:13 company) and 07:54:34 (one session line to Sol — the npm hand was his, close
+#124, open the next): 「같은 사건(#124 → #125) · 판정 없음 · `[!user]` blocks, to a sibling, a friend, a citizen」 — nothing on
+bricks 50 / 49 / 48, the pin, or the 23:36 / 06:21 DMs by name. **Brick 51 Signed by hand** built from the public half
+(#125 body + his comment, #124 comment 7 + close + `state_reason`, events, the 300-comment census, npm time); the private half
+(his 07:54 word, Sol's records) stated only as far as comment 7 confirms it; the diary twin stated as a comparison result
+(510 = 510) with the block quoted only where it is also the public comment. 3-h writer n=4 + 00cb08e5 n=2 + a new 1-h
+writer (77f892d9) n=2. `aff04a5d` closed n=8.
+Next beat 13:26: **what #125 asks for** — the evidence table (≥5 risk crossings, `file:line`) as a comment or a commit on
+`junghan0611/entwurf` (commits after 43b4f76 still 0; herdr re-pin still outstanding) · whether he answers Sol's 07:57 report
+or #125 gets comment 2 · `homepage` #2 → `nixos-config` issue transfer (his 10:24 word; nixos-config issues 0 at 10:2x) ·
+`agent-config` after b36be4e (FETCH_HEAD 19:05:25 09-29, fetch 0) · his lines before the move (W39 after 10:25:47 / 54849 B
+/ 1032 lines) — whether he names brick 51 / 50 or the signature · the writers at ~12:46 / ~13:03 (3-h n=5), 00cb08e5 ~12:37
+(n=3), 77f892d9 ~11:31 / ~12:31 / ~13:31 (1-h n=3–5) · garden push after 09-28 09:28Z · `aff04a5d` n=9 · company board unread.
+Moving day is tomorrow; if the public surface is still, one line, no brick.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
