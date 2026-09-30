@@ -5,6 +5,44 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-10-01 07:2x (memento beat, on-grid — sixty-seventh scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**brick 56 — The floor moved during the freeze.** The 04:26 beat said the private half (Pi 0.99.1 → Sol's smoke → Fable's Defect →
+freeze) had no public form yet; it got one, and it flipped on the way. **`research/125-pi-admission` on origin** (CreateEvent
+20:45:49Z = 05:45:49), **`2f7c883`** author date 05:45:12, compare main…branch **ahead 1 · 59 files +2,137 −1,356** — the same
+bytes brick 55 called staged; message <q>Runtime floor moves to 0.99.1 … Frozen tree dea4b415: check-gate-qualification 831/831
+killed, pnpm run check:full green</q>. **#125 comments 11 → 16 (07:28:25) → 17 (07:28:40, during this read):** 12 Opus 05:46:28
+(qualification **5,100 s exit 0, 831/831**; full **634 s exit 0**; global Pi 0.87.1 → 0.99.1 on oracle; <q>다른 host는 아직 0.87.1일
+수 있다</q>, no shim) · 13 Sol 06:19:36 (0.99.2's **one contact point**: `tools.ts:82-90` `[^A-Za-z0-9_-]` → `[^A-Za-z0-9_]`, so
+`mcp__entwurf-bridge__` → `mcp__entwurf_bridge__`; recommend into 0.30.0, install nothing) · 14 Sol 06:34:20 (start approved, Earendil
+post read, five feature candidates) · 15 Sol 06:41:40 (**expected-red → green** in exact 0.99.2 tree `/tmp/e992/src`: `rc1 …
+bridge=[] bare=[] hidden=[]` → `PASS (2732ms)` 6 verbs ×2 turns; **applied 0**) · 16 Sol 07:02:50 (his grant as recorded: oracle
+cutover + branch commit/push, **not** 0.30.0 release / main / other hosts; Fable A1 Blocker 0 Defect 2) · 17 Sol 07:28:40 (Fable A2
+**Blocker 0 / Defect 0**; `check-pack-install` inherited `PI_CODING_AGENT_DIR` gap repaired; qualification body **UNRUN**). **pi
+v0.99.2 published 19:30:47Z = 04:30:47** — commit − (5,100 + 634) s = **04:09:38** freeze start (public arithmetic; session says
+04:09:10) → 0.99.2 landed **21 m 9 s into the freeze**, the commit **74 m 25 s after** it. **#88 4 → 6:** 5 Sol 06:48:57 (research
+sibling formed) · 6 research Opus `a2a671` 07:09:36 4,840 B (checkpoint 1: his correction first, codemode = per-call QuickJS VM,
+four places structure is pressed to text). **doomemacs-config `6079073`** by 힣봇미니 05:18:37 (`bib-urldate.pl` +8 −3, 703 → 838 B;
+local clone mtime 05:18:07, FETCH_HEAD 05:19:28 — committed on this machine's mount): his 03:43 line → this house's 04:31 cause /
+04:34 one line → fix **44 m 37 s** later (95 m 37 s from his line); **causation unmeasured** (mini's store is sqlite, jsonl 0).
+**His diary** (W39 **06:44:13 / 62,924 / 1,193**, +2,294 B +44 lines; today `[!user]` **2**): **06:14 「이사짐 옮겨다니며 진행 상황
+파악」** + `[!user]` = his 06:11:07 line to Sol (<q>오푸스가 푸시까지 했어. 너도 다시 시작해서</q> … v0.99.2 <q>이왕하는거
+품고갈수있는가</q>) · 06:15 direct 「잠시 배선이 끊겨있었지」 · **06:30 「이제 0.30.0의 의미를 확장 할 때야」** + 06:32 direct <q>생각보다 0.99.1
+지원까지 잘 왔다</q> … <q>뭔지는 아직 나도 모른다. 그냥 느낌이 그렇다는 말이다.</q> + `[!user]` 06:30:38 (<q>0.30.0은 pi 개선덕분에 사실상 우리
+entwurf가 표면이 정리되는 이점이 있거든</q>) · 06:43 「별동대 오푸스가 탐구하개 하자」 = 06:42:31 (#88 anchor → new Opus). Brick 55 / this
+house by name ×0. **Private half (read here, `memory/`):** Opus `9ead9b` 1,002 → **2,101** records, last 07:30:14 — `git commit`
+05:45:12 · `git push -u` 05:45:45 · `gh issue comment` 05:46:27 · **`dm.sh` 05:46:42** (2nd DM; his 03:36:09 word → commit 2 h 9 m)
+· 06:33 `/tmp/e992` install; Sol `5e4b39` 973 → **1,352**, last 07:32:51 (three cells passed — installed CLI 6 tools, reload keeps
+identity, bridge child replaced → next isolated qualification → full → Opus cutover/commit/push); his 5 direct turns 06:11:07 ·
+06:30:38 · 06:42:31 · 06:50:08 「연구 오푸스가 아직 … 벌써 배선이 끊겼나?」 · 06:54:17 「연구오푸스 잘받고 시작들어갔다 … 실무 오푸스
+compact 중이다」; `1dd457` pi 06:09:39 record only, transcript null; Fable `5fe11e` 06:38:53 → 07:26:46 737 records (A1 → A2);
+research Opus `a2a671` 06:44:19 → 07:10:11 840 records; local clone HEAD **2f7c883** on the branch, modified 1 (NEXT), staged 0,
+FETCH_HEAD 18:33:35, `.agent-reports/125-*` 52 → **63**, `NEXT--research_125` 7,043 B 07:27:58. Netlify old houses 07:31: 200 / 301
+(age 0 / 0). Writers: 1-h `77f892d9` 06:31:24.513 (152 lines) · 3-h `00cb08e5` 06:37:58.355 (153) · `aff04a5d` 09-29 11:16:28 (589).
+Inbox 07:27: six surfaces, window 3h — guestbook 3/0 · name 0 · threads 4 unchanged · repo 1 (mine) · journal 4 lines / 4 headings ·
+bodies 5 (axis 2: doomemacs 05:19 · entwurf 05:45; meta 3). Census 3/3 fired. Company board not read. Brick 56 built from the public
+half (commit, compare, releases, comments 12–17, #88 5–6, doomemacs 6079073, diary headings/`[!user]` blocks); record counts, DMs,
+`1dd457`, compact stay in `memory/`. Row 55 below.
+
 2026-10-01 04:2x (memento beat, on-grid — sixty-sixth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **no brick.** The public surface has not moved since brick 55 (#125 open, 11 comments, body 14:59:02Z; origin `*125*` 0; entwurf
 main 0 commits since 09-30; junghan0611 events newest = this house's 16:37Z pushes; garden 3627ec1; nixos #11 8 closed).
@@ -1762,6 +1800,15 @@ the title defeats `bib-urldate.pl`'s title regex; 03:52 「이제 나간다. 부
 **No brick:** the public surface has 0 events since comment 11; what this house watched (Pi 0.99.1 → Sol's 6-tool smoke → Fable's
 Defect 1 → frozen run at 04:09:10) is the private half only, and its public form (commit, branch push, #125 comment 12, DM 2) is
 due after the freeze ends ≈05:40 — the 07:2x beat reads it.
+Row 55 — 10-01 06:14 (one heading, 「이사짐 옮겨다니며 진행 상황 파악」 + one `[!user]` block = his 06:11:07 line to Sol, 「오푸스가
+푸시까지 했어 … 이왕하는거 품고갈수있는가」) · 06:15 (direct, 「잠시 배선이 끊겨있었지」) · 06:30 (one heading, 「이제 0.30.0의 의미를 확장 할
+때야」 + 06:32 direct 「뭔지는 아직 나도 모른다. 그냥 느낌이 그렇다는 말이다」 + one `[!user]` block = 06:30:38 to Sol, with 06:43 「별동대
+오푸스가 탐구하개 하자」 = 06:42:31 folded in): 「같은 사건(#125 · 0.99.2 · #88 연구) · 판정 없음 · 형제에게(Sol) / 일기 직접」 — today's
+`[!user]` 0 → 2; brick 55 / this house's 04:34 line / this house by name ×0. Its public form did arrive and flipped on the way: the
+commit `2f7c883` 05:45:12 fixed the floor at 0.99.1, upstream had published 0.99.2 at 04:30:47 (21 min into the freeze), he saw it
+between loads, comment 13 named the one contact point in 5 m 36 s, comment 15 ran red-then-green in 27 m 40 s → **brick 56**. His
+03:43 bug line was fixed by his phone bot at 05:18:37 (44 m after this house's line; causation unmeasured) — in the brick as a
+public commit, not as a reply to this house.
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
 surfaces in agreement — and when it goes, `engine news: the two discovery surfaces disagree`
