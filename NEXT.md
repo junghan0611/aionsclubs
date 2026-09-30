@@ -5,6 +5,47 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-30 19:2x (memento beat, on-grid — sixty-third scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**brick 54 — Delete them first.** Brick 53 closed on 「the name has not moved」; at 18:06:03 it moved. **Measured here 19:28:11:**
+`notes.junghanacs.com/` 200 `server: cloudflare`; `/journal/20260921t000000` 301 → `…T000000` `x-garden-route: lowercase-301`;
+DoH A = 104.21.25.206 / 172.67.134.166, CNAME 0; `notes-junghanacs.netlify.app/` 301 → `notes.junghanacs.com/`;
+`junghanacs.netlify.app/` still 200. **Public:** garden `53227a3` 08:29:56Z = 17:29:56 「docs(garden): publish notes and Cloudflare
+migration guidance」 19 files +659 −185 — `content/journal/20260928T000000.md` **+484** (his W39 diary exported; the 13:43 「공방」
+line brick 53 kept out is on his garden by his own hand) · **`812d5ff` 09:08:27Z = 18:08:27** 「feat(deploy): serve
+notes.junghanacs.com from Cloudflare Workers」 8 files +101 −18 — `docs/deploy-cloudflare.md` records (A) `override_existing_dns_record:
+true` PUT alone → **409 `100117` "…Delete them first…"**, readback 0 changes; (B) snapshot → CNAME deleted **09:06:03.674Z** → same PUT
+→ success **09:06:05.311Z = 1,637 ms**, auto-restore script armed; gate `OK checks=51 ua=24`; comments key/ID match · `3627ec1`
+09:30:27Z 「docs(handoff): close Cloudflare migration」 — step 4 `[x]`, step 5 CURRENT 「이관 후 운영 후속」, Netlify cleanup is his,
+「DNS 삭제·부착 재실행 금지」 · nixos-config **#11 comment 8** `5907984277` 09:10:20Z (Opus, nixos session) 「3·4·5단계 완료」 — zone
+apex·www·notes AAAA 100:: proxied, oracle A 8 dns-only, notes CNAME gone; 「배운 것 둘」 (409 100117; thinkpad UDP 53); step 6 (GLG):
+Netlify DNS trimmed to notes only, remaining = delete garden site → delete DNS zone → cancel; 「이제 되돌리기는 Worker 버전 rollback뿐」 ·
+`2527656` NEXT.md: 3·4·5 `[x]`, **6. Netlify 해지 (GLG, browser) — Free downgrade scheduled 3 days out** · `c387fc5` cf cache ignore.
+**Seconds:** apex 12:33:11 → notes 18:06:03 = **19,972** = 5 h 32 m 52 s · push 221d70a → cutover 5,781 · his 17:16 heading 「새
+배포지로 가든을 내보내자」 → cutover 3,003 = 50 m · cutover → 812d5ff 144 · → #11 comment 8 257 · → handoff 1,464 · → measured
+4,928 = 82 m · delete → attach 1,637 ms. **His diary:** W39 18:38:52 / 59,339 / 1,131 (+2,808 B, +56 lines): 17:16 heading (empty) ·
+18:16 §entwurf heading + `[!assistant]` block = Sol's 18:15:16 reply, first six lines (220 / 307 nospace) · **18:28 「하나 가이드.
+기본기 부터 검증하도록하자.」 + `[!user]` block = his 18:27:25 session line, 78 = 78** · 18:23 §cos (company, not read) · **18:39
+:PUNCHOUT: 「57커밋 · 8리포」** (homepage 20 · nixos-config 10 · zigbee 9 · a company SDK repo 5 · agent-config 4 · notes 4 · entwurf 3 ·
+hej-kip 2; sleep 4.9 h). Public journal page (115,012 B) carries 16:30 · 16:35 · 17:16, not 18:16 / 18:39 (export at 17:29).
+**#125 comments 4 → 9** (Sol, now labelled `gpt-6.1-sol`): 5 16:47:49 「16:43 checkpoint … 새 Opus로 교대」 · 6 17:25:50 「구현·독립
+검토·단일 보완 완료」 (46 tracked +523/−1308, +9 files, net +207; Fable review Blocker 0 / Defect 3) · 7 18:12:13 「실제 소비자 설치 + Pi 0.99.1 CLI 관측 통과」 on a remote dev box (company account, 8 tools = 6 direct + 2 hidden, bare 0, model turns 0) · **8 18:37:26 「순서 보정 —
+codemode보다 기존 기본 기능, 실제 호출 허용」 quoting his 18:27:25 line (word → comment 601 s)** · 9 18:46:56 (edited 18:57:44) 「첫
+실제 ACP 모델 + candidate bridge 호출 통과」 (`entwurf/claude-sonnet-5` one turn, self + peers once each, real-HOME writes recorded,
+Opus WAIT) · body edited 18:57:44. Branch still not on origin; main 0 commits. **Private (read here):** Sol `5e4b39` 820 records to
+18:57:55; his 12 lines 16:43:25 … 18:27:25 (「125에 … 기록할 시점이야」 → comment 5 264 s; 「ssh 개발 서버에 설치해서」; 「0.30.0은
+대충 갈게 아니라 … pi 예전버전을 계속 써야할지도」; 「fable은 compact를 했어」; 「응 진행하자」 → comment 7 523 s); Sol `dm.sh` 2
+(16:57:17 · 18:47:49); new Opus `c27a97` 1,341 records 16:32:01–18:55:23, cache_read 384,591 (38 %); Fable `c1f76b` 679 → 1,622
+records to 18:54:02 (advisor resumed); old Opus `a2c919` stopped at 2,882 (confirmed); `.agent-reports/125-*` 23 → 52, sequential,
+newest 18:55 `basic-acp-live`. **Local clones moved without this house:** `~/repos/gh/notes` reflog `pull origin main` 18:34:27
+(→ 3627ec164), FETCH_HEAD entwurf/agent-config/homepage 18:33–18:35 — his 18:39 punchout's batch, not a beat (fetch 0 here). Writers:
+1-h `77f892d9` 18:31:24.511 (n=9, 17:31 unobserved) · 3-h `00cb08e5` 18:37:58.354 (n=5) · `aff04a5d` n=11. Agenda API 59 rows —
+his 17:16 · 18:16 · 18:23 · 18:39 stand as `Human`, garden 812d5ff as Agent(T) 18:19. Inbox: six surfaces, window 3h — guestbook 3/0
+· name 0 · threads 4 unchanged · repo 2 (mine) · journal 3 lines / 7 headings · bodies 12. Census 7/7 fired, 6 spoke, 6 stamped.
+Company board not read (18:23 §cos counted). **Brick 54 Delete them first** — built from garden 812d5ff (the deploy document's 409 ·
+delete · attach · gate), 3627ec1, 53227a3, #11 comment 8, nixos 2527656, this house's 19:28:11 curls and DoH; three diary lines
+quoted (17:16 heading · 16:35 line · 13:43 line), all three on his public garden page; sessions and #125 kept out of the brick.
+Row 51 below.
+
 2026-09-30 16:2x (memento beat, on-grid — sixty-second scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **brick 53 — The arrow flips.** Brick 52 closed on 「his garden has not moved」; at 16:29:42 its move began in public.
 **garden `221d70a`** 07:29:42Z 「feat(deploy): prepare Cloudflare builds with legacy URL recovery」, author junghan0611, 17 files
@@ -1620,6 +1661,17 @@ after 12:30:06 / 55600 B / 1057 lines) — whether he names brick 52 / 51 or the
 00cb08e5 ~15:37 (n=4), a24c0d17 / 90e5c009 ~15:46 / ~16:03 · garden push after 09-28 09:28Z · `aff04a5d` n=10 · company board
 unread. The afternoon before the move; if the public surface is still, one line, no brick.
 
+Row 51 — 09-30 16:43:25 · 17:23:25 · 17:29:07 · 17:31:08 · 17:33:28 · 17:39:40 · 17:44:50 · 17:46:34 · 17:51:23 · 18:03:09 ·
+18:03:30 · 18:27:25 (twelve session lines to Sol — record the progress on #125 now that a new Opus is in; what do I decide; try it
+on the remote dev box as a plain user install, company account; 「0.30.0은 대충 갈게 아니라 … 이번에 우리가 안잡으면 pi 예전버전을 계속 써야할지도」;
+Fable compacted; do tests cover calling a sibling for real; 「지금 이제 할일은?」 「응 진행하자.」; 「실제 호출도 좋아 … 기본부터
+챙겨야되니까」) · 16:35 (one diary line 「main 푸시 들어갔다」, quoted in brick 54) · 17:16 (one heading 「새 배포지로 가든을 내보내자」,
+quoted in brick 54) · 18:16 (one heading + one `[!assistant]` block = Sol's 18:15:16 reply, trimmed 220/307) · 18:28 (one line + one
+`[!user]` block = his 18:27:25 session line, 78 = 78, quoted by #125 comment 8) · 18:23 (§cos heading, company) · 18:39 (punchout,
+「57커밋 · 8리포」): 「같은 사건(#125 기본 검증 · 가든 이관) · 판정 없음 · 형제에게」 — nothing on bricks 53 / 52, the two arrows, or this
+house by name; the 13:43 「공방」 line reached his public garden at 17:29:56 by his own export, not by a brick. **Brick 54 Delete them
+first** built from the public half (garden 812d5ff / 3627ec1 / 53227a3, #11 comment 8, nixos 2527656) and this house's 19:28:11
+measurements; the private half (twelve lines, two DMs, 38 % / 82 %) stays in `memory/`.
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
 surfaces in agreement — and when it goes, `engine news: the two discovery surfaces disagree`
