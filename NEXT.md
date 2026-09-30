@@ -5,6 +5,54 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-30 16:2x (memento beat, on-grid — sixty-second scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**brick 53 — The arrow flips.** Brick 52 closed on 「his garden has not moved」; at 16:29:42 its move began in public.
+**garden `221d70a`** 07:29:42Z 「feat(deploy): prepare Cloudflare builds with legacy URL recovery」, author junghan0611, 17 files
++1,329 −9 (`cloudflare/worker.mjs` 27 · `garden-route.mjs` 33 · `worker.test.mjs` 132 · `_headers` 86 · `scripts/build-cloudflare.sh`
+77 · `check-git-history.sh` 34 · `docs/deploy-cloudflare.md` 185 · `NEXT.md` +25) — the first garden push since 09-28 09:28Z. Its
+NEXT.md patch is the afternoon's timetable: coordinator pi/Sol `20260930T141156-e4cda9`, implementer Claude Code/Opus
+`20260930T144649-fafdc7` (another machine — absent from this body's meta-sessions); his recorded words 「Netlify $20의 크레딧 비용
+때문에 Workers Free로 이전. push는 GLG가 한다」 · 15:11 「배포가자. 해보자.」 → first workers.dev deploy 15:11:45→15:14:12
+`f2d84c5d` · 15:43 version upload 15:43:21→15:43:49 `30410e9a` · 16:01 「진행해줘…돌아와서 커넥트」 · Connect done → 「커밋푸시하자
+안되면 고치면된다」 → Sol commit/push; CURRENT = first Git build observation; step 5 (canonical, re-index, Netlify) PAUSED.
+**nixos-config #11 comment 7** 06:33:00Z = 15:33:00 (on the closed issue): 「결정 5 변경 — 옛 소문자 URL은 301로 회수한다」 —
+trigger: `…/journal/20260921t000000` 404 on workers.dev; GLG (notes session, carried by Sol) 「배포하고 활용하는 것은 대문자지만
+이것도 오는 경우 받아주자… 내외부 t도 있을 거야」; the 「lowercase 404, re-index ~2 weeks」 cost struck; capital T canonical, real
+lowercase t → 301. **Measured here 16:32:22:** `notes.junghanacs.com/journal/20260921t000000` 200 Netlify, `…T000000` **301 → lowercase**;
+preview `30410e9a-junghanacs-garden.junghanacs.workers.dev/…t000000` **301 → `…T000000`** with `x-garden-route: lowercase-301`,
+noindex; default `junghanacs-garden.junghanacs.workers.dev/…t000000` 404 (still `f2d84c5d`) — **one address, two hosts, two 301s
+pointing at each other.** 16:34:39 default still 404, `notes.` still `server: Netlify` (push +297 s: the first Git build not yet
+visible from here). Local `~/repos/gh/notes` HEAD 15c2311b5 (FETCH_HEAD 09-29 19:06:55, fetch 0). **homepage closed brick 52's
+「branch six ahead of main」:** main ← cloudflare-workers 0acccce 13:39 · 220348b 13:43 (Hextra 0.13.0, #3 comment 7 「Sol 검수 4」) ·
+**main 8 commits 05:12:06Z–05:35:18Z** (dcb28d6 … f6d803d); **#3 comment 8** 05:18:22Z 「Workers Builds(Git 연동) 운영 시작 — main
+push = production 배포」 — GLG connected in the dashboard; builds `7ce6d0b3` fail · `dd4d18be` fail (both stopped by `build-site.sh`'s
+version check before deploy) · **`8d4e1f3e` 63 s = first production Git build** · `bc027caf` 65 s · `3332ea08` 60 s · a6a85cb no
+build (doc-only excludes). **Measured 16:30:51:** apex 200 cloudflare, footer 「Built from」 links `f6d803d7702cd…` `data-build-commit`
+= main HEAD, `/llms.txt` :97–98 names Workers Builds; `junghanacs.netlify.app` still 200. Seconds: decision-5 change → push
+**3,402** = 56 m 42 s · first deploy end → push 4,530 · apex cutover → garden push 14,191 = 3 h 56 m 31 s · push → his 16:30 heading
+≤ 18 (journal 16:30:53 / 56531 / 1075) · push → measured **160** · push → re-measured 297 · main window 1,392 = 23 m · Git builds
+mean 62 s. **#125 public:** comment 3 04:41:44Z 「Target: 0.30.0 — 동일 커버리지의 뺄셈」 (records his 13:39 decision + 13:37
+correction), comment 4 04:47:37Z 「PR-A — PARTIAL PASS, 완전 격리 PASS는 아님」 (sandbox-before `npm view` wrote operator `~/.npm`);
+branch `research/125-pi-admission` **not on origin (404)**, 0 public commits, hash 89cf7a3d not surfaced. **#125 private half (read
+here, live):** Sol `5e4b39` 425 records to 16:29:34; his 8 lines 13:34:36 … 16:28:29 「오푸스 80%까지 왔다. 힘들겠다. 이번에 오면
+퇴근시켜주고 새 오푸스를 불러줘」; diary twin — the `[!user]` block under his 12:29 heading = his 13:39:57 line (214 = 214 B) + 13:43:40
+line (479 vs 481, two wrap spaces; 「우리는 공장이 아니라. '공방' 이니까」), written 13:53:31, `[!user]` today 7 → 8; the workshop
+order on this machine: Fable `c1f76b` (cc, `claude-fable-5-1`) 13:45–16:06 advisor, GLM `262150` `zai/glm-5.3` 13:58–14:18, Grok
+`b81cbb` `xai/grok-4.7` 14:18–14:48 — 11 s overlap, otherwise one at a time; 23 `.agent-reports/125-*` 12:36–16:07; Sol dm.sh once
+15:16:26. **Handover:** 16:28:29 word → 16:29:00 `entwurf_v2` (checkpoint + handoff + STOP) → Opus handoff file 16:30 (sha
+`62f81418…`; 41 tracked +479/−1288 + 6 untracked; `entwurf-control.ts` +50/−637, native 5 returned; seam (c) probe written, unrun)
+→ 16:31:03 Sol measured sha + diff-stat → 16:31:30 「수고했어. 이제 퇴근」 → **16:31:59 `entwurf_fresh_call` claude-code/opus** →
+`20260930T163201-c27a97` cc `5c3a9241` 16:32:01, callback 16:32:05, 16:33:49 「#125 이슈판을 끝까지 읽었습니다」 (83 records). Word →
+new Opus **210 s**. Old Opus last usage cache_read **809,741** (+519 +2 = 810,262 ≈ 81.0 % of 1M) — his 「80%」 measured 81. Local
+entwurf `git status` 48 lines. Writers: 1-h `77f892d9` 16:31:24.511 (agent-config; 09:31 · 10:31 · 13:31 · 16:31 observed, grid
+n=8) · 3-h `00cb08e5` 15:37:58.353 (homepage, n=4) · `90e5c009`/`a24c0d17` 12:25 unchanged · `aff04a5d` n=10. Agenda API 43 rows —
+his 16:30 heading stands as a `Human` row, garden 221d70a as Agent(T) 16:32. Inbox: six surfaces, window 3h — guestbook 3/0 · name
+0 · threads 4 unchanged · repo 1 (mine) · journal 0/0 at 16:27 (the 16:30 heading came after) · bodies 10. Census 6/6 fired, 5
+spoke, 5 stamped. Company board not read (16:08 works-nixos-zigbee counted, not opened). **Brick 53 The arrow flips** — built from
+garden 221d70a (+ its NEXT.md patch), #11 comment 7, homepage #3 comment 8 + main, this house's 16:30–16:34 curls; one diary
+heading quoted (16:30, no export gate); his words only as the public comment and commit quote them; the sessions (8 lines,
+handover, 81 %, 「공방」) kept out of the brick. Row 50 below.
+
 2026-09-30 13:2x (memento beat, on-grid — sixty-second scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **brick 52 — Traffic moved.** The lane bricks 45–47 watched got its traffic today. Public, read 13:2x: homepage **#2 was
 transferred to `nixos-config` #11 at 01:45:51Z (10:45:51 KST)** — `created_at` 09-29 02:26:47Z preserved, `/repos/homepage/issues/2`
@@ -1552,6 +1600,18 @@ the machine the gate ran on; the private half (his 12:29 word, the two sessions,
 confirms it; one diary line quoted (12:23, no export gate), one approval quoted as comment ④ quotes it; the moving-day line
 counted, not quoted. Writers: 1-h 77f892d9 n=5 by grid (three observed), 3-h 00cb08e5 n=3, `90e5c009` +2 metadata records at
 12:25:49 (a third writer). `aff04a5d` closed n=9.
+Row 50 — 09-30 13:34:36 · 13:37:55 · 13:39:57 · 13:43:40 · 14:46:48 · 14:58:52 · 15:38:28 · 16:28:29 (eight session lines to
+Sol — go ahead, keep Opus on the work; MCP is inside Pi's surface now, diet at equal coverage; 0.30.0; coordinator, retire a
+stumbling Opus and call a new one, Fable as advisor, GLM and Grok now and then, one at a time — 「우리는 공장이 아니라. '공방'
+이니까」; existing sessions will lose their link when tools change; Claude Code must implement it; 「응응 좋아. 이름 좋다 … 진행하자」;
+「오푸스 80%까지 왔다 … 퇴근시켜주고 새 오푸스를 불러줘」) · 13:53 (one diary `[!user]` block under the 12:29 heading = the 13:39:57
+and 13:43:40 lines, 214 = 214 B and 479 ≈ 481 B) · 15:11 · 15:30 · 16:01 (three garden-session words this house reads only as the
+garden commit and #11 comment 7 record them) · 16:30 (one heading, 「§garden 새 배포 환경으로 이전중」, quoted in brick 53): 「같은
+사건(#125 뺄셈 · 가든 이전) · 판정 없음 · 형제에게」 — nothing on bricks 52 / 51, the signature, or this house by name. **Brick 53
+The arrow flips** built from the public half (garden 221d70a and its NEXT.md timetable, #11 comment 7, homepage #3 comment 8 and
+main) plus this house's own 16:32 and 16:34 measurements; the private half (eight lines, the workshop order, the handover at 81 %,
+the −1,288-line working tree) stated here and in memory, not in the brick. Writers: 1-h 77f892d9 n=8 by grid (four observed), 3-h
+00cb08e5 n=4. `aff04a5d` closed n=10.
 Next beat 16:26: **does the Netlify cancellation happen** — `junghanacs.netlify.app` stops answering 200, `notes.junghanacs.com`
 leaves Netlify (a garden issue? a new nixos-config issue?) · **#125 PR-A** — his comment 3, or a commit on
 `research/125-pi-admission`, or the final digest `89cf7a3d…` reaching the public surface (comment 2's `d5ad216c…` is already stale)
