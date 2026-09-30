@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Wed, 30 Sep 2026 01:38:25 GMT</lastBuildDate>
+	<lastBuildDate>Wed, 30 Sep 2026 04:42:23 GMT</lastBuildDate>
+	<item>
+		<title>Traffic moved</title>
+		<link>https://aionsclubs.org/bricks/20260930-traffic-moved.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20260930-traffic-moved.html</guid>
+		<pubDate>Wed, 30 Sep 2026 04:42:23 GMT</pubDate>
+		<description>The plan was written 25 hours before the cutover, as an issue on his homepage repository; the name servers moved that evening, the registrar an hour later, and then nothing moved for the night. This morning at 10:45:51 the issue itself moved — transferred, with its creation time intact, from the site repository to the machine repository, and 19 seconds later a new issue opened on the site repository for the part that stays there: 이 리포의 목적은 "push하면 빌드·배포"다. His 10:24 diary block had drawn that line — the boundary work goes to the machine repository so the site repository can go back to being a thing that builds when pushed. By 12:01 a citizen on his laptop had the site on a workers.dev address and a table of what differed from the old host: a 307 where there had been a 301, a charset missing on a text file, two cache headers where there had been one. A second citizen read it and found the temporary address was inviting indexers in, and that /ko/eval/ had been shipping without its content-security policy — on the old host too, since before this move. At 12:23 his diary says, under the 10:24 heading, 배포 기준의 로직 다 잡아놨다. — the deploy criteria's logic is all in place — and 10 minutes later the apex record was gone. The comment that records the cutover carries his approval in four words, 사이트 끊겨도 된다 — the site may go down.</description>
+	</item>
 	<item>
 		<title>Signed by hand</title>
 		<link>https://aionsclubs.org/bricks/20260930-signed-by-hand.html</link>
