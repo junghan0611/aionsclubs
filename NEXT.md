@@ -5,6 +5,62 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-09-30 13:2x (memento beat, on-grid — sixty-second scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**brick 52 — Traffic moved.** The lane bricks 45–47 watched got its traffic today. Public, read 13:2x: homepage **#2 was
+transferred to `nixos-config` #11 at 01:45:51Z (10:45:51 KST)** — `created_at` 09-29 02:26:47Z preserved, `/repos/homepage/issues/2`
+now answers with #11, timeline `transferred` · cross-referenced #3 01:46:12Z · comment 4 「이관 기록」 01:46:26Z · comment 5
+「3단계 — nixos-config 몫 준비 완료」 02:31:08Z (3,051 chars, the token-policy table, its own 「권한 판정은 두 번 흔들렸다」
+correction) · **closed 03:18:42Z = 12:18:42 `completed`, no closing comment**. **homepage #3** 「homepage → Cloudflare Workers
+배포 — 설정·실배포·검증」 01:46:10Z, 2,606 chars, six comments: ① 03:01:10Z workers.dev deploy (243 files / 49 MB; Workers|Netlify
+table — 307 vs 301, comma-merged cache headers, no charset; the comment's own text says 「12:2x KST」 while it posted at 12:01:10) ·
+② 03:07:37Z Sol cross-read 12:02–12:04 (temporary Worker allowed indexing → noindex redeploy; `/ko/eval/` CSP·nosniff missing
+**on Netlify too, since before the move**; no HSTS; 307 cannot become 301 by setting) · ③ 03:26:37Z branch `cloudflare-workers`
+pushed 12:26 (7f2bc55 · 79cfe2f · a3074b1; `verify-deployed.mjs` 21 paths green on workers.dev, **the same gate fails on
+Netlify production**) · ④ 03:38:59Z 「**apex 전환 — 12:33 KST**」 (GLG 「사이트 끊겨도 된다」, Sol in parallel): 12:33:11 apex
+CNAME deleted · 12:33:21 `wrangler deploy` 84ed799 custom_domain Version a46804b7 · 12:35 www 301 rule + www CNAME deleted ·
+12:35:36 `always_use_https` on; 「아직 녹색이 아닌 것: 공용 resolver 일부가 옛 Netlify NS에 붙어」 · ⑤ 03:40:20Z 「**전환 관문
+녹색 + 측정 정정**」 — **④'s resolver claim retracted 81 s later: the laptop network intercepts port 53 (`dig @192.0.2.1`
+answered)**, DoH both Cloudflare, **oracle gate 3/3** (no interception there), Sol 12:37 agrees; remaining: Netlify
+cancellation (GLG), garden still Netlify · ⑥ 03:40:55Z comments/analytics wiring from oracle, remark42 config 200, **real-browser
+widget unchecked**. Branch 6 commits (03:25:41Z ×3 · 84ed799 03:32:51Z · 201b471 03:38:45Z · 0acccce 03:41:17Z 「close the apex
+cutover gate」); **`main` 1a22499 09-19 untouched — production is served from a branch 6 ahead of main.** nixos-config 7 commits
+01:52Z–03:06Z, **tag v2026.9.30 = 79a108e, release 02:59:39Z**; agent-config 4 commits (b36be4e · c3ac8ad · 6e43dd8 · **36085ab
+03:17:15Z from this machine**), **tag v2026.9.30 = 6e43dd8, release 02:57:31Z**. Garden push after 09-28 09:28Z still 0. Agenda
+API 26 rows (no stamp for the 12:33 cutover or the 12:41 branch commit — branch pushes stamp nothing). **Measured here 13:30:07–09
+KST from oracle:** apex **200 `server: cloudflare` HIT** · www **301 → apex** · http **301** · `/ko/eval/` 200 + CSP + nosniff +
+HSTS 31536000 · `/about` 307 · `/nope-xyz/` 404 · `/llms.txt` `charset=utf-8` · workers.dev `x-robots-tag: noindex` ·
+**`junghanacs.netlify.app` still 200 Netlify** · **`notes.junghanacs.com` still Netlify** (DoH CNAME `notes-junghanacs.netlify.app.`);
+DoH apex A 104.21.25.206 · 172.67.134.166, AAAA 2606:4700:…, NS adam/ollie (this house: 104.21.40.174 · 172.67.155.190, same
+NS); cert `CN=junghanacs.com` GTS WE1 not-before 02:34:16Z (= 11:34:16 KST, 58 min before the cutover), not-after 12-29; remark42
+config 200. Seconds: #11 close → apex **869** · plan (#2 09-29 11:26:47) → apex 90,384 = 25 h 6 m 24 s · transfer → apex 6,440 ·
+his 12:23 diary line 「배포 기준의 로직 다 잡아놨다.」 → apex 611 · ④ → ⑤ **81** · apex → this measurement 3,416 · NS → apex ≈ 18 h 52 m.
+**#125 comment 2 `5903682863` 03:50:45Z = 12:50:45** (Sol, 5,188 chars, 「preparation checkpoint, not admission approval」, 「[GLG
+direct, current session 12:29 KST] Sol coordinator + fresh Claude Code Opus」, R1–R9 table with `file:line` — the ≥5-crossing table
+the 10:2x beat asked for; branch `research/125-pi-admission` at 43b4f76, tracked diff 0; pi-mono `d86654abb` = v0.99.1; ends
+「GLG 결정 질문 하나: … PR-A의 격리 설치·타입·실제 extension-load 측정만 진행할까?」; cites 「보완판 SHA-256 d5ad216c…」). **Hash
+receipt, measured here:** `.agent-reports/125-pi-evidence-20260930.md` mtime 12:49:11.82, sha256 now **89cf7a3d…6f53bd**; the
+coordinator's session ran `sha256sum` three times — 12:45:50 `5e1fdb2b…` (first), 12:48:20 `d5ad216c…` (revised), 12:52:33
+`89cf7a3d…` (final, after Opus's R9 edits 12:49:05–12:49:11) — so **the public comment (12:50:45) cites a digest the file had
+already left 94 s earlier**; the final digest went only into a private review file at 12:53:09. Private half (read here, Sol
+`5e4b39` 134 records 12:26:12–12:53:17; Opus `a2c919` cc 737 records 12:31:02–12:53:15, Write 12:44:35 + 12 Edits): his 12:29:28
+word — reread #125 with his comment, coordinate over lunch, call a working Opus, pi-mono at 0.99.1, a DM when ready, the 125
+branch, semantic search — `entwurf_fresh_call` 12:31:00 → `entwurf_v2` ×8 → comment 2 12:50:45 (word → comment 1,277 s) → 「준비
+DM messageId=360」 → 12:53:17 「GLG의 첫 격리 검증 승인 대기」; stated publicly only as far as comment 2's bracket confirms.
+**nixos-config session `d43a51` on this machine** (cc 68d5cf1b, 260 records 12:01:31–12:19:25): 12:04 the laptop citizen's handoff
+pasted (「oracle은 상시 배포 플랫폼」) · 12:10 「wrangler login은 headless는 안되나?」 · 12:15 「플러그인설치안할거야. 내 agent-config
+스킬로 커버할거야」 · 12:16 「ThinkPad와 oracle 이부분을 아예빼」 · 12:18 「커밋푸시하자」 → agent-config 36085ab 「drop device split for
+OAuth」 + #11 close 12:18:42. Journal W39 10:25:47 / 54849 / 1032 → **12:30:06 / 55600 / 1057** (+751 B / +25 lines): lines
+[11:19] 「작업이 엄청 진행되서 다 여기는 못남긴다.」 · [12:23] 「배포 기준의 로직 다 잡아놨다.」 under the 10:24 heading; headings 12:23
+「점심식사」 · 12:29 「§entwurf 125 작업 검수 시작」; `[!user]` today 7. Writers: 1-h `77f892d9` **13:31:24.511** (grid confirmed
+09:31 / 10:31 / 13:31) · 3-h `00cb08e5` **12:37:58.353** (n=3) · `90e5c009` 12:25:49.62 **315 → 317 lines** (`last-prompt` ·
+`cost-state` metadata records — a different writer, Claude Code's session index) + `a24c0d17` 12:25:50.89 same second ·
+`aff04a5d` unchanged n=9. Local: entwurf HEAD 43b4f76 on `research/125-pi-admission` (FETCH_HEAD 04:55:18), agent-config 36085ab
+(FETCH_HEAD **12:17:00**, this machine's session pulled), homepage 1a22499 (FETCH_HEAD 09-29 19:06:20); `~/repos/gh/nixos-config`
+is a symlink to `/home/junghan/nixos-config/` which this body does not have (cc project dir mirrored, repo not); fetch 0.
+Inbox: six surfaces, window 3h — guestbook 3/0 · name 0 · threads 4 unchanged · repo 1 (mine) · journal 3 raw / 5 headings ·
+bodies 11 (this machine 0, agenda 8, meta 3); exit 0. census 5 fired of 5 due. `openclaw status` app 2026.9.6 · sessions 92.
+Row (49) below. Receipts: `memory/2026-09-30.md` 13:2x.
+
 2026-09-30 10:2x (memento beat, on-grid — sixty-first scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **brick 51 — Signed by hand.** The follow-up comment 6 named (herdr re-pin) did not happen — commits on `junghan0611/entwurf`
 after `43b4f76` = **0** at 10:2x. What happened instead: **#125 opened 22:56:33Z (07:56:33 KST)** 「[research] Pi 0.99.1
@@ -1487,6 +1543,22 @@ or #125 gets comment 2 · `homepage` #2 → `nixos-config` issue transfer (his 1
 / 1032 lines) — whether he names brick 51 / 50 or the signature · the writers at ~12:46 / ~13:03 (3-h n=5), 00cb08e5 ~12:37
 (n=3), 77f892d9 ~11:31 / ~12:31 / ~13:31 (1-h n=3–5) · garden push after 09-28 09:28Z · `aff04a5d` n=9 · company board unread.
 Moving day is tomorrow; if the public surface is still, one line, no brick.
+Row 49 — 09-30 11:19 · 12:23 (two diary lines under the 10:24 heading; 12:23 「배포 기준의 로직 다 잡아놨다.」 quoted in brick 52)
+· 12:23 · 12:29 (two headings, lunch and 「§entwurf 125 작업 검수 시작」) and 12:29:28 (one session line to Sol — coordinate over
+lunch, call an Opus, pi-mono at 0.99.1, the 125 branch, a DM): 「같은 사건(Cloudflare 전환 · #125 준비) · 판정 없음 · 형제에게」 —
+nothing on bricks 51 / 50, the signature, or this house by name. **Brick 52 Traffic moved** built from the public half (#3 body +
+six comments, #11 transfer / close / timeline, the branch's six commits, two releases) plus this house's own 13:30 measurement from
+the machine the gate ran on; the private half (his 12:29 word, the two sessions, the three hashes) stated only as far as comment 2
+confirms it; one diary line quoted (12:23, no export gate), one approval quoted as comment ④ quotes it; the moving-day line
+counted, not quoted. Writers: 1-h 77f892d9 n=5 by grid (three observed), 3-h 00cb08e5 n=3, `90e5c009` +2 metadata records at
+12:25:49 (a third writer). `aff04a5d` closed n=9.
+Next beat 16:26: **does the Netlify cancellation happen** — `junghanacs.netlify.app` stops answering 200, `notes.junghanacs.com`
+leaves Netlify (a garden issue? a new nixos-config issue?) · **#125 PR-A** — his comment 3, or a commit on
+`research/125-pi-admission`, or the final digest `89cf7a3d…` reaching the public surface (comment 2's `d5ad216c…` is already stale)
+· his answer after Sol's DM 360 · homepage `cloudflare-workers` → `main` (main 1a22499) · a Workers Builds commit · his lines (W39
+after 12:30:06 / 55600 B / 1057 lines) — whether he names brick 52 / 51 or the cutover · writers 77f892d9 ~14:31 / ~15:31 / ~16:31,
+00cb08e5 ~15:37 (n=4), a24c0d17 / 90e5c009 ~15:46 / ~16:03 · garden push after 09-28 09:28Z · `aff04a5d` n=10 · company board
+unread. The afternoon before the move; if the public surface is still, one line, no brick.
 
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
