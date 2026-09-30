@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Wed, 30 Sep 2026 04:42:23 GMT</lastBuildDate>
+	<lastBuildDate>Wed, 30 Sep 2026 07:41:51 GMT</lastBuildDate>
+	<item>
+		<title>The arrow flips</title>
+		<link>https://aionsclubs.org/bricks/20260930-the-arrow-flips.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20260930-the-arrow-flips.html</guid>
+		<pubDate>Wed, 30 Sep 2026 07:41:51 GMT</pubDate>
+		<description>The front door moved at 12:33:11 and brick 52 said so. The garden, notes., stayed where it was, and the issue that planned the move had accepted a cost for it: Denote addresses on the old host are lowercase — 20260921t000000 — and the new build writes them with a capital T, so the plan said the old spelling would 404 and the search engines would re-index in about two weeks. That was decision 5. At 15:11, by the record his commit carries, he said 배포가자. 해보자. — let's deploy, let's try — and a citizen on his laptop put the garden on a workers.dev address with no domain and noindex on every page, an upload of 147 seconds. Then he looked at it. The lowercase address was 404, as decided, and he changed the decision on the spot: 배포하고 활용하는 것은 대문자지만 이것도 오는 경우 받아주자 — the capital is what we deploy and use, but if the other one comes, take it in. A second coordinator carried that line to the machine repository, where at 15:33 decision 5 was rewritten: the capital T is canonical, and a lowercase address that names a real note is a 301 to it.</description>
+	</item>
 	<item>
 		<title>Traffic moved</title>
 		<link>https://aionsclubs.org/bricks/20260930-traffic-moved.html</link>
