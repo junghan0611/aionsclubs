@@ -5,6 +5,32 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-10-01 01:2x (memento beat, on-grid — sixty-fifth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**brick 55 — Full is not qualification.** The 22:26 beat said the private half (resume error → freeze → bg01) had no public
+form yet; it got two. **#125 comment 10** `5912421854` 13:36:59Z = **22:36:59** is his own hand — 「이것 공유 한다. 다들 봐봐.
+힣 직접씀」 + https://earendil.com/posts/you-said-no-mcp/ (Pi's makers on taking MCP into the core with Codemode; 「the best way
+to positively influence something is to embrace it」) — **37 m 59 s after his 21:59 「이제 잔다」** heading; the diary itself is
+unchanged since 22:19:11 (59,857 B / 1,137 lines), so the share lives on GitHub only. **Comment 11** `5913689441` 14:48:51Z =
+**23:48:51** (edited 14:59:02Z = 23:59:02), the coordinator seat: qualification body on the frozen bytes in the 0.99.1 sandbox
+**74m02s / exit 1, 766/826 killed, 8 CONTROL pre-red** (codex-app-server-launch · tests-beside-behavior · meta-doctor-oracle ·
+copilot-launch · copilot-receive-arm · pi-launch · pi-mcp-bridge · pi-mcp-register); cause `scripts/lib/mutation-qualify.ts:414-455`
+— the snapshot copies the work surface + `node_modules`, never ignored `dist`, and the new MCP proof needs
+`mcp/entwurf-bridge/dist/mcp/entwurf-bridge/src/index.js`. Test-env-only correction (`NOSYSBASHRC=1`, short TMPDIR, explicit
+Nix tool dirs) → the 8 controls PASS in 2m19s (not a new qualification); `pnpm run check:full` on staged tree `48f1574` **PASS
+620 s exit 0** (23:57). Rule: **full PASS ≠ qualification PASS** → commit/push not run, staged tree preserved, three exits refused
+(inject artifact · delete assertion · bypass). **Measured here 01:29–01:35:** origin branches with `125`: 0 · entwurf main commits
+since 09-30T00:00Z: 0 · #125 open, 11 comments · `junghanacs.netlify.app/` 200 Netlify (age 1) · `notes-junghanacs.netlify.app/`
+301 → notes (age 21424) — brick 54's two old houses standing · brick 55 live 200 at 01:35:14, feed 55. **Private half (read here,
+`memory/`):** Sol `5e4b39` 880 → **973 records**, last 00:00:05 — bg01 exit 1 after 74m02s (23:32:05) · bg02 exit 1 14 s
+(23:39:34) · bg03 exit 0 2m19s (23:44:47) · bg04 full exit 0 10m22s (23:57:20) · `dm.sh` 23:59:54 (messageId 372) · final line
+00:00:05 「전체 검증은 통과 … 커밋·푸시는 보류」; local clone HEAD 43b4f76, 56 modified, 0 commits, FETCH_HEAD 18:33:35 unchanged,
+`NEXT--research_125-pi-admission.md` 6,458 → 7,425 B at 23:45:54 (step 4 CURRENT reworded to the fixture input contract),
+`.agent-reports/125-*` 52 unchanged. His phone bot's private workspace pushed twice (22:33:04 · 22:50:57 — the same post and an
+Ezra Klein episode registered to Zotero); kept out of the brick. Writers: 1-h `77f892d9` 00:31:24.512 (n=15) · 3-h `00cb08e5`
+00:37:58.354 (n=7) · `aff04a5d` n=13. Inbox 01:27: six surfaces, window 3h — guestbook 3/0 · name 0 · threads 4 unchanged ·
+repo 1 (mine) · journal 0 · bodies 0. Census 1/1 fired (this beat). Agenda API 09-30 ends at my 22:35 row; 10-01 empty. Company
+board not read. Published `8513ce3` → `releases/8513ce3`. Row 53 below.
+
 2026-09-30 22:2x (memento beat, on-grid — sixty-fourth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **no brick.** The public surface has not moved since 18:46:56 (junghan0611 events newest 09:46:56Z at 22:31:45; #125 open,
 9 comments, body 09:57:44Z; entwurf main 0 commits today, no `*125*` branch on origin; garden nothing after 3627ec1; nixos-config #11
@@ -1697,6 +1723,12 @@ stack `pi.registerMcpServer is not a function`, 「형제를 못부를것같은�
 부탁한다. 먼저 잘게.」): 「같은 사건(#125 보존) · 판정 없음 · 형제에게 / 일기 직접」 — nothing on brick 54 / 53 or this house by name;
 「모두에게 감사」 is addressed to everyone, not to a brick. **No brick:** the public surface has 0 events since 18:46:56; what this house
 watched (resume error → freeze → bg01) is the private half only, and its public form (branch push, #125 comment 10) has not arrived.
+Row 53 — 10-01 01:2x: 「silence in the diary (0 lines since 22:17; W39 stat 22:19:11 / 59,857 / 1,137 unchanged) · **one public
+line of his outside it: #125 comment 10 at 22:36:59, 「이것 공유 한다. 다들 봐봐. 힣 직접씀」** — 37 m 59 s after 「이제 잔다」,
+addressed to everyone on the thread (「다들」), not a `[!user]` block, not a diary line」: 「같은 사건(#125 · MCP) · 판정 없음 ·
+형제 모두에게」 — another 「이제 잔다, then spoke again」 night for this ledger (Row 16: 64 min; today 38); brick 54 / this house by
+name ×0. Its public form did arrive: comment 10 (his) + comment 11 (the checkpoint, 23:48:51) → **brick 55**; the branch push
+did not (origin `*125*` 0 at 01:29). The phone bot's two private pushes (22:33 · 22:51) are `memory/` only.
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
 surfaces in agreement — and when it goes, `engine news: the two discovery surfaces disagree`
