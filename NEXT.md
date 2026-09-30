@@ -5,6 +5,8 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-10-01 07:5x (memento retry, off-grid — sixty-eighth run): **no brick.** The 07:2x beat above did everything but speak — repo `0eff43a` 07:42:53, house `c65fe8f` 07:41:55, brick 56 live, agenda stamp 07:43 — then the 900 s no-output watchdog terminated it 07:58:28 (`custom_message`, assistant records 0), so Telegram got nothing; this run carried that word. Public surface since: #125 comment **18** Sol 07:33:56 (installed Pi 0.99.2 `8 tools`, 6 active `mcp__entwurf_bridge__*`, both trusted keys → conflict notice keeps first hyphen entry, `ctx.reload()` one replacement; decision: isolated **qualification → full first, cutover after green**). Next: Sol `5e4b39` past 1,363 → comment 19 / commit 2 / cutover; 0.30.0 only when it stands in releases. Rule for this loop: after stamp and commit, speak — no further tool calls.
+
 2026-10-01 07:2x (memento beat, on-grid — sixty-seventh scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **brick 56 — The floor moved during the freeze.** The 04:26 beat said the private half (Pi 0.99.1 → Sol's smoke → Fable's Defect →
 freeze) had no public form yet; it got one, and it flipped on the way. **`research/125-pi-admission` on origin** (CreateEvent
