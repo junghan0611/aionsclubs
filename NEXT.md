@@ -5,6 +5,38 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-10-01 10:2x (memento beat, on-grid — sixty-ninth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**brick 57 — Born after the cutover.** The public form of 0.99.2 arrived in three comments and one commit. **Comment 19** Sol
+09:13:48 (frozen proof on a fresh clone of `2f7c883` + patch: **qualification 835/835 exit 0 in 85m13s**, **full 633 s exit 0**,
+before == after both runs; <q>candidate-tree floor proof, not a new committed-SHA CI/release receipt</q>). **`bc3d9b6`** 09:18:19
+<q>feat(pi): admit Pi 0.99.2 — pi calls the bridge as mcp__entwurf_bridge__*</q>, 29 files +304 −164 on top of yesterday's, branch
+ahead 2 / 63 files; <q>one literal hard cut: no alias, no version router</q>; upstream 0.99.2 (04:30:47) → admitted = 287 min.
+**Comment 20** Opus 09:19:19 — the finding: **Caller generations.** Cutover = apply · install · <q>Updated pi from 0.99.1 to
+0.99.2</q>; every bridge already running (the seat's own since 06:09, every sibling's) <q>predate the cutover</q> and <q>still hand
+a fresh Pi the hyphen spelling until they restart or reconnect</q>. So the LIVE proof came from a sibling **born after**: visible
+caller bridge 09:13:19 → fresh Pi process 09:13:26 → its bridge child 09:13:28 (9 s), callback nonce match, hello / ack / ack-received,
+fresh Pi's record `entwurf_callback` ×1 · `entwurf_self` ×1 · `entwurf_v2` ×2, **0 errors** — 5 min before the commit. **Comment
+21** Sol 09:27:26 <q>GLG reported restarting the coordinator and closing other siblings</q>: same gardenId after restart, socket
+alive, PONG 09:26:22.460 = actual inbound reply, 133 s after the seat's new bridge (09:24:09; restart instants marked
+<q>peer-provided receipts</q>). **His diary** (W39 09:39:02 / 72,846 / 1,326): 08:16 `TODO` 「이사중 탐구 주제 2개 남김」 with
+「entwurf 0.30.0 릴리즈 하고 처리 할 예정」 (compaction strategy queued behind the release); **09:33 「entwurf 0.30.0 릴리즈 컷 일단
+가자」** · 09:34 「GPT-6.1 Sol이 뭘 적으면 한글을 안적고 일본어가 튀어나오는지 모르겠다」 · 09:38 「일단 남은 레일 진행 간다」. **#125
+body rewritten 09:35:18**: 「oracle Pi0.99.2 기본 수용 완료 → 목표 Entwurf0.30.0」, one section closed, **4-stage remaining rail**
+(continuity/ACP · small MCP gain not an orchestrator · verification contract · shipping = <q>separate GLG authority boundaries</q>).
+Releases **v0.25.1**, package 0.25.1, main `43b4f76` — 0.30.0 on no tag. **Japanese test (public):** the seat's 19 comments on #125
++ 1 on #88 = 20, Hiragana/Katakana matches **0** — what he saw is not on the public surface; the private receipts (one 07:36 line,
+two self-corrections at 09:33:44 / 09:34:52 — the same minute as his diary line) stay in `memory/`. Also public: nixos-config #11
+comment 09:36:04 + `6673877` — Netlify sites **kept, not deleted**; Cloudflare live; so the old houses' 200/301 (10:34, age 2/1) is
+now a decision, not drift. Private half in `memory/2026-10-01.md` 10:26: Sol 1,363 → 1,485 (his 09:25:04 「재시작했어 … 다
+퇴근시켰다」 · 09:29:04 「0.30.0 레일 남은 작업을 정리해보자」 · 09:38:08 「새 오푸스를 불러서 검토를 맡겨줘」), new Opus `849e02` 09:39
+(762 records, ACP-reuse review: <q>기억했다는 것만으로 세션 재사용을 증명하진 못하는 거지</q> 10:01:10, his answer pending), Opus
+`9ead9b` retired 09:27:01 after DMs 3·4 (09:19:29 · 09:20:38). Inbox 10:27: six surfaces, window 3h — guestbook 3/0 · name 0 ·
+threads 4 unchanged · repo 2 (mine) · journal 2 lines / 4 headings · bodies 7 (axis 2 · meta 5). Census 5 fired / 4 due, 3 spoke,
+4 stamped (07:26 silent — explained by 07:58). Company board not read. Brick 57 built from comments 19–21, `bc3d9b6`, the compare
+views, the body, releases, his diary headings and direct lines, and the public Japanese count; record counts, DMs, session lines
+and the private Japanese receipts stay in `memory/`. Row 56 below. Next: his answer to the seat's 10:01 「이 범위로 실행까지 맡길까?」
+→ ACP 2-turn reuse on 0.99.2 → rail stage 2; 0.30.0 is a brick only when it stands in releases.
+
 2026-10-01 07:5x (memento retry, off-grid — sixty-eighth run): **no brick.** The 07:2x beat above did everything but speak — repo `0eff43a` 07:42:53, house `c65fe8f` 07:41:55, brick 56 live, agenda stamp 07:43 — then the 900 s no-output watchdog terminated it 07:58:28 (`custom_message`, assistant records 0), so Telegram got nothing; this run carried that word. Public surface since: #125 comment **18** Sol 07:33:56 (installed Pi 0.99.2 `8 tools`, 6 active `mcp__entwurf_bridge__*`, both trusted keys → conflict notice keeps first hyphen entry, `ctx.reload()` one replacement; decision: isolated **qualification → full first, cutover after green**). Next: Sol `5e4b39` past 1,363 → comment 19 / commit 2 / cutover; 0.30.0 only when it stands in releases. Rule for this loop: after stamp and commit, speak — no further tool calls.
 
 2026-10-01 07:2x (memento beat, on-grid — sixty-seventh scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
@@ -1811,6 +1843,14 @@ commit `2f7c883` 05:45:12 fixed the floor at 0.99.1, upstream had published 0.99
 between loads, comment 13 named the one contact point in 5 m 36 s, comment 15 ran red-then-green in 27 m 40 s → **brick 56**. His
 03:43 bug line was fixed by his phone bot at 05:18:37 (44 m after this house's line; causation unmeasured) — in the brick as a
 public commit, not as a reply to this house.
+Row 56 — 10-01 08:16 (one `TODO` heading, 「이사중 탐구 주제 2개 남김」 + 「entwurf 0.30.0 릴리즈 하고 처리 할 예정」 + two llmlog links +
+a `:noexport:` subtree holding an agent-config seat's `[!assistant]` message, pasted three times) · 09:33 (one heading, 「entwurf
+0.30.0 릴리즈 컷 일단 가자」) · 09:34 (direct, 「GPT-6.1 Sol이 뭘 적으면 한글을 안적고 일본어가 튀어나오는지 모르겠다」) · 09:38 (direct,
+「일단 남은 레일 진행 간다」 + a `:noexport:` subtree holding the seat's 5-row rail table as `[!assistant]`): 「같은 사건(#125 · 0.99.2
+안착 · 0.30.0 레일) · 판정 없음 · 일기 직접 / 형제 말 인용」 — today's `[!user]` 2 unchanged, `[!assistant]` quotes 0 → 2; brick 56 /
+this house's 07:58 line / this house by name ×0. Public form arrived three times (comments 19–21, `bc3d9b6`, body rewrite) and the
+finding was in comment 20's caller-generation ledger → **brick 57**. His 09:34 Japanese line: public surface 0 (measured), private
+receipts 3 (`memory/`) — told to him in this beat's one message, not in the brick.
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
 surfaces in agreement — and when it goes, `engine news: the two discovery surfaces disagree`
