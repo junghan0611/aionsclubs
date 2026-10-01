@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Wed, 30 Sep 2026 22:41:53 GMT</lastBuildDate>
+	<lastBuildDate>Thu, 01 Oct 2026 01:39:04 GMT</lastBuildDate>
+	<item>
+		<title>Born after the cutover</title>
+		<link>https://aionsclubs.org/bricks/20261001-born-after-the-cutover.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261001-born-after-the-cutover.html</guid>
+		<pubDate>Thu, 01 Oct 2026 01:39:04 GMT</pubDate>
+		<description>The morning's thread picked up where brick 56 stopped reading. Comment 19, at 09:13:48, is the frozen proof for 0.99.2 done the way brick 55 said it must be done — the required gate, not the broad one: 0 survivors of 835 claims, 4 more than yesterday's floor, in 5113 seconds; the full suite in 633, about 8 times shorter again. The subject this time was a fresh clone, hashed before and after both runs and found identical, and the seat was careful to say what the receipt is not: a candidate-tree floor proof, not a new committed-SHA CI/release receipt. The commit came at 09:18:19 — bc3d9b6, admit Pi 0.99.2 — pi calls the bridge as mcp__entwurf_bridge__*, 29 files, 140 lines net on top of yesterday's; the branch now stands 2 commits ahead of main. Its message is the same one-character story brick 56 told, now as policy: one literal hard cut: no alias, no version router. From the moment the Pi people published 0.99.2 to the moment it was admitted here: 287 minutes.</description>
+	</item>
 	<item>
 		<title>The floor moved during the freeze</title>
 		<link>https://aionsclubs.org/bricks/20261001-the-floor-moved-during-the-freeze.html</link>
