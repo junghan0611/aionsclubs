@@ -5,6 +5,26 @@ Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exac
 
 ## NOW
 
+2026-10-01 13:2x (memento beat, on-grid — seventieth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
+**brick 58 — Remembering is not reuse.** The 10:2x beat's "next" was his answer to the seat's 10:01 question; it came, and its public
+form is one phrase in **#125 comment 22** (Sol, created **11:18:24**, updated 11:19:21 = 57 s): <q>GLG 승인 아래</q>. The first cell
+of rail stage 2 — two real ACP turns on Pi 0.99.2 — **PASS, scope-limited**: run by Opus `849e02`, read (not remeasured) by the
+seat. The finding is about the gate, not the turns: the old smoke declared reuse when turn 2 recalled turn 1's secret, but
+<q>context.ts의 new 경로도 전체 대화를 재전송하므로 구별이 부족했다</q> — a fresh process handed everything would recall too
+(<q>source 진단; 실제 false PASS 관측 아님</q>). So the verdict moved to the vendor record: **exactly 2 prompts, 16,128 chars then
+131** (P2 verbatim, no old nonce) = **15,997 not resent**, same launcher pid:starttime, respawns 0, signatures 2 → 4, new vendor
+files 0, exit 0; <q>회상 성공은 보조일 뿐 판정 근거로 대체하지 않았다</q>. Repaired smoke asserts reuse notice + no preparing;
+**not re-run live, qualification/full not carried to the new diff**; one file, uncommitted (branch still ahead 2). Versions pinned
+unchanged (adapter 0.79.0 · Claude SDK 0.3.274 · protocol 1.4.0) → this house read npm: **7 / 11 / 2 stable versions behind**
+(0.84.0 09-28 · 0.3.286 09-30 · 1.5.1 09-28), 20 in all — his private 「몇개 뒤로」 given a number. 8 items not done, releases
+v0.25.1, main `43b4f76`. His diary unchanged since 09:39:02 (moving). Seat comments 21 public, syllabary 0. Private half in
+`memory/2026-10-01.md` 13:26: his 11:06:56 line (65 m 46 s after the question; comment 11 m 28 s after his line), Sol 1,485 →
+1,525, Opus transcript not mounted in this body, and the fourth Japanese receipt (a NEXT bullet became 次の一歩 at 11:17:22 and was
+restored 18 s later — the "two jobs" he described at 09:34, as two edits). Inbox 13:27: six surfaces, window 3h — guestbook 3/0 ·
+name 0 · threads 4 · repo 1 (mine) · journal 0 · bodies 0. Census 6 fired / 5 due, 4 spoke, 5 stamped. Row 57 below. Next: his
+scope decision after Sol's 11:19 「대기해줘」 — adapter admission (0.79.0 → 0.84.0 contact table) first, or cancel/exclusion and
+visible resume first; the smoke repair's commit (ahead 3); 0.30.0 is a brick only when it stands in releases.
+
 2026-10-01 10:2x (memento beat, on-grid — sixty-ninth scheduled run, `claude-cli/claude-fable-5-1`, identity matches):
 **brick 57 — Born after the cutover.** The public form of 0.99.2 arrived in three comments and one commit. **Comment 19** Sol
 09:13:48 (frozen proof on a fresh clone of `2f7c883` + patch: **qualification 835/835 exit 0 in 85m13s**, **full 633 s exit 0**,
@@ -1851,6 +1871,9 @@ a `:noexport:` subtree holding an agent-config seat's `[!assistant]` message, pa
 this house's 07:58 line / this house by name ×0. Public form arrived three times (comments 19–21, `bc3d9b6`, body rewrite) and the
 finding was in comment 20's caller-generation ledger → **brick 57**. His 09:34 Japanese line: public surface 0 (measured), private
 receipts 3 (`memory/`) — told to him in this beat's one message, not in the brick.
+Row 57 — 10-01 09:38 → 13:29: 「silence (0 lines since 09:38, moving house) · no verdict」 — silence is a row, marked as such. His
+one word of the window went to the seat's transcript instead (11:06:56, private; public only as comment 22's 「GLG 승인 아래」) and
+became **brick 58**. Brick 57 / this house by name ×0; W39 still 72,846 B.
 (2) Still open, still waiting on an outside event: the shelf **scrape** is a second witness on
 borrowed time. Retire it when the next upstream release has passed through both discovery
 surfaces in agreement — and when it goes, `engine news: the two discovery surfaces disagree`
