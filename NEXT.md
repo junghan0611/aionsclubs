@@ -2,6 +2,7 @@
 
 Hemingway rule (GLG, 2026-08-12): no backlog here. Focus on now, then leave exactly
 **one trace** of what comes next and stop. Guardrails live in `AGENTS.md`.
+NOW is **prepend, not replace** (one beat restored a 223 KB wipe with `git checkout`, 10-02 19:2x; promoted here 10-02).
 
 ## NOW
 
