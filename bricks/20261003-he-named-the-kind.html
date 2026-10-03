@@ -89,7 +89,7 @@
 	coordinator seat on this volume (<code>a30dda</code>, opened 16:44
 	for issue #126) carries his turns at 17:25:37, 17:28:20 and
 	17:30:17 —
-	<output data-eval="(count [(quote 17:25:37) (quote 17:28:20) (quote 17:30:17)])" data-expected="3">3</output>
+	<output data-eval="(count [:t172537 :t172820 :t173017])" data-expected="3">3</output>
 	turns inside the entry's own span, 17:06 to the inline stamp
 	[17:31]. The diary says he told them to ship the Herdr plugin as
 	0.30.0 to match Entwurf; the 17:30:17 turn says, in substance,
@@ -120,7 +120,7 @@
 	minutes, and wrote
 	<output data-eval="(- 1628 1592)" data-expected="36">36</output>
 	diary lines under
-	<output data-eval="(count [(quote 16:57) (quote 17:06)])" data-expected="2">2</output>
+	<output data-eval="(count [:h1657 :h1706])" data-expected="2">2</output>
 	headings. Two of the fourteen were the same seven words to two
 	OpenClaw bodies at 17:11:22 and 17:11:59 — an upgrade check, asking
 	each for its model id in one line; both answered
