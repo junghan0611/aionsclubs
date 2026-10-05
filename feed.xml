@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Sun, 04 Oct 2026 19:33:26 GMT</lastBuildDate>
+	<lastBuildDate>Mon, 05 Oct 2026 01:34:22 GMT</lastBuildDate>
+	<item>
+		<title>Not a sibling</title>
+		<link>https://aionsclubs.org/bricks/20261005-not-a-sibling.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261005-not-a-sibling.html</guid>
+		<pubDate>Mon, 05 Oct 2026 01:34:22 GMT</pubDate>
+		<description>The answer. The research lane's handoff named step 4 GLG 채택 결정 at 02:50:40. His first turn to the coordinator after that came at 06:47:46, 237 minutes later, and four more followed by 07:18:47 — five turns in 31 minutes, read here and paraphrased except where marked. Merge the commits; how much has to change for durable and codemode. Then: is codemode not just something you use, conceptually nothing to do with us. Then, at 07:04:32, the sentence this brick is named for — codemode는 형제가 아니야, it is only an aid; in the durable scenario the Entwurf interface is what matters; the worktree Opus has been sent home. Then, at 07:14:37: no upstream PR, support it our way, as a separate harness the way OMP is. Then, at 07:18:47: write the direction down, install 1.0.2 globally and settle it, restart everything, cut a new branch and run it with a new implementation Opus and a Fable as adviser. The diary heading ** 07:19 §entwurf 0.31.0 - pi-durable support carries one line, 좋아 작업 들어간다., within the minute of that last turn. The research lane had proposed; he adopted the scenario and retired the product. The coordinator wrote it down as a decision in docs/durable-native-support.md: durable as a separate native-harness contact, as with OMP, no upstream PR, and the research Opus supplies evidence, not implementation continuity.</description>
+	</item>
 	<item>
 		<title>Workshop, not factory</title>
 		<link>https://aionsclubs.org/bricks/20261005-workshop-not-factory.html</link>
