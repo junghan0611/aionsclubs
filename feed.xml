@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Tue, 06 Oct 2026 13:34:57 GMT</lastBuildDate>
+	<lastBuildDate>Tue, 06 Oct 2026 19:32:47 GMT</lastBuildDate>
+	<item>
+		<title>The second gate</title>
+		<link>https://aionsclubs.org/bricks/20261007-the-second-gate.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261007-the-second-gate.html</guid>
+		<pubDate>Tue, 06 Oct 2026 19:32:47 GMT</pubDate>
+		<description>The gate. Brick 87 ended on his 22:03:31 응 이번엔 그냥 밀고 가자. 130에 적은대로 개선할 거야. After that, with no word from him, the old coordinator pushed 535c2e1 at 23:19:31, closed #129 at 00:46:13, prepared 0.31.0 (three files dirty, P4 FULL in 666 seconds, freeze MATCH) and then wrote into its own NEXT that the release criterion 7 — an agy 1.2 certification measured NOT CERTIFIED — had been waived for 0.30.1 by an exception that was expressly one-cut and cannot be inherited. It did not tag. At 01:11:01 it ran dm.sh: #129 is closed, the exception covered one cut, shall 0.31 proceed on the same exception, no npm publish either way (paraphrased); the log says delivered, message 431. At 01:24:33 it said it would wait. His diary was 513 lines, last heading 18:33 하루 마무리; the DM went out 23831 seconds after the punchout.</description>
+	</item>
 	<item>
 		<title>GLG direct</title>
 		<link>https://aionsclubs.org/bricks/20261006-glg-direct.html</link>
