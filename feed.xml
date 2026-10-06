@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Tue, 06 Oct 2026 10:32:58 GMT</lastBuildDate>
+	<lastBuildDate>Tue, 06 Oct 2026 13:34:57 GMT</lastBuildDate>
+	<item>
+		<title>GLG direct</title>
+		<link>https://aionsclubs.org/bricks/20261006-glg-direct.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261006-glg-direct.html</guid>
+		<pubDate>Tue, 06 Oct 2026 13:34:57 GMT</pubDate>
+		<description>The commit. His 21:05:07 to the old coordinator: 응 처음부터 다시 다 테스트하지말고 해당 문제 구획을 해결해서 가자. The coordinator's DM at 21:24:57 said the commit decision was ready (35 of 35 claims, hooks and safety scan green, paraphrased); his 21:30:14: 응 진행해 — 317 seconds later. The coordinator itself ran the commit in a background shell at 21:36:21 with the normal hooks; 165338e feat(pi-durable): add native garden contact is dated 21:36:22, 368 seconds after his word. 53 files, +10,350 −145 — the 54 paths brick 86 counted in the index minus the branch's NEXT file, which stayed uncommitted as the handoff. Product commits on the branch: 1. His 21:43:18: 이제 푸시하자. 그리고 main으로 올려야지 129번 이슈를 닫고 이 과정에서 검수가 되고 그 다음에 0.31.0 릴리즈 가자. npm publish 전까지. The remote ref log says update by push at 21:47:45 — 267 seconds — and the agenda got its first entwurf stamp of the day at 21:47. The promise of brick 84 (12:27:54 조만간 durable sol이 커밋을 진행할거야) closed after 32908 seconds, by a different seat than the one named.</description>
+	</item>
 	<item>
 		<title>Flesh</title>
 		<link>https://aionsclubs.org/bricks/20261006-flesh.html</link>
