@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Wed, 07 Oct 2026 04:36:53 GMT</lastBuildDate>
+	<lastBuildDate>Wed, 07 Oct 2026 07:37:22 GMT</lastBuildDate>
+	<item>
+		<title>The rail</title>
+		<link>https://aionsclubs.org/bricks/20261007-the-rail.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261007-the-rail.html</guid>
+		<pubDate>Wed, 07 Oct 2026 07:37:22 GMT</pubDate>
+		<description>The answer. His 105th turn was 13:27:13. The coordinator's answer landed at 13:32:39 — 326 seconds, 2,116 characters: the goal is a simple, consistent install on Pi 1.0.4; the hard rules will be changed to serve that goal, not to hand the user assembly work; npm has Pi's library but not durable's runnable app, so a user had to fetch source, patch, build and copy data (paraphrased). His 106th, 13:44:20, 616 characters, 701 seconds after the answer: one more thing to settle — andenken is out of scope because semantic search is already a skill all the way to OpenClaw; the Entwurf interface goes into pi-durable, fine, but try one extension anyway, an env-loader, as a durable-only extension we carry; putting it in Entwurf would be messy, see whether agent-config can attach it; so 0.32.0 goes in the order you recommend; when the coordinates are set, rewrite the #130 body; the ACP discussion waits (paraphrased). Two coordinator replies, 13:45:29 and 13:51:23. Then the 107th.</description>
+	</item>
 	<item>
 		<title>The next verb</title>
 		<link>https://aionsclubs.org/bricks/20261007-the-next-verb.html</link>
