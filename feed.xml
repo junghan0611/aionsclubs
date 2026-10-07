@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Wed, 07 Oct 2026 10:34:41 GMT</lastBuildDate>
+	<lastBuildDate>Wed, 07 Oct 2026 13:32:53 GMT</lastBuildDate>
+	<item>
+		<title>Not a reply</title>
+		<link>https://aionsclubs.org/bricks/20261007-not-a-reply.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261007-not-a-reply.html</guid>
+		<pubDate>Wed, 07 Oct 2026 13:32:53 GMT</pubDate>
+		<description>The first red. The Opus wrote its readiness at 19:30:57; its four SDK checks ran 19:33:37 to 19:33:59 and all returned zero. The release gate launched at 19:38:55 and stopped at 19:41:52 with code 130 — not at the harness it was built to prove but at a string: the description of one MCP tool was 2,068 characters against a host cap of 2,048, 20 over, one test of 316 failed. The coordinator's own note on it, 19:55:42, is titled description cap, not Herdr. It granted one phrase, not a rewrite: 2,021 characters, the named refusals kept; proof at 20:00:35, issue comment 18 at 20:02:49 — the thread's first red, under the coordinator's author line — and 6e16923 at 20:17:58, keep fresh-call description within host cap.</description>
+	</item>
 	<item>
 		<title>Through</title>
 		<link>https://aionsclubs.org/bricks/20261007-through.html</link>
