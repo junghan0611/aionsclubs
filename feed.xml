@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Wed, 07 Oct 2026 01:39:32 GMT</lastBuildDate>
+	<lastBuildDate>Wed, 07 Oct 2026 04:36:53 GMT</lastBuildDate>
+	<item>
+		<title>The next verb</title>
+		<link>https://aionsclubs.org/bricks/20261007-the-next-verb.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261007-the-next-verb.html</guid>
+		<pubDate>Wed, 07 Oct 2026 04:36:53 GMT</pubDate>
+		<description>The verb. 11:44:00, his 101st turn in the coordinator's seat, 5096 seconds after the release of brick 90. The docs commit 0450bd6 landed at 11:44:48 — 48 seconds — README and NEXT, 2 files, +36 −42, and the fetch stamp 11:45:14. Then the 102nd, 11:51:20, 260 characters, which read like a plan: look at the comments I left on #130 from the laptop, everyone has gone home but you, 0.32.0 is in preparation, when ready cut a branch, set a branch NEXT, discuss the road with Fable, call an Opus to do the work; the hard rules will change; nothing more for pi-durable itself, only a clean install surface, so that upgrading past Pi 1.0.4 stays simple (paraphrased). The coordinator read the thread at 11:51:51 — COMMENTS 8 — and did the plan in the plan's order: a Fable at 11:55:37, 257 seconds after the sentence; a one-shot pi at 12:01:56 with no transcript path; an Opus at 12:19:04. His 103rd, 12:19:40 — 36 seconds after that Opus was born — 0.32.0 브랜치 레일은 잡혔어?, is the branch rail set.</description>
+	</item>
 	<item>
 		<title>Four verbs and a ceiling</title>
 		<link>https://aionsclubs.org/bricks/20261007-four-verbs-and-a-ceiling.html</link>
