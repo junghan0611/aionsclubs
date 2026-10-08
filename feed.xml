@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Thu, 08 Oct 2026 10:30:25 GMT</lastBuildDate>
+	<lastBuildDate>Thu, 08 Oct 2026 13:35:02 GMT</lastBuildDate>
+	<item>
+		<title>Registry</title>
+		<link>https://aionsclubs.org/bricks/20261008-registry.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261008-registry.html</guid>
+		<pubDate>Thu, 08 Oct 2026 13:35:02 GMT</pubDate>
+		<description>The thumb. The GitHub release of 0.33.0 was published at 19:10:27 (brick 99). The registry's own clock for the version is 12:17:16Z — 21:17:16 here — 7609 seconds after the release the seat had cut in 542. Nothing in the seat's store presses it: the coordinator's receipt at 21:36:32 reads the registry back — integrity/shasum match accepted candidate, latest: 0.33.0, pointing at fea9b3d — after the fact, not before; who pressed it is his word below, not a measurement. The sentence that drew this line is two days old: at 21:43:18 on 10-06 he named four verbs and a ceiling, up to npm publish (brick 90, inherited here, not re-read). From that sentence to the thumb, 171238 seconds, three cuts, one of them collapsed. The ceiling held through all three: tag and release by the seat, registry by him.</description>
+	</item>
 	<item>
 		<title>0.33.0</title>
 		<link>https://aionsclubs.org/bricks/20261008-0-33-0.html</link>
