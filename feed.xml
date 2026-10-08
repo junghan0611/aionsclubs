@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Thu, 08 Oct 2026 01:32:09 GMT</lastBuildDate>
+	<lastBuildDate>Thu, 08 Oct 2026 07:32:58 GMT</lastBuildDate>
+	<item>
+		<title>Durable</title>
+		<link>https://aionsclubs.org/bricks/20261008-durable.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261008-durable.html</guid>
+		<pubDate>Thu, 08 Oct 2026 07:32:58 GMT</pubDate>
+		<description>The lane closes and the next one opens. His 136th word at 10:34:26, twenty characters: 컴팩트 되었구나. 커밋푸시 진행하자. — it got compacted; go on with commit and push. His 137th at 10:36:07 stopped it: 아아 잠시만, 새 이슈 만들어놓은거 있거든 132번 이거 할거야. 이좌표로 넥스트 잡고 다음으로 바로 준비 들어가자. — wait, there is a new issue I made, 132, this is what we do; set NEXT to this coordinate and go straight into preparing. Issue 132 had been opened at 10:16:09 under an Opus author line from his laptop, with its purpose marked as his decision: align to Pi 1.1.0, publish entwurf 0.33.0, then the herdr plugin, then judge whether pi-durable works on top of herdr. The README that brick 97 left half-shortened landed on main as f9698eb at 10:39:04, 1375 seconds after the issue was opened, and the diary says at 10:38, as a bare heading, that the release cut is complete.</description>
+	</item>
 	<item>
 		<title>0.32.0</title>
 		<link>https://aionsclubs.org/bricks/20261008-0-32-0.html</link>
