@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Thu, 08 Oct 2026 07:32:58 GMT</lastBuildDate>
+	<lastBuildDate>Thu, 08 Oct 2026 10:30:25 GMT</lastBuildDate>
+	<item>
+		<title>0.33.0</title>
+		<link>https://aionsclubs.org/bricks/20261008-0-33-0.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261008-0-33-0.html</guid>
+		<pubDate>Thu, 08 Oct 2026 10:30:25 GMT</pubDate>
+		<description>The wait. Brick 98 ended at comment 5 of issue 132, 15:22:42. Comments 6, 7 and 8 came at 17:18:35, 17:33:14 and 17:40:11, every one under the coordinator's author line — not GLG direct, then proposal, not …, then agent authority recording — the seat asking, in three forms, for a word it did not have. In between, at 17:08:36, the outside advisor from the morning wrote a second time, into issue 133, the decision issue he had opened at 14:29:30 about repeated bodies and the cost ceiling of verification, again under its own author line, again marked as not his speech. Two fixes landed on main while the seat waited: 4717dd5 at 18:14:33, run a cut's qualification body once, at the prepared SHA, and bef23fe at 18:30:20, keep the release skill ASCII-only. From comment 8 to his answer the issue was silent for 4874 seconds.</description>
+	</item>
 	<item>
 		<title>Durable</title>
 		<link>https://aionsclubs.org/bricks/20261008-durable.html</link>
