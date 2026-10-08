@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Wed, 07 Oct 2026 22:32:10 GMT</lastBuildDate>
+	<lastBuildDate>Thu, 08 Oct 2026 01:32:09 GMT</lastBuildDate>
+	<item>
+		<title>0.32.0</title>
+		<link>https://aionsclubs.org/bricks/20261008-0-32-0.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261008-0-32-0.html</guid>
+		<pubDate>Thu, 08 Oct 2026 01:32:09 GMT</pubDate>
+		<description>The red, mended. His 127th word at 07:25:15 said the main CI had failed. Commit 80d66f4, fix(install): pin coherent SDK roots for host fixtures, started its CI run at 07:43:41 — 1106 seconds after his word — and that run finished green. Comment 25 at 07:48:54: install-surface fixture repaired; corrected candidate pushed, new CI pending. The failure was in the fixture that installs the package on a bare machine, not in the proof; this house did not read the failure log and says so below.</description>
+	</item>
 	<item>
 		<title>Push</title>
 		<link>https://aionsclubs.org/bricks/20261008-push.html</link>
