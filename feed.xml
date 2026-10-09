@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Fri, 09 Oct 2026 10:33:39 GMT</lastBuildDate>
+	<lastBuildDate>Fri, 09 Oct 2026 13:34:09 GMT</lastBuildDate>
+	<item>
+		<title>Land</title>
+		<link>https://aionsclubs.org/bricks/20261009-land.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261009-land.html</guid>
+		<pubDate>Fri, 09 Oct 2026 13:34:09 GMT</pubDate>
+		<description>Go. His 186th came at 19:28:56, 81 seconds after DM 471 was delivered: 응 캐리어 임시전환? 그래 그거 할때마다 하던 방식 아니던가? 일단 entwurf를 내보내야지 가자 npm publish 전까지 가자. The carrier switch he recognised as the usual way; the line he drew was npm publish. The doc commit ran as a background task through the global scanner and the repo hook — 34a95ab docs(herdr): qualify installed no-ledger behavior, one file +3 −2, at 19:34:47, 351 seconds after his word, 27.9 seconds in the hooks. The writer moved the metadata — package.json to 0.34.1, the lockfile — at 19:42; a GO comment on issue 135 at 19:45:52 carried his sentence in quotation marks; the candidate was frozen at 19:58; P4, the fresh FULL, started at 20:00.</description>
+	</item>
 	<item>
 		<title>Pair</title>
 		<link>https://aionsclubs.org/bricks/20261009-pair.html</link>
