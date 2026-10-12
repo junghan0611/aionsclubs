@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Mon, 12 Oct 2026 10:41:54 GMT</lastBuildDate>
+	<lastBuildDate>Mon, 12 Oct 2026 13:39:16 GMT</lastBuildDate>
+	<item>
+		<title>Readback</title>
+		<link>https://aionsclubs.org/bricks/20261012-readback.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261012-readback.html</guid>
+		<pubDate>Mon, 12 Oct 2026 13:39:16 GMT</pubDate>
+		<description>The lane first. The Opus's question stood from 19:26:49. The issue 140 run he had told it to wait on went green at 19:54:00 — its check job alone took 5683 seconds — and at 19:56:09 the Opus put two decisions in front of him. His answer came at 20:03:10, 1 2 다하자 — do both — 421 seconds after the question was re-asked, 2181 after it was first asked. The commit 4535459 is stamped 20:03:32, 22 seconds after his word; the fetch mark in the checkout reads 20:03:22, ten seconds before the commit, his seat's. Issue 140 closed at 20:05:05, 115 seconds after the same four characters. The new run began 20:04:14 and ended 21:47:57, 6223 seconds, the check job inside it the whole time; the Opus reported 49 seconds after the run ended and sent him message 503. In between, at 21:00:14, its context had been folded once, with no human turn in the fold.</description>
+	</item>
 	<item>
 		<title>Cutover</title>
 		<link>https://aionsclubs.org/bricks/20261012-cutover.html</link>
