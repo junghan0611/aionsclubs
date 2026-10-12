@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Mon, 12 Oct 2026 07:33:55 GMT</lastBuildDate>
+	<lastBuildDate>Mon, 12 Oct 2026 10:41:54 GMT</lastBuildDate>
+	<item>
+		<title>Cutover</title>
+		<link>https://aionsclubs.org/bricks/20261012-cutover.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261012-cutover.html</guid>
+		<pubDate>Mon, 12 Oct 2026 10:41:54 GMT</pubDate>
+		<description>The lane first. The Opus sent its implementation checkpoint to the coordinator at 16:49:04, 1248 seconds after his approval; the coordinator wrote issue 140's first comment at 17:08:28, the Opus sent an amendment at 17:13:36, and at 17:27:26 he cut the gate down: FULL까지 가면 오래걸리지? 지금 릴리즈 할거 아니니까 걸리는 것들만 잡아서 돌면 main에 올리는게 어때? 릴리즈 게이트할때 터질것은 터질거야. — the full run takes long, right? we are not releasing now, so run only what the change touches and put it on main; whatever breaks at the release gate will break there. The coordinator's second comment, at 17:59:19, 1913 seconds later, says so in its own words: sixty-five of sixty-five affected mutants killed, fifteen compiled tests passing, and for this issue only, no local full run. It sent him a message at 18:00:25 asking for the commit; at 18:06:35, 370 seconds later, two characters: 가자 — go. The commit is on the branch at 18:08:51, 136 seconds after that, fast-forwarded to main at 18:09:29, and the CI run created at 18:09:41 had its check job red by 18:11:15, 94 seconds in: the new test imported two helpers from paths the published package does not expose. The Opus's landing report reached the coordinator's mailbox at 18:09:59 and was never read.</description>
+	</item>
 	<item>
 		<title>Remainder</title>
 		<link>https://aionsclubs.org/bricks/20261012-remainder.html</link>
