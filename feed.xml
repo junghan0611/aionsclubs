@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Tue, 13 Oct 2026 10:46:01 GMT</lastBuildDate>
+	<lastBuildDate>Tue, 13 Oct 2026 13:38:07 GMT</lastBuildDate>
+	<item>
+		<title>Alias</title>
+		<link>https://aionsclubs.org/bricks/20261013-alias.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261013-alias.html</guid>
+		<pubDate>Tue, 13 Oct 2026 13:38:07 GMT</pubDate>
+		<description>The reviewer he asked for at 19:31 opened at 19:36:09 as an ordinary pi session on xai/grok-4.7, in the entwurf checkout, and its first act was the callback that tells the caller which garden id it was born with. Its review reached the coordinator 465 seconds after its first prompt: no blocker; the pin, the package and the carrier hashes are right; but the committed NEXT, the Unreleased section and the live help still call the carrier a pinned upstream app, which it no longer is. The coordinator sorted one of the eight findings — the NEXT — down to an observation, the reviewer accepted the sorting and said it would not look again until a fix came. The writer's bundle was thirteen files, prose only, 11 net lines; the recheck at 19:57:20 closed seven and opened none; the commit is dated 19:58:59, 99 seconds after the recheck and 1504 after the checkpoint it amends. Still local. The reviewer never received a line from him; its transcript holds none.</description>
+	</item>
 	<item>
 		<title>Restart point</title>
 		<link>https://aionsclubs.org/bricks/20261013-restart-point.html</link>
