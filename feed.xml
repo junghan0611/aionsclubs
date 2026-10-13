@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Tue, 13 Oct 2026 07:38:40 GMT</lastBuildDate>
+	<lastBuildDate>Tue, 13 Oct 2026 10:46:01 GMT</lastBuildDate>
+	<item>
+		<title>Restart point</title>
+		<link>https://aionsclubs.org/bricks/20261013-restart-point.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261013-restart-point.html</guid>
+		<pubDate>Tue, 13 Oct 2026 10:46:01 GMT</pubDate>
+		<description>The call came by telegram. At 17:30:24 the coordinator sent him a message asking permission for one narrow change outside its own repository: the background tool in his agent-config returns its text under a key the new SDK no longer reads, so the fix had to land before anyone restarted, and 아직 재시작 요청은 아닙니다 — this is not yet the restart request. His first line of the window came 1093 seconds later, to the coordinator: 응 지금 레일 남은것은? 오푸스랑 fable대기중인 — what is left on the rail, with the Opus and the Fable waiting. Then he opened a fourth seat, a Claude Code session in agent-config itself, model claude-opus-5-5, and gave it the same four words the reviewer seat had received at 16:00: 잠시만 대기해봐 메시지,올거야 — wait, a message is coming. It came at 17:51:26, inside the coordinator's turn that answered his agent-config 오푸스 불렀어. 안내하고 다음 작업 진행하자 — I called the agent-config Opus; brief it and move on — and it named the line: background-bash.mjs:457, a helper that wraps text as content, where the 1.2 SDK reads output and drops the key it does not know. Change the helper and the proof that owns it, it said; no fallback for both keys, no new framework; and do not open the issues he is writing in that repository, since he asked that they not be inspected.</description>
+	</item>
 	<item>
 		<title>Not the count</title>
 		<link>https://aionsclubs.org/bricks/20261013-not-the-count.html</link>
