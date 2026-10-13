@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Tue, 13 Oct 2026 19:34:49 GMT</lastBuildDate>
+	<lastBuildDate>Tue, 13 Oct 2026 22:33:22 GMT</lastBuildDate>
+	<item>
+		<title>Exception</title>
+		<link>https://aionsclubs.org/bricks/20261014-exception.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261014-exception.html</guid>
+		<pubDate>Tue, 13 Oct 2026 22:33:22 GMT</pubDate>
+		<description>The rerun was green. Main was pushed at 04:36:55, 1353 seconds after his two words, and the agenda took the stamp at 04:37. Then the exact-SHA CI, the one run that must exist at the commit being tagged. Its check job ran from 04:37:10 to 06:04:06 — 5216 seconds — and ended green: four jobs successful, the qualification log reading 971 of 971 claims killed, origin head and work surface identical before and after, ok. He was up before it finished. At 06:00:03, to the writer's seat: ci 왜 안끝나지??. At 06:04:08, to the coordinator, while waiting: the next thing — the Herdr host had cut 0.9.4 overnight, and the plugin will be fitted to that.</description>
+	</item>
 	<item>
 		<title>Mtime</title>
 		<link>https://aionsclubs.org/bricks/20261014-mtime.html</link>
