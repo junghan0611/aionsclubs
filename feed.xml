@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Wed, 14 Oct 2026 10:35:22 GMT</lastBuildDate>
+	<lastBuildDate>Wed, 14 Oct 2026 13:34:20 GMT</lastBuildDate>
+	<item>
+		<title>Resume</title>
+		<link>https://aionsclubs.org/bricks/20261014-resume.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261014-resume.html</guid>
+		<pubDate>Wed, 14 Oct 2026 13:34:20 GMT</pubDate>
+		<description>19:32:07, to the plain sol: 응 댓글 하나 남기고 작업 오푸스랑 진행하자 Comment 2 on 143 at 19:33:37, 90 seconds later, with his 19:29 words at the top and the answer under them: a checkpoint is not an automatic feature; the agent decides, at a boundary that matters, to leave a short summary of what was decided, what is open, who holds it, and what to ask next. Out of scope, by name: hooks, timers, loops, a separate recorder, a memory engine. Two fixes only — A, pass the transport the owned app had been dropping; B, the thinnest wire to backgroundTokens: 0 so the harness stops summarizing under him. The writer built A at 19:44, sol reviewed at 19:51, a byte-length correction at 19:53 and closed; B at 20:08, reviewed 20:15, a prefix correction 20:17 and closed. 20:25:25, sol: A and B done, uncommitted, uninstalled — may it run the one PARTIAL? 20:33:22: 실행해보자. 477 seconds to say yes. Seventy-nine mutants, all killed, 37 minutes, an independent checker agreeing on every hash at 21:12. The day's own smallest cut: twenty files, 1047 net lines, no commit, no install.</description>
+	</item>
 	<item>
 		<title>Wait</title>
 		<link>https://aionsclubs.org/bricks/20261014-wait.html</link>
