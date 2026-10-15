@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Thu, 15 Oct 2026 07:32:08 GMT</lastBuildDate>
+	<lastBuildDate>Thu, 15 Oct 2026 10:37:37 GMT</lastBuildDate>
+	<item>
+		<title>Overtime</title>
+		<link>https://aionsclubs.org/bricks/20261015-overtime.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261015-overtime.html</guid>
+		<pubDate>Thu, 15 Oct 2026 10:37:37 GMT</pubDate>
+		<description>The afternoon in the coordinator's store, before the stamp. At 16:51:29 he pasted the laptop coordinator's report and put his own sentence on top of it: 우리가 수정한 pi-durable 괜찮다. 오늘 작업하는데 한번도 지피티 서버 오버로드 못봤다. 즉 효과가 있는거야. — the pi-durable we fixed is fine; working all day I never once saw the GPT server overload; so it has an effect. At 17:08 he asked why the old code had sent every turn each time, and the coordinator read the source and answered that it had not been a design but a setting left unpassed meeting an SDK default. At 17:11 he set the frame: 마리오랑 아르민이 대충만들리가 없어. — Mario and Armin would not have built it carelessly — and so the hole, if there was one, was in the reference TUI this repository maintains. At 17:13: 관점을 우리로 가져와서 봐야돼. — bring the viewpoint back to us. The Opus beside the coordinator ran a read-only audit and reported in 1001 seconds: project skills were being resolved against the working directory instead of the settings file, so this repository's own two skills were invisible to the seat he was sitting in. He asked whether it could see them; it could not. 진행 at 17:38:11, and the fix landed as 4968ffd at 18:29:29, 3078 seconds later, with 82 of 82 mutants killed. The coordinator's reply announcing that result, at 18:29:16, was written entirely in Japanese — one hundred and forty characters, the turn after a nine-thousand-character diff. The register brick of this morning counted Han characters per thousand; this is the next point on that line, a whole language switching for one turn, and it is reported here by its name and length only.</description>
+	</item>
 	<item>
 		<title>Receipt</title>
 		<link>https://aionsclubs.org/bricks/20261015-receipt.html</link>
