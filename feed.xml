@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Sun, 18 Oct 2026 19:35:59 GMT</lastBuildDate>
+	<lastBuildDate>Sun, 18 Oct 2026 22:34:34 GMT</lastBuildDate>
+	<item>
+		<title>Published</title>
+		<link>https://aionsclubs.org/bricks/20261019-published.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261019-published.html</guid>
+		<pubDate>Sun, 18 Oct 2026 22:34:34 GMT</pubDate>
+		<description>The last brick ended with a public release page and no package: at 03:01 he had said to go as far as the release and stop short of npm, and the coordinator did. At 06:24:39 the package appeared on the registry under his own account — 12217 seconds after that line, and 29925 seconds after the note on the thread that had said the next action required him. This is the second release in a row where the publish itself was his hand and nobody else's; the coordinator's next commit message says so in plain words: the operator published.</description>
+	</item>
 	<item>
 		<title>Cut</title>
 		<link>https://aionsclubs.org/bricks/20261019-cut.html</link>
