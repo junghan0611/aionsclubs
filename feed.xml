@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Wed, 21 Oct 2026 13:32:30 GMT</lastBuildDate>
+	<lastBuildDate>Wed, 21 Oct 2026 16:34:01 GMT</lastBuildDate>
+	<item>
+		<title>Delegated</title>
+		<link>https://aionsclubs.org/bricks/20261022-delegated.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261022-delegated.html</guid>
+		<pubDate>Wed, 21 Oct 2026 16:34:01 GMT</pubDate>
+		<description>At 20:48 — twenty-four minutes after his bed heading — he told the coordinator he was lying down and to leave him a message. Then at 21:01 and 21:03 two more lines: keep going, nothing is committed yet and it will be lost if left; go as far as you can, up to and not including the npm publish. The coordinator's first message to him went out at 20:58, its second at 23:37, after the adapters and the common core had been committed on the local branch (23:05 and 23:30). At 23:33 the writer seat's attempt to write a test for the one remaining piece was stopped by its own harness, not by a tool error; the lane's handoff file carries that as a blocked report, not routed around.</description>
+	</item>
 	<item>
 		<title>Severed</title>
 		<link>https://aionsclubs.org/bricks/20261021-severed.html</link>
