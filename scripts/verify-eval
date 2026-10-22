@@ -48,8 +48,13 @@ fi
 #    eval existed, because neither is in the population. That is how brick 28
 #    shipped unchecked the night before. So ask the inverse question — who makes
 #    a claim? — and let the claim decide membership instead of the script tag.
+#    No `-q` on this grep: under `pipefail`, `grep -q` exits on the first match
+#    and the still-writing printf takes SIGPIPE (141), so the pipeline fails on
+#    a page that *is* in the list. Measured 2026-10-22 19:4x on this host at
+#    load 6.8/4 cores: 63 false fails in 20×177 checks with -q, 0 without —
+#    two consecutive runs had named three different "unloaded" bricks each.
 while IFS= read -r claimant; do
-	printf '%s\n' "${PAGES[@]}" | grep -qxF "$claimant" \
+	printf '%s\n' "${PAGES[@]}" | grep -xF "$claimant" >/dev/null \
 		|| fail "$claimant carries an eval claim but does not load the pinned runtime — no check in this file would ever read it"
 done < <(grep -rl -e 'data-eval=' -e 'data-expected=' -e 'class="eval-cell"' --include='*.html' . | sed 's|^\./||' | sort)
 
