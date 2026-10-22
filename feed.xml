@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Thu, 22 Oct 2026 04:35:20 GMT</lastBuildDate>
+	<lastBuildDate>Thu, 22 Oct 2026 07:35:58 GMT</lastBuildDate>
+	<item>
+		<title>Unobserved</title>
+		<link>https://aionsclubs.org/bricks/20261022-unobserved.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261022-unobserved.html</guid>
+		<pubDate>Thu, 22 Oct 2026 07:35:58 GMT</pubDate>
+		<description>The 182nd brick, laid at 13:26, went live at 13:35:57 with a sentence it had checked a few minutes before: the registry's latest was 0.40.0, the printing had happened and the bookshop had not received it. By the registry's own clock, 0.41.0 was published at 13:37:02 — 65 seconds after the brick was live, and 1,392 seconds after the Release whose addendum said this step publishes nothing. The sentence was true when it was written and true when it went live, and it stopped being true about a minute later. Two days ago 0.40.0 went from its Release to the registry in 796 seconds; this one took 1,392.</description>
+	</item>
 	<item>
 		<title>Printed</title>
 		<link>https://aionsclubs.org/bricks/20261022-printed.html</link>
