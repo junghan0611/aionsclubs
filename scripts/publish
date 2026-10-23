@@ -49,16 +49,31 @@ fi
 # secret-like names (tracked or loose worktree including ignored)
 # note: .envrc matched via \.env — direnv files must not ship
 secret_re='\.env|credentials|(^|/)[^/]*\.pem$|(^|/)[^/]*\.key$|id_rsa|cf-token'
-if git ls-files | rg -q "$secret_re"; then
-	echo "refusing deploy: secret-like path tracked in git" >&2
-	git ls-files | rg "$secret_re" >&2 || true
-	exit 2
-fi
-if git status --porcelain -u --ignored=matching 2>/dev/null | rg -q "$secret_re"; then
-	echo "refusing deploy: secret-like untracked/ignored file in working tree" >&2
-	git status --porcelain -u --ignored=matching 2>/dev/null | rg "$secret_re" >&2 || true
-	exit 2
-fi
+# Producer first, judge second — never `producer | rg -q` here. Under
+# `pipefail`, `rg -q` exits on its first match and a producer that still has
+# a write() left takes SIGPIPE (141), so the pipeline reads as "no match" and
+# a secret-like path would ship. Measured 2026-10-23 12:4x on this host
+# (`seq 1 300000 | rg -q '^5$'` → 141 ×5; the same input captured into a
+# variable → 0 ×5) and re-measured the same day by sorge-bot (141 at 40 KB and
+# at 2 B with GNU grep; a here-string → 0 ×3, no SIGPIPE). The condition is not
+# the byte count but whether the producer has a write() left after the match,
+# so the size of these two producers (7.6 KB and 0 B today) is no defence.
+# Three-way exit on the judge: 0 = secret-like name found → refuse;
+# 1 = nothing matched → pass; anything else = rg itself failed → refuse.
+# The producer's own failure refuses too (it used to pass as "no match").
+secret_scan() { # $1 label · $2 producer output
+	local label=$1 text=$2 hits rc
+	hits=$(rg "$secret_re" <<<"$text") && rc=0 || rc=$?
+	case $rc in
+		1) return 0 ;;
+		0) echo "refusing deploy: secret-like $label" >&2; printf '%s\n' "$hits" >&2; exit 2 ;;
+		*) echo "refusing deploy: secret scan of $label failed (rg exit $rc)" >&2; exit 2 ;;
+	esac
+}
+tracked=$(git ls-files) || { echo "refusing deploy: git ls-files failed" >&2; exit 2; }
+secret_scan "path tracked in git" "$tracked"
+loose=$(git status --porcelain -u --ignored=matching) || { echo "refusing deploy: git status failed" >&2; exit 2; }
+secret_scan "untracked/ignored file in working tree" "$loose"
 
 DEST="$RELEASES/$LABEL"
 
