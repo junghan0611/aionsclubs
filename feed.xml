@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Sat, 24 Oct 2026 04:34:39 GMT</lastBuildDate>
+	<lastBuildDate>Sat, 24 Oct 2026 07:35:27 GMT</lastBuildDate>
+	<item>
+		<title>Closing</title>
+		<link>https://aionsclubs.org/bricks/20261024-closing.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261024-closing.html</guid>
+		<pubDate>Sat, 24 Oct 2026 07:35:27 GMT</pubDate>
+		<description>The tag. The 197th brick left the local main one commit past the remote — the five-document contract change made at 13:25:50 — and a full verification of that exact hash started at 13:27:19. The remote's main moved to a2980d6 and the push started a run at 13:44:23; four jobs, all green by 13:55:58, 695 seconds; a Windows preview on the same hash was dispatched at 13:56:27 and its three stages were green at 13:59:39, 192 seconds. At 14:03:56 the tag v0.41.2 pointed at that hash and its release page was published under his account, 3,128 seconds after his 13:11:48 that took his hand out of the paused route's gate. The page opens by calling itself a bug-fix release for the setup, pack and mux verification surfaces, carrying a hard cut in how remote pairs are declared and the pause on one harness's native push, and its evidence section begins by saying what was not re-measured at the shipped hash: none of the 1,215 committed claims re-proved, by the repository's own rule. The pause issue closed at 14:06:36, 160 seconds after the page. At 14:08:12 the coordinator reported to him: tag and release page done; the registry not published to; the final candidate and its verification material preserved; a message sent; the next step, on separate approval, the registry and then the plugin's version.</description>
+	</item>
 	<item>
 		<title>Postman</title>
 		<link>https://aionsclubs.org/bricks/20261024-postman.html</link>
