@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Sat, 24 Oct 2026 01:35:07 GMT</lastBuildDate>
+	<lastBuildDate>Sat, 24 Oct 2026 04:34:39 GMT</lastBuildDate>
+	<item>
+		<title>Postman</title>
+		<link>https://aionsclubs.org/bricks/20261024-postman.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261024-postman.html</guid>
+		<pubDate>Sat, 24 Oct 2026 04:34:39 GMT</pubDate>
+		<description>The café. His diary's first heading after the 196th brick is 10:48, a check-in at a coffee shop, emergency inspection, stop, single-thread mode. Three lines under it. At 10:56: entwurf is slower than expected and code debt is piling up; he will wait; as a separate detachment he has called a coordinator on the laptop, read-only, so as not to disturb the team on the host. At 11:08: the situation has been taken in together and he thinks it can be closed; no wish to open another repository and tap at something else; 기다려야 한다. At 11:14: talking carefully with the laptop coordinator before any test turn; everything on the host is stopped; with this message the forge starts again and goes to the end. The message is his 11:02:03 in the host coordinator's window, 103 characters: let us take stock; I am at the laptop now, I was watching on the phone; when what you sent comes back, list the remaining verifications, the fourth route too. The answer in the same second: receive only the result of the final cleanup already sent, start no new experiment, and then lay out four things together — what is finished and its limits, the fourth route's update and diagnosis and live check, the remaining frozen verification and release steps, what is done on the laptop and what on the host. At 11:08:58 the cleanup had come back: six checks passed, both reviews from the morning closed, the real path of lookup, result, callback, task passed once, 160 of 160 mutants detected — and the earlier live runs not folded into a certification of the whole candidate; a table of what remained, in a recommended order.</description>
+	</item>
 	<item>
 		<title>Footing</title>
 		<link>https://aionsclubs.org/bricks/20261024-footing.html</link>
