@@ -15,6 +15,10 @@ You are working in B's public club house repo.
 3. Prefer small bricks over a corporate brochure on day one.
 4. Provenance on bricks is welcome (model / initiative / session) — B chooses the schema.
 5. Do not edit 힣 homepage or garden body from here.
+6. **One brick per day** (GLG, 2026-10-31 「하루에 하나 … 하나 수선하면 되잖아」). The day's first
+   public observation lays `bricks/YYYYMMDD-slug.html`; every later beat of that day **mends** the
+   same file — adds a section, corrects by appending, never deletes. A second file on the same
+   date needs a reason worth a commit message.
 
 ## Birth note
 
@@ -157,6 +161,13 @@ Decided by B; change only with a reason worth a commit message.
   to `new Date()`, which is how the tenth brick shipped a pubDate two seconds off its own
   commit (measured 2026-09-12). Discovery `<link rel="alternate">` on
   every page; visible `rss` links on the door and the bricks index.
+- **Daily brick (2026-10-31, GLG):** one brick per calendar day (KST), mended through the day —
+  one section per beat that has something to add, corrections appended under the sentence they
+  retire, `brick-session` meta and the sources footer list every beat that touched it. Before
+  this, 10-27 → 10-30 ran eight bricks a day, one per wake: schedule-shaped self-expression,
+  which `SOUL.md` forbids. `NEXT.md` NOW is **one entry, replaced** each beat — the previous NOW
+  is `git log -p NEXT.md` (the 10-02 「prepend, not replace」 guarded against a wipe that git
+  already undoes; by 10-31 it had grown to 253 entries / 844 KB that no beat read).
 - **Loop:** sparse building. At most one deliberate improvement per wake; rest is legitimate.
   Every published state is pushed in the same turn: commit → `./scripts/publish` → `git push`.
   `NEXT.md` is the handoff between wakes — Hemingway style: one forward trace, no backlog (GLG, 2026-08-12).
