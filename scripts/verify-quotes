@@ -30,6 +30,13 @@ cannot cross one. Same refusal, same fail-closed rule; the summary counts it apa
 so the two gates stay auditable. Known and not wired: org line comments (`# …`), which he also
 uses (09-20 05:17, screenshot links) — a third shape, counted 0 times here so far.
 
+A brick cannot have taken words from a journal file that did not exist yet (2026-11-13): two
+October bricks quoted a six-character reply of his (「응 진행하자.」), and on 11-11 the same six
+characters appeared inside a `:noexport:` tree of week 45 — the gate refused every publish from
+then on, for words whose source is a month older than the tree. So a gated hit is discounted when
+the brick's filename date is strictly earlier than the journal file's filename date; it is printed
+`predates` and counted, never silent. A brick of the same week or later is refused as before.
+
   ROOT          release to check (default: the repo this script lives in)
   AIONS_JOURNAL journal directory (default ~/org/journal; both bodies mount it there)
   --selftest    build a scratch brick + scratch journal, prove exit 2 / exit 0 / exit 3
@@ -113,6 +120,7 @@ def run(root, jroot):
 		return [f"refusing: journal directory absent — {jroot} (set AIONS_JOURNAL)"], 3
 	frags, skipped = fragments(root)
 	hits = {k: [] for k in range(len(frags))}
+	older = set()  # k with a gated hit only in a journal file younger than the brick — cannot be its source
 	whole = set()  # k whose WHOLE stripped piece stands somewhere in the journal, not just its prefix
 	for name, lines, text, where in journal(jroot):
 		for k, (_, frag, piece) in enumerate(frags):
@@ -121,7 +129,10 @@ def run(root, jroot):
 			pos = text.find(frag)
 			while pos != -1:
 				ln = where[pos]
-				hits[k].append((name, ln + 1, gated(lines, ln) or commented(lines, ln)))
+				g = gated(lines, ln) or commented(lines, ln)
+				if g and frags[k][0][:8].isdigit() and name[:8].isdigit() and frags[k][0][:8] < name[:8]:
+					g = None; older.add(k)
+				hits[k].append((name, ln + 1, g))
 				pos = text.find(frag, pos + 1)
 	out, located, blocked, edited, innoexport, incomment = [], 0, 0, 0, 0, 0
 	for k, (brick, frag, _) in enumerate(frags):
@@ -136,10 +147,10 @@ def run(root, jroot):
 			out.append(f"GATED  {brick} «{frag[:20]}…» ← {n}:{ln} under `{head}`")
 		elif found:
 			edited += k not in whole
-			out.append(f"ok     {brick} «{frag[:20]}…» ← {found[0][0]}:{found[0][1]}" + (f" (+{len(found) - 1})" if len(found) > 1 else "") + ("" if k in whole else " · edited"))
+			out.append(f"ok     {brick} «{frag[:20]}…» ← {found[0][0]}:{found[0][1]}" + (f" (+{len(found) - 1})" if len(found) > 1 else "") + ("" if k in whole else " · edited") + (" · predates a gated copy" if k in older else ""))
 		else:
 			out.append(f"absent {brick} «{frag[:20]}…»")
-	out.append(f"quotes: checked {len(frags)} · skipped (no Hangul or < {MIN}) {skipped} · located {located} · edited {edited} · noexport {innoexport} · comment {incomment}")
+	out.append(f"quotes: checked {len(frags)} · skipped (no Hangul or < {MIN}) {skipped} · located {located} · edited {edited} · noexport {innoexport} · comment {incomment} · predates {len(older)}")
 	return out, (2 if blocked else 0)
 
 
@@ -155,6 +166,12 @@ def selftest():
 		open(f"{d}/journal/20990101T000000--scratch__journal.org", "w").write(f"* 2099-01-01\n** 09:00 시험 :noexport:\n{line[:20]}\n{line[20:]}\n** 09:10 열림\n{line}\n#+begin_comment\n{cline}\n#+end_comment\n{cline}\n")
 		want = [(f"{d}/journal", 2), (os.path.expanduser(os.environ.get("AIONS_JOURNAL", "~/org/journal")), 0), (f"{d}/nowhere", 3)]
 		ok = True
+		# the same quote in a brick dated before the scratch journal file: discounted, exit 0
+		os.makedirs(f"{d}/old/bricks")
+		open(f"{d}/old/bricks/20981231-scratch.html", "w").write(f"<q>{line}</q>")
+		out, got = run(f"{d}/old", f"{d}/journal")
+		ok &= got == 0 and any("predates" in l and l.startswith("ok") for l in out)
+		print(f"selftest older brick → exit {got} (want 0)\n  " + "\n  ".join(out))
 		for jr, code in want:
 			out, got = run(f"{d}/root", jr)
 			ok &= got == code
