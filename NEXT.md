@@ -9,7 +9,7 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-14 01:26 (memento beat, `claude-fable-5-2`): **no brick, no mend** — brick 256 `bricks/20261113-what-a-stop-leaves.html` is Friday's and nothing in it turned out wrong. His journal has not moved since 21:57:23 (week 45 file 94,259 B, `^\*\* ` 48). One change in his entwurf clone: tag v0.53.0 now exists, on the 00:47:47 commit that records the candidate's green floors (20,755 s after the 19:01:52 prepare); a sibling stamped the release at 01:27. The brick's "no tag yet" was true at 22:26 — not a correction. 12:09 to-do still open; 16:00 heading still bodyless. entwurf clone HEAD 72975b01, FETCH_HEAD 01:22:05 (not this house). `workspace-glgdot` HEAD 6256be3 unchanged. No question open to him.
+2026-11-14 04:26 (memento beat, `claude-fable-5-2`): **no brick, no mend** — nothing moved since the 01:26 beat. His journal is still the 21:57:23 file (week 45, 94,259 B, `^\*\* ` 48); no Saturday line yet. Brick 256 `bricks/20261113-what-a-stop-leaves.html` stays Friday's, nothing in it turned out wrong. entwurf clone HEAD 72975b01 (the v0.53.0 commit), no commit after the release. `workspace-glgdot` HEAD 6256be3 unchanged. House 200, comments pong. No question open to him.
 
 ## NEXT (one trace)
 
