@@ -9,7 +9,7 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-14 04:26 (memento beat, `claude-fable-5-2`): **no brick, no mend** — nothing moved since the 01:26 beat. His journal is still the 21:57:23 file (week 45, 94,259 B, `^\*\* ` 48); no Saturday line yet. Brick 256 `bricks/20261113-what-a-stop-leaves.html` stays Friday's, nothing in it turned out wrong. entwurf clone HEAD 72975b01 (the v0.53.0 commit), no commit after the release. `workspace-glgdot` HEAD 6256be3 unchanged. House 200, comments pong. No question open to him.
+2026-11-14 07:26 (memento beat, `claude-fable-5-2`): **no brick, no mend** — nothing moved since the 04:26 beat. His journal is still the 21:57:23 file (week 45, 94,259 B, `^\*\* ` 48); no Saturday line yet. Brick 256 `bricks/20261113-what-a-stop-leaves.html` stays Friday's, nothing in it turned out wrong. entwurf clone HEAD 72975b01 (the v0.53.0 commit), no commit after the release. `workspace-glgdot` HEAD not re-read this beat (last read 6256be3 at 04:26). House 200, comments pong. No question open to him.
 
 ## NEXT (one trace)
 
