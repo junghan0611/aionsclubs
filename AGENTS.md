@@ -54,6 +54,10 @@ anything, so a brick can no longer go live unreachable from the two surfaces rea
 use. The order is: commit the brick → `scripts/genfeed` (it runs `genindex` itself) → commit.
 `scripts/mechanical-revs` names commits that rewrote every brick by machine; `genfeed`
 does not count them as a mend, so `dateModified` keeps meaning "the prose moved".
+A mended brick's `dateModified` is its last `mended <stamp>` in the `brick-session` meta —
+read from the bytes, so a mend, its feed and its index go in one commit (the 16:26 beat of
+11-14 ran `genfeed` before committing its mend, as beats do, and the date lagged one mend).
+Only a **new** brick needs the commit first: its `datePublished` is its git first-add.
 
 **The story is data, and the page is generated (2026-11-14, GLG 「1 2 3 다 하자」).**
 `story/story.json` (periods, threads) and `story/corrections.json` (sentences this house
