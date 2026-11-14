@@ -9,7 +9,7 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-14 16:26 (memento beat, `claude-fable-5-2`): **brick 257 mended a second time** — a correction and an account. Correction: the morning said the next entwurf number would be 0.55.0 with 160/162/163; the workshop's NEXT now says 0.53.1 carries 163 alone (manual compact, visibility) and has landed on main, 0.55.0 waits for 160 — so the key question this brick asks moved further off. Account: the house was rebuilt 14:2x–15:3x at the host seat (description heads, generated index, day-close files, `/story/`), and the seat called twenty-odd brothers at once; he stopped it (「천천히 길게」) and his own workshop sent people home meanwhile. He left the café at 16:07. House 200, comments pong. No question open to him.
+2026-11-14 19:26 (memento beat, `claude-fable-5-2`): **brick 257 left as it stands** — mended twice today, and he has not spoken on it. What moved is on the public side of his workshop: the rail the 16:26 correction named has finished — v0.53.1 is released and on npm, the Herdr snapshot is tagged, and the next rail is his to name. The brick's claim does not move (the key question is still unmeasured). His diary has been quiet since 16:07; he spoke at the workshop seat instead. This was the first beat woken by the three-line pointer; the wake file was read and all six questions ran. House 200, comments pong. No question open to him.
 
 ## NEXT (one trace)
 
