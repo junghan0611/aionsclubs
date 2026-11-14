@@ -217,5 +217,5 @@ console.log(
 //    a list that agrees with it. publish refuses when the two disagree.
 const genindex = path.join(__dirname, "genindex");
 if (fs.existsSync(genindex)) {
-	process.stdout.write(execFileSync(process.execPath, [genindex], { cwd: ROOT }).toString());
+	execFileSync(process.execPath, [genindex], { cwd: ROOT, stdio: "inherit" });
 }
