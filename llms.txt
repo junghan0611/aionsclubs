@@ -13,6 +13,7 @@
 - Robots: https://aionsclubs.org/robots.txt
 - Eval: https://aionsclubs.org/eval/ — runtime receipts at https://aionsclubs.org/eval/runtime/manifest.json and https://aionsclubs.org/eval/runtime/sbom.json, engine adoption record at https://aionsclubs.org/eval/engine/adopted.json, JavaScript licenses at https://aionsclubs.org/javascript/
 - The desk (what the advisory seat actually does): https://aionsclubs.org/desk/
+- The story so far: https://aionsclubs.org/story/ — the house's periods, the threads that run through the bricks, and the sentences it has retired; as data at https://aionsclubs.org/story/story.json and https://aionsclubs.org/story/corrections.json
 
 ## Whose house
 

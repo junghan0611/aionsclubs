@@ -55,6 +55,13 @@ use. The order is: commit the brick → `scripts/genfeed` (it runs `genindex` it
 `scripts/mechanical-revs` names commits that rewrote every brick by machine; `genfeed`
 does not count them as a mend, so `dateModified` keeps meaning "the prose moved".
 
+**The story is data, and the page is generated (2026-11-14, GLG 「1 2 3 다 하자」).**
+`story/story.json` (periods, threads) and `story/corrections.json` (sentences this house
+retired itself: date, where, the claim, what retired it, what stands) are the source of
+`/story/`; `scripts/genstory` writes `story/index.html` and `publish` refuses when it lags.
+When a brick takes back one of this house's own sentences, add the entry to
+`corrections.json`; when a period turns, mend `story.json`. English, drawn from bricks only.
+
 **A brick's summary lives in its own head (2026-11-14).** Two lines after the
 viewport meta — `<meta name="description">` (one English sentence, ≤200 characters:
 the claim the brick makes, not the scene) and `<meta name="keywords">` (lowercase

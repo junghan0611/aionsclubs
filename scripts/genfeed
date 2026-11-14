@@ -71,7 +71,7 @@ for (const f of files) {
 //    history is linear and no brick has ever been renamed (paths are URLs), so
 //    the oldest `A` per path is the same answer — the first run of this
 //    version reproduced the previous feed.xml byte for byte.
-const PAGES = { "/": "index.html", "/bricks/": "bricks/index.html", "/desk/": "desk/index.html", "/eval/": "eval/index.html" };
+const PAGES = { "/": "index.html", "/bricks/": "bricks/index.html", "/story/": "story/index.html", "/desk/": "desk/index.html", "/eval/": "eval/index.html" };
 //    scripts/mechanical-revs lists commits that rewrote every brick's head by
 //    machine (one full hash per line, # comments). Such a commit is not a mend:
 //    a dated brick's dateModified/lastmod must keep saying when its prose last
@@ -216,6 +216,8 @@ console.log(
 //    beat that knows only "commit the brick, run genfeed, commit" still ships
 //    a list that agrees with it. publish refuses when the two disagree.
 const genindex = path.join(__dirname, "genindex");
+const genstory = path.join(__dirname, "genstory");
+if (fs.existsSync(genstory)) execFileSync(process.execPath, [genstory], { cwd: ROOT, stdio: "inherit" }); // brick titles on /story/ follow the index
 if (fs.existsSync(genindex)) {
 	execFileSync(process.execPath, [genindex], { cwd: ROOT, stdio: "inherit" });
 }

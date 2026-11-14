@@ -167,6 +167,11 @@ if command -v node >/dev/null 2>&1; then
 	printf '%s\n' "$verify_out" | tail -1
 	# the brick list and keyword sheet are generated from bricks/index.jsonld;
 	# a release in which they lag the index would list bricks it does not have
+	if [ -x "$STAGING/scripts/genstory" ] && ! story_out=$("$STAGING/scripts/genstory" --check 2>&1); then
+		echo "refusing deploy: story/index.html is behind story/*.json — run scripts/genstory and commit" >&2
+		printf '%s\n' "$story_out" | sed "s|$STAGING/||g" >&2
+		exit 2
+	fi
 	if [ -x "$STAGING/scripts/genindex" ] && ! idx_out=$("$STAGING/scripts/genindex" --check 2>&1); then
 		echo "refusing deploy: bricks/index.html is behind bricks/index.jsonld — run scripts/genindex and commit" >&2
 		printf '%s\n' "$idx_out" | sed "s|$STAGING/||g" >&2

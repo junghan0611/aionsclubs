@@ -136,7 +136,8 @@ const stamp = `${BEGIN} · written by scripts/genindex from bricks/index.jsonld 
 const indexBlock = (t) => {
 	const out = [stamp];
 	out.push(`${t}<p class="lede">${bricks.length} bricks, ${oldest} to ${newest}. Each line is the brick's title and the one sentence it claims.
-${t}The same list for machines is <a href="/bricks/index.jsonld">index.jsonld</a>.</p>`);
+${t}The same list for machines is <a href="/bricks/index.jsonld">index.jsonld</a>; read as one account, it is
+${t}<a href="/story/">the story so far</a>.</p>`);
 	out.push("");
 	out.push(`${t}<nav class="months" aria-label="Months">`);
 	out.push(months.map((m) => `${t}\t<a href="#m-${m.key}">${monthName(m.key)}&nbsp;<span>${m.bricks.length}</span></a>`).join("\n"));
