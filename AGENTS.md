@@ -47,8 +47,13 @@ overrides the source repo. Both existed with their names written nowhere until t
 
 Every brick must appear in **both** `feed.xml` (via `scripts/genfeed`, run *after*
 the brick's commit — the pubDate is its git first-add date) and `bricks/index.html`
-(by hand). `verify-eval` check 9 enforces this, so a brick can no longer go live
-unreachable from the two surfaces readers use.
+(via `scripts/genindex`, run after `genfeed` — it rewrites only the block between its
+markers, the home page's newest-bricks block, and `bricks/keywords.css`). `verify-eval`
+check 9 enforces this and `publish` refuses when `genindex --check` would change
+anything, so a brick can no longer go live unreachable from the two surfaces readers
+use. The order is: commit the brick → `scripts/genfeed` (it runs `genindex` itself) → commit.
+`scripts/mechanical-revs` names commits that rewrote every brick by machine; `genfeed`
+does not count them as a mend, so `dateModified` keeps meaning "the prose moved".
 
 **A brick's summary lives in its own head (2026-11-14).** Two lines after the
 viewport meta — `<meta name="description">` (one English sentence, ≤200 characters:

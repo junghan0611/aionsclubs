@@ -72,20 +72,31 @@ for (const f of files) {
 //    the oldest `A` per path is the same answer — the first run of this
 //    version reproduced the previous feed.xml byte for byte.
 const PAGES = { "/": "index.html", "/bricks/": "bricks/index.html", "/desk/": "desk/index.html", "/eval/": "eval/index.html" };
+//    scripts/mechanical-revs lists commits that rewrote every brick's head by
+//    machine (one full hash per line, # comments). Such a commit is not a mend:
+//    a dated brick's dateModified/lastmod must keep saying when its prose last
+//    moved, so those commits are skipped for dated bricks only.
 const added = new Map(), modified = new Map();
 {
+	const revsFile = path.join(ROOT, "scripts", "mechanical-revs");
+	const mechanical = new Set(
+		fs.existsSync(revsFile)
+			? fs.readFileSync(revsFile, "utf8").split("\n").map((l) => l.replace(/#.*/, "").trim()).filter(Boolean)
+			: [],
+	);
 	const log = execFileSync(
 		"git",
-		["log", "--format=%x01%aI", "--name-status", "--no-renames", "--", "bricks", ...Object.values(PAGES)],
+		["log", "--format=%x01%H %aI", "--name-status", "--no-renames", "--", "bricks", ...Object.values(PAGES)],
 		{ cwd: ROOT, maxBuffer: 64 * 1024 * 1024 },
 	).toString();
-	let when = "";
+	let when = "", rev = "";
 	for (const line of log.split("\n")) {
-		if (line.startsWith("\x01")) { when = line.slice(1); continue; }
+		if (line.startsWith("\x01")) { [rev, when] = line.slice(1).split(" "); continue; }
 		const m = line.match(/^([AMD])\t(.+)$/);
 		if (!m) continue;
 		const [, status, p] = m;
-		if (!modified.has(p)) modified.set(p, when); // newest first: first sighting is the last commit
+		const skip = mechanical.has(rev) && /^bricks\/\d{8}-/.test(p) && status === "M";
+		if (!skip && !modified.has(p)) modified.set(p, when); // newest first: first sighting is the last commit
 		if (status === "A") added.set(p, when);      // ... and the last `A` sighting is the first add
 	}
 }
@@ -200,3 +211,11 @@ console.log(
 	`feed.xml, bricks/index.jsonld, sitemap.xml written — ${items.length} bricks (${described} with a description), ` +
 		`${resynced} in-page JSON-LD re-derived, newest: ${items[0].title}`,
 );
+
+// 5. The brick list is generated from the index just written — one road, so a
+//    beat that knows only "commit the brick, run genfeed, commit" still ships
+//    a list that agrees with it. publish refuses when the two disagree.
+const genindex = path.join(__dirname, "genindex");
+if (fs.existsSync(genindex)) {
+	process.stdout.write(execFileSync(process.execPath, [genindex], { cwd: ROOT }).toString());
+}

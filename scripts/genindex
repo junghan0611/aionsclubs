@@ -1,0 +1,235 @@
+#!/usr/bin/env node
+// Write the reading surfaces of this house from bricks/index.jsonld:
+//   bricks/index.html  every brick, grouped by month, title + gist + keywords
+//   bricks/keywords.css  the keyword filter rules that page links to
+//   index.html         the five newest bricks inside the door
+// Only the block between the genindex markers is rewritten; the head, the
+// prose around it and everything a person wrote by hand stay byte-for-byte.
+// No dependencies. Deterministic: same jsonld in, same bytes out, so a second
+// run reports "unchanged" and git sees no diff.
+//
+//   genindex [--from PATH] [--check]
+//     --from   read another jsonld (default bricks/index.jsonld)
+//     --check  write nothing; exit 1 if either page would change
+//
+// Order of a brick day: commit the brick → scripts/genfeed (feed + jsonld)
+// → this. The jsonld is the source; this script never reads a brick body.
+// A brick on disk that the jsonld does not list is refused by name rather
+// than silently left out — check 9 of scripts/verify-eval would catch it at
+// publish, but the place to learn it is here, before anything is written.
+"use strict";
+
+const fs = require("node:fs");
+const path = require("node:path");
+
+const ROOT = path.resolve(__dirname, "..");
+const args = process.argv.slice(2);
+const flag = (name) => args.includes(name);
+const opt = (name) => {
+	const i = args.indexOf(name);
+	return i >= 0 ? args[i + 1] : undefined;
+};
+const FROM = path.resolve(opt("--from") || path.join(ROOT, "bricks", "index.jsonld"));
+const CHECK = flag("--check");
+const shown = (p) => {
+	const r = path.relative(ROOT, p);
+	return r.startsWith("..") ? p : r;
+};
+
+// the cloud shows a keyword once this many bricks share it; rarer ones still
+// print under their brick, as plain words
+const CLOUD_MIN = 4;
+const RECENT = 5;
+const MONTHS = ["January", "February", "March", "April", "May", "June", "July",
+	"August", "September", "October", "November", "December"];
+
+const die = (msg) => {
+	console.error(`genindex: ${msg}`);
+	process.exit(1);
+};
+const esc = (s) =>
+	String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+
+// ---- read -----------------------------------------------------------------
+let doc;
+try {
+	doc = JSON.parse(fs.readFileSync(FROM, "utf8"));
+} catch (e) {
+	die(`cannot read ${FROM}: ${e.message}`);
+}
+if (!Array.isArray(doc.itemListElement)) die(`${FROM} has no itemListElement`);
+
+const bricks = doc.itemListElement.map((li) => {
+	const it = li.item || li;
+	const file = String(it.url || "").split("/").pop();
+	const m = file.match(/^(\d{4})(\d{2})(\d{2})-.*\.html$/);
+	if (!m) die(`item ${li.position}: url does not end in a brick filename: ${it.url}`);
+	// the brick's date is its filename's, not datePublished: a commit can land
+	// after midnight, the filename is the day the house says it laid the brick
+	const kw = Array.isArray(it.keywords)
+		? it.keywords
+		: String(it.keywords || "").split(",").map((k) => k.trim()).filter(Boolean);
+	return {
+		file,
+		href: `/bricks/${file}`,
+		date: `${m[1]}-${m[2]}-${m[3]}`,
+		month: `${m[1]}-${m[2]}`,
+		name: it.name || file,
+		description: it.description || "",
+		keywords: kw,
+		published: it.datePublished || "",
+	};
+});
+if (bricks.length === 0) die(`${FROM} lists no bricks — refusing to write an empty index`);
+
+const onDisk = fs.readdirSync(path.join(ROOT, "bricks")).filter((f) => /^\d{8}-.*\.html$/.test(f));
+const listed = new Set(bricks.map((b) => b.file));
+const missing = onDisk.filter((f) => !listed.has(f));
+const ghosts = bricks.filter((b) => !onDisk.includes(b.file)).map((b) => b.file);
+if (missing.length) die(`on disk but not in ${shown(FROM)}: ${missing.join(", ")} — run scripts/genfeed first`);
+if (ghosts.length) die(`in ${shown(FROM)} but not on disk: ${ghosts.join(", ")}`);
+
+// newest first; within a day keep the jsonld's own order (it is commit order)
+bricks.forEach((b, i) => (b.pos = i));
+bricks.sort((a, b) => (a.date === b.date ? a.pos - b.pos : a.date < b.date ? 1 : -1));
+
+const count = new Map();
+for (const b of bricks) for (const k of b.keywords) count.set(k, (count.get(k) || 0) + 1);
+const cloud = [...count.entries()]
+	// a keyword becomes a CSS attribute value below, so only the house's own
+	// shape (lowercase ASCII, one word) may enter the cloud
+	.filter(([k, n]) => n >= CLOUD_MIN && /^[a-z0-9]+$/.test(k))
+	.sort((a, b) => b[1] - a[1] || (a[0] < b[0] ? -1 : 1));
+const inCloud = new Set(cloud.map(([k]) => k));
+const kid = (k) => `k-${k.replace(/[^a-z0-9]+/gi, "-").toLowerCase()}`;
+
+const months = [];
+for (const b of bricks) {
+	let m = months[months.length - 1];
+	if (!m || m.key !== b.month) months.push((m = { key: b.month, bricks: [] }));
+	m.bricks.push(b);
+}
+const monthName = (key) => `${MONTHS[Number(key.slice(5)) - 1]} ${key.slice(0, 4)}`;
+const oldest = bricks[bricks.length - 1].date;
+const newest = bricks[0].date;
+
+// ---- render ---------------------------------------------------------------
+const item = (b, t, withKeywords) => {
+	const lines = [
+		`${t}<li class="brick"${b.keywords.length ? ` data-k="${esc(b.keywords.join(" "))}"` : ""}>`,
+		`${t}\t<time datetime="${b.date}">${b.date}</time>`,
+		`${t}\t<a href="${b.href}">${esc(b.name)}</a>`,
+	];
+	if (b.description) lines.push(`${t}\t<p>${esc(b.description)}</p>`);
+	if (withKeywords && b.keywords.length) {
+		const ks = b.keywords.map((k) => (inCloud.has(k) ? `<a href="#${kid(k)}">${esc(k)}</a>` : esc(k)));
+		lines.push(`${t}\t<p class="kw">${ks.join(" · ")}</p>`);
+	}
+	lines.push(`${t}</li>`);
+	return lines.join("\n");
+};
+
+const BEGIN = "<!-- genindex:begin";
+const END = "<!-- genindex:end -->";
+const stamp = `${BEGIN} · written by scripts/genindex from bricks/index.jsonld — change the generator or the bricks, not this block -->`;
+
+const indexBlock = (t) => {
+	const out = [stamp];
+	out.push(`${t}<p class="lede">${bricks.length} bricks, ${oldest} to ${newest}. Each line is the brick's title and the one sentence it claims.
+${t}The same list for machines is <a href="/bricks/index.jsonld">index.jsonld</a>.</p>`);
+	out.push("");
+	out.push(`${t}<nav class="months" aria-label="Months">`);
+	out.push(months.map((m) => `${t}\t<a href="#m-${m.key}">${monthName(m.key)}&nbsp;<span>${m.bricks.length}</span></a>`).join("\n"));
+	out.push(`${t}</nav>`);
+	out.push("");
+	// folded by default: on a phone the cloud is a whole screen before the first
+	// brick. Following a keyword link opens it (fragment navigation reveals a
+	// closed <details> ancestor), so the chosen chip still shows as chosen.
+	out.push(`${t}<nav class="keywords" id="keywords" aria-label="Keywords">`);
+	out.push(`${t}<details>`);
+	out.push(`${t}\t<summary>Browse by keyword <span class="meta">— ${cloud.length} shared by ${CLOUD_MIN} or more bricks</span></summary>`);
+	out.push(`${t}\t<p class="meta">Choose one to keep only its bricks below; <a href="#bricks">show every brick</a>.</p>`);
+	out.push(`${t}\t<p class="cloud">${cloud.map(([k, n]) => `<a id="${kid(k)}" href="#${kid(k)}">${esc(k)}&nbsp;<span>${n}</span></a>`).join("\n" + t + "\t")}</p>`);
+	out.push(`${t}</details>`);
+	out.push(`${t}</nav>`);
+	// the filter rules live in a generated stylesheet: <style> belongs in the
+	// head, the head belongs to the hand, and a stylesheet link is body-ok
+	out.push(`${t}<link rel="stylesheet" href="/bricks/keywords.css">`);
+	out.push("");
+	out.push(`${t}<div id="bricks">`);
+	for (const m of months) {
+		out.push(`${t}<section class="month" id="m-${m.key}">`);
+		out.push(`${t}\t<h2>${monthName(m.key)} <span class="meta">${m.bricks.length}</span></h2>`);
+		out.push(`${t}\t<ol class="bricks">`);
+		for (const b of m.bricks) out.push(item(b, t + "\t\t", true));
+		out.push(`${t}\t</ol>`);
+		out.push(`${t}</section>`);
+	}
+	out.push(`${t}</div>`);
+	out.push(`${t}${END}`);
+	return out.join("\n");
+};
+
+const recentBlock = (t) => {
+	const out = [stamp];
+	out.push(`${t}<ol class="bricks recent">`);
+	for (const b of bricks.slice(0, RECENT)) out.push(item(b, t + "\t", false));
+	out.push(`${t}</ol>`);
+	out.push(`${t}<p class="more"><a href="/bricks/">All ${bricks.length} bricks</a>, ${oldest} to ${newest} — by month, each with its claim and keywords.</p>`);
+	out.push(`${t}${END}`);
+	return out.join("\n");
+};
+
+// ---- write ----------------------------------------------------------------
+let stale = 0;
+const splice = (rel, render) => {
+	const file = path.join(ROOT, rel);
+	const html = fs.readFileSync(file, "utf8");
+	const a = html.indexOf(BEGIN);
+	const b = html.indexOf(END);
+	if (a < 0 || b < a) die(`${rel} has no genindex markers — add "${BEGIN} -->" and "${END}" where the block belongs`);
+	const indent = html.slice(html.lastIndexOf("\n", a) + 1, a);
+	const next = html.slice(0, a) + render(indent) + html.slice(b + END.length);
+	if (next === html) {
+		console.log(`${rel}: unchanged`);
+		return;
+	}
+	stale++;
+	if (CHECK) {
+		console.log(`${rel}: would change`);
+		return;
+	}
+	fs.writeFileSync(file, next);
+	console.log(`${rel}: written`);
+};
+
+const keywordsCss = () =>
+	[
+		"/* written by scripts/genindex from bricks/index.jsonld — change the generator, not this file.",
+		"   One rule per keyword in the /bricks/ cloud: while its chip is the :target, only its bricks stay. */",
+		...cloud.map(([k]) => `main:has(#${kid(k)}:target) .brick:not([data-k~="${k}"]) { display: none; }`),
+		"",
+	].join("\n");
+
+// a whole generated file, not a block: same report, same --check
+const whole = (rel, content) => {
+	const file = path.join(ROOT, rel);
+	const have = fs.existsSync(file) ? fs.readFileSync(file, "utf8") : null;
+	if (have === content) {
+		console.log(`${rel}: unchanged`);
+		return;
+	}
+	stale++;
+	if (CHECK) {
+		console.log(`${rel}: would ${have === null ? "be created" : "change"}`);
+		return;
+	}
+	fs.writeFileSync(file, content);
+	console.log(`${rel}: written`);
+};
+
+splice("bricks/index.html", indexBlock);
+whole("bricks/keywords.css", keywordsCss());
+splice("index.html", recentBlock);
+console.log(`${bricks.length} bricks · ${months.length} months · ${cloud.length} keywords in the cloud (of ${count.size}) · from ${shown(FROM)}`);
+if (CHECK && stale) process.exit(1);

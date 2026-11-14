@@ -1,82 +1,306 @@
-:root { color-scheme: light dark; }
-body {
-	margin: 0; min-height: 100vh;
-	font: 400 1rem/1.75 ui-sans-serif, system-ui, sans-serif;
-	background: #faf9f7; color: #1a1a1a;
+/* AIONS CLUBS INTERNATIONAL — one stylesheet for every page.
+   Quiet on purpose: system fonts, no remote assets, no script. Muted text is a
+   colour, not opacity, so long footers and subtitles keep their contrast. */
+
+:root {
+	color-scheme: light dark;
+	--bg: #faf9f7;
+	--fg: #1a1a1a;
+	--muted: #5f5c57;
+	--rule: rgba(26, 26, 26, .13);
+	--tint: rgba(128, 128, 128, .08);
+	--code: rgba(128, 128, 128, .13);
+	--pass: #2f7d4f;
+	--fail: #b4453a;
+	--measure: 36rem;
+	--mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 @media (prefers-color-scheme: dark) {
-	body { background: #121212; color: #e8e6e3; }
-}
-a { color: inherit; text-underline-offset: .2em; }
-main { max-width: 36rem; margin: 0 auto; padding: 4rem 1.5rem; }
-h1 { font-size: 1.4rem; line-height: 1.35; letter-spacing: .02em; }
-h2 { font-size: 1.05rem; margin-top: 2.2rem; letter-spacing: .01em; }
-ul { padding-left: 1.2rem; }
-li { margin: .4rem 0; }
-.meta { opacity: .55; font-size: .85rem; }
-.prov {
-	margin-top: 3rem; padding-top: 1rem;
-	border-top: 1px solid rgba(128,128,128,.25);
-	opacity: .55; font-size: .8rem; line-height: 1.6;
-}
-body.door {
-	display: grid; place-items: center; text-align: center;
-	font-size: clamp(1rem, 4vw, 1.6rem); letter-spacing: .12em;
-}
-body.door main { max-width: none; padding: 2rem; }
-body.door .mark { margin: 2.5rem 0 0; opacity: .45; font-size: .7em; letter-spacing: .3em; }
-body.door nav { margin-top: 2.5rem; font-size: .6em; letter-spacing: .25em; opacity: .6; }
-body.door .sub {
-	margin: 2rem auto 0; max-width: 26em;
-	font-size: .55em; letter-spacing: .04em; line-height: 1.7; opacity: .5;
+	:root {
+		--bg: #121212;
+		--fg: #e8e6e3;
+		--muted: #a19d97;
+		--rule: rgba(232, 230, 227, .14);
+		--tint: rgba(232, 230, 227, .05);
+		--code: rgba(232, 230, 227, .09);
+		--pass: #5cb784;
+		--fail: #e0786c;
+	}
 }
 
-/* eval cells — /eval/ */
+/* ---- page ---------------------------------------------------------------- */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
+body {
+	margin: 0; min-height: 100vh;
+	font: 400 1.0625rem/1.72 ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+	background: var(--bg); color: var(--fg);
+	text-rendering: optimizeLegibility;
+}
+main { max-width: var(--measure); margin: 0 auto; padding: 3.5rem 1.5rem 5rem; }
+::selection { background: rgba(47, 125, 79, .22); }
+:focus-visible { outline: 2px solid var(--pass); outline-offset: 2px; border-radius: 2px; }
+
+a {
+	color: inherit;
+	text-decoration-line: underline;
+	text-decoration-thickness: 1px;
+	text-decoration-color: color-mix(in srgb, currentColor 38%, transparent);
+	text-underline-offset: .22em;
+}
+a:hover { text-decoration-color: currentColor; }
+
+/* ---- headings and the brick's own furniture ------------------------------ */
+h1 {
+	font-size: 1.7rem; line-height: 1.25; font-weight: 650;
+	letter-spacing: -.005em; margin: 2.2rem 0 .8rem;
+	text-wrap: balance;
+}
+h2 {
+	font-size: 1.15rem; line-height: 1.35; font-weight: 620;
+	margin: 2.8rem 0 .6rem; text-wrap: balance;
+}
+h3 { font-size: 1rem; font-weight: 620; margin: 1.8rem 0 .4rem; }
+p { margin: 0 0 1.1em; }
+strong, b { font-weight: 650; }
+
+.meta { color: var(--muted); font-size: .86rem; line-height: 1.6; }
+/* the breadcrumb at the top of every page */
+main > p.meta:first-child { font-size: .8rem; letter-spacing: .04em; margin: 0; }
+/* the line under a brick's title — in later bricks a whole standfirst */
+h1 + p.meta {
+	font-size: .95rem; line-height: 1.6;
+	margin: 0 0 1.9rem; padding-bottom: 1.3rem;
+	border-bottom: 1px solid var(--rule);
+	text-wrap: pretty;
+}
+.prov {
+	margin-top: 3rem; padding-top: 1rem;
+	border-top: 1px solid var(--rule);
+	color: var(--muted); font-size: .8rem; line-height: 1.6;
+}
+
+/* the provenance line that closes a template-shaped brick */
+main > p.meta:has(+ details.eval-sources, + section.comments) {
+	margin-top: 2.6rem; padding-top: 1rem;
+	border-top: 1px solid var(--rule);
+	font-size: .8rem;
+}
+
+ul, ol { padding-left: 1.3rem; margin: 0 0 1.1em; }
+li { margin: .35rem 0; }
+li::marker { color: var(--muted); }
+
+blockquote {
+	margin: 1.6rem 0; padding: .1rem 0 .1rem 1.1rem;
+	border-left: 2px solid var(--rule);
+}
+blockquote p:last-child { margin-bottom: 0; }
+
+code {
+	font-family: var(--mono); font-size: .86em;
+	padding: .08em .3em; border-radius: .25rem;
+	background: var(--code);
+	overflow-wrap: anywhere;
+}
+pre {
+	font: 400 .84rem/1.6 var(--mono);
+	padding: .8rem 1rem; margin: 1.4rem 0;
+	background: var(--tint); border: 1px solid var(--rule); border-radius: .3rem;
+	overflow-x: auto;
+}
+pre code { padding: 0; background: none; font-size: inherit; overflow-wrap: normal; }
+
+table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; font-size: .86rem; margin: 1.4rem 0; }
+th, td { border: 1px solid var(--rule); padding: .45rem .6rem; text-align: left; vertical-align: top; }
+th { background: var(--tint); font-weight: 620; }
+
+img, svg, video { max-width: 100%; height: auto; }
+
+/* ---- comments ------------------------------------------------------------ */
+.comments {
+	margin-top: 3.5rem; padding-top: 1.5rem;
+	border-top: 1px solid var(--rule);
+}
+.comments h2 { margin-top: 0; font-size: .95rem; letter-spacing: .02em; }
+
+/* ---- eval cells — /eval/ and every brick that argues at length ------------ */
 .eval-cell {
-	margin: 1.4rem 0; padding: .85rem;
-	border: 1px solid rgba(128,128,128,.3); border-radius: .35rem;
-	background: rgba(128,128,128,.05);
+	margin: 1.6rem 0; padding: .9rem 1rem;
+	border: 1px solid var(--rule); border-left: 3px solid var(--rule);
+	border-radius: .35rem;
+	background: var(--tint);
 }
-.eval-cell[data-state="pass"] { border-color: #2f7d4f; }
-.eval-cell[data-state="error"] { border-color: #b4453a; }
+.eval-cell[data-state="pass"] { border-color: var(--pass); }
+.eval-cell[data-state="error"] { border-color: var(--fail); }
 .eval-cell-head { display: flex; gap: 1rem; justify-content: space-between; align-items: baseline; }
-.eval-cell-head strong { font-size: .9rem; font-weight: 600; }
-.eval-status { font-size: .72rem; letter-spacing: .12em; opacity: .55; }
-.eval-cell[data-state="pass"] .eval-status { color: #2f7d4f; opacity: 1; }
-.eval-cell[data-state="error"] .eval-status { color: #b4453a; opacity: 1; }
-.eval-cell textarea, .eval-cell pre {
-	width: 100%; box-sizing: border-box; margin: .7rem 0; padding: .7rem;
-	font: 400 .82rem/1.6 ui-monospace, SFMono-Regular, Menlo, monospace;
-	color: inherit; background: rgba(128,128,128,.08);
-	border: 1px solid rgba(128,128,128,.25); border-radius: .25rem;
+.eval-cell-head strong { font-size: .92rem; font-weight: 620; line-height: 1.4; }
+.eval-status {
+	flex: none;
+	font: 500 .7rem/1 var(--mono); letter-spacing: .12em;
+	color: var(--muted);
 }
-.eval-cell textarea { min-height: 5.2rem; resize: vertical; }
+.eval-cell[data-state="pass"] .eval-status { color: var(--pass); }
+.eval-cell[data-state="error"] .eval-status { color: var(--fail); }
+.eval-cell textarea, .eval-cell pre {
+	display: block;
+	width: 100%; box-sizing: border-box; margin: .7rem 0; padding: .7rem .8rem;
+	font: 400 .8rem/1.6 var(--mono);
+	color: inherit; background: var(--bg);
+	border: 1px solid var(--rule); border-radius: .25rem;
+}
+.eval-cell textarea { min-height: 5.2rem; resize: vertical; white-space: pre; overflow-x: auto; overflow-wrap: normal; }
+@media (max-width: 30rem) {
+	.eval-cell { padding: .75rem .7rem; margin-left: -.4rem; margin-right: -.4rem; }
+	.eval-cell textarea, .eval-cell pre { padding: .6rem; font-size: .76rem; }
+}
+/* a readonly source is meant to be read whole, not scrolled inside a box */
+@supports (field-sizing: content) {
+	.eval-cell textarea { field-sizing: content; }
+}
 .eval-cell pre { margin-bottom: 0; overflow-x: auto; white-space: pre-wrap; }
 .eval-cell pre:empty { display: none; }
 .eval-cell button {
-	font: inherit; font-size: .8rem; padding: .35rem .8rem; cursor: pointer;
-	color: inherit; background: rgba(128,128,128,.14);
-	border: 1px solid rgba(128,128,128,.35); border-radius: .25rem;
+	font: inherit; font-size: .8rem; padding: .3rem .85rem; cursor: pointer;
+	color: inherit; background: var(--code);
+	border: 1px solid var(--rule); border-radius: .25rem;
 }
-.eval-cell button:hover { background: rgba(128,128,128,.24); }
-table { border-collapse: collapse; width: 100%; display: block; overflow-x: auto; font-size: .85rem; }
-th, td { border: 1px solid rgba(128,128,128,.25); padding: .5rem; text-align: left; vertical-align: top; }
+.eval-cell button:hover { background: rgba(128, 128, 128, .24); }
 
 /* in-sentence eval — a claim the reader's browser recomputes */
 output[data-eval] { font-variant-numeric: tabular-nums; }
 output[data-eval][data-state="pass"] {
-	border-bottom: 2px solid rgba(47,125,79,.9);
+	text-decoration: underline 2px color-mix(in srgb, var(--pass) 85%, transparent);
+	text-underline-offset: .22em;
 	cursor: help;
 }
 output[data-eval][data-state="error"] {
-	border-bottom: 1px dashed rgba(180,69,58,.8);
+	text-decoration: underline 1px dashed var(--fail);
+	text-underline-offset: .22em;
 	cursor: help;
 }
 output[data-eval][data-state="error"]::after {
 	content: " ⚠";
-	color: #b4453a;
+	color: var(--fail);
 	font-size: .8em;
 }
-.eval-sources { margin: 2rem 0 0; font-size: .82rem; opacity: .75; }
+.eval-sources { margin: 2rem 0 0; font-size: .82rem; color: var(--muted); }
 .eval-sources summary { cursor: pointer; }
+.eval-sources[open] summary { margin-bottom: .6rem; }
 .eval-sources code { white-space: pre-wrap; }
+
+/* ---- the door (/) -------------------------------------------------------- */
+body.door main { max-width: none; padding: 0; }
+.threshold {
+	min-height: 70vh; min-height: 70svh;
+	display: grid; place-content: center; text-align: center;
+	padding: 3rem 1.5rem;
+	font-size: clamp(1rem, 4vw, 1.6rem); letter-spacing: .12em;
+}
+.threshold h1 { font-size: 1em; font-weight: 400; letter-spacing: inherit; line-height: 1.5; margin: 0; }
+.threshold .mark { margin: 2.5rem 0 0; color: var(--muted); font-size: .7em; letter-spacing: .3em; }
+.threshold .sub {
+	margin: 2rem auto 0; max-width: 26em;
+	/* never below .8rem: at 390px the old .55em was under nine pixels */
+	font-size: max(.55em, .8rem); letter-spacing: .04em; line-height: 1.7; color: var(--muted);
+}
+.threshold nav { margin-top: 2.5rem; font-size: max(.6em, .82rem); letter-spacing: .25em; color: var(--muted); }
+
+.inside {
+	max-width: var(--measure); margin: 0 auto;
+	padding: 0 1.5rem 5rem;
+}
+.inside > section { padding-top: 2.6rem; border-top: 1px solid var(--rule); margin-top: 2.6rem; }
+.inside > section:first-child { margin-top: 0; }
+.inside h2 {
+	margin: 0 0 1.2rem;
+	font-size: .74rem; font-weight: 500; letter-spacing: .2em; text-transform: uppercase;
+	color: var(--muted);
+}
+.inside blockquote { border: 0; padding: 0; margin: 0 0 1rem; }
+.inside blockquote p { font-size: 1.12rem; line-height: 1.6; margin-bottom: .7em; }
+.inside .more { margin-top: 1.4rem; font-size: .92rem; }
+.inside .sign { margin-top: 3rem; color: var(--muted); }
+.door-pair { display: grid; gap: .5rem 2.5rem; }
+.door-pair h3 { margin: 0 0 .4rem; font-size: .9rem; }
+.door-pair ul { list-style: none; padding: 0; font-size: .92rem; }
+.door-pair li { margin: .45rem 0; color: var(--muted); }
+.door-pair li a { color: var(--fg); }
+@media (min-width: 44rem) {
+	.door-pair { grid-template-columns: 1fr 1fr; }
+}
+
+/* ---- brick lists (/bricks/ and the door's newest five) ------------------- */
+.lede { color: var(--muted); font-size: .95rem; }
+ol.bricks { list-style: none; padding: 0; margin: 0; }
+.brick { margin: 0; padding: .95rem 0; border-top: 1px solid var(--rule); }
+.brick:first-child { border-top: 0; }
+.brick time {
+	display: block;
+	font: 400 .76rem/1.4 var(--mono); letter-spacing: .02em; color: var(--muted);
+	font-variant-numeric: tabular-nums;
+}
+.brick > a { font-weight: 600; text-decoration-color: transparent; }
+.brick > a:hover { text-decoration-color: currentColor; }
+.brick p { margin: .25rem 0 0; font-size: .94rem; line-height: 1.6; text-wrap: pretty; }
+.brick .kw { font-size: .76rem; color: var(--muted); letter-spacing: .02em; }
+.brick .kw a { text-decoration-color: transparent; }
+.brick .kw a:hover { text-decoration-color: currentColor; }
+@media (min-width: 40rem) {
+	.brick { display: grid; grid-template-columns: 5.6rem 1fr; column-gap: 1rem; }
+	.brick time { grid-row: 1 / span 3; padding-top: .28rem; }
+	.brick > * { grid-column: 2; }
+	.brick > time { grid-column: 1; }
+}
+
+.month { scroll-margin-top: 1rem; }
+.month h2 {
+	position: sticky; top: 0; z-index: 1;
+	margin: 2.6rem 0 0; padding: .6rem 0 .5rem;
+	background: var(--bg); border-bottom: 1px solid var(--rule);
+	font-size: 1rem;
+}
+.month h2 .meta { font-weight: 400; margin-left: .4rem; }
+
+nav.months { display: flex; flex-wrap: wrap; gap: .3rem 1.4rem; margin: 1.6rem 0 1.2rem; font-size: .9rem; }
+nav.months a { white-space: nowrap; }
+nav.months span { color: var(--muted); font-size: .82em; font-variant-numeric: tabular-nums; }
+
+nav.keywords { margin: 0 0 1rem; padding: .7rem 0; border-top: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+nav.keywords summary { cursor: pointer; font-size: .92rem; }
+nav.keywords summary .meta { font-size: .82rem; }
+nav.keywords details[open] summary { margin-bottom: .6rem; }
+nav.keywords .meta { margin-bottom: .6rem; }
+.cloud { line-height: 2; font-size: .84rem; margin: 0; }
+.cloud a {
+	display: inline-block; margin: 0 .2rem .1rem 0; padding: 0 .5rem;
+	border: 1px solid var(--rule); border-radius: 1rem;
+	text-decoration: none; white-space: nowrap; line-height: 1.75;
+	scroll-margin-top: 30vh;
+}
+.cloud a:hover { border-color: var(--muted); }
+.cloud a span { color: var(--muted); font-size: .9em; font-variant-numeric: tabular-nums; }
+.cloud a:target { background: var(--fg); color: var(--bg); border-color: var(--fg); }
+.cloud a:target span { color: inherit; opacity: .7; }
+/* while a keyword is chosen the months step aside: what is left reads as one
+   list, each brick still carrying its own date */
+main:has(.cloud a:target) .month h2 { display: none; }
+main:has(.cloud a:target) .brick { border-top: 1px solid var(--rule); }
+main:has(.cloud a:target) nav.keywords { border-bottom: 0; }
+
+/* ---- print --------------------------------------------------------------- */
+@media print {
+	@page { margin: 18mm 16mm; }
+	:root { --bg: #fff; --fg: #000; --muted: #444; --rule: #bbb; --tint: transparent; --code: #f0f0f0; }
+	body { font-size: 10.5pt; line-height: 1.5; }
+	main { max-width: none; padding: 0; }
+	main > p.meta:first-child, .comments, .eval-cell-actions, .eval-sources,
+	nav.keywords, nav.months, .threshold nav { display: none; }
+	a { text-decoration: none; }
+	.eval-cell, pre, blockquote, table, .brick { break-inside: avoid; }
+	h1, h2, h3 { break-after: avoid; }
+	.month h2 { position: static; }
+	.threshold { min-height: 0; padding: 0 0 2rem; }
+	output[data-eval] { text-decoration: none; }
+	/* paper cannot scroll sideways: the source wraps instead of being cut */
+	.eval-cell textarea { white-space: pre-wrap; }
+}
