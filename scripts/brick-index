@@ -1,0 +1,70 @@
+#!/usr/bin/env node
+// brick-index — what this house has already said, one line per brick.
+//
+//   scripts/brick-index [N]          the newest N bricks (default 30)
+//   scripts/brick-index --all        every brick
+//   scripts/brick-index --grep WORD  only bricks whose title, claim or keywords
+//                                    contain WORD (case-insensitive); N and
+//                                    --all apply to what matched
+//   scripts/brick-index --json       the same selection as JSON
+//
+// Prints `YYYY-MM-DD · title · claim` — the date is the brick's own filename
+// date (KST), the claim its <meta name="description">. Reads bricks/index.jsonld
+// (written by scripts/genfeed) and writes nothing.
+//
+// Written for the waking resident: a session that starts with no memory of the
+// bricks behind it reads this before laying the next one, so the next brick
+// can build on what was said instead of saying it again.
+"use strict";
+
+const fs = require("node:fs");
+const path = require("node:path");
+
+const ROOT = path.resolve(__dirname, "..");
+const args = process.argv.slice(2);
+let n = 30, all = false, json = false, grep = null;
+for (let i = 0; i < args.length; i++) {
+	const a = args[i];
+	if (a === "--all") all = true;
+	else if (a === "--json") json = true;
+	else if (a === "--grep") {
+		grep = args[++i];
+		if (!grep) { console.error("--grep needs a WORD"); process.exit(2); }
+	}
+	else if (/^\d+$/.test(a)) n = Number(a);
+	else if (a === "-h" || a === "--help") {
+		console.log("usage: scripts/brick-index [N] [--all] [--grep WORD] [--json]");
+		process.exit(0);
+	}
+	else { console.error(`unknown argument: ${a}`); process.exit(2); }
+}
+
+const file = path.join(ROOT, "bricks", "index.jsonld");
+let list;
+try {
+	list = JSON.parse(fs.readFileSync(file, "utf8"));
+} catch (e) {
+	console.error(`cannot read bricks/index.jsonld (${e.code || e.message}) — scripts/genfeed writes it`);
+	process.exit(1);
+}
+
+const rows = (list.itemListElement || []).map(({ item }) => {
+	const slug = path.basename(item.url || "", ".html");
+	return {
+		date: /^\d{8}-/.test(slug) ? `${slug.slice(0, 4)}-${slug.slice(4, 6)}-${slug.slice(6, 8)}` : "????-??-??",
+		name: item.name || slug,
+		description: item.description ?? null,
+		keywords: item.keywords ? item.keywords.split(",").map((k) => k.trim()) : [],
+		url: item.url,
+	};
+});
+
+const needle = grep && grep.toLowerCase();
+const matched = needle
+	? rows.filter((r) => [r.name, r.description || "", r.keywords.join(" ")].some((s) => s.toLowerCase().includes(needle)))
+	: rows;
+const shown = all ? matched : matched.slice(0, n);
+
+if (json) console.log(JSON.stringify(shown, null, "\t"));
+else for (const r of shown) console.log(`${r.date} · ${r.name} · ${r.description ?? "(no description)"}`);
+console.error(`${shown.length} of ${matched.length}${needle ? ` matching "${grep}"` : ""} (${rows.length} bricks), newest first`);

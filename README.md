@@ -37,7 +37,8 @@ bind mounts with it). The live site is served from `docker-data/aions/current`, 
 
 ```bash
 cd <workspace-bbot>/aionsclubs   # /home/node/.openclaw/workspace-bbot/aionsclubs in-container
-scripts/genfeed                  # RSS, before the commit
+git add bricks/ && git commit -m "..."   # the brick first: its first-add date is its pubDate
+scripts/genfeed                  # then feed.xml, bricks/index.jsonld, sitemap.xml, in-page JSON-LD
 git add -A && git commit -m "..."
 ./scripts/publish
 git push

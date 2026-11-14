@@ -1,0 +1,116 @@
+#!/usr/bin/env node
+// apply-desc — write each brick's summary into its own head, then re-derive
+// the in-page JSON-LD from it.
+//
+//   scripts/apply-desc [--force] [--dry-run] FILE.json [FILE.json …]
+//   scripts/apply-desc --sync [--dry-run]
+//
+// FILE.json maps a brick slug to its summary:
+//   { "20260812-the-house-opens": { "description": "…", "keywords": ["house", "…"] } }
+//
+// The head's two meta lines are the source of truth (scripts/brickhead.js);
+// this is how a batch of them gets in. A line already present and different is
+// kept unless --force. Every entry is checked against the writer's contract
+// first (one line, ≤200 characters, 3–5 lowercase ascii keywords, nothing that
+// reads as an eval claim or a marked quote) and one bad entry refuses the
+// whole run before any file is written, so a half-applied batch cannot happen.
+//
+// After the meta lines, every brick's alternate link and JSON-LD block are
+// re-derived (`--sync` does only this; scripts/genfeed does it too). Each file
+// is checked before it is written: if anything outside those four head
+// constructs would change — the body, an eval cell, another meta — the run
+// refuses. Running it again on a body that has been mended since changes only
+// the head. Idempotent: a second run writes nothing.
+//
+//   exit 0  done (or nothing to do)    exit 2  refused; nothing written
+"use strict";
+
+const fs = require("node:fs");
+const path = require("node:path");
+const bh = require("./brickhead.js");
+
+const ROOT = path.resolve(__dirname, "..");
+const BRICKS = path.join(ROOT, "bricks");
+const args = process.argv.slice(2);
+const flag = (f) => args.includes(f);
+const force = flag("--force"), dry = flag("--dry-run"), syncOnly = flag("--sync");
+const files = args.filter((a) => !a.startsWith("--"));
+const unknown = args.filter((a) => a.startsWith("--") && !["--force", "--dry-run", "--sync"].includes(a));
+
+const refuse = (lines) => {
+	console.error(`apply-desc: refused, nothing written\n${[].concat(lines).map((l) => `  ${l}`).join("\n")}`);
+	process.exit(2);
+};
+if (unknown.length) refuse(`unknown flag ${unknown.join(" ")}`);
+if (syncOnly && files.length) refuse("--sync takes no files");
+if (!syncOnly && !files.length) refuse("usage: scripts/apply-desc [--force] [--dry-run] FILE.json … | --sync [--dry-run]");
+
+const slugs = fs.readdirSync(BRICKS).filter((f) => /^\d{8}-.*\.html$/.test(f)).map((f) => f.slice(0, -5)).sort();
+const known = new Set(slugs);
+
+// 1. read and check every entry before touching anything
+const entries = new Map();
+const problems = [];
+for (const f of files) {
+	let data;
+	try { data = JSON.parse(fs.readFileSync(f, "utf8")); } catch (e) { problems.push(`${f}: ${e.message}`); continue; }
+	if (!data || typeof data !== "object" || Array.isArray(data)) { problems.push(`${f}: not an object of slug → {description, keywords}`); continue; }
+	for (const [slug, v] of Object.entries(data)) {
+		const where = `${path.basename(f)} ${slug}`;
+		if (!known.has(slug)) { problems.push(`${where}: no bricks/${slug}.html`); continue; }
+		if (entries.has(slug)) { problems.push(`${where}: also given in ${entries.get(slug).from}`); continue; }
+		const extra = Object.keys(v || {}).filter((k) => !["description", "keywords"].includes(k));
+		if (extra.length) problems.push(`${where}: unexpected field(s) ${extra.join(", ")}`);
+		const p = [...bh.checkDescription(v?.description), ...bh.checkKeywords(v?.keywords, { strictCount: true })];
+		if (p.length) { problems.push(...p.map((x) => `${where}: ${x}`)); continue; }
+		entries.set(slug, { description: v.description, keywords: v.keywords, from: path.basename(f) });
+	}
+}
+if (problems.length) refuse(problems);
+
+// 2. compute every new file in memory; any refusal here also writes nothing
+const tally = { desc: { inserted: 0, replaced: 0, same: 0, kept: 0 }, kw: { inserted: 0, replaced: 0, same: 0, kept: 0 } };
+const kept = [];
+const pending = [];
+let synced = 0;
+for (const slug of slugs) {
+	const file = path.join(BRICKS, `${slug}.html`);
+	const before = fs.readFileSync(file, "utf8");
+	let html = before;
+	try {
+		const e = entries.get(slug);
+		if (e) {
+			const r = bh.applyMeta(html, e, { force });
+			html = r.html;
+			tally.desc[r.desc]++; tally.kw[r.kw]++;
+			if (r.desc === "kept" || r.kw === "kept") kept.push(slug);
+		}
+		const s = bh.sync(html, slug);
+		if (s.changed) synced++;
+		html = s.html;
+	} catch (err) {
+		refuse(`${slug}: ${err.message}`);
+	}
+	if (html !== before) pending.push([file, html]);
+}
+
+// 3. write (temp + rename per file, so a reader never sees half a page)
+if (!dry) {
+	for (const [file, html] of pending) {
+		const tmp = `${file}.apply-desc.${process.pid}`;
+		fs.writeFileSync(tmp, html);
+		fs.renameSync(tmp, file);
+	}
+}
+
+const t = (x) => `inserted ${x.inserted} · replaced ${x.replaced} · unchanged ${x.same} · kept ${x.kept}`;
+const without = slugs.filter((s) => !entries.has(s));
+if (!syncOnly) {
+	console.log(`entries: ${entries.size} from ${files.length} file(s)`);
+	console.log(`description: ${t(tally.desc)}`);
+	console.log(`keywords:    ${t(tally.kw)}`);
+	if (kept.length) console.log(`kept (already present and different; --force replaces): ${kept.join(", ")}`);
+	console.log(`bricks with no entry: ${without.length}${without.length && without.length <= 10 ? ` — ${without.join(", ")}` : ""}`);
+}
+console.log(`in-page JSON-LD re-derived: ${synced} of ${slugs.length}`);
+console.log(`${dry ? "would write" : "wrote"} ${pending.length} file(s)${dry ? " (dry run)" : ""}`);

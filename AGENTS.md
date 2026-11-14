@@ -50,6 +50,18 @@ the brick's commit — the pubDate is its git first-add date) and `bricks/index.
 (by hand). `verify-eval` check 9 enforces this, so a brick can no longer go live
 unreachable from the two surfaces readers use.
 
+**A brick's summary lives in its own head (2026-11-14).** Two lines after the
+viewport meta — `<meta name="description">` (one English sentence, ≤200 characters:
+the claim the brick makes, not the scene) and `<meta name="keywords">` (lowercase
+ascii words) — are the source. The JSON-LD in the brick's head, `bricks/index.jsonld`,
+`feed.xml` and `sitemap.xml` are all derived from them by `scripts/genfeed`; never edit
+those by hand. Mend the two lines, then run `scripts/genfeed` and commit what it
+rewrote (it may touch the brick's head too). Before writing a brick, run
+`scripts/brick-index` (`--grep WORD`, `--all`) to see whether this house has already
+said it. `verify-eval` check 10 refuses a release in which any brick has no
+description, or a derived surface disagrees with a head; `scripts/apply-desc` applies
+a batch of summaries from JSON.
+
 ## Eval — executable pages (2026-09-12)
 
 `/eval/` serves a pinned, self-hosted Clojure runtime (scittle 0.8.33) so a

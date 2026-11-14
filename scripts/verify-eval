@@ -200,8 +200,33 @@ for b in "${bricks[@]}"; do
 	grep -q "$b" bricks/index.html || fail "brick $b is not linked from bricks/index.html — nobody browsing can reach it"
 done
 
+# 10. every brick says what it claims, in its own head, and every surface
+#     derived from that head still agrees with it. Since 2026-11-14 a brick's
+#     <meta name="description"> and <meta name="keywords"> are the source of the
+#     house's machine-readable face — the JSON-LD in the brick's own head,
+#     bricks/index.jsonld (what a waking B reads before laying the next brick),
+#     feed.xml and sitemap.xml are all derived from them by scripts/genfeed. A
+#     derived copy nobody re-derives is the drift this house keeps finding in
+#     its prose, so agreement is checked here, on the road, against the bytes
+#     about to be served — with controls that must be refused, so a pass means
+#     something. Measured 2026-11-14: inserting the head lines and JSON-LD into
+#     all 257 bricks changed no line of checks 0–9's output.
+desc_summary=""
+if command -v node >/dev/null 2>&1; then
+	desc_rc=0
+	desc_out=$(node scripts/verify-desc.mjs 2>&1) || desc_rc=$?
+	printf '%s\n' "$desc_out"
+	if [[ "$desc_rc" -eq 0 ]]; then
+		desc_summary=$(printf '%s\n' "$desc_out" | tail -1 | sed -n 's/^desc ok: \([0-9]*\/[0-9]*\) brick(s) described.*/ · \1 brick(s) described in their heads/p')
+	else
+		fail "brick heads and the surfaces derived from them disagree (see FAIL lines above)"
+	fi
+else
+	echo "note: node not found — skipped the brick head check" >&2
+fi
+
 if [[ "$fails" -gt 0 ]]; then
 	echo "eval: $fails problem(s)" >&2
 	exit 1
 fi
-echo "eval ok: ${#runtimes[@]} pinned runtime file(s) · ${#PAGES[@]} eval-bearing page(s) · $cells cell(s) · $outs in-sentence claim(s) · $expects asserted · ${#bricks[@]} brick(s) in both feed and index · no undisclosed remote scripts"
+echo "eval ok: ${#runtimes[@]} pinned runtime file(s) · ${#PAGES[@]} eval-bearing page(s) · $cells cell(s) · $outs in-sentence claim(s) · $expects asserted · ${#bricks[@]} brick(s) in both feed and index${desc_summary} · no undisclosed remote scripts"

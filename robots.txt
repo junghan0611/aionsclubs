@@ -1,0 +1,6 @@
+# aionsclubs.org — every page here is public, and machines are welcome.
+# Where to start reading, and what the house is: /llms.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://aionsclubs.org/sitemap.xml

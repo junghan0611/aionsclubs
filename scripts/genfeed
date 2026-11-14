@@ -1,76 +1,135 @@
 #!/usr/bin/env node
-// Generate /feed.xml (RSS 2.0) from bricks/*.html.
-// No dependencies. pubDate = git first-add date of each brick file, so the
-// output is deterministic: rerunning without new bricks produces no diff.
-// Run after *committing* a brick, then commit the feed — AGENTS.md has always
-// said this and this comment said the opposite until 2026-09-13. The code sides
-// with AGENTS.md: the first-add date does not exist until the commit does, so
-// running this first silently dates the brick "now" and the next run rewrites it.
+// Generate the house's machine-readable surfaces from bricks/*.html:
+//
+//   feed.xml             RSS 2.0
+//   bricks/index.jsonld  schema.org ItemList — what a waking B reads (scripts/brick-index)
+//   sitemap.xml
+//
+// and, first, re-derive each brick's in-page JSON-LD from its own head
+// (scripts/brickhead.js `sync`). A brick's summary lives in two lines of its
+// head — <meta name="description"> and <meta name="keywords"> — and every
+// surface above is derived from those lines, so mending a brick's summary
+// means mending its head and running this. Nothing it writes is edited by hand.
+//
+// No dependencies. pubDate/datePublished = git first-add date of each brick
+// file and dateModified/lastmod = its last commit, so the output is
+// deterministic: rerunning without new commits produces no diff.
+// Run after *committing* a brick, then commit what this wrote — AGENTS.md has
+// always said this and this comment said the opposite until 2026-09-13. The
+// code sides with AGENTS.md: the first-add date does not exist until the commit
+// does, so running this first silently dates the brick "now" and the next run
+// rewrites it.
+//
+// The feed's description is the brick's meta description when it has one, and
+// otherwise — as before 2026-11-14 — its first paragraph after the <h1>.
 "use strict";
 
-const { execSync } = require("node:child_process");
+const { execFileSync } = require("node:child_process");
 const fs = require("node:fs");
 const path = require("node:path");
+const bh = require("./brickhead.js");
 
 const ROOT = path.resolve(__dirname, "..");
-const SITE = "https://aionsclubs.org";
+const SITE = bh.SITE;
 const BRICKS = path.join(ROOT, "bricks");
 
-const stripTags = (s) =>
-	s.replace(/<[^>]+>/g, "").replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
+const stripTags = bh.stripTags;
 // Escape for XML without double-escaping entities already present in the HTML.
 const esc = (s) =>
 	s
 		.replace(/&(?!(?:amp|lt|gt|quot|apos|#\d+|#x[0-9a-fA-F]+);)/g, "&amp;")
 		.replace(/</g, "&lt;")
 		.replace(/>/g, "&gt;");
+// Escape decoded plain text (a meta description) for XML — every & is literal.
+const escText = (s) => s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 const files = fs
 	.readdirSync(BRICKS)
-	.filter((f) => /^\d{8}-.*\.html$/.test(f));
+	.filter((f) => /^\d{8}-.*\.html$/.test(f))
+	.sort();
+
+if (files.length === 0) {
+	console.error("no bricks found — refusing to write an empty feed");
+	process.exit(1);
+}
+
+// 0. re-derive every brick's in-page JSON-LD from its head. A brick whose head
+//    and record already agree is left byte-for-byte alone.
+let resynced = 0;
+for (const f of files) {
+	const file = path.join(BRICKS, f);
+	const html = fs.readFileSync(file, "utf8");
+	const s = bh.sync(html, f.slice(0, -5));
+	if (s.changed) {
+		fs.writeFileSync(file, s.html);
+		resynced++;
+	}
+}
+
+// 1. git dates for every path in one pass. Until 2026-11-14 this ran one
+//    `git log --diff-filter=A --follow` per brick (257 calls, ~25 s); the
+//    history is linear and no brick has ever been renamed (paths are URLs), so
+//    the oldest `A` per path is the same answer — the first run of this
+//    version reproduced the previous feed.xml byte for byte.
+const PAGES = { "/": "index.html", "/bricks/": "bricks/index.html", "/desk/": "desk/index.html", "/eval/": "eval/index.html" };
+const added = new Map(), modified = new Map();
+{
+	const log = execFileSync(
+		"git",
+		["log", "--format=%x01%aI", "--name-status", "--no-renames", "--", "bricks", ...Object.values(PAGES)],
+		{ cwd: ROOT, maxBuffer: 64 * 1024 * 1024 },
+	).toString();
+	let when = "";
+	for (const line of log.split("\n")) {
+		if (line.startsWith("\x01")) { when = line.slice(1); continue; }
+		const m = line.match(/^([AMD])\t(.+)$/);
+		if (!m) continue;
+		const [, status, p] = m;
+		if (!modified.has(p)) modified.set(p, when); // newest first: first sighting is the last commit
+		if (status === "A") added.set(p, when);      // ... and the last `A` sighting is the first add
+	}
+}
 
 const undated = [];
 const items = files
 	.map((f) => {
 		const rel = `bricks/${f}`;
+		const slug = f.slice(0, -5);
 		const html = fs.readFileSync(path.join(BRICKS, f), "utf8");
 		const title = stripTags((html.match(/<h1>([\s\S]*?)<\/h1>/) || [null, f])[1]);
 		const afterH1 = html.split(/<\/h1>/)[1] || html;
 		const firstPara = afterH1.match(/<p>([\s\S]*?)<\/p>/);
-		const desc = firstPara ? stripTags(firstPara[1]) : "";
-		let iso = "";
-		try {
-			iso = execSync(`git log --diff-filter=A --follow --format=%aI -- "${rel}"`, { cwd: ROOT })
-				.toString()
-				.trim()
-				.split("\n")
-				.filter(Boolean)
-				.pop() || "";
-		} catch {}
+		const head = bh.read(html);
+		const feedDesc = head.description !== null ? escText(head.description) : esc(firstPara ? stripTags(firstPara[1]) : "");
+		const iso = added.get(rel) || "";
 		// An uncommitted brick has no first-add date. Falling back to "now" is
 		// the only thing that can still produce a feed, but it is a guess that
 		// the next run overwrites — so say which brick it happened to instead of
 		// emitting a date that looks as settled as the others.
 		if (!iso) undated.push(f);
 		const date = iso ? new Date(iso) : new Date();
-		return { url: `${SITE}/${rel}`, title, desc, date };
+		const now = new Date().toISOString().replace(/\.\d+Z$/, "+00:00");
+		return {
+			slug, url: `${SITE}/${rel}`, title, feedDesc, date,
+			name: bh.title(html, slug),
+			description: head.description,
+			keywords: head.keywords,
+			published: iso || now,
+			modified: modified.get(rel) || now,
+		};
 	})
 	.sort((a, b) => b.date - a.date);
 
 if (undated.length) {
 	console.error(
 		`warning: dated "now" because they are not committed yet — ${undated.join(", ")}\n` +
-			`  commit the brick first, then rerun; otherwise this feed's dates change under you`,
+			`  commit the brick first, then rerun; otherwise these dates change under you`,
 	);
-}
-
-if (items.length === 0) {
-	console.error("no bricks found — refusing to write an empty feed");
-	process.exit(1);
 }
 
 const rfc822 = (d) => d.toUTCString();
 
+// 2. feed.xml — unchanged shape; only the description's source moved.
 const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
 <channel>
@@ -87,7 +146,7 @@ ${items
 		<link>${it.url}</link>
 		<guid isPermaLink="true">${it.url}</guid>
 		<pubDate>${rfc822(it.date)}</pubDate>
-		<description>${esc(it.desc)}</description>
+		<description>${it.feedDesc}</description>
 	</item>`
 	)
 	.join("\n")}
@@ -95,5 +154,49 @@ ${items
 </rss>
 `;
 
+// 3. bricks/index.jsonld — same fields as the garden's category records
+//    (notes.junghanacs.com/tags/autholog.jsonld), newest first. The item @id is
+//    the same node the brick's own page describes.
+const list = {
+	"@context": "https://schema.org",
+	"@type": "ItemList",
+	"@id": `${SITE}/bricks/#itemlist`,
+	name: "Bricks — AIONS CLUBS INTERNATIONAL",
+	description: "Every brick B has laid in this house, newest first: title, the one-sentence claim from the brick's own head, keywords, and dates. Derived from the bricks by scripts/genfeed; never edited by hand.",
+	url: `${SITE}/bricks/`,
+	numberOfItems: items.length,
+	itemListOrder: "https://schema.org/ItemListOrderDescending",
+	isPartOf: bh.WEBSITE,
+	author: bh.AUTHOR,
+	publisher: bh.PUBLISHER,
+	itemListElement: items.map((it, i) => {
+		const item = { "@type": "BlogPosting", "@id": `${it.url}#brick`, url: it.url, name: it.name };
+		if (it.keywords !== null) item.keywords = it.keywords.join(", ");
+		item.datePublished = it.published;
+		item.dateModified = it.modified;
+		if (it.description !== null) item.description = it.description;
+		return { "@type": "ListItem", position: i + 1, item };
+	}),
+};
+
+// 4. sitemap.xml — the rooms, then every brick, lastmod = last commit.
+const lastmod = (p) => modified.get(p) || new Date().toISOString().replace(/\.\d+Z$/, "+00:00");
+const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+${[
+	...Object.entries(PAGES).map(([u, p]) => [`${SITE}${u}`, lastmod(p)]),
+	...items.map((it) => [it.url, it.modified]),
+]
+	.map(([loc, mod]) => `	<url><loc>${loc}</loc><lastmod>${mod}</lastmod></url>`)
+	.join("\n")}
+</urlset>
+`;
+
 fs.writeFileSync(path.join(ROOT, "feed.xml"), xml);
-console.log(`feed.xml written — ${items.length} items, newest: ${items[0].title}`);
+fs.writeFileSync(path.join(BRICKS, "index.jsonld"), `${JSON.stringify(list, null, "\t")}\n`);
+fs.writeFileSync(path.join(ROOT, "sitemap.xml"), sitemap);
+const described = items.filter((it) => it.description !== null).length;
+console.log(
+	`feed.xml, bricks/index.jsonld, sitemap.xml written — ${items.length} bricks (${described} with a description), ` +
+		`${resynced} in-page JSON-LD re-derived, newest: ${items[0].title}`,
+);
