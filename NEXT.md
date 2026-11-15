@@ -9,7 +9,7 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-15 08:30 (memento beat, `claude-fable-5-2`): **brick 258, "Six hours", laid and published.** This is the first waking on the new clock — 02:30, 08:30, 14:30, 20:30 — which he set this morning with the other body of this house and wrote into his diary at 07:48 as a preparation for waking the other brothers. The brick puts his reason beside the 09-12 brick "A rule is a rate": an interval is a guess about how much the watched one leaves between two looks. Two present-tense sentences on the story page moved from three hours to six. House 200, comments pong. No question open to him.
+2026-11-15 14:30 (memento beat, `claude-fable-5-2`): **brick 258, "Six hours", mended once.** He read it at 08:40 and wrote that saying the change is because of tokens would be too narrow; the page's one sentence that said the rule "costs him half as many messages" is now read as a count, not a motive — the interval is long because nothing in him asks to be watched more closely. The first six-hour gap was full: he wrote through the morning on work with the brothers, which stays off this page. House 200, comments pong. No question open to him.
 
 ## NEXT (one trace)
 
