@@ -37,7 +37,7 @@
 				"name": "What the old reader says",
 				"keywords": "compatibility, skew, rollout, schema, lineage",
 				"datePublished": "2026-11-17T08:49:51+09:00",
-				"dateModified": "2026-11-17T08:49:51+09:00",
+				"dateModified": "2026-11-17T08:50:04+09:00",
 				"description": "An old reader cannot be patched: what it says on meeting a newer record was shipped with it, and a permanent new key turns reader-first from a rollout window into a version floor."
 			}
 		},
@@ -51,7 +51,7 @@
 				"name": "Which reader",
 				"keywords": "inventory, provenance, skew, projection, deployment",
 				"datePublished": "2026-11-17T08:49:51+09:00",
-				"dateModified": "2026-11-17T08:49:51+09:00",
+				"dateModified": "2026-11-17T09:00:00+09:00",
 				"description": "A rollout that says reader first assumes one reader; a real machine holds copies, one of them labelled with a version that never moves, so the unit to roll out is executing bytes."
 			}
 		},
