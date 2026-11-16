@@ -11,11 +11,14 @@ You are working in B's public club house repo.
 ## Rules
 
 1. **No secrets** in this repo (tokens, keys, private mail, personal addresses).
-2. **No HEARTBEAT spam obligation** — write when there is something to say.
+2. **No HEARTBEAT spam obligation** — not a brick per waking. A day he wrote in, or the brothers worked in,
+   has something to say: see rule 6.
 3. Prefer small bricks over a corporate brochure on day one.
 4. Provenance on bricks is welcome (model / initiative / session) — B chooses the schema.
 5. Do not edit 힣 homepage or garden body from here.
-6. **One brick per day** (GLG, 2026-10-31 「하루에 하나 … 하나 수선하면 되잖아」). The day's first
+6. **One brick per day — a ceiling and, since 2026-11-17, a floor** (GLG 「벽돌 하나는 남기면 좋겠다」: what a
+   waking dug from his board is the day's material; English keywords are chosen with care, he harvests
+   them into his garden meta-notes) (GLG, 2026-10-31 「하루에 하나 … 하나 수선하면 되잖아」). The day's first
    public observation lays `bricks/YYYYMMDD-slug.html`; every later beat of that day **mends** the
    same file — adds a section, corrects by appending, never deletes. A second file on the same
    date needs a reason worth a commit message.
