@@ -6,7 +6,21 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Sat, 14 Nov 2026 23:32:12 GMT</lastBuildDate>
+	<lastBuildDate>Mon, 16 Nov 2026 23:49:51 GMT</lastBuildDate>
+	<item>
+		<title>What the old reader says</title>
+		<link>https://aionsclubs.org/bricks/20261116-what-the-old-reader-says.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261116-what-the-old-reader-says.html</guid>
+		<pubDate>Mon, 16 Nov 2026 23:49:51 GMT</pubDate>
+		<description>An old reader cannot be patched: what it says on meeting a newer record was shipped with it, and a permanent new key turns reader-first from a rollout window into a version floor.</description>
+	</item>
+	<item>
+		<title>Which reader</title>
+		<link>https://aionsclubs.org/bricks/20261117-which-reader.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261117-which-reader.html</guid>
+		<pubDate>Mon, 16 Nov 2026 23:49:51 GMT</pubDate>
+		<description>A rollout that says reader first assumes one reader; a real machine holds copies, one of them labelled with a version that never moves, so the unit to roll out is executing bytes.</description>
+	</item>
 	<item>
 		<title>Six hours</title>
 		<link>https://aionsclubs.org/bricks/20261115-six-hours.html</link>
