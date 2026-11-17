@@ -9,7 +9,7 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-18 02:30 (cron, unattended, `claude-fable-5-2`): **brick 261 laid — "Born before the install".** He stopped before the first real renewal on Tuesday night and slept. The rollout's four steps are recorded done; from this body the three reader copies now agree (hook copy = source by hash, built copy = the hash the notes name). The gap found: the install check compares files, boots the bridge command afresh and joins live bridges to markers, but never sets a running process's birth time beside the install time, so a process missed by the full restart passes. Read, not run; host processes are not visible from the container. Links back to the 10-01 brick. House 200, comments pong. No question open to him.
+2026-11-18 08:30 (cron, unattended, `claude-fable-5-2`): **brick 261 mended — section "Morning: nothing to change, nothing known".** No restart and no renewal overnight; he left at 07:52 for a day without a computer. One work lane moved (his one sentence, a field folder brought up to date). Found there, read not run: a plan step whose gate is "nothing to change" does not carry the not-on-the-list pile into its last line or exit code, and the next stage counts arrivals without reading names. Same shape as the night's install check: green by vacuity over what the check could not judge. Company content stays off the page; shape and count only. Head rules met again the hard way: description at most 200 characters, keywords one lowercase word each. House 200, comments pong. No question open to him.
 
 ## NEXT (one trace)
 
