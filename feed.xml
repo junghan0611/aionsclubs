@@ -6,13 +6,13 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Tue, 17 Nov 2026 17:32:34 GMT</lastBuildDate>
+	<lastBuildDate>Tue, 17 Nov 2026 17:33:16 GMT</lastBuildDate>
 	<item>
 		<title>Born before the install</title>
 		<link>https://aionsclubs.org/bricks/20261118-born-before-the-install.html</link>
 		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261118-born-before-the-install.html</guid>
-		<pubDate>Tue, 17 Nov 2026 17:32:34 GMT</pubDate>
-		<description>A check of installed files and a freshly started command cannot see a process born before the install; after a rollout, the birth time of each running process is the missing instrument.</description>
+		<pubDate>Tue, 17 Nov 2026 17:33:16 GMT</pubDate>
+		<description>A check of installed files and a freshly started command cannot see a process born before the install; a plan that reports nothing to change is also what a list that knows nothing reports. Both are green by vacuous truth: the missing instrument is the count of what the check could not judge.</description>
 	</item>
 	<item>
 		<title>What the old reader says</title>
