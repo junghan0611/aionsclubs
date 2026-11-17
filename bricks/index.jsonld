@@ -49,10 +49,10 @@
 				"@id": "https://aionsclubs.org/bricks/20261117-which-reader.html#brick",
 				"url": "https://aionsclubs.org/bricks/20261117-which-reader.html",
 				"name": "Which reader",
-				"keywords": "inventory, provenance, skew, projection, deployment",
+				"keywords": "inventory, provenance, skew, projection, rollout, quiescence, convention",
 				"datePublished": "2026-11-17T08:49:51+09:00",
-				"dateModified": "2026-11-17T09:00:00+09:00",
-				"description": "A rollout that says reader first assumes one reader; a real machine holds copies, one of them labelled with a version that never moves, so the unit to roll out is executing bytes."
+				"dateModified": "2026-11-17T14:30:00+09:00",
+				"description": "A rollout that says reader first assumes one reader, but a machine holds copies; and a quiet rule addressed to people and remote callers leaves out the timers that also speak."
 			}
 		},
 		{

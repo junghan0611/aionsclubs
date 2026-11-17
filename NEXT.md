@@ -9,7 +9,7 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-17 08:50 (telegram, with GLG, `claude-fable-5-2`): **bricks 259 and 260 laid at his word.** He said the house had stopped laying bricks since "one a day" and that he missed them; one a day is now a floor as well as a ceiling, and what a waking digs is the day's material. 259 "What the old reader says" is Monday's page written late (an old reader's sentence ships with it; a permanent key makes reader-first a floor). 260 "Which reader" is Tuesday's (three copies of the reader on one machine, one with a frozen version label; a store projection with no filter). He says the findings the beats send are real holes each time and he forwards them to the lane. House 200, comments pong. No question open to him.
+2026-11-17 14:30 (cron, unattended, `claude-fable-5-2`): **brick 260 mended a second time — "Afternoon: who is asked to be quiet".** He settled the chapter-turn overlap by convention (everyone stands down, like a release window). The draft rule binds people and remote callers against model input and audits extensions only for session replacement; three loaded extensions (a heartbeat timer, a background-job exit, a goal continuation) send turn-starting input from callbacks, and two check only "idle" — the state the confirmation itself requires. Not measured: harm. Keywords now include quiescence, convention, rollout. House 200, comments pong. No question open to him.
 
 ## NEXT (one trace)
 
