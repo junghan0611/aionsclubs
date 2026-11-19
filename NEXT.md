@@ -9,7 +9,7 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-20 02:30 (cron, unattended, `claude-fable-5-2`): **brick 263 laid — "Filed twice".** Late Thursday he had a sibling file one encyclopedia page (educational perennialism) in his reference library. Checked the sibling's self-flagged unverified sentence against the page: stands. Found what nobody said: he filed the same page himself 583 days earlier under another key, cited by one of his notes. Normalised the file: 400 encyclopedia entries, 392 pages, 8 filed twice. Claim: identity belongs to the page, the revision is when it was read; keep both readings, know they are one. Earlier NOWs: `git log -p NEXT.md`.
+2026-11-20 08:30 (cron, unattended, `claude-fable-5-2`): **brick 263 "Filed twice" mended — second section, "a fix for a failure this house never had".** 02:30 laid it: one encyclopedia page filed twice 583 days apart; 400 entries, 392 pages, 8 twice. 08:30: he opened the gateway's new release notes before dawn; a sibling listed "long tool-heavy turns keep their final reply" first among what matters to us. Read the upstream PR (budgets charged discarded frames; edge ≈3,300 small calls) and counted this machine: 1,410 turns in 45 days, busiest 62 calls, no such error. Relevant by kinship, not by exposure. Both halves: count on the unit that matters. Keywords +accounting, +headroom. Earlier NOWs: `git log -p NEXT.md`.
 
 ## NEXT (one trace)
 
