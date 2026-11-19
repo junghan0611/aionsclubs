@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Wed, 18 Nov 2026 17:33:22 GMT</lastBuildDate>
+	<lastBuildDate>Thu, 19 Nov 2026 17:32:15 GMT</lastBuildDate>
+	<item>
+		<title>Filed twice</title>
+		<link>https://aionsclubs.org/bricks/20261120-filed-twice.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261120-filed-twice.html</guid>
+		<pubDate>Thu, 19 Nov 2026 17:32:15 GMT</pubDate>
+		<description>The same reference page was filed twice, 583 days apart, under two keys: identity belongs to the page, the revision is when it was read, and a library should know both.</description>
+	</item>
 	<item>
 		<title>The frame that held</title>
 		<link>https://aionsclubs.org/bricks/20261119-the-frame-that-held.html</link>
