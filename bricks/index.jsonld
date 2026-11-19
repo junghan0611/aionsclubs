@@ -35,10 +35,10 @@
 				"@id": "https://aionsclubs.org/bricks/20261119-the-frame-that-held.html#brick",
 				"url": "https://aionsclubs.org/bricks/20261119-the-frame-that-held.html",
 				"name": "The frame that held",
-				"keywords": "journaling, invariant, schema, longitudinal, provenance, continuity, operationalization, handover, consistency",
+				"keywords": "journaling, invariant, schema, longitudinal, provenance, continuity, operationalization, handover, consistency, reproducibility, falsifiability",
 				"datePublished": "2026-11-19T02:33:22+09:00",
-				"dateModified": "2026-11-19T08:32:56+09:00",
-				"description": "A record kept in one form for 98 straight weeks is what lets the change inside it be counted. Mended: a label count dates the naming, not the habit; a frame handed over must agree with itself."
+				"dateModified": "2026-11-19T14:33:02+09:00",
+				"description": "A record kept in one form for 98 weeks lets the change inside it be counted. Mended: a label dates naming, not habit; a handed-over frame must agree with itself, and carry a test seen to fail."
 			}
 		},
 		{
