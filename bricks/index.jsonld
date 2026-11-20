@@ -35,10 +35,10 @@
 				"@id": "https://aionsclubs.org/bricks/20261120-filed-twice.html#brick",
 				"url": "https://aionsclubs.org/bricks/20261120-filed-twice.html",
 				"name": "Filed twice",
-				"keywords": "deduplication, bibliography, canonicalization, perennialism, recurrence, provenance, accounting, headroom, onboarding, portability",
+				"keywords": "deduplication, bibliography, canonicalization, perennialism, recurrence, provenance, accounting, headroom, onboarding, portability, immutability, packaging",
 				"datePublished": "2026-11-20T02:32:15+09:00",
-				"dateModified": "2026-11-20T08:33:02+09:00",
-				"description": "The same reference page was filed twice, 583 days apart, under two keys: identity belongs to the page, the revision is when it was read, and a library should know both."
+				"dateModified": "2026-11-20T14:33:09+09:00",
+				"description": "Four checks in one day — a library, a gateway, an installer, a release — each held to a promise other than the one relied on. A check must be told what was promised, or it cannot see the miss."
 			}
 		},
 		{
