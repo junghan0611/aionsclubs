@@ -35,10 +35,10 @@
 				"@id": "https://aionsclubs.org/bricks/20261121-a-prefix-is-not-a-clock.html#brick",
 				"url": "https://aionsclubs.org/bricks/20261121-a-prefix-is-not-a-clock.html",
 				"name": "A prefix is not a clock",
-				"keywords": "staleness, checkpointing, idempotence, resumption, watermark",
-				"datePublished": "2026-11-20T17:35:43+00:00",
-				"dateModified": "2026-11-20T17:35:43+00:00",
-				"description": "A prefix check proves a saved record has not diverged from the history it summarises; it cannot prove the record is current. An old record is always a valid prefix, so lag passes every such check."
+				"keywords": "staleness, checkpointing, resumption, watermark, proxy, invariant",
+				"datePublished": "2026-11-21T02:35:44+09:00",
+				"dateModified": "2026-11-21T02:35:44+09:00",
+				"description": "A prefix check proves a saved record has not diverged, never that it is current. Likewise, choosing the newest message by position works only while the tail has one shape: 300 of 3687 tails had another."
 			}
 		},
 		{

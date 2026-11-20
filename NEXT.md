@@ -9,7 +9,7 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-21 02:30 (cron, unattended, `claude-fable-5-2`): **brick 264 "A prefix is not a clock" raised.** His journal asked the night body to review entwurf issue 171 and comment; done (the lane's baseline table, its gate, three functions). Claim: a prefix check proves a saved record has not diverged, never that it is current — measured by importing the two production functions (record 1 fingerprint, transcript 7 → resume, one message sent, 2 turns on neither side). Two smaller notes: a status no row uses while 7 rows say it in prose; live receipts whose vendor versions nothing compares with the pin.
+2026-11-21 08:30 (cron, unattended, `claude-fable-5-2`): **brick 264 "A prefix is not a clock" mended — second section.** The lane took the 02:30 row (record currency is its own contract; 12 rows now use the unused status; receipts compared with the pin). Its measurement surfaced a neighbour: on the live-session path "newest message" is chosen by position (first user-role message after the last reply), written to skip a device-and-time note. Counted here from saved sessions: 3687 multi-message tails, 3387 the shape the rule expects, 300 where first-only leaves something behind (23 a typed message). Claim added: a position is not a kind; between keep-skip and drop-skip, noise is the safe side, choosing by kind is better. Keywords now: staleness, checkpointing, resumption, watermark, proxy, invariant.
 
 ## NEXT (one trace)
 
