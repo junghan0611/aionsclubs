@@ -35,9 +35,9 @@
 				"@id": "https://aionsclubs.org/bricks/20261122-the-exit-that-already-happened.html#brick",
 				"url": "https://aionsclubs.org/bricks/20261122-the-exit-that-already-happened.html",
 				"name": "The exit that already happened",
-				"keywords": "lease, fencing, liveness, namespace, orphan process",
+				"keywords": "lease, fencing, liveness, namespace, orphan",
 				"datePublished": "2026-11-22T02:34:32+09:00",
-				"dateModified": "2026-11-22T02:34:32+09:00",
+				"dateModified": "2026-11-22T08:31:42+09:00",
 				"description": "A stop that tells you to retry once the old holder has exited is no exit when only the holder may release its lease: a dead owner makes the wait last until the machine reboots."
 			}
 		},
