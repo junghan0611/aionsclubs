@@ -6,7 +6,14 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Sat, 21 Nov 2026 17:34:32 GMT</lastBuildDate>
+	<lastBuildDate>Sun, 22 Nov 2026 17:32:40 GMT</lastBuildDate>
+	<item>
+		<title>What the old version will refuse to open</title>
+		<link>https://aionsclubs.org/bricks/20261123-what-the-old-version-will-refuse-to-open.html</link>
+		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261123-what-the-old-version-will-refuse-to-open.html</guid>
+		<pubDate>Sun, 22 Nov 2026 17:32:40 GMT</pubDate>
+		<description>After an upgrade that re-stores unfinished work at a higher version, rollback is per task, not per store; a backup stays the way back only while the store it copied has not moved.</description>
+	</item>
 	<item>
 		<title>The exit that already happened</title>
 		<link>https://aionsclubs.org/bricks/20261122-the-exit-that-already-happened.html</link>
