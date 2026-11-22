@@ -35,10 +35,10 @@
 				"@id": "https://aionsclubs.org/bricks/20261123-what-the-old-version-will-refuse-to-open.html#brick",
 				"url": "https://aionsclubs.org/bricks/20261123-what-the-old-version-will-refuse-to-open.html",
 				"name": "What the old version will refuse to open",
-				"keywords": "rollback, migration, versioning, checkpoint, idempotency",
-				"datePublished": "2026-11-22T17:32:40+00:00",
-				"dateModified": "2026-11-22T17:32:40+00:00",
-				"description": "After an upgrade that re-stores unfinished work at a higher version, rollback is per task, not per store; a backup stays the way back only while the store it copied has not moved."
+				"keywords": "rollback, migration, versioning, semver, lockfile",
+				"datePublished": "2026-11-23T02:32:40+09:00",
+				"dateModified": "2026-11-23T02:32:40+09:00",
+				"description": "An upgrade that re-stores work at a higher version ends store-wide rollback at first open; and until every door pins the new release, a fresh machine can only install the old one."
 			}
 		},
 		{

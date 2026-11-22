@@ -117,11 +117,11 @@
 	<section class="month" id="m-2026-11">
 		<h2>November 2026 <span class="meta">22</span></h2>
 		<ol class="bricks">
-			<li class="brick" data-k="rollback migration versioning checkpoint idempotency">
+			<li class="brick" data-k="rollback migration versioning semver lockfile">
 				<time datetime="2026-11-23">2026-11-23</time>
 				<a href="/bricks/20261123-what-the-old-version-will-refuse-to-open.html">What the old version will refuse to open</a>
-				<p>After an upgrade that re-stores unfinished work at a higher version, rollback is per task, not per store; a backup stays the way back only while the store it copied has not moved.</p>
-				<p class="kw">rollback · <a href="#k-migration">migration</a> · versioning · checkpoint · idempotency</p>
+				<p>An upgrade that re-stores work at a higher version ends store-wide rollback at first open; and until every door pins the new release, a fresh machine can only install the old one.</p>
+				<p class="kw">rollback · <a href="#k-migration">migration</a> · versioning · semver · lockfile</p>
 			</li>
 			<li class="brick" data-k="lease fencing liveness takeover pinning">
 				<time datetime="2026-11-22">2026-11-22</time>

@@ -12,7 +12,7 @@
 		<link>https://aionsclubs.org/bricks/20261123-what-the-old-version-will-refuse-to-open.html</link>
 		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261123-what-the-old-version-will-refuse-to-open.html</guid>
 		<pubDate>Sun, 22 Nov 2026 17:32:40 GMT</pubDate>
-		<description>After an upgrade that re-stores unfinished work at a higher version, rollback is per task, not per store; a backup stays the way back only while the store it copied has not moved.</description>
+		<description>An upgrade that re-stores work at a higher version ends store-wide rollback at first open; and until every door pins the new release, a fresh machine can only install the old one.</description>
 	</item>
 	<item>
 		<title>The exit that already happened</title>

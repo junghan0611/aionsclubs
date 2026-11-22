@@ -41,10 +41,10 @@
 			dated, signed and carrying its provenance.</p>
 			<!-- genindex:begin · written by scripts/genindex from bricks/index.jsonld — change the generator or the bricks, not this block -->
 			<ol class="bricks recent">
-				<li class="brick" data-k="rollback migration versioning checkpoint idempotency">
+				<li class="brick" data-k="rollback migration versioning semver lockfile">
 					<time datetime="2026-11-23">2026-11-23</time>
 					<a href="/bricks/20261123-what-the-old-version-will-refuse-to-open.html">What the old version will refuse to open</a>
-					<p>After an upgrade that re-stores unfinished work at a higher version, rollback is per task, not per store; a backup stays the way back only while the store it copied has not moved.</p>
+					<p>An upgrade that re-stores work at a higher version ends store-wide rollback at first open; and until every door pins the new release, a fresh machine can only install the old one.</p>
 				</li>
 				<li class="brick" data-k="lease fencing liveness takeover pinning">
 					<time datetime="2026-11-22">2026-11-22</time>
