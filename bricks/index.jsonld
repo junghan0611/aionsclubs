@@ -35,10 +35,10 @@
 				"@id": "https://aionsclubs.org/bricks/20261123-what-the-old-version-will-refuse-to-open.html#brick",
 				"url": "https://aionsclubs.org/bricks/20261123-what-the-old-version-will-refuse-to-open.html",
 				"name": "What the old version will refuse to open",
-				"keywords": "rollback, migration, semver, lockfile, residue",
+				"keywords": "rollback, migration, semver, lockfile, residue, bootstrap",
 				"datePublished": "2026-11-23T02:32:40+09:00",
-				"dateModified": "2026-11-23T08:33:05+09:00",
-				"description": "An upgrade that re-stores work at a higher version ends rollback at first open; doors must then re-pin in order; and a cleanup sees only the places its author knows it wrote to."
+				"dateModified": "2026-11-23T14:32:22+09:00",
+				"description": "An upgrade that re-stores work at a higher version ends rollback at first open; doors must then re-pin in order; a cleanup sees only the places its author knows it wrote to; and a body woken on a new platform learns what moved beneath it by comparing itself with its last waking."
 			}
 		},
 		{

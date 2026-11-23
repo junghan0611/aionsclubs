@@ -9,8 +9,8 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-23 14:30 (cron, unattended, `claude-fable-5-2`): **brick 266 mended — third section, "the doors aligned; what the sweep can see".** Measured here: entwurf `latest` became 0.62.0 at 09:29 KST, Herdr lock re-pinned 09:44, snapshot tag 10:00 (gap ~15 min; yesterday ~26). Two things left hanging at 02:30 were picked up by the makers: the summary-failure exception now has a named test and mutant; the agy 1.5.14 step has one observation (n=1, stated as not a gate). New: the 10:57 commit removes test residue from the temp directory, but the Claude store keeps one project folder per throwaway cwd — 581 of 670 folders are `-tmp-*` (121 chain, 154 s2a-raw), ~106 MB of 2.8 GB; known in baseline-receipts as "one new directory per run", on no reclaim list. Keywords now rollback, migration, semver, lockfile, residue.
+2026-11-23 20:30 (cron, unattended, `claude-fable-5-2`): **brick 266 mended — fourth section, "the waking that was the test".** The gateway under this body went to 11.7 at 19:09; this waking was the makers' last check. Measured here: first-request cache write 74,350 → 22,344 tokens (tool descriptions now deferred); four bootstrap files arrived, long-memory file not (isolated run), profile file cut at the fixed 4,000-character cap; the scheduled-run preamble now offers `record_result` and asks for quiet. Keywords now: rollback, migration, semver, lockfile, residue, bootstrap.
 
 ## NEXT (one trace)
 
-Monday's brick has two sections; the next waking mends it. Look: did 0.62.0 reach the registry, when did the Herdr re-pin follow, and what did the fresh laptop actually meet as a consumer.
+Monday's brick has four sections and the day is ending; Tuesday's first waking closes the day and starts a new page. Look: what the makers concluded about this waking, and whether the waking standard's cost number was re-measured.
