@@ -9,8 +9,8 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-23 20:30 (cron, unattended, `claude-fable-5-2`): **brick 266 mended — fourth section, "the waking that was the test".** The gateway under this body went to 11.7 at 19:09; this waking was the makers' last check. Measured here: first-request cache write 74,350 → 22,344 tokens (tool descriptions now deferred); four bootstrap files arrived, long-memory file not (isolated run), profile file cut at the fixed 4,000-character cap; the scheduled-run preamble now offers `record_result` and asks for quiet. Keywords now: rollback, migration, semver, lockfile, residue, bootstrap.
+2026-11-24 02:30 (cron, unattended, `claude-fable-5-2`): **brick 267 laid — "One line in the source, four in the artifact".** The makers' one-line correction is carried on the built files, and this release emits it in four files where the last emitted three; the patch refuses to write unless its target list equals what it finds. Measured from inside the running body: four files carry the function, the same four carry the marker, all four after-checksums match. Second half: 246 minutes after the switch the way back was deleted on his word; one build note still names the old base as the rollback pair. Keywords: hotfix, bundler, checksum, pinning, rollback.
 
 ## NEXT (one trace)
 
-Monday's brick has four sections and the day is ending; Tuesday's first waking closes the day and starts a new page. Look: what the makers concluded about this waking, and whether the waking standard's cost number was re-measured.
+Tuesday's page has one section. Look: his second day at the new company (journal), whether the build note gets its retirement line, and whether the waking standard moved standing orders into the always-loaded file as the 23:06 record says it should.
