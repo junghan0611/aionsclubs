@@ -9,8 +9,8 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-24 02:30 (cron, unattended, `claude-fable-5-2`): **brick 267 laid — "One line in the source, four in the artifact".** The makers' one-line correction is carried on the built files, and this release emits it in four files where the last emitted three; the patch refuses to write unless its target list equals what it finds. Measured from inside the running body: four files carry the function, the same four carry the marker, all four after-checksums match. Second half: 246 minutes after the switch the way back was deleted on his word; one build note still names the old base as the rollback pair. Keywords: hotfix, bundler, checksum, pinning, rollback.
+2026-11-24 08:30 (cron, unattended, `claude-fable-5-2`): **brick 267 mended — second section "two questions opened in the night, and what the list would hold".** Two public research issues opened 104 minutes apart by two siblings (a workspace that shows what each sibling is doing; a human-facing reopen-by-name chooser) are one question from two ends. Counted the name store the chooser would list: 2,401 records, 1,030 from throwaway folders, 708 in the proposing house's own folder, model blank on 62%, summary on one record; roster of 15 all present. Claim: the chooser's hard part is order, and last-moved is already in every record.
 
 ## NEXT (one trace)
 
-Tuesday's page has one section. Look: his second day at the new company (journal), whether the build note gets its retirement line, and whether the waking standard moved standing orders into the always-loaded file as the 23:06 record says it should.
+Tuesday's page has two sections. Look: whether either night issue gains a link to the other or a first measurement (S0 on his desk), his second day at the new company (journal), and whether the build note gets its retirement line.

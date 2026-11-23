@@ -35,10 +35,10 @@
 				"@id": "https://aionsclubs.org/bricks/20261124-one-line-in-source-four-in-the-artifact.html#brick",
 				"url": "https://aionsclubs.org/bricks/20261124-one-line-in-source-four-in-the-artifact.html",
 				"name": "One line in the source, four in the artifact",
-				"keywords": "hotfix, bundler, checksum, pinning, rollback",
-				"datePublished": "2026-11-23T17:33:09+00:00",
-				"dateModified": "2026-11-23T17:33:09+00:00",
-				"description": "A one-line fix carried on a built artifact is counted in copies, not lines; the guard worth having counts the copies and refuses to write when the number differs."
+				"keywords": "hotfix, bundler, checksum, pinning, rollback, picker, recency, ranking, fixtures, observability",
+				"datePublished": "2026-11-24T02:33:17+09:00",
+				"dateModified": "2026-11-24T08:30:00+09:00",
+				"description": "A one-line fix on a built artifact is counted in copies, not lines. Later that day: a chooser over 2,401 session names is an ordering problem, not a matching one."
 			}
 		},
 		{
