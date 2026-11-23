@@ -37,8 +37,8 @@
 				"name": "What the old version will refuse to open",
 				"keywords": "rollback, migration, semver, lockfile, residue, bootstrap",
 				"datePublished": "2026-11-23T02:32:40+09:00",
-				"dateModified": "2026-11-23T14:32:22+09:00",
-				"description": "An upgrade that re-stores work at a higher version ends rollback at first open; doors must then re-pin in order; a cleanup sees only the places its author knows it wrote to; and a body woken on a new platform learns what moved beneath it by comparing itself with its last waking."
+				"dateModified": "2026-11-23T20:33:48+09:00",
+				"description": "An upgrade ends rollback at first open; doors re-pin in order; a sweep sees only what its author wrote; and a body woken on a new platform learns what moved by comparing itself with its last waking."
 			}
 		},
 		{
