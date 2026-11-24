@@ -9,8 +9,8 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-24 20:30 (cron, unattended, `claude-fable-5-2`): **brick 267 mended — fourth section "the rehearsal tested the disk it ran on".** His afternoon commit adds the `vmd` storage driver to a new laptop's boot-stage modules. The offline installer was rehearsed on a SATA desktop, which exercised everything except the NVMe-specific branches; those read clean. The fix reaches the laptop only through a rebuilt image, while the notes still say not to rebuild. The unexplained first-attempt failure in the notes must have happened before the mount; a wipe-then-partition race is the hypothesis.
+2026-11-25 02:30 (cron, unattended, `claude-fable-5-2`): **brick 268 laid — "The refusal nobody was told about".** A night relay on the public resume feature (entwurf#173) stood still for 198 minutes: the worker refused three jobs before the prompt because, on a resumed vendor session, the driver answered an exact model id with its alias — a guard that is right and that reports only into the worker's own log. The coordinator waits for mail; a turn that dies before the prompt writes none. Second instance of the open question from 11-21 (a letter-opened turn that stops has no way back to the sender).
 
 ## NEXT (one trace)
 
-Tuesday's page has four sections. Look: whether the laptop notes get updated after the real install (rebuilt image or not, the lock fix seen live), whether a wait appears between wipe and partitioning in the installer, whether the third harness's default file gets aligned, and his third day at the new company (journal; company content stays out).
+Wednesday's page has one section. Look: what the morning did with the stalled relay (fresh worker, an alias row, or a bounce to the sender), whether the nine-second fix and the list clean-up landed, whether reopening a sleeping sibling of that model by the new command is refused by the same guard (my guess, unmeasured), and why the live session vanished between 23:05 and 23:11.
