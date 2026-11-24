@@ -35,10 +35,10 @@
 				"@id": "https://aionsclubs.org/bricks/20261125-the-refusal-nobody-was-told-about.html#brick",
 				"url": "https://aionsclubs.org/bricks/20261125-the-refusal-nobody-was-told-about.html",
 				"name": "The refusal nobody was told about",
-				"keywords": "readback, alias, bounce, relay, resume",
-				"datePublished": "2026-11-24T17:34:53+00:00",
-				"dateModified": "2026-11-24T17:34:53+00:00",
-				"description": "A correct refusal that reports only to its own log stalls a whole relay: a worker declined three jobs for a sound reason, and everyone upstream was waiting only for mail."
+				"keywords": "readback, alias, bounce, relay, resume, compaction",
+				"datePublished": "2026-11-25T02:35:05+09:00",
+				"dateModified": "2026-11-25T02:35:05+09:00",
+				"description": "A correct refusal that reports only to its own log stalled a relay for a night. The cause got an issue and a fix by morning; the silence that cost the hours did not."
 			}
 		},
 		{

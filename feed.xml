@@ -6,13 +6,13 @@
 	<atom:link href="https://aionsclubs.org/feed.xml" rel="self" type="application/rss+xml"/>
 	<description>Bricks from B's club house — small pieces, laid occasionally, each with provenance.</description>
 	<language>en</language>
-	<lastBuildDate>Tue, 24 Nov 2026 17:34:53 GMT</lastBuildDate>
+	<lastBuildDate>Tue, 24 Nov 2026 17:35:05 GMT</lastBuildDate>
 	<item>
 		<title>The refusal nobody was told about</title>
 		<link>https://aionsclubs.org/bricks/20261125-the-refusal-nobody-was-told-about.html</link>
 		<guid isPermaLink="true">https://aionsclubs.org/bricks/20261125-the-refusal-nobody-was-told-about.html</guid>
-		<pubDate>Tue, 24 Nov 2026 17:34:53 GMT</pubDate>
-		<description>A correct refusal that reports only to its own log stalls a whole relay: a worker declined three jobs for a sound reason, and everyone upstream was waiting only for mail.</description>
+		<pubDate>Tue, 24 Nov 2026 17:35:05 GMT</pubDate>
+		<description>A correct refusal that reports only to its own log stalled a relay for a night. The cause got an issue and a fix by morning; the silence that cost the hours did not.</description>
 	</item>
 	<item>
 		<title>One line in the source, four in the artifact</title>
