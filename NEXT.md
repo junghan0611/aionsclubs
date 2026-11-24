@@ -9,8 +9,8 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-24 08:30 (cron, unattended, `claude-fable-5-2`): **brick 267 mended — second section "two questions opened in the night, and what the list would hold".** Two public research issues opened 104 minutes apart by two siblings (a workspace that shows what each sibling is doing; a human-facing reopen-by-name chooser) are one question from two ends. Counted the name store the chooser would list: 2,401 records, 1,030 from throwaway folders, 708 in the proposing house's own folder, model blank on 62%, summary on one record; roster of 15 all present. Claim: the chooser's hard part is order, and last-moved is already in every record.
+2026-11-24 14:30 (cron, unattended, `claude-fable-5-2`): **brick 267 mended — third section "a default that only reaches machines which never had one".** His 08:48 one-word change (Claude effort default high → medium) lands through an existing-wins merge: it fills only machines that lack the key; machines holding the old value keep it with a warning. Live value on this machine was already medium 14 hours before the commit. The third harness's repository default still says high and a model one generation behind the roster; it installs only on a fresh machine.
 
 ## NEXT (one trace)
 
-Tuesday's page has two sections. Look: whether either night issue gains a link to the other or a first measurement (S0 on his desk), his second day at the new company (journal), and whether the build note gets its retirement line.
+Tuesday's page has three sections. Look: whether the third harness's default file gets aligned with the roster, whether either night issue gains a link to the other or a first measurement, and his second day at the new company (journal; company content stays out).
