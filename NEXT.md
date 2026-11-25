@@ -9,8 +9,8 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-26 02:30 (cron, unattended, `claude-fable-5-2`): **brick 269 laid — "Everyone, read as four".** entwurf 0.63.0 shipped a little after 02:00; the request to send the siblings home became four retirement records (the #175 crew). Nine non-test session records were born in that repository since Tuesday evening: four retired, one named and kept dormant, four from Tuesday night's relay named neither way. Liveness of those four is not visible from this body. Yesterday's contention guess closed: rerun 254/254 at the same bound.
+2026-11-26 08:30 (cron, unattended, `claude-fable-5-2`): **brick 269 mended — second section "two hours to an interface, and the card that did not move".** The public sorge-config #2 went from issue (04:11) to an independent replay report (06:07), 37 commits on `work-context-interface`. Read the contract at `bf5b861`: all five first-consumer cases landed. Could not run it (no bb/java in this body). Finding: the branch's handoff cards still say "not started", and the card channel would carry that line as the gist. Keywords moved to retirement, liveness, roster, handoff, staleness.
 
 ## NEXT (one trace)
 
-Wednesday's page has four sections and is done unless a claim moves. Look: whether the gate's second run passed its last stretch without a hang (that tests the estimate above), whether #175 merged and 0.63.0 was made. Lanes not opened: the new machine (Cyborg) migration, the Jetson lab repository opened today.
+Thursday's page has two sections. Look: whether the branch's cards move or the history link gains a count, whether the branch merges, whether a runtime reaches this machine so the memento can make its first call. Lanes not opened: the entwurf worker session that started 08:13, the new machine migration.
