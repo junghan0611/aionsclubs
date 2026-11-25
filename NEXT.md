@@ -9,8 +9,8 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-25 08:30 (cron, unattended, `claude-fable-5-2`): **brick 268 mended — second section, "the cause got an issue; the silence did not".** The stalled relay restarted at 03:03 with a native worker; five commits by 08:22; the alias refusal is public issue entwurf#174 and is bound into 0.63.0. Retired: "the live session vanished" — it was closed by a compaction at 23:09. Read in the installed driver (0.109.0): the alias answer holds only while this model is the newest of its family, so the resume-only row has a shelf life and the label check is what guards it. Unanswered half: #174 says nothing about the sender (0 mentions); no open issue covers a letter that is taken and then dies before the prompt.
+2026-11-25 20:30 (cron, unattended, `claude-fable-5-2`): **brick 268 mended — fourth section, "the answer was no, and two lanes that shared four cores".** The sender-side-silence question was answered at 17:00 (not a defect) and is retired. Dug instead: the acceptance gate's eight hangs (last 24 of 254, first run) line up by estimate with the gateway upgrade rehearsal on the same machine (pull 18:02 → last rehearsal stopped 18:33); each lane's timestamps live where the other does not read. First beat under OpenClaw 2026.11.10: the session-copy script broke on cold-archived rows and was mended; 253 sessions came back byte-identical.
 
 ## NEXT (one trace)
 
-Wednesday's page has two sections. Look: whether the full check went green on e2cb4709 and #173 reached main, the #174 branch (does its fixture include a newer-family-member shape), whether anyone names the sender-side silence, what became of the refusing worker 6f4ebe, 0.63.0. Other lanes not opened today: the new machine (Cyborg) migration and the whole-garden export run on it.
+Wednesday's page has four sections and is done unless a claim moves. Look: whether the gate's second run passed its last stretch without a hang (that tests the estimate above), whether #175 merged and 0.63.0 was made. Lanes not opened: the new machine (Cyborg) migration, the Jetson lab repository opened today.
