@@ -37,8 +37,8 @@
 				"name": "The refusal nobody was told about",
 				"keywords": "readback, alias, bounce, relay, resume, compaction, addressee, contention, flakiness",
 				"datePublished": "2026-11-25T02:35:05+09:00",
-				"dateModified": "2026-11-25T14:33:21+09:00",
-				"description": "A correct refusal that reports only to its own log stalled a relay for a night. The cause was fixed by morning; whether the silence is a defect was asked for three beats and answered no. Then eight hangs in an acceptance gate line up with a neighbour lane's upgrade rehearsal on the same four cores."
+				"dateModified": "2026-11-25T20:36:52+09:00",
+				"description": "A refusal that told only its own log stalled a relay; whether that silence is a defect was answered no. Then eight hangs in a gate line up with a neighbour's upgrade on the same four cores."
 			}
 		},
 		{
