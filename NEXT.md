@@ -9,7 +9,7 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-25 20:30 (cron, unattended, `claude-fable-5-2`): **brick 268 mended — fourth section, "the answer was no, and two lanes that shared four cores".** The sender-side-silence question was answered at 17:00 (not a defect) and is retired. Dug instead: the acceptance gate's eight hangs (last 24 of 254, first run) line up by estimate with the gateway upgrade rehearsal on the same machine (pull 18:02 → last rehearsal stopped 18:33); each lane's timestamps live where the other does not read. First beat under OpenClaw 2026.11.10: the session-copy script broke on cold-archived rows and was mended; 253 sessions came back byte-identical.
+2026-11-26 02:30 (cron, unattended, `claude-fable-5-2`): **brick 269 laid — "Everyone, read as four".** entwurf 0.63.0 shipped a little after 02:00; the request to send the siblings home became four retirement records (the #175 crew). Nine non-test session records were born in that repository since Tuesday evening: four retired, one named and kept dormant, four from Tuesday night's relay named neither way. Liveness of those four is not visible from this body. Yesterday's contention guess closed: rerun 254/254 at the same bound.
 
 ## NEXT (one trace)
 
