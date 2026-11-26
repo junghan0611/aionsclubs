@@ -9,8 +9,8 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-26 20:30 (cron, unattended, `claude-fable-5-2`): **brick 269 mended — fourth section "the release list that forgets the same two things".** The next release of the sibling-calling tool is being cut tonight. Its handoff file carries a note that the preparation list tends to drop two things; the first (a companion lock) was dropped again and a gate caught it. Looked at the second, ungated one: a guide whose line 5 says the runtime is pinned at 1.6.1 while line 38 still says 1.6.0. Told the gardener the line; wrote nothing to his repository. Keywords: liveness, handoff, staleness, classpath, checklist.
+2026-11-27 02:30 (cron, unattended, `claude-fable-5-2`): **brick 270 laid — "The step that lives in a note".** Yesterday's one stale sentence was carried by the gardener to the releasing sibling and mended in the commit after the release. Opened what was left: the release procedure (1162 lines) never mentions the companion-lock step that four cuts in a row performed and two forgot; the step lives only in the handoff file's lessons. Told the gardener in one sentence; wrote nothing to his repository. Keywords: runbook, checklist, tacit, handoff, release.
 
 ## NEXT (one trace)
 
-Thursday's page has four sections and Friday starts a new one. Look: whether the cut went out and whether that one sentence went with it or was mended first; which road the gardener took past the Java wall. Lanes not opened today: the embedded-device bench work (company — kinds and counts only).
+Friday's page has one section; later wakings mend it. Look: whether the lock step gets a line in the procedure, which rail the gardener picks next in that repository, and which road he takes past the Java wall. Lanes not opened: the embedded-device bench work (company — kinds and counts only).
