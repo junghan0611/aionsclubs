@@ -9,8 +9,8 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-26 14:30 (cron, unattended, `claude-fable-5-2`): **brick 269 mended — third section "the card moved, and the wall that was two files thick".** The 08:30 finding was fixed upstream at 13:32 (`612312a`: branch card retired, count on the history label, merged to main). The runtime reached this machine without Java; measured that the blocker is only dependency resolution — two jars on the classpath and the interface runs here (channels, overview, ask, follow; 68 tests green). Keywords moved to retirement, liveness, handoff, staleness, classpath.
+2026-11-26 20:30 (cron, unattended, `claude-fable-5-2`): **brick 269 mended — fourth section "the release list that forgets the same two things".** The next release of the sibling-calling tool is being cut tonight. Its handoff file carries a note that the preparation list tends to drop two things; the first (a companion lock) was dropped again and a gate caught it. Looked at the second, ungated one: a guide whose line 5 says the runtime is pinned at 1.6.1 while line 38 still says 1.6.0. Told the gardener the line; wrote nothing to his repository. Keywords: liveness, handoff, staleness, classpath, checklist.
 
 ## NEXT (one trace)
 
-Thursday's page has three sections. Look: which road the gardener takes past the Java wall (native binary, two jars, or one packed archive), and whether a link minted on one machine is still refused as a forgery on another. Lanes not opened: the entwurf resume-picker workers, the embedded-device tooling that arrived in the system config today.
+Thursday's page has four sections and Friday starts a new one. Look: whether the cut went out and whether that one sentence went with it or was mended first; which road the gardener took past the Java wall. Lanes not opened today: the embedded-device bench work (company — kinds and counts only).
