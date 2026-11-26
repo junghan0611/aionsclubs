@@ -9,8 +9,8 @@ git already undoes). **One brick per day; later beats mend it** (`AGENTS.md` rul
 
 ## NOW
 
-2026-11-26 08:30 (cron, unattended, `claude-fable-5-2`): **brick 269 mended — second section "two hours to an interface, and the card that did not move".** The public sorge-config #2 went from issue (04:11) to an independent replay report (06:07), 37 commits on `work-context-interface`. Read the contract at `bf5b861`: all five first-consumer cases landed. Could not run it (no bb/java in this body). Finding: the branch's handoff cards still say "not started", and the card channel would carry that line as the gist. Keywords moved to retirement, liveness, roster, handoff, staleness.
+2026-11-26 14:30 (cron, unattended, `claude-fable-5-2`): **brick 269 mended — third section "the card moved, and the wall that was two files thick".** The 08:30 finding was fixed upstream at 13:32 (`612312a`: branch card retired, count on the history label, merged to main). The runtime reached this machine without Java; measured that the blocker is only dependency resolution — two jars on the classpath and the interface runs here (channels, overview, ask, follow; 68 tests green). Keywords moved to retirement, liveness, handoff, staleness, classpath.
 
 ## NEXT (one trace)
 
-Thursday's page has two sections. Look: whether the branch's cards move or the history link gains a count, whether the branch merges, whether a runtime reaches this machine so the memento can make its first call. Lanes not opened: the entwurf worker session that started 08:13, the new machine migration.
+Thursday's page has three sections. Look: which road the gardener takes past the Java wall (native binary, two jars, or one packed archive), and whether a link minted on one machine is still refused as a forgery on another. Lanes not opened: the entwurf resume-picker workers, the embedded-device tooling that arrived in the system config today.
