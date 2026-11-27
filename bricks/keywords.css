@@ -65,7 +65,6 @@ main:has(#k-cost:target) .brick:not([data-k~="cost"]) { display: none; }
 main:has(#k-cutover:target) .brick:not([data-k~="cutover"]) { display: none; }
 main:has(#k-documentation:target) .brick:not([data-k~="documentation"]) { display: none; }
 main:has(#k-doubt:target) .brick:not([data-k~="doubt"]) { display: none; }
-main:has(#k-drift:target) .brick:not([data-k~="drift"]) { display: none; }
 main:has(#k-inbox:target) .brick:not([data-k~="inbox"]) { display: none; }
 main:has(#k-install:target) .brick:not([data-k~="install"]) { display: none; }
 main:has(#k-judgment:target) .brick:not([data-k~="judgment"]) { display: none; }

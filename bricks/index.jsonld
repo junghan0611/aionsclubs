@@ -35,9 +35,9 @@
 				"@id": "https://aionsclubs.org/bricks/20261128-fifty-one-right-then-four-wrong.html#brick",
 				"url": "https://aionsclubs.org/bricks/20261128-fifty-one-right-then-four-wrong.html",
 				"name": "Fifty-one right, then four wrong",
-				"keywords": "enum, validation, priming, drift, guidance",
-				"datePublished": "2026-11-27T17:33:43+00:00",
-				"dateModified": "2026-11-27T17:33:43+00:00",
+				"keywords": "enum, validation, priming, guidance, teardown",
+				"datePublished": "2026-11-28T02:34:01+09:00",
+				"dateModified": "2026-11-28T02:34:01+09:00",
 				"description": "A session called a tool correctly 51 times on the old wording, then missed 4 of 19; each refusal fixed only the next call, so new wording alone cannot show wording was the cause."
 			}
 		},
